@@ -112,7 +112,7 @@ git branch recover_branch commit_id
 ```shell
 git revert e3d368f457358a4a39f31f033d6a6f3729df541c
 ```
-- 创建一个git库推送到远端（可参照github）  
+- 创建一个git库推送到远端`可参照github`  
 ```
 git init
 git add .
@@ -125,7 +125,7 @@ git commit -m "first commit"
 git remote add origin git@github.com:tongg112/integral.git
 git push -u origin master
 ```
-- git提交全局保存密码(建议设置ssh key来替代输入密码的方式)  
+- git提交全局保存密码`建议设置ssh key来替代输入密码的方式`  
 ```shell
 git config --global credential.helper store
 ```
