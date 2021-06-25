@@ -29,6 +29,8 @@ github_username:  tongg112
 
 # Build settings
 theme: minima
+minima:
+  skin: dark
 # remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
