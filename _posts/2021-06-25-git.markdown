@@ -30,14 +30,16 @@ git config http.proxy socks5://127.0.0.1:10809
 ```
 
 ## git获取版本差异打包
-- 某个版本与当前版本的差异  
+- 某个版本与当前版本的差异
+
 ```shell
 # 完整的commit id
 git diff e3d368f457358a4a39f31f033d6a6f3729df541c --name-only | xargs zip update.zip
 # 或者 简略的commit id
 git diff e177fd68 --name-only | xargs zip update.zip
 ```
-- 两个版本之间的差异打包  
+- 两个版本之间的差异打包
+
 ```shell
 # git archive -o ./update.zip 新 $(git diff --name-only 旧 新)
 git archive -o ./update.zip 5ec3905f6a64ad90ea53803b1ec05a72476e2e1c $(git diff --name-only cb59ee6a13812761067a28ea25a8188f467d47e0 5ec3905f6a64ad90ea53803b1ec05a72476e2e1c )
