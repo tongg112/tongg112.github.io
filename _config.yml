@@ -34,7 +34,7 @@ minima:
   social_links:
     twitter: lotongok
     github: tongg112
-    
+
 # remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
