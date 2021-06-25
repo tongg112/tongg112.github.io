@@ -29,7 +29,7 @@ github_username:  tongg112
 
 # Build settings
 # theme: minima
-remote_theme: cayman
+remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 google_analytics: UA-112876570-1
@@ -56,5 +56,3 @@ kramdown:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-theme: jekyll-theme-cayman
