@@ -34,8 +34,14 @@ plugins:
 google_analytics: UA-112876570-1
 markdown: kramdown
 kramdown:
-  input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:   # Rouge Options › https\://github.com/jneen/rouge#full-options
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
