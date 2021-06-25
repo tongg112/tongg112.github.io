@@ -6,6 +6,7 @@ categories: git
 ---
 ## git基础
 http://www.ruanyifeng.com/blog/2014/06/git_remote.html
+
 ## git设置代理
 ```shell
 # 设置当前代理
@@ -27,6 +28,7 @@ git config http.proxy socks5://127.0.0.1:10809
 版权声明：本文为CSDN博主「用户昵称不能为空」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/default7/article/details/100068256
 ```
+
 ## git获取版本差异打包
 - 某个版本与当前版本的差异
 ```shell
@@ -41,6 +43,7 @@ git diff e177fd68 --name-only | xargs zip update.zip
 git archive -o ./update.zip 5ec3905f6a64ad90ea53803b1ec05a72476e2e1c $(git diff --name-only cb59ee6a13812761067a28ea25a8188f467d47e0 5ec3905f6a64ad90ea53803b1ec05a72476e2e1c )
 
 ```
+
 ## git统计
 - git统计代码行数
 ```shell
@@ -63,6 +66,7 @@ git log --pretty='%aN' | sort -u | wc -l
 ```shell
 git log --oneline | wc -l
 ```
+
 ## git配置文件
 本地项目配置文件，在项目目录下 `.git/config` 文件
 全局，用户目录下 `.gitconfig` 文件
@@ -76,6 +80,7 @@ git log --oneline | wc -l
 git config –global core.editor vim
 ```
 > Linux下编辑~/.gitconfig文件 在core中添加editor = vim
+
 ## 常用基础命令
 - 获取主机[origin]上的所有分支  
 ```shell
