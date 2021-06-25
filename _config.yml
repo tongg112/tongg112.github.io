@@ -27,14 +27,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author:
   email: lotongok#gmail.com
 
-social:
-  twitter: lotongok
-  github:  tongg112
-
 # Build settings
 theme: minima
 minima:
   skin: classic
+  social_links:
+    twitter: lotongok
+    github: tongg112
+    
 # remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
