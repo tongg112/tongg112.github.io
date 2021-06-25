@@ -30,7 +30,7 @@ github_username:  tongg112
 # Build settings
 theme: minima
 minima:
-  skin: dark
+  skin: classic
 # remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
