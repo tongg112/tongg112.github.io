@@ -37,7 +37,7 @@ minima:
     github: tongg112
 disqus:
     shortname: xtongs.com
-show_excerpts: true
+# show_excerpts: true
 # remote_theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
