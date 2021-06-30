@@ -36,7 +36,7 @@ minima:
     twitter: lotongok
     github: tongg112
 disqus:
-    shortname: xtongs.com
+    shortname: xtongs-com
 # show_excerpts: true
 # remote_theme: jekyll-theme-cayman
 plugins:
