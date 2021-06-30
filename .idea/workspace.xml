@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29979bda-66a5-4434-9401-605c63bec771" name="Default Changelist" comment="修复格式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
       <workItem from="1624604248182" duration="6407000" />
       <workItem from="1624634914300" duration="3114000" />
       <workItem from="1625038205184" duration="5117000" />
-      <workItem from="1625045858220" duration="202000" />
+      <workItem from="1625045858220" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="修复格式">
       <created>1624629627934</created>
@@ -86,6 +86,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
