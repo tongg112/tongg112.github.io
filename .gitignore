@@ -4,5 +4,6 @@ _site
 .jekyll-metadata
 vendor
 .idea
+.idea\workspace.xml
 /.idea
 .DS_Store
