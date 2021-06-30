@@ -23,7 +23,7 @@ SEOTitle: Xtong的博客 | Xtong's Blog
 description: >- # this means to ignore newlines until "baseurl:"
   Xtong's Blog, 学习经验分享
 keyword: "lotongok, @xtongs, 后端, Xtongs, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xtongs.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Publish posts or collection documents with a future date.
