@@ -30,6 +30,7 @@ author:
 lang: zh
 # Build settings
 theme: minima
+taglink: /tags/#:tag
 minima:
   skin: classic
   social_links:
