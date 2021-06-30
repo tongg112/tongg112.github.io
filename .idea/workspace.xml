@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="29979bda-66a5-4434-9401-605c63bec771" name="Default Changelist" comment="修复格式">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
       <workItem from="1624604248182" duration="6407000" />
       <workItem from="1624634914300" duration="3114000" />
       <workItem from="1625038205184" duration="5117000" />
-      <workItem from="1625045858220" duration="1132000" />
+      <workItem from="1625045858220" duration="1751000" />
     </task>
     <task id="LOCAL-00001" summary="修复格式">
       <created>1624629627934</created>
