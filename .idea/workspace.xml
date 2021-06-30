@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29979bda-66a5-4434-9401-605c63bec771" name="Default Changelist" comment="修复格式">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/ads.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/ads.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ads.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +56,7 @@
       <updated>1624604247040</updated>
       <workItem from="1624604248182" duration="6407000" />
       <workItem from="1624634914300" duration="3114000" />
-      <workItem from="1625038205184" duration="3167000" />
+      <workItem from="1625038205184" duration="3943000" />
     </task>
     <task id="LOCAL-00001" summary="修复格式">
       <created>1624629627934</created>
