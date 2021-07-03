@@ -3,7 +3,7 @@ layout: post
 title:  "Airpods连接Ubuntu"
 subtitle: ""
 author: xtong
-date:   2021-06-25 21:32:52 +0800
+date:   2021-07-01 22:34:25 +0800
 catalog: true
 tags: [Ubuntu, Linux]
 header-img: "img/post-bg-node.png"
