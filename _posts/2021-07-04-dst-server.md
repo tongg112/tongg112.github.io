@@ -24,7 +24,7 @@ windows的饥荒联机版存档位置一般在这个目录，（`87037553`这个
 ```
 C:\Users\{用户名}\Documents\Klei\DoNotStarveTogether\87037553\Cluster_1
 ```
-<img class="shadow" src="/img/in-post/post-dst-server/save.png" width="260">
+<img class="shadow" src="/img/in-post/post-dst-server/save.png" >
 
 ### 创建并下载服务端配置
 登录klei账号：https://accounts.klei.com/account/game/list  
