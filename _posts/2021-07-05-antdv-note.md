@@ -121,7 +121,7 @@ export default {
 
 ## 调试模式，初始化完成console输出内容
 在`src/utils/screenLog.js`
-字体使用【ASCII - ANSI Shadow】
+字体使用【ASCII - ANSI Shadow】  
 工具地址：https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=xtong
 
 ## Empty组件使用
