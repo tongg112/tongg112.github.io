@@ -250,3 +250,5 @@ export default {
   }
 }
 ```
+## 分割线
+用`<a-divider />`代替`<hr />`
