@@ -31,9 +31,10 @@ C:\Users\{用户名}\Documents\Klei\DoNotStarveTogether\87037553\Cluster_1
 使用steam登录，登录后选择【《饥荒：联机版》的游戏服务器】按钮  
 （https://accounts.klei.com/account/game/servers?game=DontStarveTogether）
 添加新服务器，填写好服务器配置后，点击【下载设置】按钮，得到一个压缩文件`MyDediServer.zip`。
-解压后，把我们的存档替换进来：
+### 解压空白存档，将其替换成要迁移的存档
+解压`MyDediServer.zip`后，把我们的存档替换进来：
 - 删除 MyDediServer 下的 Master 和 Caves 文件夹；
-- 将我们需要迁移的存档 Cluster 目录下的 Master 和 Caves 文件夹拷贝到 MyDediServer。
+- 将我们需要迁移的存档 Cluster 目录下的 Master 和 Caves 文件夹拷贝到 MyDediServer目录里。
 
 ## 服务器准备工作
 
@@ -52,33 +53,13 @@ tar -zxvf steamcmd_linux.tar.gz
 ```shell
 mkdir -p ~/.klei/DoNotStarveTogether
 ```
-## 开始迁移
-### 上传游戏存档
-将准备好的 MyDediServer 文件夹，上传到`~/.klei/DoNotStarveTogether`下。
+### 上传空白存档
+把之前得到的`MyDediServer.zip`,上传到`~/.klei/DoNotStarveTogether`并解压。
 ```shell
-# 存档上传后的路径：
+# 空白存档的位置
 ~/.klei/DoNotStarveTogether/MyDediServer
 ```
-### 上传游戏mod
-windows本地饥荒游戏mod一般在  
-```
-{steam安装目录}\Steam\steamapps\common\Don't Starve Together\mods
-# 比如
-D:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods
-```
-将这个mods文件夹里的文件上传到服务器下面的目录中
-```
-~/dontstarvetogether_dedicated_server/mods
-```
-对于《神话书说》《棱镜》等mod，并没有在上面的mods目录中，需要在这个目录下找
-```
-{steam安装目录}\Steam\steamapps\workshop\content\322330
-# 比如
-D:\Program Files (x86)\Steam\steamapps\workshop\content\322330
-```
-找到对应的mod，并上传到服务器`~/dontstarvetogether_dedicated_server/mods`中。  
-注意，需要将这些mod的文件夹命名为`workshop-{mod ID}`的格式。  
-比如`workshop-727774324`。
+## 开始迁移
 
 ### 启动脚本上传至云服务器
 上传或者创建以下脚本到云服务器的当前用户目录（~/）：
@@ -136,6 +117,38 @@ screen
 ./run_dedicated_servers.sh
 
 ```
+执行成功后，服务器上会生成一些目录，Ctrl+c停止脚本，进行后续操作。
+- 生成的`~/dontstarvetogether_dedicated_serve`可以存放稍后上传mod
+- 生成的`~/.klei/DoNotStarveTogether`用来存放存档
+
+### 上传需要迁移的游戏存档
+将准备好的 MyDediServer 文件夹，上传到`~/.klei/DoNotStarveTogether`下。
+```shell
+# 存档上传后的路径：
+~/.klei/DoNotStarveTogether/MyDediServer
+```
+
+### 上传游戏mod
+windows本地饥荒游戏mod一般在  
+```
+{steam安装目录}\Steam\steamapps\common\Don't Starve Together\mods
+# 比如
+D:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together\mods
+```
+将这个mods文件夹里的文件上传到服务器下面的目录中
+```
+~/dontstarvetogether_dedicated_server/mods
+```
+对于《神话书说》《棱镜》等mod，并没有在上面的mods目录中，需要在这个目录下找
+```
+{steam安装目录}\Steam\steamapps\workshop\content\322330
+# 比如
+D:\Program Files (x86)\Steam\steamapps\workshop\content\322330
+```
+找到对应的mod，并上传到服务器`~/dontstarvetogether_dedicated_server/mods`中。  
+注意，需要将这些mod的文件夹命名为`workshop-{mod ID}`的格式。  
+比如`workshop-727774324`。
+
 
 # 其他注意
 ## 报`libcurl-gnutls.so.4`找不到的错误
