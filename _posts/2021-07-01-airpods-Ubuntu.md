@@ -18,6 +18,7 @@ comments: true
 
 - 编辑 `/etc/bluetooth/main.conf` 文件，设定`ControllerMode = bredr`
 - 重启蓝牙 `sudo /etc/init.d/bluetooth restart`
+- AirPods 长按充电盒上的按钮，进入蓝牙配对模式。
 - 在 Ubuntu 设置中找到蓝牙，搜索 Airpods 配对。
 
 如果连接上了，但是没有声音。就按如下的操作。  
