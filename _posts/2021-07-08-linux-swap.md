@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Linux服务器增加swap分区"
-subtitle: ""
+subtitle: "centos操作过程记录"
 author: xtong
-date:   2021-07-09 21:32:52 +0800
+date:   2021-07-08 21:32:52 +0800
 catalog: true
-tags: [linux, swap]
+tags: [Linux, swap, centos]
 header-img: "img/post-bg-node.png"
 comments: true
 ---

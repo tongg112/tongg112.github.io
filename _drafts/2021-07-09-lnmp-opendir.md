@@ -5,7 +5,7 @@ subtitle: ""
 author: xtong
 date:   2021-07-09 21:32:52 +0800
 catalog: true
-tags: [linux, php]
+tags: [Linux, php]
 header-img: "img/post-bg-node.png"
 comments: true
 ---
