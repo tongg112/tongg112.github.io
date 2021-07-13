@@ -16,7 +16,7 @@ comments: true
 使用软删除保证了数据的完整性，另外在定位程序问题上也有一定的帮助。  
 # 实现思路
 我的习惯是，在需要软删除的业务表中，加入以下4个字段：
-```mysql
+```sql
 -- MySQL 举例 --
 `status` tinyint(3) NOT NULL DEFAULT '1' COMMENT '状态（1正常，2更新，3删除）',
 `created_at` bigint(13) NOT NULL COMMENT '创建时间',
