@@ -3,7 +3,7 @@ layout: post
 title:  "Happy Birthday [back number]"
 subtitle: "假名歌词"
 author: xtong
-date:   2021-07-17 22:39:42 +0800
+date:   2021-07-17 20:39:42 +0800
 catalog: true
 tags: [歌曲, 日语]
 header-img: "img/post-bg-nhk.jpg"
