@@ -193,7 +193,7 @@ chmod chown chgrp chage passwd su sudo umask chattr
 ```
 
 # 参考资料
-文章：[《实用技能：60个常用的Linux命令》](https://www.linuxprobe.com/linux-command-skill.html)    
+文章：<a href="https://www.linuxprobe.com/linux-command-skill.html" target="_blank" >《实用技能：60个常用的Linux命令》</a>    
 
 ---
 图书：《Linux就该这么学》  
