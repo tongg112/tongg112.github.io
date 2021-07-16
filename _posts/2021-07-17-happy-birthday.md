@@ -16,8 +16,6 @@ comments: true
 
 <h6 style="text-align: center"> 词曲：清水依与吏 </h6>
 
-
-<div style="text-align: center">
 いつの間<span style="color: red;">(ま)</span>にやら
 
 日付<span style="color: red;">(ひづけ)</span>は変<span style="color: red;">(か)</span>わって
@@ -126,7 +124,7 @@ comments: true
 
 
 
-<h3>罗马音歌词</h3>
+<h3>罗马音歌词<h3>
 
 i tsu no ma ni yara
 
@@ -231,7 +229,6 @@ ka ta o mo i no ore
 ha ppii baa su dei
 
 ka ta o mo i no ore
-</div>
 
 ## 原文地址
 <a href="http://blog.sina.com.cn/s/blog_179955fd70102zbnj.html" target="_blank" >backnumber-HappyBirthday（假名歌词+罗马音歌词）</a>
