@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Happy Birthday [back number]"
-subtitle: "假名歌词"
+title:  "Happy Birthday 歌词"
+subtitle: "歌手：back number"
 author: xtong
 date:   2021-07-17 20:39:42 +0800
 catalog: true
