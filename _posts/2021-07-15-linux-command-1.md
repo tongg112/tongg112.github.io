@@ -152,7 +152,8 @@ ifconfig free fdisk ethtool mii-tool dmidecode dmesg lspci
 ```
 - 其他
 ```
-echo printf rpm yum watch alias unalias date clear history eject time nohup nc xargs exec export unset type
+echo printf rpm yum watch alias unalias date clear
+history eject time nohup nc xargs exec export unset type
 ```
 - 系统性能监视高级命令(12个)
 ```
@@ -201,5 +202,5 @@ chmod chown chgrp chage passwd su sudo umask chattr
 ---
 
 地址：https://book.douban.com/subject/27198046/  
-在线阅读：https://www.linuxprobe.com/basic-learning-00.html
+在线阅读：https://www.linuxprobe.com/basic-learning-00.html  
 PDF在线阅读：https://www.linuxprobe.com/docs/LinuxProbe.pdf
