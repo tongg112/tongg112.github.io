@@ -12,223 +12,227 @@ comments: true
 
 # Happy Birthday 歌词
 
-<h2 style="text-align: center"> Happy Birthday </h2>
+**Happy Birthday**
 
-<h6 style="text-align: center"> 词曲：清水依与吏 </h6>
+**作词：清水依与吏**
 
-いつの間<span style="color: red;">(ま)</span>にやら
+**作曲：清水依与吏**
 
-日付<span style="color: red;">(ひづけ)</span>は変<span style="color: red;">(か)</span>わって
 
-なんで年<span style="color: red;">(とし)</span>って取<span style="color: red;">(と)</span>るんだろう
 
-もう背<span style="color: red;">(せ)</span>は伸<span style="color: red;">(の)</span>びないくせに
+**いつの間**(ま)**にやら**
 
+**日付**(ひづけ)**は変**(か)**わって**
 
+**なんで年**(とし)**って取**(と)**るんだろう**
 
-着信<span style="color: red;">(ちゃくしん)</span>の音<span style="color: red;">(おと)</span>で
+**もう背**(せ)**は伸**(の)**びないくせに**
 
-飛<span style="color: red;">(と)</span>び起<span style="color: red;">(お)</span>きたけど損<span style="color: red;">(そん)</span>したな
 
-君<span style="color: red;">(きみ)</span>かと思<span style="color: red;">(おも)</span>ったのに
 
+**着信**(ちゃくしん)**の音**(おと)**で**
 
+**飛**(と)**び起**(お)**きたけど損**(そん)**したな**
 
-何<span style="color: red;">(なに)</span>かの手<span style="color: red;">(て)</span>違<span style="color: red;">(ちが)</span>いで
+**君**(きみ)**かと思**(おも)**ったのに**
 
-好<span style="color: red;">(す)</span>きになってくれないかな
 
-どうにも君<span style="color: red;">(きみ)</span>のいない場所<span style="color: red;">(ばしょ)</span>は
 
-空気<span style="color: red;">(くうき)</span>が薄<span style="color: red;">(うす)</span>くてさ
+**何**(なに)**かの手**(て)**違**(ちが)**いで**
 
+**好**(す)**きになってくれないかな**
 
+**どうにも君**(きみ)**のいない場所**(ばしょ)**は**
 
-くだらない話<span style="color: red;">(はなし)</span>は思<span style="color: red;">(おも)</span>い付<span style="color: red;">(つ)</span>くのに
+**空気**(くうき)**が薄**(うす)**くてさ**
 
-君<span style="color: red;">(きみ)</span>を抱<span style="color: red;">(だ)</span>き締<span style="color: red;">(し)</span>めていい
 
-理由<span style="color: red;">(りゆう)</span>だけが見付<span style="color: red;">(みつ)</span>からない
 
-ああそうか そうだよな
+**くだらない話**(はなし)**は思**(おも)**い付**(つ)**くのに**
 
-ハッピーバースデー
+**君**(きみ)**を抱**(だ)**き締**(し)**めていい**
 
-片想<span style="color: red;">(かたおも)</span>いの俺<span style="color: red;">(おれ)</span>
+**理由**(りゆう)**だけが見付**(みつ)**からない**
 
+**ああそうか そうだよな**
 
+**ハッピーバースデー**
 
-愛<span style="color: red;">(あい)</span>が何<span style="color: red;">(なに)</span>かは知<span style="color: red;">(し)</span>らないけれど
+**片想**(かたおも)**いの俺**(おれ)
 
-好<span style="color: red;">(す)</span>きと言<span style="color: red;">(い)</span>う名前<span style="color: red;">(なまえ)</span>の
 
-痛<span style="color: red;">(いた)</span>みになら詳<span style="color: red;">(くわ)</span>しいかも
 
-君<span style="color: red;">(きみ)</span>にも教<span style="color: red;">(おし)</span>えてあげたいけれど
+**愛**(あい)**が何**(なに)**かは知**(し)**らないけれど**
 
-結局<span style="color: red;">(けっきょく)</span>教<span style="color: red;">(おそ)</span>わるのは俺<span style="color: red;">(おれ)</span>だろう
+**好**(す)**きと言**(い)**う名前**(なまえ)**の**
 
+**痛**(いた)**みになら詳**(くわ)**しいかも**
 
+**君**(きみ)**にも教**(おし)**えてあげたいけれど**
 
-このまま今日<span style="color: red;">(きょう)</span>が終<span style="color: red;">(お)</span>わり
+**結局**(けっきょく)**教**(おそ)**わるのは俺**(おれ)**だろう**
 
-明日<span style="color: red;">(あした)</span>が来<span style="color: red;">(く)</span>れば
 
-いつになっても
 
-縮<span style="color: red;">(ちぢ)</span>まらないこの距離<span style="color: red;">(きょり)</span>を
+**このまま今日**(きょう)**が終**(お)**わり**
 
-駆<span style="color: red;">(か)</span>け引<span style="color: red;">(ひ)</span>きにも綱引<span style="color: red;">(つなひ)</span>きにも
+**明日**(あした)**が来**(く)**れば**
 
-ならないやり取<span style="color: red;">(と)</span>りを
+**いつになっても**
 
-もっと単純<span style="color: red;">(たんじゅん)</span>な名前<span style="color: red;">(なまえ)</span>で
+**縮**(ちぢ)**まらないこの距離**(きょり)**を**
 
-呼<span style="color: red;">(よ)</span>んであげられるよ
+**駆**(か)**け引**(ひ)**きにも綱引**(つなひ)**きにも**
 
-何<span style="color: red;">(なに)</span>ひとつ終<span style="color: red;">(お)</span>われないけど
+**ならないやり取**(と)**りを**
 
+**もっと単純**(たんじゅん)**な名前**(なまえ)**で**
 
+**呼**(よ)**んであげられるよ**
 
-つまらない言葉<span style="color: red;">(ことば)</span>の繰<span style="color: red;">(く)</span>り返<span style="color: red;">(かえ)</span>しで
+**何**(なに)**ひとつ終**(お)**われないけど**
 
-つじつまもきっと
 
-合<span style="color: red;">(あ)</span>ってない物語<span style="color: red;">(ものがたり)</span>の続<span style="color: red;">(つづ)</span>きに
 
-ひとりよがりの毎日<span style="color: red;">(まいにち)</span>に
+**つまらない言葉**(ことば)**の繰**(く)**り返**(かえ)**しで**
 
-ハッピーバースデー
+**つじつまもきっと**
 
-君<span style="color: red;">(きみ)</span>に言<span style="color: red;">(い)</span>って欲<span style="color: red;">(ほ)</span>しいだけ
+**合**(あ)**ってない物語**(ものがたり)**の続**(つづ)**きに**
 
+**ひとりよがりの毎日**(まいにち)**に**
 
+**ハッピーバースデー**
 
-くだらない話<span style="color: red;">(はなし)</span>は思<span style="color: red;">(おも)</span>い付<span style="color: red;">(つ)</span>くのに
+**君**(きみ)**に言**(い)**って欲**(ほ)**しいだけ**
 
-君<span style="color: red;">(きみ)</span>を抱<span style="color: red;">(だ)</span>き締<span style="color: red;">(し)</span>めていい
 
-理由<span style="color: red;">(りゆう)</span>だけが見付<span style="color: red;">(みつ)</span>からない
 
-ああそうか そうだよな
+**くだらない話**(はなし)**は思**(おも)**い付**(つ)**くのに**
 
-ハッピーバースデー
+**君**(きみ)**を抱**(だ)**き締**(し)**めていい**
 
-片想<span style="color: red;">(かたおも)</span>いの俺<span style="color: red;">(おれ)</span>
+**理由**(りゆう)**だけが見付**(みつ)**からない**
 
-ハッピーバースデー
+**ああそうか そうだよな**
 
-片想<span style="color: red;">(かたおも)</span>いの俺<span style="color: red;">(おれ)</span>
+**ハッピーバースデー**
 
+**片想**(かたおも)**いの俺**(おれ)
 
+**ハッピーバースデー**
 
+**片想**(かたおも)**いの俺**(おれ)
 
 
-<h3>罗马音歌词<h3>
 
-i tsu no ma ni yara
 
-hi du ke wa ka watte
 
-na n de to shi tteto ru n da rou
+**罗马音歌词**
 
-mou se wa no bi nai ku se ni
+**i tsu no ma ni yara**
 
+**hi du ke wa ka watte**
 
+**na n de to shi tteto ru n da rou**
 
-cha ku shi n no oto de
+**mou se wa no bi nai ku se ni**
 
-to bi o ki ta kedo son shi ta na
 
-ki mi ka to o motta no ni
 
+**cha ku shi n no oto de**
 
+**to bi o ki ta kedo son shi ta na**
 
-na ni ka no te chiga i de
+**ki mi ka to o motta no ni**
 
-su ki ni na tte kure na i ka na
 
-dou ni mo ki mi noi nai ba sho wa
 
-ku u ki ga u su kute sa
+**na ni ka no te chiga i de**
 
+**su ki ni na tte kure na i ka na**
 
+**dou ni mo ki mi noi nai ba sho wa**
 
-ku da ra na i hana shi wa o mo i tsu ku no ni
+**ku u ki ga u su kute sa**
 
-ki mi wo da ki shime te ii
 
-ri yuu da ke ga mitsu ka ra na i
 
-aa so u ka sou dayo na
+**ku da ra na i hana shi wa o mo i tsu ku no ni**
 
-ha ppii baa su dei
+**ki mi wo da ki shime te ii**
 
-ka ta o mo i no ore
+**ri yuu da ke ga mitsu ka ra na i**
 
+**aa so u ka sou dayo na**
 
+**ha ppii baa su dei**
 
-a i ga na ni ka washi ra na i ke re do
+**ka ta o mo i no ore**
 
-su ki to i u na mae no
 
-i ta mi ni na raku wa shi i ka mo
 
-ki mi ni mo o shie te a ge ta i ke re do
+**a i ga na ni ka washi ra na i ke re do**
 
-ke kkyo ku o so waru no wa o re da rou
+**su ki to i u na mae no**
 
+**i ta mi ni na raku wa shi i ka mo**
 
+**ki mi ni mo o shie te a ge ta i ke re do**
 
-ko no ma ma kyouga o wa ri
+**ke kkyo ku o so waru no wa o re da rou**
 
-a shi ta ga ku reba
 
-i tsu ni na tte mo
 
-chi ji ma ra naiko no kyo ri wo
+**ko no ma ma kyouga o wa ri**
 
-ka ke hi ki ni motsu na hi ki ni mo
+**a shi ta ga ku reba**
 
-na ra nai ya ri tori wo
+**i tsu ni na tte mo**
 
-mo tto tan jyu nna na ma e de
+**chi ji ma ra naiko no kyo ri wo**
 
-yon de a ge ra reru yo
+**ka ke hi ki ni motsu na hi ki ni mo**
 
-na ni hi to tsu owa re nai ke do
+**na ra nai ya ri tori wo**
 
+**mo tto tan jyu nna na ma e de**
 
+**yon de a ge ra reru yo**
 
-tsu ma ra na i koto ba no ku ri ka e shi de
+**na ni hi to tsu owa re nai ke do**
 
-tsu ji tsu ma moki tto
 
-a tte na i mo noga ta ri no tsu du ki ni
 
-hi to ri yo ga rino ma i ni chi ni
+**tsu ma ra na i koto ba no ku ri ka e shi de**
 
-ha ppii baa su dei
+**tsu ji tsu ma moki tto**
 
-ki mi ni i tte hoshii da ke
+**a tte na i mo noga ta ri no tsu du ki ni**
 
+**hi to ri yo ga rino ma i ni chi ni**
 
+**ha ppii baa su dei**
 
-ku da ra na i hana shi wa o mo i tsu ku no ni
+**ki mi ni i tte hoshii da ke**
 
-ki mi wo da ki shime te ii
 
-ri yuu da ke ga mitsu ka ra na i
 
-aa so u ka sou dayo na
+**ku da ra na i hana shi wa o mo i tsu ku no ni**
 
-ha ppii baa su dei
+**ki mi wo da ki shime te ii**
 
-ka ta o mo i no ore
+**ri yuu da ke ga mitsu ka ra na i**
 
-ha ppii baa su dei
+**aa so u ka sou dayo na**
 
-ka ta o mo i no ore
+**ha ppii baa su dei**
+
+**ka ta o mo i no ore**
+
+**ha ppii baa su dei**
+
+**ka ta o mo i no ore**
 
 ## 原文地址
 <a href="http://blog.sina.com.cn/s/blog_179955fd70102zbnj.html" target="_blank" >backnumber-HappyBirthday（假名歌词+罗马音歌词）</a>
