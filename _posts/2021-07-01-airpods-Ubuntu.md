@@ -31,4 +31,4 @@ comments: true
 耳机和蓝牙鼠标都可以正常使用了。
 
 # 参考资料
-https://jixiaobai.club/airpods-connection-guide/
+- [Airpods耳机连接Mac、Windows 10、iPhone、安卓、Linux-完全指南](https://jixiaobai.club/airpods-connection-guide/)

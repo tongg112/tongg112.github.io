@@ -191,11 +191,11 @@ uptime top free vmstat mpstat iostat sar chkconfig
 chmod chown chgrp chage passwd su sudo umask chattr
 ```
 
-# 参考文章和书籍
+# 参考资料
 文章：[《实用技能：60个常用的Linux命令》](https://www.linuxprobe.com/linux-command-skill.html)    
 
 ---
-书籍：《Linux就该这么学》  
+图书：《Linux就该这么学》  
 <img class="shadow" src="/img/in-post/post-linux/post-linux.png" >  
 
 ---

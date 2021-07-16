@@ -167,5 +167,8 @@ ln -s /usr/lib64/libcurl.so.4 ~/steamcmd/linux64/libcurl-gnutls.so.4
 ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl.so.4.3.0
 ```
 # 参考资料
-https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/  
-https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/
+
+
+- [Dedicated Server Quick Setup Guide - Linux](https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/  )
+- [Dedicated Server Quick Setup Guide - Windows](https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/)
+
