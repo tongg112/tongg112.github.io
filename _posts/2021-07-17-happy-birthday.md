@@ -81,114 +81,69 @@ comments: true
 **ハッピーバースデー**  
 **片想**(かたおも)**いの俺**(おれ)  
 
---
+---
 
 
 **罗马音歌词**
 
-**i tsu no ma ni yara**
-
-**hi du ke wa ka watte**
-
-**na n de to shi tteto ru n da rou**
-
-**mou se wa no bi nai ku se ni**
+**i tsu no ma ni yara**  
+**hi du ke wa ka watte**  
+**na n de to shi tteto ru n da rou**  
+**mou se wa no bi nai ku se ni**  
 
 
-
-**cha ku shi n no oto de**
-
-**to bi o ki ta kedo son shi ta na**
-
-**ki mi ka to o motta no ni**
+**cha ku shi n no oto de**  
+**to bi o ki ta kedo son shi ta na**  
+**ki mi ka to o motta no ni**  
 
 
-
-**na ni ka no te chiga i de**
-
-**su ki ni na tte kure na i ka na**
-
-**dou ni mo ki mi noi nai ba sho wa**
-
-**ku u ki ga u su kute sa**
+**na ni ka no te chiga i de**  
+**su ki ni na tte kure na i ka na**  
+**dou ni mo ki mi noi nai ba sho wa**  
+**ku u ki ga u su kute sa**  
 
 
-
-**ku da ra na i hana shi wa o mo i tsu ku no ni**
-
-**ki mi wo da ki shime te ii**
-
-**ri yuu da ke ga mitsu ka ra na i**
-
-**aa so u ka sou dayo na**
-
-**ha ppii baa su dei**
-
-**ka ta o mo i no ore**
+**ku da ra na i hana shi wa o mo i tsu ku no ni**  
+**ki mi wo da ki shime te ii**  
+**ri yuu da ke ga mitsu ka ra na i**  
+**aa so u ka sou dayo na**  
+**ha ppii baa su dei**  
+**ka ta o mo i no ore**  
 
 
-
-**a i ga na ni ka washi ra na i ke re do**
-
-**su ki to i u na mae no**
-
-**i ta mi ni na raku wa shi i ka mo**
-
-**ki mi ni mo o shie te a ge ta i ke re do**
-
-**ke kkyo ku o so waru no wa o re da rou**
+**a i ga na ni ka washi ra na i ke re do**  
+**su ki to i u na mae no**  
+**i ta mi ni na raku wa shi i ka mo**  
+**ki mi ni mo o shie te a ge ta i ke re do**  
+**ke kkyo ku o so waru no wa o re da rou**  
 
 
-
-**ko no ma ma kyouga o wa ri**
-
-**a shi ta ga ku reba**
-
-**i tsu ni na tte mo**
-
-**chi ji ma ra naiko no kyo ri wo**
-
-**ka ke hi ki ni motsu na hi ki ni mo**
-
-**na ra nai ya ri tori wo**
-
-**mo tto tan jyu nna na ma e de**
-
-**yon de a ge ra reru yo**
-
-**na ni hi to tsu owa re nai ke do**
+**ko no ma ma kyouga o wa ri**  
+**a shi ta ga ku reba**  
+**i tsu ni na tte mo**  
+**chi ji ma ra naiko no kyo ri wo**  
+**ka ke hi ki ni motsu na hi ki ni mo**  
+**na ra nai ya ri tori wo**  
+**mo tto tan jyu nna na ma e de**  
+**yon de a ge ra reru yo**  
+**na ni hi to tsu owa re nai ke do**  
 
 
-
-**tsu ma ra na i koto ba no ku ri ka e shi de**
-
-**tsu ji tsu ma moki tto**
-
-**a tte na i mo noga ta ri no tsu du ki ni**
-
-**hi to ri yo ga rino ma i ni chi ni**
-
-**ha ppii baa su dei**
-
-**ki mi ni i tte hoshii da ke**
+**tsu ma ra na i koto ba no ku ri ka e shi de**  
+**tsu ji tsu ma moki tto**  
+**a tte na i mo noga ta ri no tsu du ki ni**  
+**hi to ri yo ga rino ma i ni chi ni**  
+**ha ppii baa su dei**  
+**ki mi ni i tte hoshii da ke**  
 
 
-
-**ku da ra na i hana shi wa o mo i tsu ku no ni**
-
-**ki mi wo da ki shime te ii**
-
-**ri yuu da ke ga mitsu ka ra na i**
-
-**aa so u ka sou dayo na**
-
-**ha ppii baa su dei**
-
-**ka ta o mo i no ore**
-
-**ha ppii baa su dei**
-
-**ka ta o mo i no ore**
-
+**ku da ra na i hana shi wa o mo i tsu ku no ni**  
+**ki mi wo da ki shime te ii**  
+**ri yuu da ke ga mitsu ka ra na i**  
+**aa so u ka sou dayo na**  
+**ha ppii baa su dei**  
+**ka ta o mo i no ore**  
+**ha ppii baa su dei**  
+**ka ta o mo i no ore**  
 ## 原文地址
 <a href="http://blog.sina.com.cn/s/blog_179955fd70102zbnj.html" target="_blank" >backnumber-HappyBirthday（假名歌词+罗马音歌词）</a>
