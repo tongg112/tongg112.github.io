@@ -59,6 +59,9 @@ wx.getUserProfile is not a function; [Component] Event Handler Error @ pages/ind
 
 这才恍然大悟，原来官方在《微信官方文档-API-wx.getUserProfile》中也有说明。将基础库从原来设置的 2.6.2 修改为最新的 2.18.0 后，再进行真机调试，果然可以获取到用户昵称和头像了。
 
+# 我的小程序
+<img class="shadow" src="/img/in-post/post-wx-userinfo.jpg" > 
+
 # 参考资料
 - <a href="https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801" target="_blank">小程序登录、用户信息相关接口调整说明</a>
 - <a href="https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserProfile.html#Bug-Tip" target="_blank">微信官方文档-API-wx.getUserProfile</a>
