@@ -252,3 +252,8 @@ export default {
 ```
 ## 分割线
 用`<a-divider />`代替`<hr />`
+
+## 获取form表单的值,根据值动态控制元素展示
+```
+v-if="form.getFieldValue('fix_status') == 4"
+```
