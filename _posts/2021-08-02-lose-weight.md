@@ -4,7 +4,7 @@ title:  "减肥课程笔记"
 subtitle: "来自《冯雪科学减肥 16 讲》"
 author: xtong
 date:   2021-08-02 22:50:52 +0800
-catalog: true
+catalog: false
 tags: [健康, 笔记]
 header-img: "img/post-bg-node.png"
 comments: true
