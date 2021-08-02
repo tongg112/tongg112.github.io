@@ -6,7 +6,7 @@ author: xtong
 date:   2021-08-02 22:50:52 +0800
 catalog: true
 tags: [健康, 笔记]
-header-img: "img/post-bg-lose-weight.png"
+header-img: "img/post-bg-lose-weight.jpg"
 comments: true
 ---
 # 减肥笔记 | 冯雪科学减肥 16 讲
