@@ -12,6 +12,10 @@ comments: true
 
 <h1>打上花火 歌词</h1>
 
+作词：米津玄师  
+
+作曲：米津玄师  
+
 <div class="lyricBody ">
       <div class="large">
         <div class="hiragana">
