@@ -119,7 +119,7 @@ comments: true
  * Twitter: @rich_clark
  */
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
@@ -143,7 +143,7 @@ main {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
@@ -12342,7 +12342,7 @@ img.mediumCenteredImg {
   display: block;
 }
 
-.artistTheme__desc h1 {
+.artistTheme__desc {
   font-size: 2em;
 }
 
@@ -12451,7 +12451,7 @@ img.mediumCenteredImg {
   border-color: #e80;
 }
 
-.artistTheme--col01 .artistTheme__desc h1 ,
+.artistTheme--col01 .artistTheme__desc ,
 .artistTheme--col01 .artistTheme__desc h2 ,
 .artistTheme--col01 .artistTheme__desc h3 {
   color: #f5a21b;
@@ -12468,7 +12468,7 @@ img.mediumCenteredImg {
 .artistTheme--col02 ,
 .artistTheme--col02 .artistTheme__item a ,
 .artistTheme--col02 .btnList__item a ,
-.artistTheme--col02 .artistTheme__desc h1 ,
+.artistTheme--col02 .artistTheme__desc ,
 .artistTheme--col02 .artistTheme__desc h2 ,
 .artistTheme--col02 .artistTheme__desc h3 {
   color: #9e61cc;
@@ -12490,7 +12490,7 @@ img.mediumCenteredImg {
 .artistTheme--col03 ,
 .artistTheme--col03 .artistTheme__item a ,
 .artistTheme--col03 .btnList__item a ,
-.artistTheme--col03 .artistTheme__desc h1 ,
+.artistTheme--col03 .artistTheme__desc ,
 .artistTheme--col03 .artistTheme__desc h2 ,
 .artistTheme--col03 .artistTheme__desc h3 {
   color: #118ad7;
@@ -12512,7 +12512,7 @@ img.mediumCenteredImg {
 .artistTheme--col04 ,
 .artistTheme--col04 .artistTheme__item a ,
 .artistTheme--col04 .btnList__item a ,
-.artistTheme--col04 .artistTheme__desc h1 ,
+.artistTheme--col04 .artistTheme__desc ,
 .artistTheme--col04 .artistTheme__desc h2 ,
 .artistTheme--col04 .artistTheme__desc h3 {
   color: #ff6986;
@@ -12534,7 +12534,7 @@ img.mediumCenteredImg {
 .artistTheme--col05 ,
 .artistTheme--col05 .artistTheme__item a ,
 .artistTheme--col05 .btnList__item a ,
-.artistTheme--col05 .artistTheme__desc h1 ,
+.artistTheme--col05 .artistTheme__desc ,
 .artistTheme--col05 .artistTheme__desc h2 ,
 .artistTheme--col05 .artistTheme__desc h3 {
   color: #5eb21c;
