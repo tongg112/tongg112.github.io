@@ -992,126 +992,6 @@ body.stop-scrolling {
 
 .sweet-alert .sa-icon.sa-success .sa-line.sa-long {
   -ms-transform: rotate(-45deg) \9; }
-/* Slider */
-.slick-slider
-{
-    position: relative;
-
-    display: block;
-
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list
-{
-    position: relative;
-
-    display: block;
-    overflow: hidden;
-
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-       -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-         -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
-}
-
-.slick-slide
-{
-    display: none;
-    float: left;
-    margin: 2px;
-
-    height: 100%;
-    min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
-
-    height: auto;
-
-    border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-    display: none;
-}
 @charset "utf-8";
 
 /*----------------------------------------------------------------------------
@@ -1278,24 +1158,36 @@ body.stop-scrolling {
 /** --------------------------------------------------------------------------------
  * html body
  */
-html {
-  overflow-y: scroll;
+body {
+  line-height: 1.5;
+  /*color: #343330;*/
+  color: #555;
+  min-width: 320px;
+  background-color: #fff;
+  font-size: 14px;
+  /*font-family: monospace;*/
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Helvetica,"HelveticaNeue",Verdana,sans-serif;
+  margin: auto;
+  max-width: 750px;
 }
 
-body {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  color: #343330;
-  font-size: small;
-  line-height: 1.5;
-  background-color: #fff;
-  /*background-color: #fffae4;あとで調整*/
-  width: 100%;
-  min-width: 1040px;
+.shadow img {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 blockquote {
-  color: #808080;
+	color: #808080;
   font-weight: bold;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="submit"],
+input[type="image"],
+input[type="search"],
+textarea{
+ -webkit-appearance: none;
+ border-radius: 0;
 }
 
 cite,
@@ -1309,8 +1201,35 @@ cite a:hover {
   opacity: 0.7;
 }
 
+.rect_bnr {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.rect_bnr + .rect_bnr {
+  margin-top: 10px;
+}
+
+.lnk_rect_bnr {
+  margin: 0 auto;
+  width: 300px;
+  display: block;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+header + .threeToOneRectangleBanner {
+  padding: 0;
+}
+
 .loader-inner {
-  line-height: 315px;
+  line-height: 200px;
+  text-align: center;
 }
 
 .line-scale-pulse-out div,
@@ -1319,42 +1238,26 @@ cite a:hover {
 }
 
 
+
 /** --------------------------------------------------------------------------------
  * ハイパーテキスト
  */
 a {
   color: #343330;
   outline: none;
-  -webkit-transition: all 0.4s ease;
-     -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-       -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
   text-decoration: none;
 }
 
+/*
 a:hover,
 a:active {
-  color: #e80;
+  color: #343330;
 }
+*/
 
 a img {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-a:hover img {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
+  -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease;
 }
 
 /** --------------------------------------------------------------------------------
@@ -1362,22 +1265,22 @@ a:hover img {
  */
 @font-face {
   font-family: utIcon;
-  src:url('/fonts/utIcon.eot?0509');
-  src:url('/fonts/utIcon.eot?#iefix?0509') format('embedded-opentype'),
-    url('/fonts/utIcon.woff?0509') format('woff'),
-    url('/fonts/utIcon.ttf?0509') format('truetype'),
-    url('/fonts/utIcon.svg#utIcon?0509') format('svg');
+  src:url('/fonts/utIcon.eot?-9wbizx');
+  src:url('/fonts/utIcon.eot?#iefix-9wbizx') format('embedded-opentype'),
+    url('/fonts/utIcon.woff?-9wbizx') format('woff'),
+    url('/fonts/utIcon.ttf?-9wbizx') format('truetype'),
+    url('/fonts/utIcon.svg?-9wbizx#utIcon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: smileIcon;
-  src:url('/fonts/smileIcon.eot?');
-  src:url('/fonts/smileIcon.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/smileIcon.woff?') format('woff'),
-    url('/fonts/smileIcon.ttf?') format('truetype'),
-    url('/fonts/smileIcon.svg?#smileIcon') format('svg');
+  src:url('/fonts/smileIcon.eot?-8rtbiz');
+  src:url('/fonts/smileIcon.eot?#iefix-8rtbiz') format('embedded-opentype'),
+    url('/fonts/smileIcon.woff?-8rtbiz') format('woff'),
+    url('/fonts/smileIcon.ttf?-8rtbiz') format('truetype'),
+    url('/fonts/smileIcon.svg?-8rtbiz#utIcon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -1393,354 +1296,2542 @@ a:hover img {
   font-style: normal;
 }
 
+/** ------------------------------
+ * 基本のtable
+ */
+table {
+  border-bottom: 1px solid #ddd;
+  border-collapse: separate;/* firefoxでborderが出ないバグ対策 */
+  border-spacing: 0;/* firefoxでborderが出ないバグ対策 */
+}
+
+th,
+td {
+  padding: 8px 10px;
+}
+
+tr + tr > * {
+  border-top: 1px solid #ddd;
+}
+
+tr > td + td {
+  border-left: 1px dotted #ddd;
+}
+
+th {
+  position: relative;
+  background-color: #f2f2f0;
+  font-weight: bold;
+}
+
+
+
 /** --------------------------------------------------------------------------------
  * $header
  */
 header {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
   line-height: 1.0;
-  background-color: #343330;
-  /*border-bottom: 3px solid #e80;*/
 }
 
-.header__inner {
-  width: 1040px;
-  margin: 0 auto;
+header img {
+  height: 25px;
+}
+
+.headerLogo {
   padding: 10px 0;
-}
-
-.header__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.header__inner * {
-  display: block;
-  float: left;
-}
-
-header a {
-  text-decoration: none !important;
-}
-
-header .headerLogo {
-  width: 100px;
-  margin-right: 15px;
+  height: 25px;
+  background: #222;
+  text-align: center;
 }
 
 .headerLogo img {
-  width: 100%;
+  height: 25px;
+  width: 97px;
 }
+
+/*hamburger*/
+.navControl {
+  position: absolute;
+  right: 36px;
+  top: 6px;
+}
+
+.navBar,
+.navBar::before,
+.navBar::after {
+  background-color: #fff;
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition: all .5s;
+  width: 24px;
+}
+
+.navBar {
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 15px;
+}
+
+.navBar::before {
+  top: 8px;
+}
+
+.navBar::after {
+  bottom: 8px;
+}
+
+.active .navBar {
+  background: transparent;
+  opacity: 1;
+}
+
+.active .navBar::before {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.active .navBar::after {
+  transform: translateY(8px) rotate(45deg);
+}
+
 
 /** ------------------------------
- * グローバルナビ
+ * 開閉メニュー
  */
 .globalNav {
-  font-size: 12px;
-  margin-top: 8px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  display: none;
+  font-size: 0;
 }
 
-.globalNav__item a:before {
-  font-family: utIcon;
+.navOpen .globalNav {
+  display: block;
+}
+
+.globalNav__title {
+  padding: 10px;
+  color: #fff;
+  background-color: #e80;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.globalNav__item {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33.33%;
+  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.globalNav__item br {
+  display: none;
+}
+
+@media only screen and (max-width: 420px) {/* 以下 */
+  .globalNav__item br {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {/* 以下 */
+  .globalNav__item {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 350px) {/* 以下 */
+  .globalNav__item {
+    font-size: 12px;
+  }
+}
+
+.globalNav__item:not(:nth-of-type(3n)):before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 74%;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.globalNav__menuBody {
+  position: relative;
+}
+
+.globalNav__menuBody:before {
+  margin: auto;
+  position: absolute;
+  top: 33.33%;
+  right: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.globalNav__menuBody::after {
+  margin: auto;
+  position: absolute;
+  right: 0;
+  bottom: 33.33%;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
 }
 
 .globalNav__item a {
-  color: #fff;
-  margin: 0 2px;
-  padding: 5px 12px;
-  /*padding: 5px 13px;*/
+  padding: 17px 3px;
   display: block;
-  border-radius: 3px;
-  position: relative;
-  -webkit-transition: all 0.3s ease;
-     -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
-
-.globalNav__item a:before {
-  font-size: 15px;
-  font-weight: normal;
-  vertical-align: middle;
-  margin-top: -2px;
-  margin-right: 2px;
-  display: inline-block;
-}
-
-.globalNav__item--search a:before {
-  content: "\e92c";
-}
-
-.globalNav__item--ranking a:before {
-  content: "\e908";
-}
-
-.globalNav__item--sp a:before {
-  content: "\e90b";
-}
-
-.globalNav__item--keyword a:before {
-  content: "\e921";
-}
-
-.globalNav__item--news a:before {
-  content: "\e90c";
-}
-
-.globalNav__item--pickupArtist a:before {
-  content: "\e934";
-}
-
-.globalNav__item--mypage a:before {
-  content: "\e928";
-}
-
-.globalNav__item--idol a:before {
-  content: "\e918";
-}
-
-.globalNav__item--karaoke a:before {
-  content: "\e927";
-}
-
-.globalNav__item--live a:before {
-  content: "\e937";
-}
-
-.globalNav__item--current a {
-  color: #fff !important;
-  background-color: #e80;
-}
-
-.globalNav__item--mypage {
-  position: relative;
-  z-index: 60;
-}
-
-/** ------------------------------
- * マイメニュー
- */
-.myMenu {
-  width: 1040px;
-  margin: 0 auto;
-  display: none;
-  position: relative;
-  z-index: 50;
-}
-
-.myMenu > div {
-  font-size: 0;
-  background-color: #eee;
-  width: 380px;
-  padding: 3px;
-  border: 1px solid #ddd;
-  position: absolute;
-  right: 0;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.myMenu ul {
-  background-color: #fff;
-  padding: 10px 5px;
-  border: 1px solid #e6e6e6;
-}
-
-.myMenu ul:before {
-  content: "";
-  display: block;
-  border-style: solid;
-  border-width: 15px 10px;
-  border-color: transparent transparent #eee transparent;
-  position: absolute;
-  top: -30px;
-  right: 80px;
-  z-index: 10;
-}
-
-.myMenu ul:after {
-  content: "";
-  display: block;
-  border-style: solid;
-  border-width: 17px 12px 16px;
-  border-color: transparent transparent #d6d6d6 transparent;
-  position: absolute;
-  top: -33px;
-  right: 78px;
-  z-index: 8;
-}
-
-.myMenu__item {
-  width: 33.33%;
-  font-size: 13px;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.myMenu__item:before {
-  content: "";
-  background-color: #ddd;
-  height: 74%;
-  width: 1px;
-  margin: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.myMenu__item--right:before {
-  display: none;
-}
-
-.myMenu__item:after {
-  content: "";
-  background-color: #ddd;
-  width: 74%;
-  height: 1px;
-  margin: auto;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.myMenu__item--bottom:after {
-  display: none;
-}
-
-.myMenu__item a {
   text-decoration: none;
-  padding: 25px 3px;
-  display: block;
 }
 
-.myMenu__item a:before {
-  font-family: utIcon;
+.globalNav__item a::before {
+  margin: 0 auto 5px;
+  display: block;
+  vertical-align: middle;
   font-size: 34px;
   font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 auto 10px;
-  display: block;
+  font-family: utIcon;
 }
 
-.myMenu__item--lyricHistory a:before {
-  /*content: "\e65a";
-  content: "\e6aa";*/
+.globalNav__item--history a::before {
   content: "\e92a";
 }
 
-.myMenu__item--newsHistory a:before {
-  /*content: "\e6ab";*/
-  content: "\e92e";
+/*
+.globalNav__item--lyricHistory a:before {
+  content: "\e6aa";
 }
 
-.myMenu__item--spHistory a:before {
-  /*content: "\e622";*/
-  content: "\e92d";
+.globalNav__item--newsHistory a:before {
+  content: "\e6ab";
 }
 
-.myMenu__item--search a:before {
+.globalNav__item--spHistory a:before {
+  content: "\e622";
+}
+*/
+
+.globalNav__item--search a::before {
   content: "\e92c";
 }
 
-.myMenu__item--sp a:before {
-  content: "\e600";
+.globalNav__item--sp a::before {
+  content: "\e92d";
 }
 
-.myMenu__item--ranking a:before {
-  content: "\e691";
+.globalNav__item--ranking a::before {
+  content: "\e931";
 }
 
-.myMenu__item--keyword a:before {
-  content: "\e64a";
+.globalNav__item--keyword a::before {
+  content: "\e921";
 }
 
-.myMenu__item--news a:before {
-  content: "\e605";
+.globalNav__item--news a::before {
+  content: "\e92e";
 }
 
-.myMenu__item--request a:before {
-  /*content: "\e620";*/
+.globalNav__item--pickupArtist a::before {
+  content: "\e934";
+}
+
+.globalNav__item--request a::before {
   content: "\e930";
 }
 
-.myMenu__item--favourite a:before {
-  /*content: "\e604";*/
+.globalNav__item--favourite a::before {
   content: "\e92b";
 }
 
-.myMenu__overlay {
-  background: transparent;
-  width:100%;
-  height:100%;
-  position: fixed;
-  top: 0;
+.globalNav__item--idol a::before {
+  content: "\e92f";
+}
+
+.globalNav__item--karaoke a::before {
+  content: "\e927";
+}
+
+.globalNav__item--live a::before {
+  content: "\e937";
+}
+
+/** ------------------------------------------------------------
+ * cotents
+ */
+
+.contents {
+  position: relative;
+}
+
+.topContents {
+  background: #ededed;
+  font-size: 12px;
+  padding-bottom: 14px;
+}
+
+.topContents section + section {
+  margin: 14px 0;
+}
+
+.topContents a:hover,
+.topContents a:active {
+  color: inherit;
+  opacity: 0.7;
+}
+
+/** ------------------------------
+ * パンくずリスト
+ */
+.breadCrumbs {
+  text-align: left;
+  padding: 0 5px;
+  margin: 0;
+  background-color: #fff;
+}
+
+main .breadCrumbs:first-child {
+  border-top: 3px solid #e80;
+}
+
+.path {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #000;
+}
+
+.path:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e602";
+}
+
+.path li {
+  display: inline;
+}
+
+.path li + li::before {
+  content: ">";
+  font-size: 10px;
+}
+
+.path li a {
+  color: #0044cc;
+}
+
+
+/** ------------------------------------------------------------
+ * TOP
+ */
+ .threeToOneRectangleBanner {
+   padding: 10px 0;
+   text-align: center;
+   background-color: #fff;
+ }
+
+ .threeToOneRectangleBanner a {
+   margin: 0 auto;
+   width: 300px;
+   display: block;
+ }
+
+ .threeToOneRectangleBanner img {
+   width: 100%;
+   height: auto;
+ }
+
+ .boxAreaRank .threeToOneRectangleBanner {
+   margin-bottom: 10px;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
+ }
+
+ .threeToOneRectangleBanner > div {
+   margin: 0 auto;
+ }
+
+/* バナー
+.threeToOneRectangleBanner.borderBottom {
+  border-bottom: 1px solid #ddd;
+}
+
+header + .threeToOneRectangleBanner {
+  padding-top: 0;
+}
+
+header.navOpen + .threeToOneRectangleBanner {
+  padding-top: 10px;
+}
+*/
+
+/* slider 20181219*/
+.topSlide_items {
+  margin: 0 5px;
+  position: relative;
+}
+
+.topSlide_items img {
+  width: 100%;
+}
+
+.topSlide_ttlWrap {
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.topSlide_ttl {
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+}
+
+[class^=arrow_]::before {
+  color: #fff;
+  font-family: utIcon;
+  font-weight: normal;
+  font-size: .8em;
+  margin: auto;
+  position: absolute;
+  z-index: 1000;
+}
+
+.arrow_left::before {
+  content: "\e911";
+  top: 10px;
+  left: 20px;
+}
+
+.arrow_right::before {
+  content: "\e913";
+  bottom: 10px;
+  right: 20px;
+}
+
+/* 検索窓 20181219*/
+.searchWrap {
+  background: #333;
+  padding: 10px;
+}
+
+.searchBar_top {
+  position: relative;
+}
+
+.searchBar_top input {
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  color: #969798;
+  /*font-size: 16px;iPhone対策*/
+  font-size: 1.1em;
+  outline: none;
+  padding: 10px 10px 10px 40px;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.searchBar_top input:focus {
+  outline: 0;
+}
+
+.searchBar_top input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #969798;
+}
+.searchBar_top input::-moz-placeholder { /* Firefox 19+ */
+  color: #969798;
+}
+.searchBar_top input:-ms-input-placeholder { /* IE 10+ */
+  color: #969798;
+}
+.searchBar_top input:-moz-placeholder { /* Firefox 18- */
+  color: #969798;
+}
+
+.searchBar_top::before {
+  content: "\e92c";
+  top: 10px;
+  left: 12px;
+  color: #969798;
+  font-family: utIcon;
+  font-weight: normal;
+  font-size: 1.1em;
+  margin: auto;
+  position: absolute;
+  z-index: 1000;
+}
+
+.btn_searchWrap {
+  display: flex;
+  display: -webkit-flex;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.btn_search {
+  background: #e80;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 10px;
+  text-align: center;
+  width: calc((100% - 10px)/2);
+}
+
+.lnk_moreSearch {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+
+a.lnk_moreSearch:hover,
+a.lnk_moreSearch:active {
+  color: #fff;
+}
+
+/* グローバルメニュー 20181219*/
+.menuWrap {
+  background: #fff;
+  border-bottom: 1px solid #555;
+  margin-bottom: 14px;
+}
+
+.menuLst {
+  display: flex;
+  display: -webkit-flex;
+  padding: 10px 0;
+}
+
+.menuLstItems {
+  position: relative;
+  width: calc(100% / 4);
+  height: 60px;
+}
+
+.menuLstItems:not(:last-of-type) {
+  border-right: 1px solid #ddd;
+}
+
+.lnk_menuLstItems {
+  display: block;
+  height: 100%;
+  text-transform: uppercase;
+}
+
+.lnk_menuLstItems::before {
+  font-family: utIcon;
+  font-weight: normal;
+  font-size: 3em;
+  margin: auto;
+  line-height: 1;
+  top: 2px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.lnk_menuLstItems_Rank {
+  color: #D6A810;
+}
+
+.lnk_menuLstItems_Rank::before {
+  color: #D6A810;
+  content: "\e900";
+}
+
+.lnk_menuLstItems_new {
+  color: #F02361;
+}
+
+.lnk_menuLstItems_new::before {
+  color: #F02361;
+  content: "\e901";
+}
+
+.lnk_menuLstItems_ft {
+  color: #AD64BE;
+}
+
+.lnk_menuLstItems_ft::before {
+  color: #AD64BE;
+  content: "\e903";
+}
+
+.lnk_menuLstItems_news {
+  color: #5467B2;
+}
+
+.lnk_menuLstItems_news::before {
+  color: #5467B2;
+  content: "\e904";
+}
+
+.menuLstItems_txt {
+  position: absolute;
+  bottom: 0px;
+  margin: auto;
+  right: 0;
   left: 0;
-  z-index: 7;
+  text-align: center;
+}
+
+
+/* バナー */
+.billboardBanner {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.billboardBanner a {
+  display: inline-block;
+}
+
+/* 検索 */
+.searchBar {
+  padding: 10px;
+  background-color: #e80;
+}
+
+.searchBar__inputArea {
+  display: table;
+  table-layout: fixed;
+  border-radius: 100px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.searchBar__inputArea > * {
+  padding: 3px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.searchBar__inputArea > * > * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1.7;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: monospace;
+  outline: none;
+}
+
+.searchBar__selectOuter {
+  width: 116px;
+  position: relative;
+  overflow: hidden;
+}
+
+.searchBar__selectOuter:after {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  right: 0;
+  color: #343330;
+  font-size: 26px;
+  font-family: utIcon;
+  content: "\e697";
+}
+
+.searchBar select {
+  margin-right: 5px;
+  padding-left: 10px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  color: #e80;
+}
+
+.searchBar select option {
+  padding-left: 10px;
+}
+
+.searchBar input {
+  padding: 0 5px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #e80;
+}
+
+.searchBar__buttonOuter {
+  width: 28px;
+}
+
+.searchBar button {
+  border-radius: 100px;
+  position: relative;
+  width: 100%;
+  height: 28px;
+  color: #fff;
+  background-color: #343330;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.searchBar button:hover {
+  opacity: 0.8;
+}
+
+.searchBar button:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 24px;
+  line-height: 1.2;
+  text-indent: 0;
+}
+
+
+/* billboard 20181219*/
+.srideWrap {
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.topSlide_inr {
+  position: relative;
+  width: 100%;
+  height: calc(100vw / 1.5);
+}
+
+.topSlide_inr::before,
+.topSlide_inr::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 100;
+    opacity: 0.7;
+}
+
+.topSlide_inr::before {
+  border-width: 50px 100px 0 0;
+  border-color: #000 transparent transparent transparent;
+  left: 0;
+  top: 0;
+}
+
+.topSlide_inr::after {
+  bottom: 0;
+  border-width: 0 0 50px 100px;
+  border-color: transparent transparent #000 transparent;
+  right: 0;
+}
+
+.topSlide_inr .bxslider{
+  display: none;
+}
+
+.topSlide_inr .bxslider.slick-initialized{
+  display: block; /*slick-initializedが付与されたら表示*/
+}
+
+/** ------------------------------
+ * billboardスライド
+ */
+.billboard {
+  padding: 10px;
+  position: relative;
+  background-color: #f2f2f0;
+  overflow: hidden;
+}
+
+.billboard--top {
+  background-color: #fffae4;
+}
+
+.billboardSlide__item a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+  text-decoration: none;
+}
+
+.billboardSlide__item a > * {
+  display: table-cell;
+  direction: ltr;
+}
+
+.billboardSlide__sub {
+  width: 100px;
+  vertical-align: top;
+}
+
+.billboardSlide__sub--video {
+  width: 130px;
+}
+
+.billboardSlide__sub img {
+  width: 100px;
+  height: 100px;
+}
+
+.billboardSlide__sub--video img {
+  padding: 5px 0;
+  width: 100%;
+  height: auto;
+}
+
+.billboardSlide__title {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000 !important;
+}
+
+.billboard--top .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.billboard--top .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #343330 !important;
+}
+
+/** ------------------------------
+ * タイトル 20181213
+
+.indexTitle {
+  padding: 12px 10px;
+  line-height: 1.0;
+  color: #fff;
+  background-color: #e80;
+  font-size: 21px;
+  text-align: center;
+}
+
+.indexTitle--pvRanking {
+  background-color: #72c331;
+}
+
+.indexTitle--pvRanking:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e691";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--keyword:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e64a";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--news {
+  background-color: #31c3ad;
+}
+
+.indexTitle--news:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e605";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--pickup {
+  background-color: #7f5ed4;
+}
+.indexTitle--pickup:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e691";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--special {
+  background-color: #ab538b;
+}
+.indexTitle--special:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e600";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--newest {
+  background-color: #d0475a;
+}
+.indexTitle--newest:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e61b";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+
+.indexTitle--wp {
+  background-color: #343330;
+}
+
+.indexTitle--wp:before {
+  margin-right: -0.2em;
+  font-family: utIcon;
+  content: "\e600";
+  font-weight: normal;
+  vertical-align: top;
+  font-size: 24px;
+  line-height: 1.0;
+}
+*/
+.mainAreas {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/*181213 TOPコーナー見出し*/
+.indexTtl {
+  align-items: center;
+  border-top: 4px solid #555;
+  display: flex;
+  display: -webkit-flex;
+  height: 40px;
+  justify-content: space-between;
+  padding: 14px 10px;
+  position: relative;
+}
+
+[class^=indexTtl_] {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 5px 0 50px;
+  width: 100%;
+}
+
+[class^=indexTtl_]::before {
+  display: inline-block;
+  font-family: utIcon;
+  font-weight: normal;
+  font-size: 2.6em;
+  left: 10px;
+  position: absolute;
+  vertical-align: bottom;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.box_lnk_indexTtl {
+  padding-right: 16px;
+  white-space: nowrap;
+}
+/*
+[class^=lnk_indexTtl] {
+  position: relative;
+}
+
+[class^=lnk_indexTtl]::after {
+  content: '';
+  height: 6px;
+  margin: auto;
+  position: absolute;
+  top: 3px;
+  transform: rotate(45deg);
+  right: -10px;
+  width: 6px;
+}
+*/
+[class^=lnk_indexTtl]::after {
+  content: '';
+  display: inline-block;
+  height: 6px;
+  margin: auto;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+/* 先行歌詞　*/
+.heading__no__icon {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 0 5px 0 0px;
+  width: 100%;
+}
+.lnk_indexTtl_pre{
+  color: #AD64BE;
+}
+
+.lnk_indexTtl_pre::after {
+  border-top: 1px solid #AD64BE;
+  border-right: 1px solid #AD64BE;
+}
+
+/*今話題のハッシュタグ*/
+.indexTtl_tag,
+.lnk_indexTtl_tag,
+.indexTtl_tag:before {
+  color: #3faba3;
+}
+
+.indexTtl_tag:before {
+  content: "\e926";
+}
+
+.lnk_indexTtl_tag::after {
+  border-top: 1px solid #3faba3;
+  border-right: 1px solid #3faba3;
+}
+
+/*歌詞ランキング*/
+.indexTtl_rank,
+.lnk_indexTtl_rank,
+.indexTtl_rank::before {
+  color: #D6A810;
+  width: auto;
+}
+
+.indexTtl_rank::before {
+  content: "\e900";
+}
+
+.lnk_indexTtl_rank::after {
+  border-top: 1px solid #D6A810;
+  border-right: 1px solid #D6A810;
+}
+
+.boxAreaRank .lst_boxArea:first-of-type {
+  padding-top: 10px;
+}
+
+/*新着歌詞*/
+.indexTtl_new,
+.lnk_indexTtl_new,
+.indexTtl_new::before {
+  color: #F02361;
+}
+
+.indexTtl_new::before {
+  content: "\e901";
+}
+
+/*コラム*/
+.indexTtl_column {
+  color: #AD64BE;
+}
+
+.indexTtl_column:before {
+  content: "\e932";
+}
+
+
+.lnk_indexTtl_new::after {
+  border-top: 1px solid #F02361;
+  border-right: 1px solid #F02361;
+}
+
+/*ピックアップ*/
+.indexTtl_pcup,
+.lnk_indexTtl_pcup,
+.indexTtl_pcup::before {
+  color: #2AA29A;
+}
+
+.indexTtl_pcup::before {
+  content: "\e902";
+}
+
+.lnk_indexTtl_pcup::after {
+  border-top: 1px solid #2AA29A;
+  border-right: 1px solid #2AA29A;
+}
+
+/*特集*/
+.indexTtl_feature,
+.lnk_indexTtl_feature,
+.indexTtl_feature::before {
+  color: #AD64BE;
+}
+
+.indexTtl_feature::before {
+  content: "\e903";
+}
+
+.lnk_indexTtl_feature::after {
+  border-top: 1px solid #AD64BE;
+  border-right: 1px solid #AD64BE;
+}
+
+/*エンタメ*/
+.indexTtl_etmt,
+.lnk_indexTtl_etmt,
+.indexTtl_etmt::before {
+  color: #5467B2;
+}
+
+.indexTtl_etmt::before {
+  content: "\e904";
+}
+
+.lnk_indexTtl_etmt::after {
+  border-top: 1px solid #5467B2;
+  border-right: 1px solid #5467B2;
+}
+
+/*pick up*/
+.indexTtl_pickup {
+  color: #ad64be;
+}
+
+.indexTtl_pickup::before {
+  content: "\e933";
+}
+
+/*ライブコラム*/
+.indexTtl_live {
+  color: #ad64be;
+}
+
+.indexTtl_live::before {
+  content: "\e936";
+}
+
+/*アルバム*/
+.indexTtl_album,
+.indexTtl_album::before {
+  color: #AD64BE;
+}
+
+.indexTtl_album::before {
+  content: "\e938";
+}
+
+/******************************
+コーナー
+******************************/
+.lst_boxArea {
+  position: relative;
+  min-height: 55px;
+}
+
+.lst_boxArea_tmb {
+  min-height: 77px;
+}
+
+.lst_boxArea + .lst_boxArea {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.lnk_lst_boxArea_tmb {
+  display: block;
+  min-height: 77px;
+  padding: 0 10px 10px 10px;
+}
+
+.lnk_lst_boxArea_new {
+  display: block;
+  min-height: 55px;
+  padding: 0 10px 10px 10px;
+}
+
+[class^=icoTxt_] {
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  padding: 1px 8px;
+}
+
+[class^=icoTxt_] + [class^=icoTxt_] {
+  margin-left: .2em;
+}
+
+.icoTxt_rank {
+  background: #D6A810;
+  margin-right: .5em;
+  vertical-align: bottom;
+}
+
+.icoTxt_rank_movie {
+  background: #AD64BE;
+}
+
+.icoTxt_new {
+  background: #FF3B2D;
+  text-transform: uppercase;
+}
+
+.icoTxt_pre {
+  background: #28C4E5;
+}
+
+.icoTxt_fav {
+  background: #FF2994;
+}
+
+.icoTxt_sp {
+  background: #d70035;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  bottom: 65px;
+  right: 2px;
+  position: absolute;
+  padding: 2px 8px;
+  z-index: 100;
+}
+
+.releaseDate {
+  color: #555;
+}
+
+[class^=moreBtn_] {
+  border-radius: 30px;
+  display: block;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+}
+
+[class$=moreBtn_fix] {
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+.boxInr_tieIn {
+  color: #888;
+  font-weight: bold;
+  font-size: .8em;
+  padding-left: .2em;
+}
+
+.boxArea_preLyric {
+  padding: 0 0 0 0;
+}
+
+.boxArea {
+  padding: 0 10px 10px 10px;
+}
+
+.boxArea_artists {
+  bottom: 14px;
+  font-size: 1.2em;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 180px);
+}
+
+.boxArea_artists_move {
+  left: 85px;
+}
+
+.boxArea_square_img {
+  height: 65px;
+  overflow: hidden;
+  width: 65px;
+}
+
+.boxArea_square_img img {
+  width: 100%;
+}
+
+.parts_boxArea_tmb {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+}
+
+.boxArea_tmb_contents {
+  overflow: hidden;
+  padding-left: 10px;
+  width: calc(100% - 75px);
+}
+
+/*歌詞ランキング 20181213*/
+.boxArea_ttl,
+.boxArea_tieIn {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.boxArea_ttl {
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+
+.boxArea_tieIn {
+  color: #888;
+}
+
+.moreBtn_ranks {
+  border: 1px solid #D6A810;
+  color: #D6A810;
+}
+
+/*新着 20181213*/
+.boxArea_new_contents {
+
+}
+
+.moreBtn_news {
+  border: 1px solid #F02361;
+  color: #F02361;
+  margin: 10px 0 0 auto;
+}
+
+/*ピックアップ*/
+.moreBtn_pcups {
+  border: 1px solid #2AA29A;
+  color: #2AA29A;
+}
+
+/*特集*/
+.lst_boxArea_feature {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+
+.lst_boxArea_feature--wrap {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.lst_boxArea_feature--wrap .parts_boxArea_feature {
+  margin-top: 10px;
+}
+
+.parts_boxArea_feature {
+  position: relative;
+  width: calc((100% - 10px)/2);
+}
+
+.boxArea_feature_img img {
+  width: 100%;
+}
+
+.boxArea_ttl_feature {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-weight: bold;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+/*特集が1のとき*/
+.lnk_only_parts_boxArea_feature {
+  display: table;
+}
+
+.lnk_only_parts_boxArea_feature > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.lnk_only_parts_boxArea_feature .boxArea_feature_img {
+  max-width: 200px;
+  padding-right: 20px;
+}
+
+
+/** ------------------------------------------------------------
+ * 話題のキーワード 181213
+*/
+.keywordLineUp {
+  padding: 10px 0 0 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fffae4;
+  font-size: 0;
+}
+
+.keywordLineUp li {
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  font-size: medium;
+}
+
+.keywordLineUp li a {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #343330;
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.keywordLineUp li a:before {
+  margin-right: 5px;
+  font-family: utIcon;
+  content: "\e64a";
+  color: #e4e4e4;
+  font-size: 11px;
+}
+
+.more {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
+  font-size: 15px;
+}
+
+.more a {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  color: #e80;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.more a:after {
+  margin: auto;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  right: 8px;
+  bottom: 0;
+  color: #fff;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-color: #e80;
+  font-family: utIcon;
+  content: "\e699";
+  line-height: 1.0;
+}
+
+@media only screen and (max-width: 380px) {
+  .more__name {
+    display: none;
+  }
+}
+
+.more--pvRanking a {
+  color: #72c331;
+}
+
+.more--pvRanking a:after {
+  background-color: #72c331;
+}
+
+.more--news a {
+  color: #31c3ad;
+}
+
+.more--news a:after {
+  background-color: #31c3ad;
+}
+
+.more--wp a {
+  color: #343330;
+}
+
+.more--wp a:after {
+  background-color: #343330;
+}
+
+.more--ranking a {
+  color: #7f5ed4;
+}
+
+.more--ranking a:after {
+  background-color: #7f5ed4;
+}
+
+.more--special a {
+  color: #ab538b;
+}
+
+.more--special a:after {
+  background-color: #ab538b;
+}
+
+.more--ranking a {
+  color: #7f5ed4;
+}
+
+.more--ranking a:after {
+  background-color: #7f5ed4;
+}
+
+.more--newest a {
+  color: #d0475a;
+}
+
+.more--newest a:after {
+  background-color: #d0475a;
+}
+
+
+/** ------------------------------
+ * PR表記
+ */
+.PR {
+  color: #aaa;
+  font-size: 11px;
+  font-weight: normal;
+}
+
+/** ------------------------------
+ * 基本の一覧
+*/
+.list__item {
+  border-bottom: 1px solid #fff;
+}
+
+.list__item,
+.list__item > a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.list__main,
+.list__sub {
+  padding: 10px;
+  display: table-cell;
+  direction: ltr;
+}
+
+.list__main {
+  vertical-align: middle;
+}
+
+.list__sub {
+  padding-right: 5px;
+  width: 75px;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+.list__sub img {
+  width: 100%;
+}
+
+.list__sub--special {
+  width: 146px;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+.list__sub--special img {
+  width: 100%;
+}
+
+.list__release {
+  margin-top: -0.5em;
+  margin-right: -0.3em;
+  padding: 0 0.6em;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  background-color: #bbb;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+.list__title {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.list__title--short {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list__title--break {
+  word-wrap: break-word;
+}
+
+.list__title--icon {
+  margin: -10px -10px 10px -10px;
+  padding: 5px 23px 5px 12px;
+  position: relative;
+  line-height: 1.3;
+  color: #343330;
+  background-color: #f2f2f0;
+  text-decoration: none;
+}
+
+.list__title--icon a {
+  display: block;
+}
+
+.list__title--icon a:after {
+  margin: auto;
+  content: "\e6a5";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  height: 1em;
+  line-height: 1.0;
+  color: #e80;
+  font-family: utIcon;
+  font-size: 14px;
+}
+
+.list__message,
+.list__beginning {
+  color: #888;
+  font-size: 13px;
+}
+
+.list__beginning + .list__name {
+  margin: 5px -10px -5px;
+  padding: 5px 10px 0;
+  border-top: 1px dotted #ddd;
+}
+
+.list__beginning + .list__name a {
+  color: #0044cc;
+}
+
+.list__name,
+.list__name * {
+  color: #999;
+}
+
+.list__name {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.list__name *:before {
+  margin-right: -0.2em;
+  content: "\e690";
+  color: #ccc;
+  font-family: utIcon;
+  vertical-align: middle;
+}
+
+.list__name__artist {
+  margin-bottom: 4px;
+}
+
+.list__name__lyricist {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+/* 投票結果 */
+.list__date {
+  margin-top: 5px;
+  color: #e80;
+  font-size: 12px;
+  text-align: right;
+}
+
+.list__date--news {
+  color: #31c3ad;
+}
+
+.list__voteCount {
+  margin-top: 5px;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.list__voteCount span {
+  color: #e80;
+  font-size: 200%;
+}
+
+.list__button {
+  text-align: right;
+}
+
+.list__button {
+  border-top: 1px dotted #ddd;
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.list__button button {
+  padding: 6px 8px 6px 10px;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  color: #fff;
+  background-color: #343330;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.list__button button:after {
+  margin-left: 4px;
+  font-family: utIcon;
+  content: "\e674";
+  vertical-align: middle;
+}
+
+.list__link {
+  color: #0044cc;
+}
+
+/** ------------------------------
+ * JSカレンダー
+ */
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+  font-family: monospace;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  color: #e80;
+  font-weight: normal;
+}
+
+.ui-datepicker th {
+  padding: 4px 0;
+  color: #fff;
+  background-color: #444;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  font-weight: bold;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+  border-radius: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  padding-top: 2px;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.ui-datepicker .ui-datepicker-prev:before {
+  font-family: utIcon;
+  content: "\e696";
+}
+
+.ui-datepicker .ui-datepicker-next:before {
+  font-family: utIcon;
+  content: "\e699";
+}
+
+.ui-widget-header .ui-icon {
+  background-image: none !important;
+}
+
+/** ------------------------------
+ * モーダルウィンドウ
+ */
+.modalWindow {
+  width: 300px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: none;
+}
+
+.modalWindow__title {
+  padding: 10px 15px;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  line-height: 1.4;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #f2f2f0;
+}
+
+.modalWindow__title h2,
+.modalWindow__title h3,
+.modalWindow__title h4 {
+  font-weight: bold;
+}
+
+.modalWindow button.close {
+  margin: auto;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.modalWindow button.close:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #343330;
+  outline: none;
+  text-align: center;
+
+  font-family: utIcon;
+  content: "\e639";
+}
+
+.modalWindow__body {
+  padding: 15px;
+}
+
+.voteSurvey {
+  margin-top: -15px;
+}
+
+.voteSurvey dt,
+.voteSurvey dd {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.voteSurvey .selectOuter,
+.voteSurvey .selectOuter select,
+.voteSurvey input[type="text"] {
+  width: 250px !important;
+  height: 36px;
+  font-size: 16px !important;
+  font-family: monospace;
+}
+
+.voteSurvey .selectOuter {
+  padding: 0 !important;
+}
+
+.voteSurvey .selectOuter select,
+.voteSurvey input[type="text"] {
+  padding: 8px 6px !important;
+}
+
+.voteSurvey__button {
+  text-align: center;
+}
+
+.voteSurvey input[type="button"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  text-align: right;
+  width: 10em;
+  color: #fff;
+  background-color: #e80;
+  font-family: monospace;
+  cursor: pointer;
+  text-align: center;
+}
+
+.voteSurvey input[type="button"] + input[type="button"] {
+  background-color: #343330;
+}
+
+.voteSurvey__button {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.voteSurvey__button input {
+  border-radius: 3px;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  width: 40%;
+  height: 2.5em;
+  color: #fff;
+  background-color: #e80;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.voteSurvey__button input + input {
+  background-color: #343330;
+}
+
+/**/
+input.voted {
+  background-color: yellow;
+}
+
+input.mostVoted {
+  color: red;
+}
+
+#lean_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  height: 100%;
+  width :100%;
+  background: #000;
+  display: none;
+}
+
+/* 歌詞をシェア */
+.lyricShare {
+  text-align: center;
+  font-size: 17px;
+}
+
+.lyricShare__item + .lyricShare__item {
+  margin-top: 15px;
+}
+
+.lyricShare__item a {
+  padding: 12px 12px 12px 32px;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  color: #e80;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.lyricShare__item--line a {
+  color: #fff;
+  background-color: #00c300;
+}
+
+.lyricShare__item--twitter a {
+  color: #fff;
+  background-color: #55acee;
+}
+
+.lyricShare__item a:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  font-family: utIcon;
+  font-size: 30px;
+  line-height: 1.0;
+  vertical-align: middle;
+}
+
+.lyricShare__item--line a:before {
+  content: "\e6ac";
+}
+
+.lyricShare__item--twitter a:before {
+  content: "\e6a9";
+}
+
+
+/** ------------------------------
+ * 特集専用リスト
+
+.spList__item {
+  padding: 10px;
+}
+
+.spList__item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.spList__item + .spList__item {
+  border-top: 1px solid #ddd;
+}
+
+.spList__sub {
+  margin: 0 15px 10px 0;
+  float: left;
+}
+
+.spList__sub img {
+  width: 75px;
+}
+
+.spList__title {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.spList__message {
+  color: #777;
+  font-size: 12px;
+}
+*/
+/** ------------------------------
+ * 特集などの一覧
+ */
+.blockList {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  word-break: break-all;
+}
+
+.spList__item + .blockList {/* TOPページ用 */
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.blockList:before,
+.blockList:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.blockList:before {
+  left: 33.33%;
+}
+
+.blockList:after {
+  left: 66.66%;
+}
+
+.blockList__inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blockList__item {
+  display: block;
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+}
+
+.blockList__item:nth-of-type(3n+1) {
+  clear: both;
+}
+
+.blockList__main {
+  padding: 10px 10px 15px;
+}
+
+.blockList__title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.blockList__body {
+  color: #777;
+  font-size: 13px;
+}
+
+.blockList__body {
+  color: #777;
+  font-size: 13px;
+}
+
+.blockList__date {
+  margin-top: 3px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #ddd;
+  color: #e80;
+  font-size: 12px;
+  text-align: right;
+}
+
+.blockList__sub {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.spList__item + .blockList .blockList__sub {/* TOPページ用 */
+  padding-top: 0;
+}
+
+.blockList__sub img {
+  width: 75px;
+}
+
+/** ------------------------------
+ * 営業枠
+ */
+.promotionList__item {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.promotionList__item--main {
+  width: 100%;
+  float: none;
+  padding: 4px;
+}
+
+.promotionList__item:nth-child(2) {
+  padding-left: 4px;
+  padding-right: 2px;
+}
+
+.promotionList__item:nth-child(3) {
+  padding-left: 2px;
+  padding-right: 4px;
+}
+
+.promotion__image img {
+  width: 100%;
+}
+
+.promotion {
+  /* border: 1px solid rgba(0,0,0,0.2); */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.promotion__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  box-sizing: border-box;
+  background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,0.8));
+  background-image: linear-gradient(transparent,rgba(0,0,0,0.8));
+}
+
+.promotion__title {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 105%;
+  padding: 10px 8px;
+}
+
+.promotion__artist:before {
+  color: #ccc;
+  content: "\e690";
+  font-size: 12px;
+  font-family: utIcon;
+  vertical-align: middle;
+}
+
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .promotion__title {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .promotion__title {
+    font-size: 80%;
+  }
+}
+
+
+/** ------------------------------
+ * ランキング
+ */
+
+.rankingIcon {
+  margin-bottom: 2px;
+  border-radius: 3px;
+  display: block;
+  width: 2.5em;
+  color: #fff;
+  background-color: #e80;
+  text-align: center;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rankingIcon--index {
+  width: 4.5em;
+  background-color: #72c331;
+}
+
+.rankingRequestButton {
+  margin-top: 10px;
+}
+
+.rankingRequestButton button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #D6A810;
+  border: 0;
+  border-radius: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+
+/** ------------------------------------------------------------
+ * 下層
+ */
+/** ------------------------------
+ * タイトル
+ */
+.mainTitle {
+  padding: 10px;
+  border-top: 3px solid #e80;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mainTitle:before {
+  margin: -0.3em -0.3em 0 0;
+  font-family: utIcon;
+  display: inline-block;
+  font-weight: normal;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 1.0;
+}
+
+.mainTitle--pvRanking::before {
+  content: "\e691";
+}
+
+.mainTitle--sp::before {
+  content: "\e600";
+}
+
+.mainTitle--newest::before {
+  content: "\e61b";
+}
+
+.mainTitle--search::before {
+  content: "\e630";
+}
+
+.mainTitle--news::before {
+  content: "\e605";
+}
+
+.mainTitle--keyword::before {
+  content: "\e64a";
+}
+
+.mainTitle--history::before {
+  content: "\e65a";
+}
+
+.mainTitle--favourite::before {
+  content: "\e604";
+}
+
+.mainTitle--mail::before {
+  content: "\e687";
+}
+
+.mainTitle--lyricRequest::before {
+  content: "\e630";
+}
+
+.mainTitle--lyricRequest {
+  color: #e80;
+  font-size: 14px;
+}
+
+/** 候補 **/
+.lyricOptions {
+  padding-bottom: 40px;
+}
+
+/* タイアップ情報 */
+.lyricTieup {
+  color: #888;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.lyricTieup:before {
+  margin-right: 0.8em;
+  content: "―";
+  font-size: 10px;
+}
+
+.subTitle {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  color: #e80;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.subTitle--bg {
+  background-color: #f6f6f6;
+}
+
+.subTitle--noLine {
+  border-top: none;
+}
+
+/* 記事系 */
+.articleTitle {
+  padding: 10px;
+  border-top: 3px solid #e80;
+  border-bottom: 1px dotted #ddd;
+  background-color: #f2f2f0;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.breadCrumbs + .articleTitle {
+  border-top: none;
+}
+
+.articleTitle__sub {
+  margin-top: 3px;
+  display: block;
+  color: #888;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.articleTitle__sub a {
+  color: #0044cc;
+}
+
+.articleTitle__sub a:before {
+  margin-right: -0.2em;
+  content: "\e690";
+  color: #ccc;
+  font-size: 12px;
+  font-family: utIcon;
+  vertical-align: middle;
+}
+
+.articleGenreAndType {
+  background-color: #f2f2f0;
+  padding: 4px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.articleGenreAndType a {
+  color: #e80;
+  margin-left: 8px;
+}
+
+/* 開閉 */
+.touch {
+  position: relative;
+  cursor: pointer;
+}
+
+.touch:before {
+  margin: auto;
+  border-width: 5px 10px;
+  border-style: solid;
+  border-color: transparent #343330 transparent transparent;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 44px;
+  bottom: 0;
+}
+
+.opened:before {
+  border-color: transparent #ccc transparent transparent;
+}
+
+.touch:after {
+  margin: auto;
+  padding: 5px;
+  border-radius: 3px;
+  content: "\e630";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  font-family: utIcon;
+  display: inline-block;
+  font-weight: normal;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  background-color: #343330;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.opened:after {
+  background-color: #ccc;
+}
+
+.touch + * {
+  display: none;
 }
 
 /** ------------------------------
  * SNSナビ
  */
-.shareLink {
-  float: right;
-}
-
-.shareLink--left {
-  float: left;
-}
-
 .snsNav {
-  font-size: 42px;
-  vertical-align: top;
-  margin-top: 2px;
-  float: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
+  text-align: left;
+  min-height: 44px;
+}
+
+.snsNav--noLine {
+  border-bottom: none;
 }
 
 .snsNav__item {
-  width: 43px;
-  height: 45px;
-  margin-bottom: 2px;
-  margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 44px;
+  font-size: 0;
+  line-height: 1.0;
+  vertical-align: top;
   overflow: hidden;
 }
 
+.snsNav__item + .snsNav__item {
+  margin-left: 9px;
+}
+
 .snsNav__item a {
-  /*color: #fff;*/
-  text-decoration: none !important;
-  padding-left: 55px;
+  padding-left: 42px;
   display: block;
-  position: relative;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  font-size: 10px;
+  color: #fff;
+  text-decoration: none !important;
 }
 
 .snsNav__item a:before {
-  font-family: utIcon;
-  line-height: 42px;
-  display: block;
   position: absolute;
   top: 2px;
   left: 0;
-}
-
-.snsNav__item a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
+  font-family: utIcon;
+  display: block;
+  font-size: 42px;
 }
 
 .snsNav__item--twitter a:before {
@@ -1758,42 +3849,14 @@ header .headerLogo {
   color: #d84937;
 }
 
-/* LINEアイコン
 .snsNav__item--line a:before {
   content: "\e695";
   color: #00c300;
 }
-*/
 
 .snsNav__item--youtube a:before {
   content: "\e6ae";
   color: #cc181e;
-}
-
-.snsNav__item--share a:before {
-  content: "\e6ad";
-  color: #ee7b00;
-}
-
-.snsNav__item--favourite a:before {
-  content: "\e604";
-  color: #fff;
-  color: #eebe00;
-  font-size: 60%;
-  text-align: center;
-  width: 43px;
-  height: 43px;
-  display: inline-block;
-  border: 1px solid #eebe00;
-  -webkit-border-radius: 7px;
-          border-radius: 7px;
-  top: 1px;
-  box-sizing: border-box;
-}
-
-.snsNav__item--favourite a.favourite--on:before {
-  color: #fff;
-  background-color: #eebe00;
 }
 
 .snsNav__item--hatena a:before {
@@ -1801,1587 +3864,84 @@ header .headerLogo {
   color: #008fde;
 }
 
-.indexSubttl--withShare .shareLink {
-  position: absolute;
-  right: 10px;
-  top: 2px;
-}
-
-/** ------------------------------------------------------------
- * TOP
- */
-
-/** ------------------------------
- * billboard
- */
-.billboard {
-  background-color: #fee3bf;
-}
-
-.billboard__inner {
-  width: 1040px;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-.billboard__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
+.snsNav__item--favourite {
   display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/* バナー */
-.billboardBanner {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.billboardBanner a {
-  display: inline-block;
-}
-
-.billboardSlide {
-  background-color: #fff;
-  width: 626px;
-  min-height: 294px;
-  padding: 23px 41px 0;
-  float: left;
-  border: 1px solid #ddd;
-}
-
-/* スライド */
-.billboardSlide--video {
-  background: #ddd;
-  width: auto;
-  min-height: 180px;
-  padding: 12px 41px 0;
-  padding-bottom: 10px;
-  float: left;
-  border:none;
-}
-
-.billboardSlide__title {
-  margin-top: 8px;
-}
-
-/* top動画スライド */
-.billboard--sidebar {
-  background-color: #f2f2f0;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
-}
-
-.billboardSlide--sidebar {
-  width: 100%;
-  background-color: #f2f2f0;
-}
-
-.billboardSlide--sidebar__item a {
-  text-decoration: none;
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-}
-
-.billboardSlide--sidebar__item a > * {
-  display: table-cell;
-  direction: ltr;
-}
-
-.billboardSlide--sidebar__sub {
-  width: 150px;
-  vertical-align: top;
-}
-
-.billboardSlide--sidebar__sub--video {
-  width: 100px;
-  padding: 5px;
-}
-
-.billboardSlide--sidebar__sub--video img {
-  width: 100%;
-  height: auto;
-  padding: 5px 0;
-}
-
-.billboardSlide--sidebar__title {
-  vertical-align: middle;
-  padding-left: 20px;
-}
-
-/* bxSlider */
-.bx-prev,
-.bx-next {
-  color: #fff !important;
-  font-size: 0;
-  /* text-decoration: none !important; */
-  line-height: 0;
-  background-color: #333;
-  width: 22px;
-  height: 110px;
-  margin: auto;
-  padding: 0;
-  display: block;
-  /* border: 1px solid #ddd; */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.bx-prev:hover,
-.bx-next:hover {
-  background-color: #f3a318;
-}
-
-.bx-prev:before,
-.bx-next:before {
-  font-family: utIcon;
-  font-size: 24px;
-  text-indent: -4px;
-  line-height: 1.0;
-  width: 24px;
-  height: 24px;
-  margin: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 3px;
-  right: 0;
-}
-
-.bx-prev {
-  left: -43px;
-}
-
-.bx-next {
-  right: -42px;
-}
-
-.bx-prev:before {
-  content: "\e69a";
-}
-
-.bx-next:before {
-  content: "\e69d";
-}
-
-/** ------------------------------
- * 201903 topContents
- */
-.topContents {
-  background-color: #acaba9;
-}
-
-.topContents__inner {
-  width: 1040px;
-  margin: 0 auto;
-  padding: 10px 0 15px;
-}
-
-.topContents__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/* スライド */
-.topContents__slide {
-  background-color: #fff;
-  width: 710px;
-  height: 380px;
-  float: left;
-}
-
-.articleSlide__item {
-  /*width: 560px;
-  height: 380px;*/
-  margin: 0 5px;
-  position: relative;
-}
-
-.articleSlide__item img {
-  width: 100%;
   height: 100%;
-  margin: 0 auto;
-}
-
-.articleSlide__title {
-  color: #fff;
-  background-color: rgba(85, 85, 85, .8);
-  height: 4.6154em;
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.articleSlide__title span {
-  display: block;
-}
-
-/* slickJS */
-.articleSlide__list .slick-list {
-  position: relative;
-}
-
-.articleSlide__list .slick-list:before ,
-.articleSlide__list .slick-list:after {
-  content: " ";
-  width: 0;
-  height: 0;
-  display: block;
-  border-style: solid;
-  border-width: 41px 72px;
-  position: absolute;
-  z-index: 999;
-  opacity: .8
-}
-
-.articleSlide__list .slick-list:before {
-  border-color: #222 transparent transparent #222;
-  top: 0;
-  left: 0;
-}
-
-.articleSlide__list .slick-list:after {
-  border-color: transparent #222 #222 transparent;
-  bottom: 0;
-  right: 0;
-}
-
-/* arrow */
-.slick-prev ,
-.slick-next {
-  position: absolute;
-  z-index: 9999;
-}
-
-.slick-prev {
-  top: 10px;
-  left: 20px;
-}
-
-.slick-next {
-  bottom: 10px;
-  right: 20px;
-}
-
-.slick-prev:hover ,
-.slick-next:hover {
-  cursor: pointer;
-}
-.slick-prev:before ,
-.slick-next:before {
-  font-family: utIcon;
-  color: #fff;
-  font-size: 26px;
-}
-
-.slick-prev:before {
-  content: "\e911";
-}
-
-.slick-next:before {
-  content: "\e913";
-}
-
-/* dots */
-.slick-dots {
-  font-size: 0;
+  font-size: 24px;
+  line-height: 42px;
   text-align: center;
-  padding: 15px 0;
-}
-
-.slick-dots li {
-  display: inline-block;
-}
-
-.slick-dots li + li {
-  margin-left: 10px;
-}
-
-.slick-dots button {
-  text-indent: 100%;
-  line-height: 0;
-  white-space: nowrap;
-  background-color: #c7c7c6;
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  overflow: hidden;
-  outline: none;
-  border: none;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-
-.slick-dots button:hover {
-  cursor: pointer;
-}
-
-.slick-active button {
-  background-color: #646361;
-}
-/* 201309 */
-
-/* 新着歌詞 */
-.billboardNewest {
-  background-color: #fff;
-  width: 298px;
-  border: 1px solid #ddd;
-  float: right;
-  position: relative;
-}
-
-.billboardNewest__title {
-  font-size: 131%;
-  line-height: 44px;
-  background-color: #eee;
-  margin: 5px 1px 1px;
-  padding: 0 19px;
-  position: relative;
-}
-
-.billboardNewest__title:before {
-  content: "";
-  background-color: #e80;
-  width: 100%;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: -4px;
-  left: 0;
-}
-
-.billboardNewest__more {
-  line-height: 1.0;
-  position: absolute;
-  top: 20px;
-  right: 19px;
-}
-
-.billboardNewest__more a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #343330;
-  padding: 1px 8px 1px 13px;
-  display: block-inline;
-  border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.billboardNewest__more a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.billboardNewest__more a:after {
-  font-family: utIcon;
-  content: "\e699";
-  vertical-align: bottom;
-}
-
-.billboardNewestList__item {
-  padding: 10px 20px 8px;
-}
-
-.billboardNewestList__item:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.billboardNewestList__item + .billboardNewestList__item {
-  border-top: 1px solid #eee;
-}
-
-.billboardNewestList__title {
-  font-size: 93%;
-  font-weight: bold;
-  text-overflow: ellipsis;/* テキストが表示領域からはみ出た場合、末尾に省略符号「…」を表示 */
-  white-space: nowrap;/* 自動改行しない */
-  display: block;
-  overflow: hidden;/* overflowの値にvisible以外のものを指定 */
-}
-
-.billboardNewestList__name,
-.billboardNewestList__date {
-  font-size: 85%;
-}
-
-.billboardNewestList__name {
-  float: left;
-}
-
-.billboardNewestList__name a {
   color: #e80;
-}
-
-.billboardNewestList__date {
-  color: #888;
-  margin-left: 10px;
-  float: right;
-}
-
-/* 201903 */
-.topContents__newest {
-  background-color: #fff;
-  width: 300px;
-  height: 380px;
-  float: right;
-  overflow: hidden;
-}
-/* 201903 */
-
-/* 検索 */
-.billboardSearch {
-  background-color: #e80;
-  clear: both;
-}
-
-.billboardSearch__inner {
-  text-align: center;
-  width: 1040px;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-.billboardSearch__inputArea {
-  background-color: #fff;
-  width: 710px;
-  margin: 0 auto;
-  padding: 4px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.billboardSearch__inputArea:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.billboardSearch__inputArea input[type="text"],
-.billboardSearch__inputArea button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  float: left;
-  outline: none;
-  border: none;
-}
-
-/*201903*/
-.topContentsSearch {
-  background-color: #343330;
-  position: relative;
-}
-
-.topContentsSearch #search {
-  position: absolute;
-  top: -80px;
-}
-
-.topContentsSearch__inner {
-  font-size: 0;
-  text-align: center;
-  width: 1040px;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-.topContentsSearch__item {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.topContentsSearch__item + .topContentsSearch__item {
-  margin-left: 10px;
-}
-
-.topContentsSearch__inputArea {
-  background-color: #fff;
-  width: 530px;
-  padding: 4px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.topContentsSearch__inputArea:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.topContentsSearch__inputArea input[type="text"],
-.topContentsSearch__submitBtn button ,
-.topContentsSearch__detailSearch a {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  font-size: 14px;
-  outline: none;
-}
-
-.topContentsSearch__inputArea input[type="text"],
-.topContentsSearch__submitBtn button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-/*201903*/
-
-/* プルダウン装飾JS用 */
-.easy-select-box {
-  color: #e80;
-  font-size: 14px;
-  text-align: left;
-  background-color: #fffdf4;
-  width: 152px !important;
-  float: left;
-  position: relative;
-}
-
-.easy-select-box .esb-displayer {
-  text-indent: 5px;
-  line-height: 27px;
-  height: 27px;
-  padding: 0 27px 0 3px;
-  cursor: pointer;
-}
-
-.easy-select-box .esb-displayer:after {
-  font-family: utIcon;
-  content: "\e697";
-  color: #e80;
-  font-size: 26px;
-  height: 26px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 3px;
-  z-index: 1;
-}
-
-.easy-select-box .esb-displayer:hover {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-  -ms-filter: 'alpha(opacity=80)';
-}
-
-.easy-select-box:hover .esb-displayer {
-  text-decoration:none;
-}
-
-.easy-select-box.disabled .esb-displayer,
-.easy-select-box:hover.disabled .esb-displayer {
-  background-position: 0 -36px;
-}
-
-.easy-select-box .esb-dropdown {
-  background-color: #fff;
-  width: 145px !important;
-  max-height: 200px;
-  display: none;
-  border: 1px solid #ddd;
-  overflow: auto;
-  position: absolute;
-  z-index: 999;
-}
-
-.easy-select-box .esb-item {
-  background-color: #fffdf4;
-  padding: 3px 6px;
-  cursor: pointer;
-}
-
-.easy-select-box .esb-item:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #e80;
-}
-
-/* 201903 */
-.topContentsSearch__inputArea .easy-select-box {
-  color: #343330;
-  font-size: 14px;
-  text-align: left;
-  background-color: #e9e9e9;
-  width: 120px !important;
-  margin-right: 10px;
-  float: left;
-  position: relative;
-}
-
-.topContentsSearch__inputArea .easy-select-box .esb-displayer {
-  line-height: 27px;
-  height: 27px;
-  padding: 0 25px 0 10px;
-  cursor: pointer;
-}
-
-.topContentsSearch__inputArea .easy-select-box .esb-displayer:after {
-  font-family: utIcon;
-  content: "\e697";
-  color: #343330;
-  font-size: 26px;
-  height: 26px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.topContentsSearch__inputArea .easy-select-box .esb-dropdown {
-  background-color: #fff;
-  width: 118px !important;
-  max-height: 200px;
-  display: none;
-  border: 1px solid #ddd;
-  overflow: auto;
-  position: absolute;
-  z-index: 999;
-}
-
-.topContentsSearch__inputArea .easy-select-box .esb-item {
-  background-color: #fff;
-  padding: 3px 6px;
-  cursor: pointer;
-}
-
-.topContentsSearch__inputArea .easy-select-box .esb-item:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: #999;
-}
-/* 201903 */
-
-/* input */
-.billboardSearch input[type="text"] {
-  width: 420px;
-  margin-right: 15px;
-}
-
-.billboardSearch button {
-  color: #fff;
-  text-align: center;
-  background-color: #343330;
-  width: 123px;
-  border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.billboardSearch button:before {
-  font-family: utIcon;
-  content: "\e92c";
-  margin-right: 5px;
-}
-
-.billboardSearch button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-/* 201903 */
-.topContentsSearch input[type="text"] {
-  line-height: 27px;
-  width: 100%;
-  height: 27px;
-  float: left;
-}
-
-.topContentsSearch__submitBtn button ,
-.topContentsSearch__detailSearch a{
-  color: #fff;
-  text-align: center;
-  text-indent: .05em;
-  line-height: 37px;
-  letter-spacing: .05em;
-  width: 115px;
-  height: 37px;
-  border-radius: 3px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.topContentsSearch__submitBtn button {
-  background-color: #e80;
-}
-
-.topContentsSearch__inputArea {
-  position: relative;
-  padding-left: 35px;
+  border: 1px solid #e80;
+  border-radius: 7px;
   box-sizing: border-box;
 }
 
-.topContentsSearch__inputArea:before {
-  content: "\e92c";
-  top: 7px;
-  left: 10px;
-  color: #777;
-  font-family: utIcon;
-  font-size: 15px;
-  position: absolute;
-  z-index: 1000;
+.snsNav__item--favourite.favourite--on {
+  color: white;
+  background-color: #e80;
 }
 
-.topContentsSearch__detailSearch a{
-  background-color: #343330;
-  display: block;
-  border: solid 1px #fff;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
+.snsNav__item--share a:before {
+  content: "\e6ad";
+  color: #ee7b00;
 }
 
-.topContentsSearch__detailSearch a:hover,
-.topContentsSearch__submitBtn button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-/* 201903 */
-
-/** ------------------------------------------------------------
- * container
- */
-#container {
-  width: 1040px;
-  margin: 0 auto;
-  padding: 16px 0;
-  position: relative;
-}
-
-#container:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/** ------------------------------------------------------------
- * contents
- */
-#contents {
-  width: 710px;
-  float: left;
-}
-
-/** ------------------------------
- * contentBox
- */
-.contentBox {
-  background-color: #fff;
-  margin-bottom: 15px;
-  clear: both;
-  border: 1px solid #ddd;
-  position: relative;
-}
-
-.contentBox--half {
-  background-color: transparent;
-  width: 348px;
-  margin-bottom: 0;
-  padding: 1px;
-  float: left;
-  clear: none;
-  border: none;
-  position: relative;
-  z-index: 5;
-}
-
-.contentBox--half  + .contentBox--half {
-  float: right;
-}
-
-.contentBox--halfRanking {
-  border: 1px solid #ddd;
-  padding: 0;
-}
-
-.halfBoxWrapper {
-  margin-bottom: 15px;
-  position: relative;
-}
-
-.halfBoxWrapper:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.halfBoxWrapper__inner:before,
-.halfBoxWrapper__inner:after {
-  content: "";
-  background-color: #fff;
-  width: 348px;
-  display: block;
-  border: 1px solid #ddd;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.halfBoxWrapper__inner:before{
-  left: 0;
-}
-
-.halfBoxWrapper__inner:after{
-  right: 0;
-}
-
-/* 2011903 */
-.mainContents {
-  background-color: #fff;
-  margin-bottom: 20px;
-  clear: both;
-  border: 1px solid #ddd;
-  position: relative;
-}
-
-.contentMain__inner {
-  margin: 10px;
-  overflow: hidden;
-}
-
-.halfContents__wrap {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.halfContents__wrap:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.halfContents__wrapInner:before,
-.halfContents__wrapInner:after {
-  content: " ";
-  background-color: #fff;
-  width: 350px;
-  display: block;
-  border: 1px solid #ddd;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  -webkit-box-shadow: 0 5px 0 #e9e9e9;
-     -moz-box-shadow: 0 5px 0 #e9e9e9;
-       -o-box-shadow: 0 5px 0 #e9e9e9;
-          box-shadow: 0 5px 0 #e9e9e9;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.halfContents__wrapInner:before{
-  left: 0;
-}
-
-.halfContents__wrapInner:after{
-  right: 0;
-}
-
-.mainContents__wrapHalf {
-  width: 350px;
-  float: left;
-  z-index: 5;
-  position: relative;
-}
-
-.mainContents__wrapHalf + .mainContents__wrapHalf {
-  float: right;
-}
-
-/* shadow */
-.contentsShadow {
-  -webkit-box-shadow: 0 5px 0 #e9e9e9;
-     -moz-box-shadow: 0 5px 0 #e9e9e9;
-       -o-box-shadow: 0 5px 0 #e9e9e9;
-          box-shadow: 0 5px 0 #e9e9e9;
-}
-/* 2011903 */
-
-.contentBox__title {
-  color: #e80;/* 基本色 */
-  font-size: 131%;
-  margin: 5px 1px 1px;
-  padding: 10px 9px;
+/* タグページ シェアー+アマゾン*/
+.shareAndAmazonLink {
+  display: flex;
   border-bottom: 1px solid #ddd;
-  position: relative;
 }
 
-/* 201903 */
-.contentHead {
-  width: 100%;
-  display: table;
-  table-layout: auto;
-  border-collapse: separate;
-  border-spacing:  10px 14px;
-  border-top: solid 4px #343330;
-  border-bottom: solid 1px #f2f2f2;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.contentHead__ttl ,
-.contentHead__view {
-  vertical-align: middle;
-  display: table-cell;
-}
-
-.contentHead__ttl {
-  font-size: 1.15em;
-  font-weight: bold;
-  position: relative;
-}
-
-.contentHead__ttlIcon {
-  padding-left: 2.75em;
-}
-
-.contentHead__ttlIcon:before {
-  font-family: utIcon;
-  font-size: 2.1404682em;
-  font-weight: normal;
-  line-height: 1;
-  vertical-align: middle;
-  width: 1em;
-  height: 1em;
-  margin: auto 0;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-}
-
-/* 先行歌詞 */
-.heading__no__icon {
-  font-size: 1.15em;
-  font-weight: bold;
-  position: relative;
-  color: #555;
-}
-
-/* icon */
-/* 新着 */
-.contentHead__ttlIcon--type01:before {
-  content: "\e901";
-}
-
-/* ランキング */
-.contentHead__ttlIcon--type02:before {
-  content: "\e900";
-}
-
-/* ピックアップ歌詞 */
-.contentHead__ttlIcon--type03:before {
-  content: "\e902";
-}
-
-/* 特集 */
-.contentHead__ttlIcon--type04:before {
-  content: "\e903";
-}
-
-/* カラオケコラム */
-.contentHead__ttlIcon--type05:before {
-  content: "\e932";
-}
-
-/* 新着エンタメニュース */
-.contentHead__ttlIcon--type06:before {
-  content: "\e904";
-}
-
-/* ハッシュタグ */
-.contentHead__ttlIcon--type07:before {
-  content: "\e926";
-}
-
-/* PICK UP アーティスト */
-.contentHead__ttlIcon--type08:before {
-  content: "\e933";
-}
-
-/* 動画 */
-.contentHead__ttlIcon--type09:before {
-  content: "\e905";
-}
-
-/* ライブコラム */
-.contentHead__ttlIcon--type10:before {
-  content: "\e936";
-}
-
-.contentHead__view {
-  text-align: right;
-}
-
-.contentHead__view a {
-  white-space: nowrap;
-  padding-right: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-.contentHead__view a:after {
-  content: " ";
-  width: 6px;
-  height: 6px;
-  margin: auto 0;
-  border-top: solid 1px;
-  border-right: solid 1px;
-  display: block;
-  position: absolute;
-  top: -2px;
-  bottom: 0;
-  right: 1px;
-  -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-/* pink */
-.contentColor--style01 a:hover ,
-.contentColor--style01 .contentHead__ttl ,
-.contentColor--style01 .contentHead__view a ,
-.contentColor--style01 .articleList__view a ,
-.contentColor--style01 .articleTag {
-  color: #f02361;
-}
-
-.contentColor--style01 .rankNo__icon {
-  background-color: #f02361;
-}
-
-.contentColor--style01 .articleList__view a:hover {
-  background-color: #f02361;
-  border-color: #f02361;
-}
-
-/* gold */
-.contentColor--style02 a:hover ,
-.contentColor--style02 .contentHead__ttl ,
-.contentColor--style02 .contentHead__view a ,
-.contentColor--style02 .articleList__view a ,
-.contentColor--style02 .articleTag {
-  color: #d6a810;
-}
-
-.contentColor--style02 .rankNo__icon {
-  background-color: #d6a810;
-}
-
-.contentColor--style02 .articleList__view a:hover {
-  background-color: #d6a810;
-  border-color: #d6a810;
-}
-
-/* bluegreen */
-.contentColor--style03 a:hover ,
-.contentColor--style03 .contentHead__ttl ,
-.contentColor--style03 .contentHead__view a ,
-.contentColor--style03 .articleList__view a ,
-.contentColor--style03 .articleTag {
-  color: #2aa29a;
-}
-
-.contentColor--style03 .rankNo__icon {
-  background-color: #2aa29a;
-}
-
-.contentColor--style03 .articleList__view a:hover {
-  background-color: #2aa29a;
-  border-color: #2aa29a;
-}
-
-/* violet */
-.contentColor--style04 a:hover ,
-.contentColor--style04 .contentHead__ttl ,
-.contentColor--style04 .contentHead__view a ,
-.contentColor--style04 .articleList__view a ,
-.contentColor--style04 .articleTag {
-  color: #ad64be;
-}
-
-.contentColor--style04 .rankNo__icon {
-  background-color: #ad64be;
-}
-
-.contentColor--style04 .articleList__view a:hover {
-  background-color: #ad64be;
-  border-color: #ad64be;
-}
-
-/* blue */
-.contentColor--style05 a:hover ,
-.contentColor--style05 .contentHead__ttl ,
-.contentColor--style05 .contentHead__view a ,
-.contentColor--style05 .articleList__view a ,
-.contentColor--style05 .articleTag {
-  color: #5467b2;
-}
-
-.contentColor--style05 .rankNo__icon {
-  background-color: #5467b2;
-}
-
-.contentColor--style05 .articleList__view a:hover {
-  background-color: #5467b2;
-  border-color: #5467b2;
-}
-
-/* twitter */
-.contentColor--twitter .contentHead__ttl {
-  color: #1da1f2;
-}
-
-/* facebook */
-.contentColor--facebook .contentHead__ttl {
-  color: #3b5998;
-}
-/* 201903 */
-
-/* アーティスト歌詞一覧 */
-.lyricsInfo {
-  font-size: 0.9em;
-  padding: 4px 10px;
-}
-
-/* 201904 */
-.lyricsDate {
-  color: #888;
-  font-size: 1.111112em;
-}
-
-/* オススメ歌詞 */
-.contentBox__title--recommend {
-  padding-right: 120px;
-}
-
-.contentBox__titleSub {
-  color: #343330;
-  font-size: 13px;
-  line-height: 1.2;
-  display: block;
-}
-
-.contentBox__title a {
-  color: #e80;
-}
-
-.contentBox__title a:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
-  margin-right: -0.2em;
-}
-
-.contentBox__title--lyricTitle,
-.contentBox__title--article {
-  color: #343330;
-  font-size: 160%;
-  background-color: #f6f6f6;
-  padding: 15px 17px 13px 19px;
-}
-
-.contentBox__title--lyricTitle {
-  padding-right: 78px;
-  position: relative;
-}
-
-.contentBox__title--article {
-  font-size: 193%;
-}
-
-.contentBox__title--lyricTitle:after,
-.contentBox__title--article:after {
-  content: "";
-  background-color: #fff;
-  width: 100%;
-  height: 1px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.contentBox__title:before {
-  content: "";
-  background-color: #e80;/* 基本色 */
-  width: 100%;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: -4px;
-  left: 0;
-}
-
-/* タイアップ情報 */
-.lyricTieup {
-  color: #888;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.lyricTieup:before {
-  content: "―";
-  font-size: 10px;
-  margin-right: 0.8em;
-}
-
-/* サブタイトル */
-.contentBox__subTitle {
-  color: #e80;
-  font-size: 116%;
-  padding: 0.6em 10px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-.contentBox__subTitle--line {
-  border-top: 1px solid #ddd;
-}
-
-/* もっと見る */
-.contentBox__more {
-  line-height: 1.0;
-  position: absolute;
-  top: 20px;
-  right: 9px;
-}
-
-.contentBox__subTitle + .contentBox__more {
-  margin-top: -2.1em;
-  top: auto;
-}
-
-.contentBox__more a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #343330;
-  padding: 1px 8px 1px 13px;
-  display: block-inline;
-  border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.contentBox__more a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.contentBox__more a:after {
-  font-family: utIcon;
-  content: "\e699";
-  vertical-align: bottom;
-}
-
-.contentBox__footerMore {
-  text-align: right;
-  padding: 10px 9px;
-  border-top: 1px solid #ddd;
-}
-
-.contentBox__footerMore a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #343330;
-  padding: 1px 8px 1px 13px;
-  display: block-inline;
-  border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.contentBox__footerMore a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.contentBox__footerMore a:after {
-  font-family: utIcon;
-  content: "\e699";
-  vertical-align: bottom;
-}
-
-/* 赤紫 */
-.contentBox__title--keyword {
-  color: #ab538b;
+.shareAndAmazonLink .snsNav {
+  flex-grow: 1;
   border-bottom: none;
 }
-.contentBox__title--keyword:before,
-.contentBox__more--keyword a {
-  background-color: #ab538b;
+
+.shareAndAmazonLink .amazonLink {
+  height: 60px;
+  width: 100px;
+  position: relative;
 }
 
-/* スミレ */
-.contentBox__title--news {
-  color: #7f5ed4;
-}
-.contentBox__title--news:before,
-.contentBox__more--news a {
-  background-color: #7f5ed4;
+.shareAndAmazonLink .amazonLink a {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
 }
 
-/* 黄緑 */
-.contentBox__title--recentPopular {
-  color: #72c331;
-}
-.contentBox__title--recentPopular:before,
-.contentBox__more--recentPopular a {
-  background-color: #72c331;
-}
-
-/* 黄緑 */
-.contentBox__title--pickup {
-  color: #31c3ad;
-}
-.contentBox__title--pickup:before {
-  background-color: #31c3ad;
-}
-
-/* 紅 */
-.contentBox__title--special {
-  color: #d0475a;
-}
-.contentBox__title--special:before,
-.contentBox__more--special a {
-  background-color: #d0475a;
-}
-
-/* ツイート */
-.contentBox__title--tweet {
-  color: #55acee;
-}
-.contentBox__title--tweet:before {
-  background-color: #55acee;
-}
-
-/* コラム */
-.contentBox__title--wp {
-  color: #343330;
-}
-.contentBox__title--wp:before {
-  background-color: #343330;
-}
-
-/* 内容 */
-.contentBox__body {
-  margin: 1px;
-}
-
-.contentBox__body--text {
-  font-size: 109%;
-}
-
-.contentBox__body--sitemap a {
-  color: #e80;
-}
-
-.contentBox__body--sitemap a:hover {
-  opacity: 0.6;
-}
-
-.contentBox__body--sitemap p {
-  font-weight: bold;
-}
-
-.contentBox__body--sitemap dt {
-  width: 100%;
-  box-sizing: border-box
-}
-
-/** ------------------------------
- *記事関連
- */
-.articleGenreAndType {
-  background-color: #f6f6f6;
-  padding: 4px 8px;
-  border-bottom: 1px solid #ddd;
-}
-
-.articleGenreAndType a {
-  color: #0044cc;
-  margin-left: 8px;
-}
-
-.articleGenreAndType a:hover {
-  opacity: 0.6;
-}
-
-.articleOverview {
-  padding: 15px;
-}
-
-.articleOverview .articleOverview__img {
-  width: 100%;
-  min-height: 460px;
-  display: flex;
-  align-items: center;
-}
-
-.articleOverview img {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
-.articleOverview .articleOverview__description {
-  color: #555452;
-  font-size: 15px;
-  line-height: 1.5;
-  word-break: break-all;
-  margin-top: 4px;
-}
-
-.articleOverview__date {
-  color: #bbb;
-  margin: 4px 0;
-}
-
-.articleOverview__writer:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.articleOverview__writer__articleSub {
-  color: #bbb;
-  margin-right: 6px;
-  float: left;
-}
-
-.articleOverview__writer__writerPerson {
-  float: left;
-}
-
-.articleOverview__writer__writerPerson a {
-  color: #0044cc;
-}
-
-/** 特集のハッシュタグ */
-.articleOverview__tags {
-  margin-top: 8px;
-}
-
-.articleOverview__tags a {
-  color: #0044cc;
+/* articleInfo */
+.relatedLink + .articleInfo,
+.lyricBody + .articleInfo {
+  border-top: 1px solid #ddd;
 }
 
 .articleInfo {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  background: #fff;
 }
 
 .articleInfo:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
+  content: "";
   display: block;
   clear: both;
-  visibility: hidden;
+}
+
+.articleDate {
+  padding: 10px 15px 0;
+  color: #999;
+  font-size: 11px;
 }
 
 .bodyImageList {
-  width: 100%;
   display: table;
   table-layout: fixed;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 4px;
 }
 
 .bodyImageList__item {
-  vertical-align: middle;
   display: table-cell;
+  vertical-align: middle;
   border: 1px solid #ddd;
 }
 
@@ -3390,9 +3950,9 @@ header .headerLogo {
 }
 
 .bodyImageList__item a {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .bodyImageList__item img {
@@ -3403,20 +3963,20 @@ header .headerLogo {
  * ぎゅっとまとめ
  */
 .articleSummary {
-  margin: 15px 15px 0;
+  margin-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .articleSummary dt {
   margin-left: 10px;
-  padding: 5px 1em 3px;
+  padding: 5px 1em 4px;
   position: relative;
   display: inline-block;
   line-height: 1;
   color: #fff;
   background-color: #e80;
-  font-size: 90%;
+  font-size: 12px;
   vertical-align: bottom;
 }
 
@@ -3436,16 +3996,16 @@ header .headerLogo {
 }
 
 .articleSummary dd {
-  padding: 1.2em 3em;
+  padding: 0.5em 0.7em 0.5em 0.9em;
   border: 1px solid #e80;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-  font-size: 112%;
+  -webkit-border-radius: 16px;
+          border-radius: 16px;
+  font-size: 15px;
 }
 
 .articleSummary li {
-  margin: 0.8em 0;
-  padding-left: 30px;
+  margin: 0.7em 0;
+  padding-left: 19px;
   position: relative;
 }
 
@@ -3472,2899 +4032,112 @@ header .headerLogo {
 }
 
 /** ------------------------------
- *日付
+ * 検索時スライド
  */
-.articleInfo__date {
-  color: #888;
-  line-height: 4em;
-  float: left;
-}
-
-.articleInfo .articleInfo__date {
-  line-height: 1.5;
-  margin-top: 2.30769em;
-}
-
-.contentBox__voteTime {
-  text-align: center;
-  padding: 20px 10px;
-}
-
-/** ------------------------------
- * shareLink
- */
-.contentBox .shareLink {/* ページ項目内の場合
-  line-height: 1.0;
-  padding: 3px 12px 5px 0;*/
-}
-
-.contentBox .shareLink:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.shareLink__item {
-  padding: 5px 5px;
-  float: left;
-}
-
-.shareLink__item .twitter-share-button {
-  width: 105px !important;
-}
-
-/* 記事の下にある場合 */
-.wideShareLink {
-  margin-right: 1px;
-}
-
-.wideShareLink .shareLink {
-  width: 100%;
-  text-align: center;
-  padding: 1px 0 0;
-  display: table;
-  table-layout: fixed;
-  float: none;
-  clear: both;
-  border-top: 1px solid #ddd;
-}
-
-.wideShareLink .snsNav {
-  width: 100%;
-  margin: 0;
+.searchSlide {
   padding: 0;
-  display: table-cell;
-  float: none;
-  position: relative;
 }
 
-.wideShareLink .shareLink div + div {
-  border-left: 1px solid #fff;
-}
-
-.wideShareLink .shareLink .snsNav__item {
-  width: auto;
-  height: auto;
-  margin: 0;
-}
-
-.wideShareLink .shareLink a {
-  color: #fff;
-  font-size: 12px;
-  text-decoration: none;
-  background-color: #ccc;
-  padding: 10px 0 10px 0;
-  display: block;
-}
-
-.wideShareLink .snsNav__item--twitter a {
-  background-color: #55acee;
-}
-
-.wideShareLink .snsNav__item--facebook a {
-  background-color: #3b5998;
-}
-
-.wideShareLink .snsNav__item--googleplus a {
-  background-color: #d84937;
-}
-
-.wideShareLink .snsNav__item--youtube a {
-  background-color: #cc181e;
-}
-
-.wideShareLink .snsNav__item--share a {
-  background-color: #e80;
-}
-
-.wideShareLink .shareLink a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.wideShareLink .snsNav__item a:before {
-  color: #fff !important;
-  font-size: 24px;
-  line-height: 1.2;
-  width: 24px;
-  margin: 0 auto 4px;
-  position: static;
-}
-
-.wideShareLink .snsNav__item--twitter a:before {
-  content: "\e6a9";
-}
-
-.wideShareLink .snsNav__item--facebook a:before {
-  content: "\e6a8";
-}
-
-.wideShareLink .snsNav__item--googleplus a:before {
-  content: "\e6a7";
-}
-
-.wideShareLink .snsNav__item--youtube a:before {
-  content: "\e647";
-}
-
-.wideShareLink .snsNav__item--share a:before {
-  content: "\e61b";
-}
-
-/* 記事 */
-.article__body {
-  color: #555452;
-  font-size: 15px;
-  line-height: 1.5;
-  padding: 25px 20px;
-}
-
-.article__body a {
-  color: #0044cc;
-  text-decoration: underline;
-}
-
-.article__body img {
-  max-width: 100%;
-}
-
-.article__body img.center {
-  margin: 0 auto;
-  display: block;
-}
-
-.article__body img.floatRight {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 2em;
-  float: right;
-}
-
-.article__body img.floatLeft {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-right: 2em;
-  float: left;
-}
-
-.article__body #reviews {
-  margin: 10px -22px;
-}
-
-.article__body #reviews h2 {
-  font-size: initial;
-  border-bottom: initial;
-}
-
-.article__body #reviews .btn_sbs a {
-  color: #fff;
-}
-
-.article__body hr+br,
-.article__body .lyricCard+br {
-  display: none;
-}
-
-.article__body .openTrunkBody {
-  text-align: center;
-}
-
-.article__body .openTrunkBody a {
-  color: #fff;
-  background-color: #e80;
-  width: 600px;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 100px;
-}
-
-.article__body .trunkBody {
-  display: none;
-}
-
-.article__body h2 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.5em;
-  margin: 7px 0;
-  border-bottom: 2px solid #e80;
-}
-
-.article__body h3 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.5em;
-  margin: 5px 0;
-  padding-left: 3px;
-  border-left: 3px solid #e80;
-}
-
-.article__body h4 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.5em;
-  margin: 5px 0;
-  padding-left: 6px;
-  border-left: 6px double #e80;
-}
-
-.article__body__pagerNext {
-  text-align: center;
-  margin-top: 16px;
-}
-
-.article__body__pagerNext a {
-  color: #fff;
-  background-color: #e80;
-  width: 600px;
-  padding: 10px;
-  display: inline-block;
-  border-radius: 100px;
-  text-decoration: none;
-}
-
-.article__body__pagerNext a:hover {
-  opacity: 0.6;
-}
-
-.article__body__pager {
-  text-align: center;
-  margin-top: 8px;
-  margin-bottom: 1px;
-  padding: 10px;
-}
-
-.article__body__pager__item,
-.article__body__pager__item a {
-  display: inline-block;
-}
-
-.article__body__pager__item--current {
-  background-color: #eee;
-}
-
-.article__body__pager__item a:hover {
-  border-color: #e80;
-}
-
-.article__body__pager__item--current,
-.article__body__pager__item a {
-  padding: 4px 12px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.article__body__pager__item a {
-  text-decoration: none;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.article__body__pager__item--prev a,
-.article__body__pager__item--next a {
-  color: #0044cc;/* リンク色 */
-}
-
-.article__body__pager__item--prev a:before {
-  font-family: utIcon;
-  content: "\e63c";
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.article__body__pager__item--next a:after {
-  font-family: utIcon;
-  content: "\e63d";
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-/* 特集記事内 */
-.article__body cite
-{
-  color: #808080;
-}
-
-.ut-int
-{
-  color: maroon;
-}
-
-.ut-photocap
-{
-  color: gray;
-  font-size: x-small;
-}
-
-.ut-red
-{
-  color: red;
-  font-weight: bold;
-}
-
-.ut-blue
-{
-  color:blue;
-  font-weight: bold;
-}
-
-.ut-yellow
-{
-  color: #ffd900;
-  font-weight: bold;
-}
-
-.ut-green
-{
-  color: green;
-  font-weight: bold;
-}
-
-.ut-pink
-{
-  color: #FFA8B8;
-  font-weight: bold;
-}
-
-.ut-deep-pink
-{
-  color: #ff33dd;
-  font-weight: bold;
-}
-
-.ut-light-blue
-{
-  color: #00FFFF;
-  font-weight: bold;
-}
-
-.ut-purple
-{
-  color: purple;
-  font-weight: bold;
-}
-
-.ut-yellow-marker
-{
-  background: linear-gradient(transparent 70%,yellow 50%);
-  font-weight: bold;
-}
-
-/* 目次 */
-.article__index {
-  font-size: 14px;
-  background-color: #FCFCFC;
-  margin: 20px;
-  padding: 20px 25px;
-  border: 1px solid #CCC;
-}
-
-.article__index label {
-  color: #0044cc;
-  cursor: pointer;
-}
-
-.article__index ol {
-  display: none;
-}
-
-.article__index--title input[type="checkbox"] {
-  display: none;
-}
-
-.article__index a {
-  color: #0044cc;
-}
-
-.article__index a:hover {
-  opacity: 0.6;
-}
-
-.article__index--title {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.article__index--h2 {
-}
-
-.article__index--h3 {
-  padding-left: 2.0em;
-}
-
-.article__date {
-  color: #bbb;
-  text-align: right;
-  padding-right: 4px;
-}
-
-.article__pager {
-  font-size: 14px;
-  height: 30px;
-  padding: 10px 15px;
-  position: relative;
-}
-
-.article__pager__item {
-  vertical-align: middle;
-}
-
-.article__pager__item a {
-  color: #0044cc;
-  text-align: center;
-  width: 300px;
-  padding: 4px 5px;
-  display: inline-block;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.article__pager__item a:hover {
-  border-color: #e80;
-}
-
-.article__pager__item--prev {
-  float: left;
-}
-
-.article__pager__item--prev a:before {
-  font-family: utIcon;
-  content: "\e63c";
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.article__pager__item--next {
-  float: right;
-}
-
-.article__pager__item--next a:after {
-  font-family: utIcon;
-  content: "\e63d";
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-/** ------------------------------
- * ライター
- */
-.writerInfo {
-  padding: 6px 8px;
-}
-
-.writerInfo:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.writerInfo__profile {
-  color: #555452;
-  word-break: break-all;
-  float: right;
-}
-
-.writerInfo__profile a {
-  color: #e80;
-}
-
-.writerInfo__profile__name {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.writerInfo__image {
-  margin: 0 10px 10px 0;
-  float: left;
-}
-
-.writerInfo__image img {
-  width: auto;
-  height: auto;
-  max-width: 160px;
-  max-height: 160px;
-  display: block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.youtube {
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  position: relative;
-}
-
-.youtube iframe {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.abematv {
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  position: relative;
-}
-
-.abematv iframe {
-  width: 100% !important;
-  height: 100% !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-a.abematvlink {
-  display: none;
-}
-
-.article__mainImage {
-  text-align: center;
-  margin: -24px -20px 25px;
-}
-
-.article__mainImage img {
-  max-width: 100%;
-}
-
-.lyricCard ,
-.lyricCard a {
-  color: #0044cc;
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-  text-decoration: none;
-}
-
-.lyricCard {
-  margin: 25px 0 8px;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.lyricCard .text,
-.lyricCard .image {
-  padding: 10px;
-  display: table-cell;
-  direction: ltr;
-  vertical-align: top;
-}
-
-.lyricCard .text {
-  line-height: 1.2;
-  padding-left: 0;
-}
-
-.lyricCard .text .title {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.lyricCard .text .artist {
-  color: #808080;
-  font-size: 90%;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.lyricCard .text .artist span + span {
-  margin-left: 5px;
-}
-
-.lyricCard .text .line {
-  font-size: 80%;
-  line-height: 1.6;
-}
-
-.lyricCard .image {
-  width: 100px;
-  text-decoration: none;
-}
-
-.lyricCard .image img {
-  width: 100%;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.lyricCard + br {
-  display: none;
-}
-
-.lyricCard__pattern1 .lyricTitle,
-.lyricCard__pattern1 .lyricInfo
-{
-  display: inline-block;
-}
-
-.lyricCard__pattern1 .lyricTitle
-{
-  margin-right: 40px;
-}
-
-.lyricCard__pattern1 .lyricInfo
-{
-  margin-bottom: 8px;
-}
-
-.lyricCard__pattern4 a:hover .moreBtn {
-  color: #fff;
-  background-color: #e80;
-}
-
-.lyricCard__pattern4 {
-  padding: 11px 0px;
-  margin:0px;
-  position: relative;
-  border-top: 2px dotted #ccc;
-  border-bottom: none;
-  border-right: none;
-  border-left: none;
-  -webkit-border-radius: none;
-     -moz-border-radius: none;
-          border-radius: none;
-}
-
-.lyricCard__pattern4 .text {
-  padding: 0px 0px 0px 10px;
-}
-
-.lyricCard__pattern4 .image {
-  width: 108px;
-  padding: 0px;
-}
-
-.lyricCard__pattern4 .image img {
-  box-shadow: 3px 3px 1px #CCC;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-
-.lyricCard__pattern4 .lyricTitle .title
-{
-  font-size: 16px;
-  font-weight: bold;
-  color: #313131;
-  text-decoration: none;
-}
-
-.lyricCard__pattern4 .lyricTitle .artist
-{
-  font-size: 15px;
-  color: #343330;
-}
-
-.lyricCard .lyricInfo
-{
-  font-size: 90%;
-}
-
-.lyricCard__pattern4 .lyricInfo .lyricCard__subTitle
-{
-  margin-bottom: 32px;
-  font-size: 12px;
-  color: #888;
-}
-
-.lyricCard__pattern4 .moreBtn{
-  position: absolute;
-  right: 0px;
-  bottom: 11px;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: normal;
-  color: #e80;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-}
-
-/* 戻るリンク */
-.contentBox__backLink {
-  text-align: center;
-  margin-top: 10px;
-  padding-top: 1px;
-  border-top: 1px solid #ddd;
-  position: relative;
-}
-
-.contentBox__backLink a {
-  font-size: large;
-  text-decoration: none;
-  background-color: #f6f6f6;
-  padding: 10px 19px;
-  display: block;
-}
-
-.contentBox__backLink a:before {
-  font-family: utIcon;
-  content: "\e6a1";
-  font-size: 26px;
-  line-height: 1.0;
-  vertical-align: middle;
-  width: 26px;
-  height: 26px;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 12px;
-}
-
-/* リンク */
-.contentBox__buttonLink {
-  text-align: center;
-  width: 100%;
-  padding-top: 1px;
-  display: table;
-  table-layout: fixed;
-  clear: both;
-  border-top: 1px solid #ddd;
-}
-
-.contentBox__buttonLink > div {
-  display: table-cell;
-  position: relative;
-}
-
-.contentBox__buttonLink div + div {
-  border-left: 1px solid #fff;
-}
-
-.contentBox__buttonLink a {
-  color: #fff;
-  font-size: 15px;
-  text-decoration: none;
-  background-color: #42e2a7;
-  padding: 10px 19px;
-  display: block;
-}
-
-.contentBox__buttonLink div + div a {
-  background-color: #a1dc3c;
-}
-
-.contentBox__buttonLink a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.contentBox__buttonLink a:before {
-  font-family: utIcon;
-  content: "\e684";
-  font-size: 20px;
-  line-height: 1.0;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-}
-
-.contentBox__buttonLink div + div a:before {
-  content: "\e691";
-}
-
-/** ------------------------------
- * 歌詞詳細
- */
-.lyricData {
-  padding: 10px;
+.searchSlide__title {
+  padding: 4px 8px;
+  border-radius: 6px 6px 0 0;
   border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-.lyricBody + .lyricData {
-  border-top: 1px solid #ddd;
-  border-bottom: none;
-}
-
-.lyricBody + .lyricData .lyricData__sub {
-  height: auto;
-}
-
-.lyricBody + .lyricData .lyricData__main {
-  width: 570px;
-  margin-right: 0;
-}
-
-.lyric--body {
-  height: 18px;
-}
-
-.lyricData:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.lyricData__sub {
-  width: 100px;
-  min-height: 100px;
-  float: left;
-}
-
-.lyricData__sub img {
-  width: 100%;
-}
-
-.lyricData__main {
-  width: 410px;
-  margin-right: 160px;
-  float: right;
-}
-
-.lyricData .shareLink {
-  line-height: 1.0;
-  width: 144px;
-  position: absolute;
-  top: 7px;
-  right: 10px;
-}
-
-/* 楽曲制作 */
-.lyricWork {
-  margin-bottom: 5px;
-  /*border-bottom: 1px solid #eee;*/
-}
-
-.lyricWork__title,
-.lyricWork__body {
-  margin-bottom: 3px;
-}
-
-.lyricWork__title {
-  font-weight: bold;
-  margin-right: 10px;
-  float: left;
-}
-
-.lyricWork__body {
-  color: #888;
-  word-break: break-all;
-  overflow: hidden;
-}
-
-/* アフィリンク */
-.lyricLink:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.lyricLink__item {
-  margin-right: 5px;
-  float: left;
-}
-
-.youtubeLink {
-  font-size: 15px;
-  margin: 0 20px 10px 10px;
-  float: right;
-}
-
-.lnk_ytube_long {
-  color: #e80;
-  padding: 5px 15px;
-  display: inline-block;
-  border: 2px solid #e80;
-  border-radius: 10px;
-}
-
-.lnk_ytube_long::before {
-  font-family: utIcon;
-  content: "\e60a";
-  color: #e80;
-  line-height: 1;
-  vertical-align: middle;
-  padding-right: 4px;
-}
-
-.article__body .youtubeLink a {
-  color: #fff;
-  text-decoration: none;
-  background-color: #e80;
-  padding: 4px 15px 4px 10px;
-  display: block-inline;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.article__body .youtubeLink a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.article__body .youtubeLink a:before {
-  font-family: utIcon;
-  content: "\e61d";
-  font-size: 120%;
-  vertical-align: middle;
-  margin-top: -1px;
-  padding-right: 6px;
-  display: inline-block;
-}
-
-/*
-.lyricLink__button {
-  color: #fff !important;
-  text-decoration: none !important;
-  line-height: 26px;
-  background-color: #e80;
-  padding: 0 15px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.lyricLink__button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.lyricLink__button--iTunes:before {
-  font-family: utIcon;
-  content: "\e61b";
-  vertical-align: middle;
-  margin-right: 3px;
-}
-
-.lyricLink__button--youtube:before {
-  font-family: utIcon;
-  content: "\e647";
-  vertical-align: middle;
-  margin-right: 3px;
-}
-*/
-
-/* カテゴリ */
-.lyricCategory {
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #eee;
-}
-
-.lyricCategory__title  {
-  font-weight: bold;
-  margin-right: 10px;
-  float: left;
-}
-
-.lyricCategory__body {
-  color: #888;
-  overflow: hidden;
-}
-
-.lyricCategory__body a {
-  color: #e80;
-}
-
-/* キーワード */
-.lyricKeyword {
-  padding-top: 10px;
-  clear: both;
-}
-
-.lyricKeyword__inner {
-  padding-top: 10px;
-  border-top: 1px solid #eee;
-  list-style-type: none;
-}
-
-.lyricKeyword__item {
-  margin-right: 5px;
-  display: inline-block;
-}
-
-.lyricKeyword__item a {
-  color: #0044cc;
-}
-
-/* 歌詞フォント */
-.lyricFont {
-  background-color: #eee;
-  width: 415px;
-  margin-left: 10px;
-  padding: 5px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.lyricFont--bodyFrame {
-  width: auto;
-  margin: 15px 10px 10px 10px;
-  float: right;
-}
-
-.lyricFont__size {
-  background-color: #fff;
-  min-height: 54px;
-  padding: 8px 10px;
-  float: left;
-  border-radius: 3px;
-}
-
-.lyricFont__size + .lyricFont__size {
-  margin-left: 5px;
-}
-
-.lyricFont__title {
-  color: #fff;
-  font-size: 85%;
-  text-align: center;
-  background-color: #343330;
-  margin-bottom: 5px;
-  padding: 2px 0;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.lyricFont input[type="button"] {
-  background-color: #f6f6f6;
-  padding: 3px 10px;
-  margin: 0px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  cursor: pointer;
-}
-
-.lyricFont input[disabled="disabled"] {
-  color: #e80;
-  background-color: #fff;
-  border-color: #e80;
-}
-
-/* 歌詞 */
-.lyricBody {
-  margin: 25px 20px 5px;
-}
-
-/* 歌詞お楽しみ */
-.hopeVote {
-  margin: 30px;
-}
-
-.hopeVote__message {
-  font-size: medium;
-  text-align: center;
-  line-height: 1.8;
-  padding-bottom: 20px;
-}
-
-.hopeVote__message span {
-  display: inline-block;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(255,242,0,0)), color-stop(60%,rgba(255,242,0,1)), color-stop(100%,rgba(255,255,0,1)));
-  background: -webkit-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
-  background:    -moz-linear-gradient(top, rgba(255,242,0,0) 59%, rgba(255,242,0,1) 60%, rgba(255,255,0,1) 100%);
-  background:     -ms-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
-  background:      -o-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
-  background:         linear-gradient(to bottom, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff200', endColorstr='#ffff00',GradientType=0 );
-}
-
-.hopeVote__balloon {
-  color: #e80;
-  font-size: 120%;
-  text-align: center;
-  background-color: #fff;
-  margin-bottom: 20px;
-  padding: 30px 10px;
-  border: 1px solid #e6e6e6;
-  position: relative;
-}
-
-.hopeVote__balloon:before {
-  content: "";
-  margin-left: -20px;
-  display: block;
-  border-style: solid;
-  border-width: 15px 10px;
-  border-color: #fff transparent transparent transparent;
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  z-index: 10;
-}
-
-.hopeVote__balloon:after {
-  content: "";
-  margin-left: -21px;
-  display: block;
-  border-style: solid;
-  border-width: 16px 11px;
-  border-color: #d6d6d6 transparent transparent transparent;
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  z-index: 8;
-}
-
-.rankingList {
-  border-top: 1px solid #ddd;
-}
-
-.balloon + .rankingList {
-  border-top: 1px solid #ddd !important;
-}
-
-.hopeVoteButton {
-  text-align: center;
-}
-
-.hopeVoteButton button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  color: #fff;
-  font-size: large;
-  line-height: 25px;
-  background-color: #e80;
-  width: 50%;
-  margin: 0;
-  padding: 10px 0;
-  display: inline-block;
-  outline: none;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.4s ease;
-     -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-       -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-}
-
-.hopeVoteButton button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-/* tweet */
-.tweetBox {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.tweetBox:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/*
-.tweetBox:before {
-  font-family: utIcon;
-  content: "\e6a9";
-  color: #fff;
-  font-size: 60px;
-  text-align: center;
-  line-height: 100px;
-  background-color: #55acee;
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-  display: block;
-  float: left;
-  overflow: hidden;
-}
-  */
-
-.tweetBox__label {
-  color: #fff;
-  font-size: 18px;
-  background-color: #55acee;
-  padding: 4px 10px;
-}
-
-.tweetBox__input {
-  width: 100%;
-  display: table;
-}
-
-.tweetBox__input div {
-  color: #55acee;
-  font-size: 17px;
-  text-align: center;
-  vertical-align: middle;
-  height: 4em;
-  display: table-cell;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
-
-.tweetBox__input div.selected {
-  color: #555;
-  background-color: #fffe66;
-}
-
-.tweetBox__button {
-  text-align: center;
-  margin: 10px 0 0;
-}
-
-.tweetBox__input input[type="text"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  font-size: 15px;
-  text-align: center;
-  line-height: 1.7;
-  background-color: transparent;
-  width: 80px;
-  margin: 0 10px;
-  padding: 4px 6px;
-  outline: none;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-}
-
-.tweetBox__button input[type="button"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  color: #fff;
-  font-size: medium;
-  text-align: center;
-  line-height: 2;
-  background-color: #55acee;
-  margin: 0 0 0 10px;
-  padding: 0 25px;
-  border: none;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.tweetBox__button input[type="button"]:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.lyricBody__row {
-  margin: 10px 0;
-  padding-left: 3.2em;
-  position: relative;
-}
-
-.lyricBody__row + .lyricBody__row {
-  padding-top: 10px;
-  border-top: 1px dotted #ddd;
-}
-
-.lyricBody__number {
-  color: #fff;
-  text-align: center;
-  background-color: #55acee;
-  min-width: 2em;
-  padding: 0 0.2em;
-  display: block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  position: absolute;
-  left: 0;
-}
-
-.lyricLineNum {
-  cursor: pointer;
-}
-
-.lyricLineNum:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-/****************公開後歌詞▼▼ アルファ版 20201101
-*********************************/
-.gaugeWrap--newLyric .voteBtn::before {
-  top: 10px;
-}
-
-.gaugeWrap--newLyric .openVoteResult::before {
-  top: 11px;
-}
-
-.gaugeWrap--newLyric .gaugeLst span:not(:nth-child(6)) {
-  padding-top: 35px;
-}
-
-.newLyricSwitch {
-  margin: 18px auto 0;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  text-align: center;
-}
-
-.newLyricSwitch__item {
-  display: table-cell;
-  padding: 0 2px;
-}
-
-.newLyricSwitch__item > button {
-  margin: 0;
-  padding: 5px 4px;
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  display: block;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  line-height: 1.2;
-  cursor: pointer;
-  appearance: none;
-  background: #fff;
-  outline: none;
-}
-
-.newLyricSwitch__item > button > span {
-  font-size: 80%;
-}
-
-.furiganaButton--disabled {
-  color: #ccc;
-  background-color: #eee;
-}
-
-
-/* 関連リンク */
-.relatedLink {
-  padding: 20px 20px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.relatedLink__title {
-  color: #e80;
-  font-size: medium;
-  font-weight: bold;
-  margin: 0 0 12px;
-  border-bottom: 2px solid #e80;
-}
-
-.relatedLink__body {
-  line-height: 1.8;
-}
-
-.relatedLink__body--lyric img {
-  max-width: 100%;
-}
-
-.relatedLink__body--lyric a {
-  color: #0044cc;
-}
-
-.relatedLink__body--lyric a.box {
-  text-decoration: none;
-  background-color: #fff;
-  padding: 4px 6px;
-  display: inline-block;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.relatedLink__body--lyric a.box:hover {
-  border-color: #e80;
-}
-
-.relatedLink__item a {
-  color: #555452;
-  text-decoration: none;
-  padding-left: 20px;
-  position: relative;
-  -webkit-transition: all 0.3s ease;
-     -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
-
-.relatedLink__item a:before {
-  font-family: utIcon;
-  content: "\e683";
-  font-size: 12px;
-  width: 12px;
-  height: 12px;
-  display: block;
-  position: absolute;
-  top: 0.1em;
-  left: 0;
-}
-
-.relatedLink__item a:hover {
-  color: #e80;
-}
-
-/* アルバム詳細 */
-.albumDetail {
-  margin-top: 0;
-  padding: 17px 20px 15px;
-  border-top: 1px solid #ddd;
-}
-
-.albumDetail a {
-  color: #0044cc;
-}
-
-.albumDetail__heading {
-  padding: 0 20px;
-  border-top: 1px solid #ddd;
-}
-
-.albumDetail__heading h2 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.5em;
-  margin: 7px 0;
-  border-bottom: 2px solid #e80;
-}
-
-.albumDetail__heading + .albumDetail {
-  border-top: none;
-}
-
-.albumDetail__title {
-  color: #e80;
-  font-size: medium;
-  font-weight: bold;
-  margin: 0 0 12px;
-  border-bottom: 2px solid #e80;
-}
-
-.albumDetail__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.albumDetail__body img {
-  max-width: 160px;
-  margin: 0 15px 10px 0;
-  float: left;
-  -ms-flex-positive: 1;
-   -webkit-box-flex: 1;
-          flex-grow: 1;
-  -ms-flex-item-align: start;
-           align-self: flex-start;
-}
-
-.albumDetail__contentDetail + .albumDetail__contentInfo {
-  margin-top: 20px;
-}
-
-/* アーティスト詳細 */
-/*.artistInfo
-{
-  width: 100%;
-  padding: 10px;
-  display: table;
-  border-top: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-.artistInfo .artistImage
-{
-  vertical-align: middle;
-  padding-right: 10px;
-  display: table-cell;
-}
-
-.artistInfo .artistImage img
-{
-  max-width: 338px;
-  max-height: 300px;
-}
-
-.artistInfo .artistTags
-{
-  vertical-align: top;
-  width: 100%;
-  display: table-cell;
-}
-
-.artistInfo .keywordLineUp
-{
-  max-height: 300px;
-  overflow: auto;
-}
-*/
-/* アーティスト情報 */
-/*.artistInfo__profile__name {
-  font-size: medium;
-  font-weight: bold;
-  margin-top: 8px;
   margin-bottom: 4px;
-  padding-top: 8px;
-  border-top: 1px solid #ddd;
-}
-
-.artistInfo__profile__image {
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.artistInfo__profile__image img {
-  max-width: 600px;
-}
-
-.artistInfo__latest__title {
-  font-size: medium;
-  font-weight: bold;
-  margin-top: 8px;
-  margin-bottom: 4px;
-  padding-top: 8px;
-  border-top: 1px solid #ddd;
-}
-*/
-/* 投票 */
-.gauge {
-  margin: 15px 10px 10px;
-}
-
-.gauge:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.gauge__button button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  color: #bbb;
-  font-size: 15px;
-  line-height: 2.1;
-  vertical-align: top;
-  background-color: #fff;
-  width: 65px;
-  margin: 0;
-  padding: 36px 0 0;
-  outline: none;
-  border: 1px solid #e6e6e6;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
   position: relative;
-  cursor: pointer;
-}
-
-.gauge__button .voted {
-  color: #e80;
-  background-color: #fff59d;
-  border-color: #fff59d;
-}
-
-.gauge__button .mostVoted {
-  color: #e80;
-  border-color: #e80;
-}
-
-.gauge__button button:before {
-  font-family: smileIcon;
-  content: "\e6b4";
-  font-size: 32px;
-  line-height: 1.1;
-  margin-left: -0.5em;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-}
-
-.gauge__button button.kandoBtn:before {
-  content: "\e6b1";
-}
-
-.gauge__button button.rennaiBtn:before {
-  content: "\e6b0";
-}
-
-.gauge__button button.gennkiBtn:before {
-  content: "\e602";
-}
-
-.gauge__button button.openVoteResult:before {
-  content: "";
-  background-image: url("/images/pc/pie.png");
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-  display: block;
-  top: 6px;
-}
-
-.gauge__button .openVoteResult {
-  color: #fff;
-  background-color: #50cc33;
-  border-color: #50cc33;
-}
-
-/*
-.gauge__button .favourite {
-  color: #e80;
-  font-size: 300%;
-  line-height: 1.7;
-  padding-top: 1px;
-}
-
-.gauge__button .favourite:before {
-  display: none;
-}
-
-.gauge__button .favourite {
-  border-color: #e80;
-}
-
-.gauge__button .favourite--on {
-  color: #fff;
-  background-color: #e80;
-}
-*/
-
-/** ------------------------------
- * 基本の一覧
- */
-.list__item,
-.list__item > a {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-}
-
-.list__item + .list__item {
-  border-top: 1px solid #ddd;
-}
-
-.list__item > a {
-  text-decoration: none;
-}
-
-.list__main,
-.list__sub,
-.list__content {
-  padding: 10px;
-  display: table-cell;
-  direction: ltr;
-}
-
-.list__main {
-  line-height: 1.8;
-  vertical-align: middle;
-  padding-left: 0;
-}
-
-.list__sub {
-  text-decoration: none;
-  vertical-align: top;
-  width: 100px;
-}
-
-.list__sub--compact {
-  width: 65px;
-}
-
-.list__sub img {
-  width: 100%;
-}
-
-.list__content {
-  line-height: 1.8;
-  vertical-align: middle;
-}
-
-.list__release {
-  color: #fff;
-  font-size: 11px;
-  text-align: center;
   line-height: 1.4;
-  vertical-align: middle;
-  background-color: #bbb;
-  padding: 0 0.5em;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.list__title {
+  font-size: 15px;
   font-weight: bold;
+  background-color: #f2f2f0;
+  color: #e80;
 }
 
-.list__title--large {
-  font-size: 116%;
+.bx-viewport {
 }
 
-.list__title--indexRanking a:hover {
-  color: #72c331;
+.searchSlide a {
+  display: block;
 }
 
-.list__title--pickup a:hover {
-  color: #31c3ad;
+.searchSlide img {
+  display: inline-block !important;
+  width: 100%;
 }
 
-.list__title--special {
-  -webkit-transition: all 0.4s ease;
-     -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-       -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
+@media only screen and (min-width: 420px) {
+  .searchSlide__itemOuter {
+    width: 136px !important;
+  }
 }
 
-a:hover .list__title--special {
-  color: #d0475a;
+.searchSlide__item {
+  text-align: center;
+  word-break: break-all;
 }
 
-.list__name,
-.list__date {
-  font-size: 85%;
-}
-
-.list__name a {
-  color: #e80;/* 基本色 */
-}
-
-.list__name a:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
-  margin-right: -0.2em;
-}
-
-.list__message {
-  color: #888;
-  font-size: 93%;
+.searchSlide__name {
   margin-top: 5px;
-}
-
-.list__date {
-  color: #e80;/* 基本色 */
-  text-align: right;
-}
-
-/* 黄緑 */
-.list__name--ranking a {
-  color: #72c331;
-}
-
-/* 黄緑 */
-.list__name--pickup a {
-  color: #31c3ad;
-}
-
-/* 紅 */
-.list__date--special {
-  color: #d0475a;
-}
-
-.list__voteCount {
-  text-align: right;
   line-height: 1.2;
+  font-size: 11px;
 }
 
-.list__voteCount span {
-  color: #e80;
-  font-size: 200%;
-}
-
-.list__button {
-  text-align: right;
-}
-
-.list__button button {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  color: #fff;
-  text-align: right;
-  background-color: #333;
-  margin: 5px 0 0;
-  padding: 3px 8px 3px 10px;
+/* JS関連 */
+.searchSlide .bx-prev,
+.searchSlide .bx-next {
+  margin: 18px 0 58px 0;
+  padding: 0 7px;
+  border-radius: 2px;
   border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-     -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-}
-
-.list__button button:hover {
-  background-color: #e80;
-}
-
-
-.list__button button:after {
-  font-family: utIcon;
-  content: "\e699";
-  vertical-align: middle;
-  margin-left: 3px;
-}
-
-/* 201903 */
-/* 縦 */
-.articleList__item ,
-.articleList__item > a {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  border-collapse: separate;
-  direction: rtl;
-  border-spacing: 0;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.articleList__item + .articleList__item {
-  border-top: solid 1px #f2f2f2;
-}
-
-.articleList__item a {
-  color: #555;
-}
-
-.articleList__main ,
-.articleList__sub {
-  vertical-align: top;
-  padding: 10px;
-  display: table-cell;
-  direction: ltr;
-}
-
-.articleList__main {
-  position: relative;
-}
-
-.articleList__ttlWrap {
-  min-height: 70px;
-}
-
-.articleList__stateIcon {
-  font-size: 0;
-  margin-bottom: 3px;
-}
-
-.articleList__stateIcon .stateIcon + .stateIcon {
-  margin-left: 5px;
-}
-
-.articleList__ttl {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.articleList__ttl .stateIcon {
-  margin-right: 5px;
-}
-
-.articleList__ttl a {
-  word-break: break-all;
-  word-wrap: break-word;
   display: inline-block;
-  position: relative;
-}
-
-.newestList .articleList__ttl a {
-  display: inline;
-}
-
-.articleList__subTtl {
-  color: #999;
-  font-size: 12px;
-  font-weight: normal;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.articleList__name {;
-  text-overflow: ellipsis;
-  line-height: 20px;
-  white-space: nowrap;
-  padding-right: 90px;
-  overflow: hidden;
-}
-
-.articleList__view {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-
-.articleList__view a ,
-.articleList__view span {
-  color: #999;
-  font-size: 11px;
-  text-align: center;
-  line-height: 20px;
-  width: 80px;
-  height: 20px;
-  display: block;
-  overflow: hidden;
-  border: solid 1px;
-  -webkit-border-radius: 50px;
-     -moz-border-radius: 50px;
-       -o-border-radius: 50px;
-          border-radius: 50px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.articleList__view a:hover {
-  color: #fff;
-}
-
-.articleList__message {
-  color: #999;
-  font-size: 12px;
-  word-break: break-all;
-  word-wrap: break-word;
-  margin-top: 5px;
-}
-
-.articleList__sub {
-  width: 90px;
-  padding-right: 0;
-}
-.articleList__sub img {
-  width: 100%;
-}
-
-.articleList__ads {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding-top: 15px;
-}
-
-/* 最新歌詞 */
-.topContents__newest .newestList {
-  border-top: solid 1px transparent;
-}
-
-.newestList .articleList__ttl {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-bottom: 5px;
-  overflow: hidden;
-}
-
-.newestList .articleList__ttl {
-  font-size: 13px;
-}
-
-/* rankNo */
-.rankNo {
-  margin-left: 50px;
-  position: relative;
-}
-
-.rankNo__icon {
-  color: #fff;
-  font-size: 11px;
-  font-weight: normal;
-  text-align: center;
-  text-indent: .1em;
-  letter-spacing: .1em;
-  line-height: 20px;
-  background-color:#555;
-  width: 40px;
-  height: 18px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-       -o-border-radius: 3px;
-          border-radius: 3px;
-  position: absolute;
-  top: 1.5px;
-  left: -50px;
-}
-
-/* コラム/pick up */
-.columnList .articleList__main ,
-.pickupList .articleList__main {
-  vertical-align: middle;
-}
-
-.columnList .articleList__sub {
-  width: 130px;
-}
-
-.pickupList .articleList__sub {
-  width: 134px;
-}
-
-/* 横 */
-.articleFlex {
-  font-size: 0;
-  margin: 5px;
-}
-
-.articleFlex__item {
-  vertical-align: top;
-  width: 20%;
-  padding: 5px;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#sidebar .articleFlex__item {
-  width: 50%;
-}
-
-.articleFlex__item a {
-  display: block;
-}
-
-.articleFlex__thumb img {
-  width: 100%;
-}
-
-.articleFlex__ttl {
-  font-size: 12px;
-  font-weight: bold;
-  word-break: break-all;
-  word-wrap: break-word;
-  max-height: 4.5em;
-  margin-top: 10px;
-  overflow: hidden;
-}
-
-/* タグ */
-.articleTag {
-  font-size: 14px;
-  margin-top: 5px;
-  word-break: break-all;
-}
-
-.tagInfo {
-  display: flex;
-  display:-webkit-box;
-  padding: 10px 15px;
-}
-
-.tagInfo .shareLink {
-  flex-grow: 1;
-  -webkit-box-flex: 1;
-}
-
-/* 201903 */
-
-/** ------------------------------
- * JSカレンダー
- */
-.ui-widget,
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default {
-  color: #e80;
-  font-weight: normal;
-}
-
-.ui-datepicker th {
-  color: #fff;
-  background-color: #444;
-  padding: 4px 0;
-}
-
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-  font-weight: bold;
-}
-
-.ui-datepicker .ui-datepicker-title select {
-  border: 1px solid #ccc;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.ui-corner-all,
-.ui-corner-bottom,
-.ui-corner-right,
-.ui-corner-br {
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-}
-
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-  text-align: center;
-  text-decoration: none;
   line-height: 1.8;
-  vertical-align: middle;
-  padding-top: 2px;
-}
-
-.ui-datepicker .ui-datepicker-prev:before {
-  font-family: utIcon;
-  content: "\e696";
-}
-
-.ui-datepicker .ui-datepicker-next:before {
-  font-family: utIcon;
-  content: "\e699";
-}
-
-.ui-widget-header .ui-icon {
-  background-image: none !important;
-}
-
-.voteSurvey {
-  border-top: 1px solid #ddd;
-}
-
-.voteSurvey td .selectOuter {
-  width: 160px;
-}
-
-.voteSurvey__button {
-  text-align: center;
-}
-
-.voteSurvey td input[type="text"] {
-  width: 148px
-}
-
-.voteSurvey td input[type="button"] {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
   color: #fff;
-  text-align: right;
-  background-color: #e80;
-  width: 10em;
-  padding: 5px;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  background: rgba(0,0,0,0.5);
+  font-size: 11px;
+  text-align: center;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-     -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-       -o-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-  text-align: center;
+  transition: all 0.5s ease;
 }
 
-.voteSurvey td input[type="button"] + input[type="button"] {
-  background-color: #343330;
-}
-
-/** ------------------------------
- * 箱型の一覧
- */
-.blockList {
-  background: #eee url("/images/common/tableBg.png") no-repeat 100% 100%;
-  margin-bottom: 1px;
-}
-
-.blockList__inner {
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
-  position: relative;
+.searchSlide .bx-prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   z-index: 10;
+  line-height: 60px;
 }
 
-.blockList__inner--last {
-  border-bottom: none;
+.searchSlide .bx-prev:before {
+  content: "\e69a";
+  font-family: utIcon;
 }
 
-.blockList__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.blockList__item {
-  width: 235px;
-  float: left;
-  border-right: 1px solid #ddd;
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.blockList__item + .blockList__item + .blockList__item {
-  width: 234px;
-  border-right: none;
-}
-
-.blockList__image {
-  vertical-align: top;
-  width: 100%;
-  height: 234px;
-}
-
-/** ------------------------------
- * 特集などの一覧（blockListに入るもの）
- */
-.preface {
-  text-decoration: none !important;
-  padding-top: 244px;
-}
-
-.preface:before {/* 各ボックスの高さが揃っているように見せるための背景の白い領域 */
-  content: "";
-  background-color: #fff;
-  width: 235px;
-  display: block;
-  border-right: 1px solid #ddd;
+.searchSlide .bx-next {
   position: absolute;
   top: 0;
+  right: 0;
   bottom: 0;
-  z-index: 0;
+  z-index: 10;
+  line-height: 60px;
 }
 
-.preface__title,
-.preface__body,
-.preface__date {
-  padding: 0 10px;
-}
-
-.preface__title,
-.preface__body {
-  position: relative;
-}
-
-.preface__title {
-  font-weight: bold;
-  font-size: 109%;
-  margin-bottom: 7px;
-}
-
-.preface__body {
-  color: #888;
-  font-size: 85%;
-  padding-bottom: 1.0em;
-}
-
-.preface__date {
-  color: #e80;
-  font-size: 85%;
-  text-align: right;
-  width: 215px;
-  position: absolute;
-  bottom: 0.4em;
-}
-
-.preface__sub {
-  width: 235px;
-  position: absolute;
-  top: 0;
-}
-
-.preface__sub img {
-  vertical-align: top;
-  width: 100%;
-  height: 234px;
-}
-
-/** ------------------------------
- * 営業枠
- */
-.billboardGroup {
-  background-color: white;
-  padding: 4px;
-}
-
-.billboardGroup:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.billboardPromotion {
-  float: left;
-}
-
-.promotionList {
-  width: 736px;
-}
-
-.promotionList__item {
-  width: 40%;
-  /* padding-left: 2px;
-  padding-right: 2px; */
-  float: left;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.promotionList__item:nth-child(even) {
-  margin-bottom: 4px;
-}
-
-.promotionList__item--main {
-  width: 60%;
-  padding-right: 4px;
-}
-
-.promotion {
-  width: 100%;
-  /* border: 1px solid rgba(0,0,0,0.2); */
-  position: relative;
-  /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.15); */
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.promotion a {
-  display: block;
-}
-
-.promotion__image {
-}
-
-.promotion__image img {
-  width: 100%;
-  height: 163px;
-}
-
-.promotionList__item--main .promotion__image img {
-  height: 330px;
-}
-
-.promotion__content {
-  background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,0.9));
-  background-image: linear-gradient(transparent,rgba(0,0,0,0.9));
-  width: 100%;
-  height: 80%;
-  padding: 26% 4px 8px 4px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.promotionList__item--main .promotion__content {
-  padding: 30% 4px 8px 4px;
-}
-
-.promotion__title {
-  color: #fff;
-  font-size: 105%;
-  padding: 6px 4px;
-}
-
-.promotionList__item--main .promotion__title {
-  font-size: 130%;
-  padding: 10px 10px 20px;
-  position: absolute;
-  bottom: 0;
-}
-
-.promotion__artist {
-  padding: 0 6px 4px 6px;
-}
-
-.promotionList__item--main .promotion__artist {
-  padding: 0 10px 4px 14px;
-}
-
-.promotion__artist span {
-  color: #ccc;
-}
-
-.promotion__artist span:before {
+.searchSlide .bx-next:after {
+  content: "\e69d";
   font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
 }
 
-
-/*
-.promotions {
-  width: 710px;
-  height: 330px;
-  float: left;
-}
-
-.promotions__section {
-  padding: 8px;
-  float: left;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.promotions__section--main {
-  width: 70%;
-}
-
-.promotions__section--sub {
-  width: 30%;
-}
-
-.promoMain {
-  width: 100%;
-  position: relative;
-}
-
-.promoMain__image {
-}
-
-.promoMain__image img {
-  max-width: 100%;
-}
-
-.promoMain__content {
-  background-color: rgba(0,0,0,0.5);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.promoMain__content__title {
-  color: #fff;
-  font-size: 140%;
-  padding: 8px;
-}
-
-.promoSub {
-  width: 260px;
-  height: 165px;
-  position: relative;
-}
-
-.promoSub__image img {
-  width: 260px;
-  height: 165px;
-}
-
-.promoSub__title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.promo__container {
-  position: relative;
-}
-
-.promo__image {
-  width: 100%;
-  height: 200px;
-  display: block;
-}
-
-.promo__top .promo__image {
-  height: 300px;
-}
-
-.promo__caption {
-  color: white;
-  background-color: rgba(0,0,0,0.7);
-  width: 100%;
-  padding: 12px;
-  position: absolute;
-  bottom: 0;
-  box-sizing: border-box;
-}
-
-.promo__caption h3 {
-  font-weight: bold;
-}
-
-.promo__top .list__main {
-  line-height: normal;
-  padding: 8px;
-}
-
-.promo__top .list__title {
-  font-size: 1.7em;
-}
-
-.promo__top .list__sub {
-  width: 200px;
-  padding: 4px;
-}
-
- .promoBlock {
-  width: 100%;
- }
-
- .promoBlock__item {
-  width: 50%;
- }
-
- .promoBlock__item:first-child {
-  float: left;
- }
-
- .promoBlock__item:last-child {
-  float: right;
- }
-
- .rectangleBanner.promotion {
-  background-color: #fff;
-  border: 1px solid #ddd;
- }
- */
-
-/** ------------------------------
- * pickupList
- */
-.pickupList {
-  width: 100%;
-  display: table;
-  border-collapse: separate;/* firefoxでborderが出ないバグ対策 */
-  border-spacing: 0;/* firefoxでborderが出ないバグ対策 */
-}
-/*
-.pickupList__item {
-  vertical-align: top;
-  padding: 10px 8px 10px 10px;
-  display: table-cell;
-}
-
-.pickupList__item +.pickupList__item {
-  border-left: 1px solid #ddd;
-}
-
-.pickupList__itemInner {
-  text-decoration: none !important;
-  width: 100%;
-  display: table;
-  direction: rtl;
-  unicode-bidi: embed;
-}
-
-.pickupList__main,
-.pickupList__sub {
-  vertical-align: top;
-  display: table-cell;
-  direction: ltr;
-}
-
-.pickupList__title {
-  font-weight: bold;
-}
-
-.pickupList__date {
-  color: #888;
-  font-size: 83%;
-  text-align: right;
-  margin-top: 5px;
-}
-
-.pickupList__sub {
-  width: 65px;
-  padding-right: 8px;
-}
-
-.pickupList__sub img {
-  width: 100%;
-}
-*/
-/** ------------------------------
- * 基本のtable
- */
-table {
-  border-collapse: separate;/* firefoxでborderが出ないバグ対策 */
-  border-spacing: 0;/* firefoxでborderが出ないバグ対策 */
-}
-
-th,
-td {
-  padding: 8px 10px;
-}
-
-tr + tr > * {
-  border-top: 1px solid #ddd;
-}
-
-tr > td + td {
-  border-left: 1px dotted #ddd;
-}
-
-th {
-  font-weight: bold;
-  background-color: #eee;
-  position: relative;
-}
-
-/* シンプルなtable */
-.simpleTable {
-  margin-bottom: 2px;
-}
-
-.simpleTable th,
-.simpleTable td {
-  padding: 14px 20px;
-}
-
-.simpleTable tr > th:first-of-type {
-  font-size: 109%;
-  background-color: transparent;
-  width: 200px;
-  position: relative;
-}
-
-.simpleTable tr > th:first-of-type:before {
-  content: "";
-  background-color: #e80;
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-}
-
-.simpleTable td {
-  color: #555452;
-}
-
-/** ------------------------------
- * 自由入力エリア
- */
-.freeArea {
-  color: #555452;
-  font-size: 109%;
-  margin-bottom: 1px;
-  padding: 10px 10px 25px;
-  border-bottom: 1px solid #ddd;
-}
-
-.freeArea a {
-  color: #0044cc;
-}
-
-.freeArea img {
-  max-width: 100%;
-}
-
-/** ------------------------------
- * キーワード
- */
-.keywordList__tag {
-  width: 11em;
-  text-align: center;
-}
-
-.keywordList__tagLink {
-  word-break: break-all;
-  color: #0044cc !important;
-}
-
-.keywordList__tagLink:before {
-  font-family: utIcon;
-  content: "\e64a";
-  color: #aaa;
-  font-size: 10px;
-}
-
-.keywordList__tagLink:hover:before {
-  color: #e80;
-}
-
-.keywordList__title {
-  font-weight: bold;
-}
-
-.keywordList__name {
-  color: #0044cc !important;
-  font-size: 85%;
-  vertical-align: middle;
-}
-
-.keywordList__name:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-right: -0.2em;
-}
-
-.keywordList__lyric {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.keywordList__list {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.keywordList__list + .keywordList__list {
-  margin-top: 7px;
-  padding-top: 7px;
-  border-top: 1px dotted #ddd;
-}
-
-/** ------------------------------
- * 検索
- */
-.searchResult__head {
-  width: 230px;
-}
-
-.searchResult__artist {
-  width: 140px;
-}
-
-.searchResult__title a {
-  font-weight: bold;
-  color: #0044cc;
-}
-
-.searchResult__name {
-  font-size: 85%;
-}
-
-.searchResult__artist a,
-.searchResult__name a {
-  color: #0044cc;
-}
-
-.searchResult__name a:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
-  margin-right: -0.2em;
-}
-
-.searchResult__lyricist {
-  font-size: 0.9em;
-}
-
-.artistLyricList .searchResult__head {
-  width: 210px;
-}
-
-.artistLyricList .searchResult__artist {
-  width: 190px;
-}
-
-.artistLyricList .artistList__beginning a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-height: 1.5em;
-  max-height: calc(1.5em * 3);
-}
 
 /** ------------------------------
  * 該当なし
  */
 .noItem {
-  color: #888;
-  font-size: medium;
-  text-align: center;
   margin: 50px 15px;
+  color: #888;
+  font-size: 15px;
+  text-align: center;
 }
 
 .noItem--line {
@@ -6373,172 +4146,78 @@ th {
   border-top: 1px solid #ddd;
 }
 
+.noItem--bottomLine {
+  margin: 0;
+  padding: 50px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
 /** ------------------------------
  * 送信完了
  */
 .sendMessage {
+  margin: 30px 10px;
   color: #888;
-  font-size: medium;
-  text-align: center;
-  margin: 80px 15px;
+  font-size: 14px;
 }
 
 /** ------------------------------
- * 歌詞検索
+ * 表示切替タブ
  */
-.searchForm__title {
-  width: 230px;
-}
-
-/** ------------------------------
- * フォーム関連
- */
-table input[type="text"],
-table textarea {
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  font-size: 108%;
-  padding: 4px 6px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-table input[type="text"] {
-  width: 80%;
-}
-
-table textarea {
-  width: 94%;
-  height: 200px;
-}
-
-/* ボタン */
-.formButton {
-  text-align: center;
-  margin-top: 1px;
+.switchTab {
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
   padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.formButton > * {
-  display: inline-block;
-}
-
-.formButton button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  color: #fff;
-  font-size: medium;
+  font-size: 11.5px;
+  line-height: 1.3;
   text-align: center;
-  line-height: 2;
-  background-color: #343330;
-  margin: 0;
-  padding: 0 60px;
-  border: none;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
 }
 
-.formButton button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
+.switchTab__inner {
+  border: 1px solid #e80;
+  display: table;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  border-radius: 3px;
 }
 
-/* 歌詞検索フォーム */
-.lyricSearchForm th {
-  width: 110px;
-  padding-left: 0;
-  padding-right: 0;
+.switchTab__item {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #fff;
 }
 
-.lyricSearchForm td input[type="text"] {
-  width: 92%;
+.switchTab__item + .switchTab__item {
+  border-left: 1px solid #e80;
 }
 
-/* selects装飾 */
-td .selectOuter {
-  width: 96%;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  position: relative;
-}
-
-td select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
-  font-size: 108%;
-  line-height: 1.7;
-  background-color: transparent;
-  margin: 0;
-  padding: 4px 0;
-  outline: none;
-  border: none;
-}
-
-td .selectOuter:after {
-  font-family: utIcon;
-  content: "\e697";
+.switchTab__item a {
+  padding: 6px 0;
+  display: block;
   color: #e80;
-  font-size: 26px;
-  position: absolute;
-  top: -0.1em;
-  right: 0;
-  z-index: 1;
+  text-decoration: none;
 }
 
-td .selectOuter select {
-  width: 112%;
-  padding-left: 5px;
-  position: relative;
-  z-index: 10;
+.switchTab__item--current {
+  background-color: #e80;
 }
 
-td .selectOuter select option {
-  padding-left: 5px;
+.switchTab__item--current a {
+  color: #fff !important;
 }
 
 /** ------------------------------
- * 歌詞リクエスト
- */
-.lyricForm__head {
-  width: 210px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.lyricForm textarea,
-.lyricForm input[type="text"] {
-  width: 80%;
-}
-
-/** ------------------------------
- * ランキングタブ
+ * ランキングページタブ
  */
 
 .switchTabRanking {
-  background: #eee;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  padding: 0 10px 10px;
+  font-size: 11.5px;
 }
 
-.switchTabRanking__inner {
-  padding: 10px;
+.switchTabRanking__inner + .switchTabRanking__inner {
+  margin-top: 8px;
 }
 
 .switchTabRanking__inner:after {
@@ -6548,176 +4227,218 @@ td .selectOuter select option {
 }
 
 .switchTabRanking__item {
-  text-align: center;
   float: left;
-  width: calc((100% - 30px) / 4);
+  width: calc(50% - 4px);
+  text-align: center;
   border: 1px solid #D6A810;
   border-radius: 4px;
-  background-color: #fff;
   box-sizing: border-box;
-}
-
-.switchTabRanking__item + .switchTabRanking__item {
-  margin-left: 10px;
+  background: #fff;
 }
 
 .switchTabRanking__item a {
-  display: inline-block;
-  width: 100%;
-  padding: 5px;
   color: #D6A810;
-  box-sizing: border-box;
 }
 
 .switchTabRanking__item--current a {
   color: #fff;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--lyric {
+.switchTabRanking__item--current.switchTabRanking--lyric {
   background: #D6A810;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--movie {
+.switchTabRanking__item--current.switchTabRanking--movie {
   background: #AD64BE;
   border-color: #AD64BE;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item-hope {
+.switchTabRanking__item--current.switchTabRanking--hope {
   background: #5467b2;
   border-color: #5467b2;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--feeling {
+.switchTabRanking__item--current.switchTabRanking--feeling {
   background: #f46b88;
   border-color: #f46b88;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--reviewLyric {
+.switchTabRanking__item--current.switchTabRanking--reviewLyric {
   background: #f02361;
   border-color: #f02361;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--reviewArtist {
+.switchTabRanking__item--current.switchTabRanking--reviewArtist {
   background: #3faba3;
   border-color: #3faba3;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--reviewNews {
+.switchTabRanking__item--current.switchTabRanking--reviewNews {
   background: #5467B2;
   border-color: #5467B2;
 }
 
-.switchTabRanking__item--current.switchTabRanking__item--reviewSpecialArticle {
+.switchTabRanking__item--current.switchTabRanking--reviewSpecialArticle {
   background: #ad64be;
   border-color: #ad64be;
 }
 
-.highlightTtl {
-  padding: 15px;
-  text-align: center;
-  color: #fff;
+.switchTabRanking__item + .switchTabRanking__item {
+  margin-left: 8px;
 }
 
-.indexSubttl {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid;
+.switchTabRanking__item a {
+  display: block;
+  padding: 6px 0;
 }
 
-.indexSubttl--withShare {
-  position: relative;
-}
-
-.indexSubttl h2 {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-.indexSubttl.indexSubttl--lyric {
+.indexTtl_noIcon.lyricRankingTtl {
   color: #D6A810;
-  border-color: #D6A810;
+  border-bottom: 1px solid #D6A810;
 }
 
-.highlightTtl.highlightTtl--lyric {
-  background-color: #D6A810;
-}
-
-.indexSubttl.indexSubttl--movie {
+.indexTtl_noIcon.movieRankingTtl {
   color: #AD64BE;
-  border-color: #AD64BE;
+  border-bottom: 1px solid #AD64BE;
 }
 
-.highlightTtl.highlightTtl--movie {
-  background-color: #AD64BE;
-}
-
-.indexSubttl.indexSubttl--hope {
+.indexTtl_noIcon.hopeRankingTtl {
   color: #5467b2;
-  border-color: #5467b2;
+  border-bottom: 1px solid #5467b2;
   border-top: 4px solid #5467b2;
 }
 
-.indexSubttl.indexSubttl--allHope {
+.indexTtl_noIcon.allHopeRankingTtl {
   color: #5467b2;
-  border-color: #5467b2;
+  border-bottom: 1px solid #5467b2;
 }
 
-.highlightTtl.highlightTtl--hope {
-  background-color: #5467b2;
-}
-
-.indexSubttl.indexSubttl--feeling {
+.indexTtl_noIcon.feelingRankingTtl {
   color: #f46b88;
-  border-color: #f46b88;
+  border-bottom: 1px solid #f46b88;
 }
 
-.highlightTtl.highlightTtl--feeling {
-  background-color: #f46b88;
-}
-
-.indexSubttl.indexSubttl--reviewLyric {
+.indexTtl_noIcon.reviewRankingTtl--lyric {
   color: #f02361;
-  border-color: #f02361;
+  border-bottom: 1px solid #f02361;
 }
 
-.highlightTtl.highlightTtl--reviewLyric {
-  background-color: #f02361;
-}
-
-.indexSubttl.indexSubttl--reviewArtist {
+.indexTtl_noIcon.reviewRankingTtl--artist {
   color: #3faba3;
-  border-color: #3faba3;
+  border-bottom: 1px solid #3faba3;
 }
 
-.highlightTtl.highlightTtl--reviewArtist {
-  background-color: #3faba3;
-}
-
-.indexSubttl.indexSubttl--reviewNews {
+.indexTtl_noIcon.reviewRankingTtl--news {
   color: #5467B2;
-  border-color: #5467B2;
+  border-bottom: 1px solid #5467B2;
 }
 
-.highlightTtl.highlightTtl--reviewNews {
-  background-color: #5467B2;
-}
-
-.indexSubttl.indexSubttl--reviewSpecialArticle {
+.indexTtl_noIcon.reviewRankingTtl--specialArticle {
   color: #ad64be;
-  border-color: #ad64be;
+  border-bottom: 1px solid #ad64be;
 }
 
-.highlightTtl.highlightTtl--reviewSpecialArticle {
-  background-color: #ad64be;
+.indexTtl_noIcon.reviewRankingTtl--writer {
+  color: #D6A810;
+  border-bottom: 1px solid #D6A810;
 }
 
-.boxArea_rank--movie .icoTxt_rank {
+.indexTtl_noIcon.indexTtl_rank {
+  color: #D6A810;
+  border-top: 4px solid #D6A810;
+}
+
+.highlightTtl {
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.highlightTtl--lyric,
+.highlightTtl--writer {
+  background: #D6A810;
+}
+
+.highlightTtl--movie {
   background: #AD64BE;
 }
 
-.boxArea_rank--movie .icoTxt_rank_top3::before {
-  color: #AD64BE;
+.highlightTtl--hope {
+  background: #5467b2;
+}
+
+.highlightTtl--feeling {
+  background: #f46b88;
+}
+
+.highlightTtl--reviewLyric {
+  background: #f02361;
+}
+
+.highlightTtl--reviewArtist {
+  background: #3faba3;
+}
+
+.highlightTtl--reviewNews {
+  background: #5467B2;
+}
+
+.highlightTtl--reviewSpecialArticle {
+  background: #ad64be;
+}
+
+/** ------------------------------
+ * 記事
+ */
+.articleOverview {
+  padding: 0 15px;
+}
+
+.articleOverview .articleOverview__img {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.articleOverview img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.articleOverview .articleOverview__description {
+  margin-top: 4px;
+  color: #555452;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.articleOverview__date {
+  color: #bbb;
+  font-size: 11px;
+  margin: 4px 0;
+}
+
+.articleOverview__writer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.articleOverview__writer__articleSub {
+  float: left;
+  color: #bbb;
+  margin-right: 6px;
+}
+
+.articleOverview__writer__writerPerson {
+  float: left;
+}
+
+.articleOverview__writer__writerPerson a {
+  color: #0044cc;
 }
 
 /** ------------------------------
@@ -6778,910 +4499,2030 @@ td .selectOuter select option {
   background: #C0C0C0;
 }
 
-/** ------------------------------
- * ランキング提案
- */
-.rankingRequestForm th {
-  text-align: left;
-  width: 210px;
-  padding-left: 20px;
-  padding-right: 0;
-}
-
-.rankingRequestForm td {
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.rankingRequestForm textarea,
-.rankingRequestForm input[type="text"] {
-  width: 90%;
-}
-
-.rankingRequestConfirm th {
-  text-align: left;
-  width: 210px;
-  padding-left: 20px;
-  padding-right: 0;
-}
-
-.rankingRequestConfirm td {
-  text-align: left;
-}
-
-/* ボタン */
-.rankingRequestButton {
-  margin-top: 10px;
-}
-
-.rankingRequestButton button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: calc(100% - 200px);
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: center;
-  color: #fff;
-  background-color: #D6A810;
-  border: 0;
-  border-radius: 50px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  cursor: pointer;
-}
-
-.rankingRequestButton button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.lnk_moreRanking_wrapper {
-  padding: 10px;
-}
-
-.lnk_moreRanking {
-  color: #D6A810;
-  border: 2px solid #D6A810;
-  border-radius: 50px;
-  box-sizing: border-box;
-  display: block;
-  font-weight: bold;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-.lnk_moreRanking:hover {
-  color: #fff;
-  background-color: #D6A810;
-}
-
-/** ------------------------------
- * ライター応募
- */
-.writerEntryForm__head {
-  width: 210px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.writerEntryForm textarea,
-.writerEntryForm input[type="text"] {
-  width: 80%;
-}
-
-/** ------------------------------
- * 各種情報掲載
- */
-.publishRequestForm__head {
-  width: 210px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.publishRequestForm textarea,
-.publishRequestForm input[type="text"] {
-  width: 80%;
-}
-
-/** ------------------------------
- * ハッシュタグの紹介文（本番）
- */
-.lyricTagIntroduction__title {
-  color: #e80;
-  font-size: 20px;
-  font-weight: normal;
-}
-.lyricTagIntroduction__body {
-  color: #000;
-  font-size: 17px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-.lyricTagIntroduction__userInfo {
-  color: #888;
-  font-size: 15px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-
-
-/** ------------------------------
- * ハッシュタグの紹介文応募
- */
-.lyricTagIntroductionForm th {
-  text-align: left;
-  width: 210px;
-  padding-left: 20px;
-  padding-right: 0;
-}
-
-.lyricTagIntroductionForm td {
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.lyricTagIntroductionForm textarea,
-.lyricTagIntroductionForm input[type="text"] {
-  width: 95%;
-}
-
-.lyricTagIntroductionForm__new {
-  text-align: left;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-left: 15px;
-}
-
-.lyricTagIntroductionForm__addLyric {
-  text-align: right;
-  padding-top: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.lyricTagIntroductionForm__addLyric button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  color: #fff;
-  font-size: small;
-  text-align: center;
-  line-height: 2;
-  background-color: #343330;
-  margin: 0;
-  padding: 0 20px;
-  border: none;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.lyricTagIntro  ductionForm .body {
-  width: 95%;
-  height: 300px;
-}
-
-.lyricTagIntroductionForm .previewButton {
-  text-align: center;
-  margin-top: 1px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.lyricTagIntroductionForm .previewButton button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  color: #fff;
-  font-size: medium;
-  text-align: center;
-  line-height: 2;
-  background-color: #e80;
-  margin: 0;
-  padding: 5px 60px;
-  border: none;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.lyricTagIntroductionForm .lyricTagIntroductionForm__preview {
-  text-align: left;
-}
-
-.lyricTagIntroductionForm .lyricTagIntroductionForm__previewTitle {
-  color: #e80;
-  font-size: 20px;
-  font-weight: normal;
-}
-
-.lyricTagIntroductionForm .lyricTagIntroductionForm__previewBody {
-  color: #000;
-  font-size: 17px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-
-.lyricTagIntroductionForm .lyricTagIntroductionForm__previewUserInfo {
-  color: #888;
-  font-size: 15px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-
-.lyricTagIntroductionSent {
-  color: #888;
-  font-size: medium;
-  text-align: center;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.lyricTagIntroductionSent__tableHeader {
-  color: #888;
-  font-size: medium;
-  text-align: center;
-}
-
-.lyricTagIntroductionSent__table {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.lyricTagIntroductionSent__table td {
-  font-size: large;
-  font-weight: bold;
-}
-
-/** ------------------------------
- * ハッシュタグ検索
- */
-.selectTagWindow th {
-  width: 210px;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.selectTagWindow div {
-  text-align: center;
-}
-
-.selectTagWindow textarea,
-.selectTagWindow input[type="text"] {
-  width: 80%;
-}
-
-.selectTagWindow select {
-  width: 90%;
-}
-
-.selectTagWindow .select {
-  text-align: center;
-  margin-top: 1px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.selectTagWindowSearchLoading {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-/** ------------------------------
- * 歌詞リンク検索
- */
-.selectLyricWindow th {
-  width: 210px;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.selectLyricWindow div {
-  text-align: center;
-}
-
-.selectLyricWindow textarea,
-.selectLyricWindow input[type="text"] {
-  width: 80%;
-}
-
-.selectLyricWindow select {
-  width: 90%;
-}
-
-.selectLyricWindow .select {
-  text-align: center;
-  margin-top: 1px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.selectLyricWindow .selected {
-  text-align: center;
-  margin-top: 1px;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-}
-
-.selectLyricWindowSearchLoading {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.selectLyricWindowSelectedLyric {
-  padding-bottom: 20px;
-}
-
-.selectLyricWindowSelectedLyric input[type="text"] {
-  text-align: center;
-}
-
-.selectLyricWindow__resultTitle {
-  color: #000;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.selectLyricWindow__resultArtist {
-  color: #000;
-  font-size: 15px;
-  font-weight: normal;
-  text-align: center;
-}
-
-.selectLyricWindow__resultArtist span:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 14px;
-  vertical-align: middle;
-  margin-right: 2px;
-}
-
-/** ------------------------------
- * ハッシュタグ紹介文プレビュー
- */
-.previewWindow .previewWindow__preview {
-  margin: 20px;
-}
-
-.previewWindow__previewTheme {
-  color: #e80;/* 基本色 */
-  font-size: 131%;
-  margin: 5px 1px 1px;
-  padding: 10px 9px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-}
-
-.previewWindow__previewTheme:before {
-  content: "";
-  background-color: #e80;/* 基本色 */
-  width: 100%;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: -4px;
-  left: 0;
-}
-
-
-.previewWindow .previewWindow__previewTitle {
-  color: #e80;
-  font-size: 20px;
-  font-weight: normal;
-}
-
-.previewWindow .previewWindow__previewBody {
-  color: #000;
-  font-size: 17px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-
-.previewWindow .previewWindow__previewUserInfo {
-  color: #888;
-  font-size: 15px;
-  font-weight: normal;
-  margin-top: 10px;
-}
-
-.previewWindow__loading {
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-
-/* 必須 */
-.mandatoryfield {
-  color: #fff;
-  font-size: 10px;
-  font-weight: normal;
-  vertical-align: middle;
-  background-color: #e80;
-  padding: 1px 4px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-/** ------------------------------------------------------------
- * エラーメッセージ
- */
-.errorMessage {
-  margin-bottom: 1px;
-  padding: 20px 100px;
-  border-bottom: 1px solid #ddd;
-}
-
-.errorMessage__title {
-  font-family: "Times New Roman", serif;
-  color: #ef8100;
-  font-size: xx-large;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-  padding: 0 20px;
-}
-
-.errorMessage__body {
-  color: #824e1c;
-  background-color: #fffae4;
-  padding: 15px;
-  border: 1px solid #ddd;
-  list-style-type: square;
-}
-
-.errorMessage__item {
-  margin-left: 1.5em;
-}
-
-/** ------------------------------
- * pager
- */
-.pager {
-  text-align: center;
-  margin-bottom: 1px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-table + .pager,
-.list + .pager,
-.blockList + .pager,
-#loadIcon + .pager {
-  border-top: 1px solid #ddd;
-  border-bottom: none;
-}
-
-.pager__item,
-.pager__item a {
-  display: inline-block;
-}
-
-.pager__item--current {
-  background-color: #eee;
-}
-
-.pager__item a:hover {
-  border-color: #e80;
-}
-
-.pager__item--current,
-.pager__item a {
-  padding: 4px 12px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.pager__item a {
-  text-decoration: none;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.pager__item--first a,
-.pager__item--last a {
-  color: #e80;/* 基本色 */
-}
-
-.pager__item--first a:before {
-  font-family: utIcon;
-  content: "\e63c";
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.pager__item--last a:after {
-  font-family: utIcon;
-  content: "\e63d";
-  vertical-align: middle;
-  margin-left: 5px;
-}
-
-/** ------------------------------
- * newIcon
- */
-.newIcon {
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.4;
-  vertical-align: middle;
-  background-color: #e80;
-  padding: 0 0.5em;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-/** ------------------------------
- * preIcon
- */
-.preIcon {
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.4;
-  vertical-align: middle;
-  background-color: #28c4e5;
-  padding: 0 0.5em;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-/* 201903 */
-.stateIcon {
-  color: #fff;
-  font-size: 11px;
-  text-align: center;
-  text-indent: .1em;
-  text-transform: uppercase;
-  line-height: 20px;
-  letter-spacing: .1em;
-  vertical-align: middle;
-  height: 18px;
-  padding: 0 5px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-       -o-border-radius: 3px;
-          border-radius: 3px;
-}
-
-.stateIcon__pre {
-  background-color: #5dc2e0;
-}
-
-.stateIcon__new {
-  background-color: #f6542c;
-}
-
-.stateIcon__pop {
-  background-color: #ff4ca6;
-}
-
-/** ------------------------------
- * popularIcon
- */
-.popularIcon {
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: italic;
-  text-align: center;
-  line-height: 1.4;
-  vertical-align: middle;
-  background-color: #f44aa2;
-  padding: 0 0.5em;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-
-/** ------------------------------
- * 検索時スライド
- */
-.searchSlide {
-  margin-bottom: 1px;
-  padding: 16px 41px 13px;
-  border-bottom: 1px solid #ddd;
-}
-
-.searchSlide a {
-  display: inline-block;
-}
-
-.searchSlide img {
-  width: 100%;
-  display: inline-block !important;
-}
-
-.searchSlide__itemOuter {
-  width: 108px !important;
-}
-
-.searchSlide__item {
-  text-align: center;
-  word-break: break-all;
-}
-
-.searchSlide__name {
+/** 特集のハッシュタグ */
+.articleOverview__tags {
   margin-top: 8px;
 }
 
-/* JS関連 */
-.searchSlide .bx-prev,
-.searchSlide .bx-next {
-  height: 68px;
+.articleOverview__tags a {
+  color: #0044cc
+}
+
+.articleBody {
+  padding: 5px 15px;
+  color: #555452;
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+.articleBody a {
+  color: #0044cc;
+  text-decoration: underline;
+}
+
+.articleBody .openTrunkBody {
+  text-align: center;
+}
+
+.articleBody .openTrunkBody a {
+  background-color: #e80;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  width: 90%;
+  border-radius: 100px;
+}
+
+.articleBody .trunkBody {
+  display: none;
+}
+
+.articleBody .articleBody__img {
+  text-align: center;
+  min-height: 345px;
+  display: flex;
+  align-items: center;
+}
+
+.articleBody img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.articleBody img.floatRight {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.articleBody img.floatLeft {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.articleBody hr+br,
+.articleBody .lyricCard+br {
+  display: none;
+}
+
+.articleBody h2 {
+  margin: 7px 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4em;
+  border-bottom: 2px solid #e80;
+}
+
+.articleBody h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding-left: 3px;
+  border-left: 3px solid #e80;
+}
+
+.articleBody h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding-left: 6px;
+  border-left: 6px double #e80;
+}
+
+.articleBody__pagerNext {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.articleBody__pagerNext a {
+  background-color: #e80;
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  width: 90%;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.articleBody__pagerNext a:hover {
+  opacity: 0.6;
+}
+
+.articleBody__pager {
+  margin-top: 8px;
+  margin-bottom: 1px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.articleBody__pager__item,
+.articleBody__pager__item a {
+  display: inline-block;
+}
+
+.articleBody__pager__item--current {
+  background-color: #eee;
+}
+
+.articleBody__pager__item a:hover {
+  border-color: #e80;
+}
+
+.articleBody__pager__item--current,
+.articleBody__pager__item a {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.articleBody__pager__item a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.articleBody__pager__item--prev a,
+.articleBody__pager__item--next a {
+  color: #0044cc;/* リンク色 */
+}
+
+.articleBody__pager__item--prev a:before {
+  margin-right: 5px;
+  font-family: utIcon;
+  content: "\e63c";
+  vertical-align: middle;
+}
+
+.articleBody__pager__item--next a:after {
+  margin-left: 5px;
+  font-family: utIcon;
+  content: "\e63d";
+  vertical-align: middle;
+}
+
+.articleBody #reviews {
+  font-size: 12px;
+  margin: 10px -15px;
+}
+
+.articleBody #reviews h2 {
+  margin: initial;
+  font-size: initial;
+  line-height: initial;
+  border-bottom: initial;
+}
+
+.articleBody #reviews .more_Btn_review,
+.articleBody #reviews .more_Btn_topic {
+  color: #fff;
+}
+
+/* 特集記事内 */
+.articleBody cite {
+  color: #808080;
+}
+
+.ut-int {
+  color: maroon;
+}
+
+.ut-photocap {
+  color: gray;
+  font-size: x-small;
+}
+
+.ut-red {
+  color: red;
+  font-weight: bold;
+}
+
+.ut-blue {
+  color:blue;
+  font-weight: bold;
+}
+
+.ut-yellow {
+  color: #ffd900;
+  font-weight: bold;
+}
+
+.ut-green {
+  color: green;
+  font-weight: bold;
+}
+
+.ut-pink {
+  color: #FFA8B8;
+  font-weight: bold;
+}
+
+.ut-deep-pink {
+  color: #ff33dd;
+  font-weight: bold;
+}
+
+.ut-light-blue {
+  color: #00FFFF;
+  font-weight: bold;
+}
+
+.ut-purple {
+  color: purple;
+  font-weight: bold;
+}
+
+.ut-yellow-marker
+{
+  background: linear-gradient(transparent 70%,yellow 50%);
+  font-weight: bold;
+}
+
+/* 目次 */
+.articleIndex {
+  margin: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #FCFCFC;
+  border: 1px solid #CCC;
+  min-height: 25px;
+}
+
+.articleIndex label {
+  color: #0044cc;
+  cursor: pointer;
+}
+
+.articleIndex ol {
+  display: none;
+}
+
+.articleIndex--title input[type="checkbox"] {
+  display: none;
+}
+
+.articleIndex--title {
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
+
+.articleIndex a {
+  color: #0044cc;
+}
+
+.articleIndex--h3 {
+  padding-left: 2em;
+}
+
+.articlePager {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 7px;
+  background-color: #f2f2f0;
+  text-align: center;
+  height: 35px;
+  display: relative;
+}
+
+.articlePagerItem {
+  display: inline-block;
+}
+
+.articlePagerItem a {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px;
+  width: 140px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+.articlePagerItem--prev {
+  float: left;
+}
+
+.articlePagerItem--prev a {
+  color: #0044cc;
+}
+
+.articlePagerItem--prev a:before {
+  margin-right: 5px;
+  font-family: utIcon;
+  font-size: 14px;
+  content: "\e63c";
+  vertical-align: middle;
+}
+
+.articlePagerItem--next {
+  float: right;
+}
+
+.articlePagerItem--next a {
+  color: #0044cc;
+}
+
+.articlePagerItem--next a:after {
+  margin-left: 5px;
+  font-family: utIcon;
+  font-size: 14px;
+  content: "\e63d";
+  vertical-align: middle;
+}
+
+
+.lyricCard ,
+.lyricCard a {
+  font-size: 12px;
+  color: #0044cc;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+  text-decoration: none;
+}
+
+.lyricCard {
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.lyricCard .text,
+.lyricCard .image {
+  padding: 10px;
+  display: table-cell;
+  direction: ltr;
+  vertical-align: top;
+}
+
+.lyricCard .text {
+  padding-left: 0;
+  line-height: 1.1;
+}
+
+.lyricCard .text .title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.lyricCard .text .artist {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: #808080;
+}
+
+.lyricCard .text .line {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.lyricCard .image {
+  width: 80px;
+  text-decoration: none;
+}
+
+.lyricCard .image img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.lyricCard__pattern1 .lyricTitle,
+.lyricCard__pattern1 .lyricInfo {
+  display: inline-block;
+}
+
+.lyricCard__pattern1 .lyricTitle {
+  margin-right: 40px;
+}
+
+.lyricCard__pattern1 .lyricInfo {
+  margin-bottom: 8px;
+}
+
+.lyricCard__pattern4 a:hover .moreBtn {
+  color: #fff;
+  background-color: #e80;
+}
+
+.lyricCard__pattern4 {  
+  padding: 11px 0px;
+  margin:0px;
+  position: relative;
+  border-top: 2px dotted #ccc;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  -webkit-border-radius: none;
+     -moz-border-radius: none;
+          border-radius: none;
+}
+
+.lyricCard__pattern4 .text {
+  padding: 0px 0px 0px 10px;
+}
+
+.lyricCard__pattern4 .image {
+  width: 108px;
+  padding: 0px;
+}
+
+.lyricCard__pattern4 .image img {
+  box-shadow: 3px 3px 1px #CCC;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.lyricCard__pattern4 .lyricTitle .title
+{
+  font-size: 16px;
+  font-weight: bold;
+  color: #313131;
+  text-decoration: none;
+}
+
+.lyricCard__pattern4 .lyricTitle .artist
+{
+  font-size: 15px;
+  color: #343330;
+  line-height: 1.6;
+}
+
+.lyricCard .lyricInfo {
+  font-size: 90%;
+}
+
+.lyricCard__pattern4 .lyricInfo .lyricCard__subTitle
+{
+  margin-bottom: 32px;
+  font-size: 12px;
+  color: #888;
+}
+
+.lyricCard__pattern4 .moreBtn{
+  position: absolute;
+  right: 0px;
+  bottom: 11px;
+  width: 80px;
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #e80;
+  color: #e80;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 /** ------------------------------
- * 表示切替タブ
+ * ライター
  */
-.switchTab {
-  padding-left: 5px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+.writerInfo {
+  padding: 6px 8px;
 }
 
-.switchTab__inner {
-  display: table;
-}
-
-.switchTab__item {
-  display: table-cell;
-}
-
-.switchTab__item a {
-  background-color: #fff;
-  text-decoration: none;
-  margin: 10px 0 0 5px;
-  padding: 5px 15px;
+.writerInfo:after {
+  content: "";
   display: block;
-  border: 1px solid #ddd;
-  border-bottom-style: none;
-  -webkit-border-radius: 3px 3px 0 0;
-     -moz-border-radius: 3px 3px 0 0;
-          border-radius: 3px 3px 0 0;
+  clear: both;
 }
 
-.switchTab__item a:hover {
+.writerInfo__profile {
+  color: #555452;
+  word-break: break-all;
+}
+
+.writerInfo__profile a {
   color: #e80;
 }
 
-.switchTab__item--current a {
-  color: #343330 !important;
+.writerInfo__profile__name {
+  font-size: 16px;
   font-weight: bold;
-  background-color: #eee;
-  margin-bottom: -1px;
-  padding-bottom: 6px;
+}
+
+.writerInfo__image {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.writerInfo__image img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 3px;
+}
+
+/** ------------------------------
+ * youtube
+ */
+.youtube,
+.youtube__container {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube iframe,
+.youtube__container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/** ------------------------------
+ * abematv
+ */
+.abematv {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.abematv iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/** ------------------------------
+ * iTunes
+ */
+.iTunesData {
+  border-bottom: 1px solid #ddd;
+}
+
+.iTunesData__inner {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.iTunesData__main,
+.iTunesData__sub {
+  padding: 10px;
+  display: table-cell;
+  direction: ltr;
+}
+
+.iTunesData__main {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.iTunesData__sub {
+  width: 110px;
+  vertical-align: top;
+}
+
+.iTunesData__sub img {
+  width: 100%;
+}
+
+.iTunesInfo__title,
+.iTunesInfo__body {
+  margin-bottom: 6px;
+}
+
+.iTunesInfo__title {
+  width: 60px;
+  margin-right: 10px;
+  float: left;
+  font-weight: bold;
+}
+
+.iTunesInfo__body {
+  color: #888;
+  overflow: hidden;
+}
+
+.iTunesData__purchase {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.iTunesData__audio {
+  margin: 4px 10px 10px;
+}
+
+.iTunesData__audio audio {
+  width: 100%;
+}
+
+.iTunesPreview {
+  display: none;
+  background: #fff;
+}
+
+/** ------------------------------
+ * 吹き出し
+ */
+.balloon {
+  margin: 10px 20px 7px;
+  padding: 15px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  background-color: #e80;
+  text-align: center;
+}
+
+.balloon:after {
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #e80 transparent transparent transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+}
+
+/** ------------------------------
+ * 投稿ランキング
+ */
+.rankingList .rankingList__item {
+  padding: 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.balloon + .rankingList {
+  border-top: 1px solid #ddd;
+}
+
+.rankingList__title {
+  margin: 0 -10px 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f6f6f6;
+}
+
+.rankingList__item + .rankingList__item {
+  border-bottom: 1px solid #ddd;
+}
+
+.rankingList__main {
+  margin-left: 87px;
+}
+
+.rankingList__title h2 {
+  color: #343330;
+  font-weight: bold;
+  font-size: 116%;
+}
+
+.rankingList__image {
+  float: left;
+}
+
+.rankingList__image img {
+  width: 75px;
+}
+
+.rankingList__time {
+  padding-top: 4px;
+  color: #e80;
+  font-size: 93%;
+}
+
+.rankingList__message {
+  margin: 20px 0;
+}
+
+.rankingList__finished {
+  padding: 5px 0 0;
+  color: #e00;
+  text-align: right;
+  font-size: 116%;
+  font-weight: bold;
+}
+
+.rankingList__button {
+  margin: 0 -10px;
+  border-top: 1px dashed #ddd;
+  text-align: center;
+}
+
+.rankingList__button button,
+.rankingList__button a,
+.rankingList__button span {
+  margin: 10px auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  background-color: #e80;
+  font-family: monospace;
+  width: 80%;
+}
+
+.rankingList__button span {
+  color: #aaa;
+  background-color: #ddd;
+}
+
+.rankingList__button a.rankingList__resultButton {
+  background-color: #333;
+}
+
+/* 結果 */
+.voteCount {
+  margin-bottom: 2px;
+  padding: 30px 5px;
+  position: relative;
+  background-color: #fffae4;
+  text-align: center;
+  font-size: 25px;
+}
+
+.voteCount:after {
+  border-bottom: 1px solid #ddd;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  content: "";
+  display: block;
+}
+
+.voteCount:before {
+  font-family: utIcon;
+  content: "\e671";
+}
+
+.voteCount span {
+  margin: 0 5px;
+  color: #f33;
+  font-size: 45px;
+}
+
+/* 投票期間 */
+.voteTime {
+  padding: 10px;
+  text-align: center;
+  background-color: #fffae4;
+}
+
+.voteTime dt {
+  color: #e80;
+  font-size: 18px;
+}
+
+.voteTime dd {
+  color: #888;
 }
 
 /** ------------------------------
  * ニュース検索
  */
 .newsSearch {
-  background-color: #eee;
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
 }
 
-.newsSearch:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
+.newsSearch__mainTitle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.newsSearch__mainTitle button {
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  right: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #e80;
+  cursor: pointer;
+  margin: auto;
+  padding: 6px 10px 6px 30px;
+}
+
+.newsSearch__mainTitle button:before {
+  position: absolute;
+  left: 7px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 20px;
 }
 
 .newsSearch__inner {
-  background-color: #fff;
-  width: 440px;
+  border-radius: 100px;
+  position: relative;
   padding: 4px;
-  float: left;
   border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.newsSearch__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
+  background-color: #fff;
 }
 
 .newsSearch__inner * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  line-height: 1.7;
   -webkit-appearance: none;
      -moz-appearance: none;
       -ms-appearance: none;
           appearance: none;
-  font-size: 15px;
-  line-height: 1.7;
   background-color: transparent;
-  margin: 0;
-  padding: 0;
+  font-size: 15px;
+  font-family: monospace;
   outline: none;
-  border: none;
 }
 
-.newsSearch input[type="text"] {
-  width: 330px;
-  margin-left: 5px;
-  float: left;
+.newsSearch input {
+  padding: 0 34px 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
 }
 
 .newsSearch button {
+  border-radius: 100px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 28px;
+  height: 28px;
   color: #fff;
+  background-color: #343330;
   text-align: center;
-  background-color: #e80;
-  width: 100px;
-  float: right;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
-.newsSearch button:hover {
+
+.newsSearch button:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 24px;
+  line-height: 1.2;
+  text-indent: 0;
+}
+
+.newsSearch__select {
+  margin-bottom: 5px;
+}
+
+.newsSearch__select:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.newsSearch__select .selectOuter {
+  position: relative;
+}
+
+.newsSearch__select .selectOuter:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 3px;
+  color: #e80;
+  font-size: 26px;
+  font-family: utIcon;
+  content: "\e697";
+}
+
+.newsSearch__select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  height: 35px;
+  border-radius: 100px;
+}
+
+/** ------------------------------
+ * 特集検索
+ */
+.specialArticleSearch {
+  border-bottom: 1px solid #ddd;
+}
+
+/* アーティスト検索ボタン */
+.specialArticleSearch__artistSearch {
+  margin-top: 6px;
+  text-align: right;
+}
+
+.specialArticleSearch__artistSearch a {
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #000;
+  margin-right: 3px;
+  padding: 6px 10px 6px 30px;
+  display: inline-block;
+}
+
+.specialArticleSearch__artistSearch a:before {
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 20px;
+}
+
+/* ジャンル選択 */
+ul.specialArticleSearch__categoryGenre {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 6px 6px;
+}
+
+ul.specialArticleSearch__categoryGenre ol {
+  display: table-row;
+}
+
+ul.specialArticleSearch__categoryGenre li {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #888;
+}
+
+ul.specialArticleSearch__categoryGenre li a {
+  display: block;
+  color: #888;
+  padding: 8px 0;
+}
+
+ul.specialArticleSearch__categoryGenre li.selected {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #e80;
+}
+
+ul.specialArticleSearch__categoryGenre li.selected a {
+  font-weight: bold;
+  display: block;
+  color: #fff;
+  background-color: #e80;
+  padding: 8px 0;
+}
+
+/* 種類選択 */
+ul.specialArticleSearch__categoryType {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+}
+
+ul.specialArticleSearch__categoryType ol {
+  display: table-row;
+}
+
+ul.specialArticleSearch__categoryType li {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: medium;
+}
+
+ul.specialArticleSearch__categoryType li a {
+  display: block;
+  padding: 12px 0;
+  color: #888;
+}
+
+ul.specialArticleSearch__categoryType li.selected {
+  border-bottom: 2px solid #e80;
+}
+
+ul.specialArticleSearch__categoryType li.selected a {
+  font-weight: bold;
+  display: block;
+  color: #e80;
+  padding: 8px 0;
+}
+
+/* 人気の特集ランキング */
+.specialArticleRankingLink {
+  margin: 6px 0;
+  text-align: center;
+}
+
+.specialArticleRankingLink a {
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ee4e00;
+  padding: 8px 20px 8px 56px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.specialArticleRankingLink a:before {
+  position: absolute;
+  left: 20px;
+  top: -3px;
+  font-family: utIcon;
+  content: "\e691";
+  font-size: 30px;
+}
+
+.specialArticleRankingLink a:hover {
   opacity: 0.8;
   -ms-filter: alpha(opacity=80);
 }
 
-.newsSearch button:before {
-  font-family: utIcon;
-  content: "\e92c";
-  margin-right: 5px;
+/** ------------------------------
+ * 特集一覧 - アーティスト検索
+ */
+.specialArticleArtistSearch {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
 }
 
-.newsSearch .easy-select-box {
-  background-color: #fff;
-  width: 230px !important;
-  height: 27px;
-  margin-right: 2px;
-  padding: 4px 1px;
+.specialArticleArtistSearch__inner {
+  border-radius: 100px;
+  position: relative;
+  padding: 4px;
   border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  background-color: #fff;
 }
 
-.newsSearch .easy-select-box .esb-dropdown {
-  width: 220px !important;
+.specialArticleArtistSearch__inner * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  line-height: 1.7;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: monospace;
+  outline: none;
 }
 
-.newsSearch__fullWidth {
+.specialArticleArtistSearch input {
+  padding: 0 34px 0 10px;
   width: 100%;
   box-sizing: border-box;
+  display: block;
 }
 
-.grid {
-  padding-left: 1px;
-}
-
-#loadIcon {
-  text-align: center;
-  margin: 30px 0;
-}
-
-/** ------------------------------
- * ランキング
- */
-.rankingIcon {
-  color: #fff;
-  font-size: medium;
-  font-weight: normal;
-  font-style: normal;
-  text-align: center;
-  line-height: 1.5;
-  background-color: #e80;
-  min-width: 1.6em;
-  padding: 0 0.3em;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+.specialArticleArtistSearch button {
+  border-radius: 100px;
   position: absolute;
-  left: 0;
+  top: 3px;
+  right: 3px;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  background-color: #343330;
+  text-align: center;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
-.rankingIcon--index {
-  background-color: #72c331;
-  padding: 0;
+.specialArticleArtistSearch button:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 24px;
+  line-height: 1.2;
+  text-indent: 0;
 }
 
-.list__main--ranking {
-  padding-left: 3.6em;
-  position: relative;
+.specialArticlePopularArtist {
+  padding: 6px 0 0 6px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fffae4;
+  font-size: 0;
 }
 
-.list__main--indexRanking {
-  padding-left: 2.6em;
-  position: relative;
+.specialArticlePopularArtist li {
+  margin: 0 6px 6px 0;
+  display: inline-block;
+  font-size: medium;
+}
+
+.specialArticlePopularArtist li a {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #343330;
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
 }
 
 /** ------------------------------
- * 新着
+ * 人気の特集ランキング
  */
-.newestList__releaseHead {
-  text-align: center;
-  width: 7em;
-  padding-left: 0;
-  padding-right: 0;
+.specialArticleWeeklyRanking {
+  padding: 5px 10px;
 }
 
-.newestList__release {
-  color: #888;
-  font-size: 85%;
+.specialArticleWeeklyRanking__Title {
   text-align: center;
-}
-
-.newestList__title a {
+  background-color: #fffae4;
+  padding: 15px 10px;
+  margin-bottom: 5px;
+  border: 1px dotted #333333;
+  border-radius: 5px;
   font-weight: bold;
 }
 
-.newestList__name {
-  font-size: 85%;
+.specialArticleWeeklyRanking__PagerTop {
+  text-align: right;
 }
 
-.newestList__name a {
+.specialArticleWeeklyRanking__Article,
+.specialArticleWeeklyRanking__Article a {
+  font-size: 12px;
+  color: #000;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.specialArticleWeeklyRanking__Article {
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.specialArticleWeeklyRanking__Article .text,
+.specialArticleWeeklyRanking__Article .image {
+  padding: 10px 10px 12px 10px;
+  display: table-cell;
+  direction: ltr;
+  vertical-align: top;
+}
+
+.specialArticleWeeklyRanking__Article .text {
+  position: relative;
+  padding-left: 0;
+  line-height: 1.1;
+}
+
+.specialArticleWeeklyRanking__Article .text .title {
+  font-weight: bold;
+}
+
+.specialArticleWeeklyRanking__Article .text .description {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.specialArticleWeeklyRanking__Article .image {
+  width: 80px;
+  text-decoration: none;
+}
+
+.specialArticleWeeklyRanking__Article .image img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.specialArticleWeeklyRanking__Article .writer {
+  position: absolute;;
+  bottom: 4px;
+  right: 4px;
+  color: #272672;
+  font-size: 90%;
+}
+
+/** ------------------------------
+ * ステージャーライブランキング
+ */
+.stagerLiveRanking {
+  padding: 5px 10px;
+}
+
+.stagerLiveRanking img {
+  margin: 0;
+}
+
+.stagerLiveRanking__topImage img {
+  width: 100%;
+}
+
+.stagerLiveRanking__topMessage {
+  margin: 20px 12px 10px 12px;
+  color: #888;
+  font-size: 15px;
+  text-align: center;
+}
+
+.stagerLiveRanking__topMessage--presented {
+  font-size: 12px;
+  margin-top: 16px;
+  text-align: right;
+  color: #888;
+}
+
+.stagerLiveRanking__Title {
+  text-align: center;
+  background-color: #fffae4;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border: 1px dotted #333333;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.stagerLiveRanking__Article {
+  color: #000;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.stagerLiveRanking__Article {
+  margin: 8px 0 14px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.stagerLiveRanking__Article a:hover {
+  color: #fa3;
+}
+
+.stagerLiveRanking__Article .text,
+.stagerLiveRanking__Article .image {
+  padding: 10px 10px 12px 10px;
+  display: table-cell;
+  direction: ltr;
+  vertical-align: top;
+}
+
+.stagerLiveRanking__Article .text {
+  position: relative;
+  padding-left: 0;
+  line-height: 1.2;
+}
+
+.stagerLiveRanking__Article .text .title {
+  font-weight: bold;
+  font-size: 110%;
+  margin-bottom: 4px;
+}
+
+.stagerLiveRanking__Article .text .title .user_id {
+  margin-bottom: 4px;
+  font-size: 70%;
+  color: #888;
+}
+
+.stagerLiveRanking__Article .text .description {
+  font-size: 90%;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.stagerLiveRanking__Article .text .description a {
   color: #e80;
+}
+
+.stagerLiveRanking__Article .text .roomUrl {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+}
+
+.stagerLiveRanking__Article .text .roomUrl a {
+  color: #e83;
+}
+
+.stagerLiveRanking__Article .image {
+  width: 100px;
+  text-decoration: none;
+}
+
+.stagerLiveRanking__Article .image img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.stagerLiveRanking__Article .writer {
+  font-size: 90%;
+  position: absolute;;
+  bottom: 4px;
+  right: 4px;
+  color: #272672;
+}
+
+.stagerLiveRanking__Article + br {
+  display: none;
+}
+
+/* 画像で見る */
+.grid {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.grid-item {
+  width: 100px;
+}
+
+.grid-item a {
+  display: block;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+  .grid {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .grid {
+    width: 450px;
+  }
+  .grid-item {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .grid {
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .grid {
+    width: 800px;
+  }
+  .grid-item {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .grid {
+    width: 1000px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid {
+    width: 1200px;
+  }
+}
+
+/** ------------------------------
+ * マイアーティスト設定
+ */
+.artistSearch {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
+}
+
+.artistSearch__inner {
+  border-radius: 100px;
+  position: relative;
+  padding: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.artistSearch__inner * {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  line-height: 1.7;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: monospace;
+  outline: none;
+}
+
+.artistSearch input {
+  padding: 0 34px 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.artistSearch button {
+  border-radius: 100px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  background-color: #343330;
+  text-align: center;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+
+.artistSearch button:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  font-family: utIcon;
+  content: "\e630";
+  font-size: 24px;
+  line-height: 1.2;
+  text-indent: 0;
+}
+
+.list__myArtistbutton {
+  border-top: 1px dotted #ddd;
+  padding: 6px;
+  background-color: #fbfbfb;
+}
+
+.list__myArtistbutton button {
+  width: 200px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 3px;
+  display: block;
+  color: #fff;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.list__myArtistbutton button.add {
+  background-color: #e80;
+}
+
+.list__myArtistbutton button.delete {
+  background-color: #343330;
+}
+
+.myArtistbutton {
+  border-top: 1px dotted #ddd;
+  padding: 6px;
+  background-color: #fbfbfb;
+  text-align: center;
+}
+
+.myArtistbutton button {
+  width: 200px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.myArtistbutton button.add {
+  background-color: #e80;
+}
+
+.myArtistbutton button.delete {
+  background-color: #343330;
+}
+
+/** ------------------------------
+ * 自由入力エリア
+ */
+.freeArea {
+  padding: 10px 10px 25px;
+  border-bottom: 1px solid #ddd;
+  color: #555452;
+  font-size: 14px;
+}
+
+.freeArea:empty {
+  display: none;
+}
+
+.freeArea a {
+  color: #e80;
+}
+
+/** ------------------------------
+ * ajaxロード中
+ */
+.loadImage {
+  margin: 0 auto;
+  padding: 30px 0;
+  display: block;
+}
+
+
+
+
+/*newIcon*/
+.newIcon {
+  margin-top: -0.5em;
+  margin-right: -0.2em;
+  padding: 0 0.6em;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  background-color: #FF3B2D;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+/*preIcon*/
+.preIcon {
+  margin-top: -0.5em;
+  margin-right: -0.2em;
+  padding: 0 0.6em;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  background-color: #28c4e5;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+/*popularIcon*/
+.popularIcon {
+  margin-top: -0.5em;
+  margin-left: -0.2em;
+  padding: 0 0.6em;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  background-color: #f44aa2;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+/** ------------------------------
+ * ハッシュタグ一覧
+ */
+.keywordList {
+  border-bottom: 1px solid #ddd;
+  line-height: 1.3;
+}
+
+.keywordList__tag {
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
+}
+
+.keywordList__item + .keywordList__item {
+  border-top: 1px solid #ddd;
+}
+
+.keywordList__tag a {
+  padding: 8px 23px 8px 10px;
+  position: relative;
+  display: block;
+  color: #0044cc !important;
+}
+
+.keywordList__tag a:before {
+  content: "\e64a";
+  color: #e80;
+  font-family: utIcon;
+  font-size: 10px;
+}
+
+.keywordList__tag a:after {
+  margin: auto;
+  content: "\e6a5";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  height: 1em;
+  line-height: 1.0;
+  color: #e80;
+  font-family: utIcon;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.keywordList__list {
+  padding: 10px;
+}
+
+.keywordList__list + .keywordList__list {
+  padding-top: 10px;
+  border-top: 1px dotted #ddd;
+}
+
+.keywordList__title {
+  margin-bottom: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.keywordList__name {
+  position: relative;
+  color: #999;
+  font-size: 85%;
+  vertical-align: middle;
+}
+
+.keywordList__name:before {
+  margin-right: -0.2em;
+  content: "\e690";
+  color: #ccc;
+  font-family: utIcon;
+  vertical-align: middle;
+}
+
+/** ------------------------------
+ * フォーム関連
+ */
+.form dt {
+  padding: 15px 10px 5px;
+  color: #e80;
+  font-size: 14px;
+}
+
+.form dt:before {
+  margin-right: 3px;
+  line-height: 1.2;
+  content: "\e63a";
+  color: #ccc;
+  font-family: utIcon;
+}
+
+.form dd {
+  padding: 0 10px 5px;
+  min-height: 2em;
+}
+
+.form--confirm dd {
+  padding-bottom: 15px;
+}
+
+.form--confirm dd {
+  font-size: 15px;
+}
+
+.form--confirm dd + dt {
+  border-top: 1px solid #ddd;
+}
+
+.form input[type="text"],
+.form textarea {
+  padding: 8px 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: monospace;
+}
+
+.form input[type="text"] {
+  width: 100%;
+}
+
+.form textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.form select {
+  margin: 0;
+  padding: 4px 0;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  line-height: 1.7;
+  background-color: transparent;
+  font-size: 108%;
+  font-family: monospace;
+  outline: none;
+}
+
+.form .selectOuter {
+  padding: 0 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  position: relative;
+}
+
+.form .selectOuter:after {
+  position: absolute;
+  z-index: 1;
+  top: -0.1em;
+  right: 0;
+  color: #e80;
+  font-size: 26px;
+  font-family: utIcon;
+  content: "\e697";
+}
+
+.form .selectOuter select {
+  padding-left: 5px;
+  position: relative;
+  z-index: 10;
+}
+
+.form .selectOuter select option {
+  padding-left: 5px;
+}
+
+
+/* ボタン */
+.formButton {
+  margin-top: 1px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  background-color: #f2f2f0;
+  text-align: center;
+}
+
+.formButton > * {
+  display: inline-block;
+}
+
+.formButton button {
+  margin: 0;
+  padding: 0 60px;
+  border-radius: 2px;
+  border: none;
+  line-height: 2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #343330;
+  font-size: medium;
+  text-align: center;
+  cursor: pointer;
+}
+
+.formButton .formButton--search {
+  letter-spacing: 0.5em;
+}
+
+.formButton .formButton--search:before {
+  font-family: utIcon;
+  content: "\e630";
+  line-height: 1.2;
+}
+
+.formButton--double button {
+  padding: 0 10px;
+  box-sizing: border-box;
+  min-width: 146px;
+}
+
+.formButton--double button:before {
+  content: "";
+}
+
+/* 必須 */
+.mandatoryfield {
+  padding: 0 4px;
+  border-radius: 3px;
+  float: right;
+  display: block;
+  color: #fff;
+  background-color: #343330;
+  font-weight: normal;
+  font-size: 10px;
+  vertical-align: bottom;
+}
+
+/* エラーメッセージ */
+.errorMessage {
+  padding: 5px 15px 15px;
+  position: relative;
+}
+
+.errorMessage__title {
+  padding: 0 15px;
+  color: #ef8100;
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.errorMessage__title:before {
+  margin-right: 7px;
+  content: "＼";
+  font-size: 21px;
+}
+
+.errorMessage__title:after {
+  margin-left: 7px;
+  content: "／";
+  font-size: 21px;
+}
+
+.errorMessage__body {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  position: relative;
+  z-index: 9;
+  color: #824e1c;
+  background-color: #fffae4;
+  list-style-type: square;
+  font-size: 12px;
+}
+
+.errorMessage:before {
+  margin-left: -10px;
+  border-width: 15px 10px;
+  border-style: solid;
+  border-color: #fffae4 transparent transparent transparent;
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  z-index: 10;
+  content: "";
+  display: block;
+}
+
+.errorMessage:after {
+  margin-left: -12px;
+  border-width: 17px 12px;
+  border-style: solid;
+  border-color: #ddd transparent transparent transparent;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  z-index: 8;
+  content: "";
+  display: block;
+}
+
+.errorMessage__item {
+  margin: 4px 0 4px 1em;
+}
+
+/** ------------------------------------------------------------
+ * pager
+ */
+.pager {
+  border-bottom: 1px solid #ddd;
+  padding: 6px 5px 3px;
+  background-color: #f2f2f0;
+  text-align: center;
+  font-size: 0;
+}
+
+#loadIcon + .pager {
+  border-top: 1px solid #ddd;
+}
+
+.pager__item {
+  margin: 0 3px 3px 0;
+}
+
+.pager__item,
+.pager__item a {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.pager__item--current,
+.pager__item a {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  min-width: 1em;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pager__item--current {
+  color: #e80;
+  border-color: #e80;
+}
+
+.pager__item--prev a,
+.pager__item--next a {
+  padding-right: 8px;
+  padding-left: 8px;
+  color: #e80;
+}
+
+/** ------------------------------
+ * textList
+ */
+.textList {
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.textList__title {
+  padding: 10px 10px 8px;
+  font-weight: bold;
+}
+
+.textList__body {
+  padding: 0 10px 10px;
+  color: #888;
+  position: relative;
+  font-size: 13px;
+}
+
+.textList__body + .textList__title {
+  border-top: 1px solid #ddd;
 }
 
 /** ------------------------------
  * テキスト基本形
  */
 .space {
+  padding: 30px 15px;
+  position: relative;
   color: #555452;
   line-height: 1.6;
-  padding: 40px 25px;
-  border-bottom: 1px solid #ddd;
-  position: relative;
 }
 
 .space--line {
@@ -7690,35 +6531,37 @@ table + .pager,
 
 .themeColor {
   color: #e80 !important;
+  font-size: 17px;
 }
 
-/**/
+/* 長文系 */
 .longText {
-  line-height: 1.6;
   margin-top: 10px;
+  line-height: 1.6;
 }
 
 .longText__title {
-  line-height: 1.4;
-  padding: 10px 25px 7px;
-  display: inline-block;
+  padding: 10px 15px 7px;
   border-bottom: 3px solid #e80;
+  display: inline-block;
+  line-height: 1.4;
 }
 
 .longText__title h2 {
-  font-size: medium;
   font-weight: bold;
+  font-size: medium;
 }
 
 .longText__body {
-  color: #555452;
-  margin: -2px 0 25px;
-  padding: 13px 25px 0;
+  margin: -2px 0 20px;
+  padding: 13px 15px 0;
   border-top: 1px solid #ddd;
+  color: #555452;
 }
 
+/* リスト */
 .basicList {
-  margin: 10px 0 10px 2.2em;
+  margin: 15px 0 15px 1em;
   list-style-type: square;
 }
 
@@ -7741,8 +6584,8 @@ table + .pager,
 }
 
 .numberList > li span {
-  font-weight: bold;
   display: block;
+  font-weight: bold;
 }
 
 .numberList > li > ul {
@@ -7767,49 +6610,46 @@ table + .pager,
 }
 
 .bracketList li:before {
-  content: "(" counter(cnt) ") ";
-  display: marker;
   position: absolute;
   left: 0;
+  display: marker;
+  content: "(" counter(cnt) ") ";
 }
 
 .compactList::after {
   content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
   display: block;
-  clear: both;
   visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
 }
 
 .compactList dt {
-  font-weight: bold;
   float: left;
+  clear: both;
+  font-weight: bold;
 }
 
 .compactList dt::after {
   content: ":";
 }
 
-.compactList dd {
-  overflow: hidden;
-}
-
 /* サイン */
 .sign {
+  margin: 25px 15px;
   color: #555452;
-  margin: 25px;
 }
 
 .sign:after {
   content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
   display: block;
-  clear: both;
   visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
 }
 
 .sign__inner {
@@ -7817,1753 +6657,465 @@ table + .pager,
 }
 
 .sign__title {
+  margin-bottom: 5px;
+  color: #fff;
+  background-color: #343330;
+  font-weight: bold;
+  text-align: center;
+}
+
+/** ------------------------------
+ * サイトマップ
+ */
+.sitemap a {
+  color: #e80;
+}
+
+.sitemap a:hover {
+  opacity: 0.6;
+}
+
+.sitemap p {
   font-weight: bold;
 }
 
-/** ------------------------------------------------------------
- * sidebar
- */
-#sidebar {
-  width: 300px;
-  float: right;
-}
-
-/** ------------------------------
- * banner
- */
-.MediumRectangleBanner,
-.rectangleBanner {
-  /*margin-bottom: 15px;*/
-  margin-bottom: 20px;
-}
-
-/** ------------------------------
- * 話題のキーワード
- */
-.keywordLineUp {
-  background-color: #fffcf6;
-  padding: 10px 10px 4px;
-}
-
-.keywordLineUp--index {
-  background-color: #fbf4f8;
- }
-
-.keywordLineUp:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.keywordLineUp li {
-  margin: 0 6px 6px 0;
-  float: left;
-}
-
-.keywordLineUp li a {
-  text-decoration: none;
-  background-color: #fff;
-  padding: 3px 5px;
-  display: inline-block;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.keywordLineUp li a:hover {
-  color: #e80;
-  border-color: #e80;
-}
-
-.keywordLineUp--index li a:hover {
-  color: #ab538b;
-  border-color: #ab538b;
-}
-
-/** ------------------------------
- * 音楽特集
- */
-.specialLineUp__item a {
+.sitemap dt {
   width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-  color: #0044cc;
+  box-sizing: border-box
 }
 
-.specialLineUp__item a:hover {
-  color: #7f5ed4;
-}
-
-.specialLineUp__item + .specialLineUp__item {
-  border-top: 1px solid #eee;
-}
-
-.specialLineUp__main,
-.specialLineUp__sub {
-  padding: 10px;
-  display: table-cell;
-  direction: ltr;
-}
-
-.specialLineUp__main {
-  vertical-align: middle;
-  padding-left: 0;
-}
-
-.specialLineUp__sub {
-  vertical-align: top;
-  width: 80px;
-}
-
-.specialLineUp__sub img {
-  width: 100%;
+.sitemap .basicList {
+    margin: 5px 0 5px 1em;
 }
 
 /** ------------------------------
- * twitter
+ * 歌詞詳細
  */
-#twitter {
-  height: 480px;
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-#twitter.mainContents {
-  height: 300px;
-  margin-bottom: 20px;
-}
-/** ------------------------------
- * facebook
- */
-#facebook {
-  height: 600px;
-}
-
-#facebook.mainContents {
-  height: 400px;
-  overflow: hidden;
-}
-
-/** ------------------------------------------------------------
- * errorPage
- */
-.errorPage {
-  text-align: center;
-  padding: 80px 0;
-}
-
-.errorPage__title {
-  color: #e80;
-  font-size: 54px;
-  line-height: 1.3;
-}
-
-.errorPage__text {
-  color: #999;
-  font-size: medium;
-}
-
-#exceptionMessage {
-  text-align: left;
-  background-color: #fff;
-  margin-top: 40px;
-  padding: 20px;
-  border: 3px solid #e80;
-}
-
-/** ------------------------------------------------------------
- * footer
- */
-footer {
-  color: #9a9998;
-  font-size: 13px;
-  background-color: #343330;
-}
-
-footer:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-footer a,
-footer a:hover,
-footer a:active {
-  color: #fff;
-}
-
-/* バナー */
-.footerBanner {
-  text-align: center;
-  background-color: #c2beae;
-  padding: 10px 0;
-}
-
-.footerBanner a {
-  display: inline-block;
-}
-
-.footer__inner {
-  width: 1040px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  padding: 10px 0;
-  position: relative;
-}
-
-.footer__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/* メイン領域 */
-.footer__main {
-  width: 810px;
-  float: left;
-  position: relative;
-}
-/* Logo */
-.footerLogo {
-  margin-bottom:20px;
-  border-bottom: 3px solid #e80;
-}
-.footer__main ul {
-  width:100%;
-  display:table;
-}
-.footer__main ul li {
-  width:20%;
-  display:table-cell;
-}
-.footerNavi {
-  line-height:1.8em;
-  margin-bottom:20px;
-}
-.footerNavi .tSpace {
-  padding-top:1.8em;
-}
-.footer__main ul:nth-of-type(2)
-{
-  width:auto;
-}
-.footer__main ul:nth-of-type(2) li
-{
-  width:auto;
-}
-.footer__main ul:nth-of-type(2) li:nth-of-type(n+2) {
-  padding-left:25px;
-}
-/* Copyright , rss */
-.footerInfo {
-  margin-top:20px;
-}
-.footerInfo li:nth-of-type(1) {
-  font-size: 11px;
-  vertical-align:middle;
-  width:75%;
-}
-.footerInfo  li:nth-of-type(2) {
-  font-size: 14px;
-  text-align:right;
-  line-height: 1.2;
-  width:25%;
-}
-.footerInfo  li:nth-of-type(2) p {
-  text-align:left;
-  text-indent: 1em;
-  padding-bottom:5px;
-}
-.footerInfo  li:nth-of-type(2) a {
-  text-decoration: none;
-  background-color: #e80;
-  /* margin-left:3px; */
-  padding: 3px 20px 3px 35px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  position: relative;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-.footerInfo  li:nth-of-type(2) a:hover {
-  background-color: #f3a318;
-}
-.footerInfo  li:nth-of-type(2) a:before {
-  font-family: utIcon;
-  content: "\e6a6";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-}
-
-/* 201903 */
-/* カテゴリ一覧 */
-.footerCategory {
-  width: 100%;
-  margin-top: 10px;
-  display: table;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.footerCategory__item {
-  vertical-align: top;
-  display: table-cell;
-}
-
-.footerCategory__itemSpecial {
-  width: 40%;
-}
-
-/* カテゴリリスト */
-* + .categoryList {
-  margin-top: 30px;
-}
-
-.categoryList {
-  display: block !important;
-}
-
-.categoryList__item {
-  width: auto !important;
-  padding: 0 !important;
-  display: list-item !important;
-}
-
-.categoryList__item + .categoryList__item {
-  margin-top: 5px;
-}
-
-/* カテゴリ定義リスト */
-.categoryDefine__ttl {
-  color: #fff;
-}
-
-.categoryDefine__ttl + .categoryDefine__body {
-  margin-top: 5px;
-}
-
-.categoryDefine__body {
-  padding-left: 1em;
-}
-
-.categoryDefine__body .categoryDefine__ttl {
-  color: #9a9998;
-}
-
-.categoryDefine__body .categoryDefine__body {
-  padding-left: 0;
-}
-
-.categoryDefine__wrap:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.categoryDefine__wrapHalf {
-  width: 50%;
-  float: left;
-}
-
-/* メニュー */
-* + .footerMenu {
-  margin-top: 25px;
-}
-
-.footerMenu {
-  font-size: 0;
-  display: block !important;
-}
-
-.footerMenu__item {
-  font-size: 13px;
-  width: auto !important;
-  display: inline-block !important;
-}
-
-.footerMenu__item + .footerMenu__item {
-  margin-left: 20px;
-  padding-left: 0 !important;
-}
-
-/* コピーライト RSS */
-* + .footerFoot {
-  margin-top: 25px;
-}
-
-.footerFoot:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.footerFoot #copyright {
-  color: #9a9998;
-  font-size: 11px;
-  float: left;
-}
-
-.footerFoot #copyright a {
-  color: #9a9998;
-}
-
-.rssInfo {
-  margin: -7px 0 0;
-  float: right;
-}
-
-.rssInfo__ttl {
-  text-indent: .5em;
-}
-
-.rssList {
-  font-size: 0;
-}
-
-.rssList__item {
-  width: auto !important;
-  display: inline-block !important;
-}
-
-.rssList__item + .rssList__item {
-  margin-left: 5px;
-}
-
-.rssList__item a {
-  color: #fff;
-  font-size: 12px;
-  text-align: center;
-  background-color: #e18c32;
-  padding: 2px 20px;
-  padding-left: 35px;
-  display: inline-block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-       -o-border-radius: 3px;
-          border-radius: 3px;
-  position: relative;
-}
-
-.rssList__item a:before {
-  font-family: utIcon;
-  content: "\e6a6";
-  font-size: 1.2em;
-  line-height: 1;
-  width: 1em;
-  height: 1em;
-  margin: auto 0;
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 4px;
-}
-/* 201903 */
-
-/* 許諾 */
-.license {
-  width: 210px;
-  float: right;
-}
-
-.license__sub {
-  font-size: 0;
-  text-align: left;
-}
-
-.license__sub li {
-  margin-bottom: 5px;
-}
-
-.license__item + .license__item {
-  margin-left: 5px;
-}
-
-.license__item--jasrac {
-  width: 60px;
-}
-
-.license__item--nextone {
-  width: 60px;
-}
-
-.license__main {
-  font-size: 10px;
-  line-height: 1.3;
-  margin-top: 5px;
-}
-
-/* 相互リンク */
-.footerLink {
-  background-color: #777;
-  width: 1040px;
-  margin: 10px auto;
-  position: relative;
-}
-
-/* 掲載メディア */
-.footerMedia {
-  width: 1040px;
-  margin: 10px auto;
-  position: relative;
-}
-
-.footerMedia li {
-  width: 45%;
-  display: inline-block;
-}
-
-/** ----------------------------------------
- * モーダル
- */
-#lean_overlay {
-  background: #000;
-  width:100%;
-  height:100%;
-  display: none;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index:100;
-}
-
-.modalWindow {
-  width: 400px;
-  display: none;
-}
-
-.modalWindow button.close {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-size: 16px;
-  background-color: transparent;
-  width: 26px;
-  height: 26px;
-  margin: auto;
-  overflow: hidden;
-  border: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 10px;
-  cursor: pointer;
-}
-
-.modalWindow button.close:before {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-family: utIcon;
-  color: #fff;
-  content: "\e639";
-  text-align: center;
-  line-height: 26px;
-  background-color: #343330;
-  width: 26px;
-  height: 26px;
-  outline: none;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/** ------------------------------
- * iTunes
- */
-.iTunesData {
-  padding: 10px;
+.lyricData {
   border-bottom: 1px solid #ddd;
 }
 
-.iTunesData:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.iTunesData--last {
+.lyricBody + .lyricData {
+  border-top: 1px solid #ddd;
   border-bottom: none;
 }
 
-.iTunesData__sub {
-  width: 110px;
-  float: left;
+.lyricData:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.iTunesData__sub img {
+.lyricData:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+}
+
+.lyricData__sub {
+  padding: 10px;
+  float: left;
+  width: 65px;
+}
+
+.lyricData__sub img {
   width: 100%;
 }
 
-.iTunesData__main {
-  width: 556px;
-  float: right;
+.lyricWork {
+  padding: 10px;
+  overflow: hidden;
 }
 
-.iTunesInfo {
-  padding: 8px 0;
+/* 楽曲制作 */
+.lyricData--lyricDetail .lyricWork {
+  padding-right: 136px;
+  min-height: 41px;/* 作詞作曲などの登録が2項目以下の場合用補正 */
 }
 
-.iTunesInfo__title,
-.iTunesInfo__body {
+.lyricWork__title,
+.lyricWork__body {
   margin-bottom: 3px;
 }
 
-.iTunesInfo__title {
-  font-weight: bold;
-  width: 60px;
+.lyricWork__title {
   margin-right: 10px;
+  float: left;
+  font-weight: bold;
+}
+
+.lyricWork__body {
+  color: #888;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+/* アフィリンク */
+.lyricLink {
+  padding: 8px 10px 4px;
+  border-top: 1px solid #eee;
+  clear: both;
+}
+
+.lyricLink:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+}
+
+.lyricLink__item {
+  margin-right: 5px;
+  margin-bottom: 4px;
   float: left;
 }
 
-.iTunesInfo__body {
-  color: #888;
-}
-
-.iTunesData__sub img + .iTunesData__purchase {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.iTunesData__audio {
-  background-color: #000;
-  height: 2.7em;
-  padding: 2px 0 2px 4em;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+/* カテゴリ */
+.lyricCategory {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
   clear: both;
-  position: relative;
 }
 
-.iTunesData__audio:before {
-  content: "試聴";
+.lyricCategory__title  {
+  margin-right: 10px;
+  float: left;
+  font-weight: bold;
+}
+
+.lyricCategory__body {
+  color: #888;
+  overflow: hidden;
+}
+
+.lyricCategory__body a {
+  color: #e80;
+}
+
+/* キーワード */
+.lyricKeyword {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+  clear: both;
+}
+
+.lyricKeyword__item {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.lyricKeyword__item a {
+  color: #0044cc;
+}
+
+/* 歌詞フォント */
+.lyricFont {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #eee;
+}
+
+.lyricFont__size {
+  padding: 8px 10px 4px;
+  border-radius: 3px;
+  display: table-cell;
+  background-color: #fff;
+}
+
+.lyricFont__size + .lyricFont__size {
+  width: 41%;
+}
+
+.lyricFont__title {
+  margin: 0 5px;
+  padding: 2px 0;
+  border-radius: 3px;
   color: #fff;
-  background-color: #666;
-  padding: 0 5px;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  background-color: #343330;
+  font-size: 85%;
+  text-align: center;
 }
 
-.iTunesData__audio audio {
-  vertical-align: top;
-  width: 80%;
-  height: 2.7em;
-  margin: 0;
-  padding: 0;
-}
-
-.showITunesPlayer {
+.lyricFont__body span {
+  padding: 3px 7px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f6f6f6;
   cursor: pointer;
 }
 
-.iTunesPreview {
-  display: none;
+.lyricFont__body span.rubyButton {
+  text-transform: uppercase;
 }
 
-/** ------------------------------
- * 投稿ランキング
- */
-.balloon {
-  color: #fff;
-  font-size: 118%;
+.lyricFont__body span.disabled {
+  border-color: #e80;
+  color: #e80;
+  background-color: #fff;
+}
+
+.lyricFont__body {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.lyricFont__body span {
+  display: table-cell;
   text-align: center;
-  background-color: #e80;
-  margin: 10px 70px 7px;
-  padding: 15px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+}
+
+.lyricBackLink {
+  padding: 10px;
+}
+
+.lnk_lyricBack {
+  border-radius: 50px;
+  border: 2px solid #e80;
+  color: #e80;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.lnk_lyricBack--reviewLyric {
+  color: #f02361;
+  border: 2px solid #f02361;
+}
+
+.lnk_lyricBack--reviewArtist {
+  color: #3faba3;
+  border: 2px solid #3faba3;
+}
+
+.lnk_lyricBack--reviewNews {
+  color: #5467B2;
+  border: 2px solid #5467B2;
+}
+
+.lnk_lyricBack--reviewSpecialArticle {
+  color: #ad64be;
+  border: 2px solid #ad64be;
+}
+
+
+/* 投票 */
+.gauge__button {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.gauge__button span {
+  padding-top: 23px;
+  border: 1px solid #e6e6e6;
   position: relative;
+  display: table-cell;
+  border-radius: 3px;
+  line-height: 2;
+  color: #bbb;
+  background-color: #fff;
+  font-size: 13px;
+  vertical-align: middle;
 }
 
-.balloon:after {
-  content: "";
-  margin-left: -10px;
-  display: block;
-  border-style: solid;
-  border-width: 10px;
-  border-color: #e80 transparent transparent transparent;
+.gauge__button .voted {
+  border-color: #fff59d;
+  color: #e80;
+  background-color: #fff59d;
+}
+
+.gauge__button .mostVoted {
+  border-color: #e80;
+  color: #e80;
+}
+
+.gauge__button span::before {
+  margin-left: -0.5em;
   position: absolute;
-  bottom: -20px;
+  top: 4px;
   left: 50%;
+  font-family: smileIcon;
+  content: "\e6b4";
+  font-size: 22px;
+  line-height: 1.1;
 }
 
-.balloon {
-  background-color: #e80;
-  margin-top: 25px 0 5px;
+.gauge__button span:nth-of-type(2)::before {
+  content: "\e6b1";
+}
+
+.gauge__button span:nth-of-type(3)::before {
+  content: "\e6b0";
+}
+
+.gauge__button span:nth-of-type(4)::before {
+  content: "\e602";
+}
+
+.gauge__button span:nth-of-type(5)::before {
+  top: 3px;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/sp/pie.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.gauge__button .openVoteResult {
+  border-color: #50cc33;
+  color: #fff;
+  background-color: #50cc33;
+}
+
+/* 歌詞 */
+/*
+.lyricBody {
+  margin: 0 15px;
+}*/
+
+.lyric--body {
+  height: 18px;
+}
+
+/* 歌詞お楽しみ */
+.hopeVote {
+  margin: 20px 10px 20px;
+}
+
+.hopeVote__message {
+  padding-bottom: 20px;
+  line-height: 1.8;
+  font-size: medium;
+  text-align: center;
+}
+
+.hopeVote__message span {
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(255,242,0,0)), color-stop(60%,rgba(255,242,0,1)), color-stop(100%,rgba(255,255,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
+  background:    -moz-linear-gradient(top, rgba(255,242,0,0) 59%, rgba(255,242,0,1) 60%, rgba(255,255,0,1) 100%);
+  background:     -ms-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
+  background:      -o-linear-gradient(top, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
+  background:         linear-gradient(to bottom, rgba(255,242,0,0) 59%,rgba(255,242,0,1) 60%,rgba(255,255,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff200', endColorstr='#ffff00',GradientType=0 );
+}
+
+.hopeVote__balloon {
+  margin: 0 auto 20px;
+  padding: 30px 10px;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  width: 278px;
+  color: #e80;
+  background-color: #fff;
+  text-align: center;
+}
+
+.hopeVote__balloon:before {
+  margin-left: -20px;
+  border-width: 15px 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  z-index: 10;
+  content: "";
+  display: block;
+}
+
+.hopeVote__balloon:after {
+  margin-left: -21px;
+  border-width: 16px 11px;
+  border-style: solid;
+  border-color: #d6d6d6 transparent transparent transparent;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  z-index: 8;
+  content: "";
+  display: block;
 }
 
 .rankingList {
   border-top: 1px solid #ddd;
 }
 
+.rankingList_simple .rankingList__title {
+  border-bottom: none;
+  margin: 0 -10px;
+  background-color: #fff;
+}
+
+.rankingList_simple .rankingList__time {
+  color: #999;
+}
+
 .balloon + .rankingList {
   border-top: 1px solid #ddd !important;
 }
 
-.contentBox__title + .contentBox__body > .rankingList,
-.pager + .rankingList {
-  border-top: none;
-}
-
-.rankingList .rankingList__item {
-  padding: 0 10px;
-}
-
-.rankingList__title {
-  background-color: #eee;
-  margin: 0 -10px 10px;
-  padding: 8px 12px;
-  border-bottom: 1px solid #ddd;
-}
-
-.rankingList_simple .rankingList__title {
-  margin-bottom: 0px;
-  background-color: #fff;
-}
-
-.rankingList_simple .rankingList__title .rankingList__time {
-  color: #999;
-}
-
-.rankingList__item + .rankingList__item {
-  border-top: 1px solid #ddd;
-}
-
-.rankingList_simple .rankingList__item {
-  border-top: none;
-}
-
-.rankingList__title h2 {
-  color: #343330;
-  font-size: 116%;
-  font-weight: bold;
-  margin-top: 16px;
-}
-
-.rankingList__image {
-  margin-right: 12px;
-  float: left;
-}
-
-.rankingList__time {
-  color: #e80;
-  font-size: 93%;
-  padding-top: 4px;
-}
-
-.rankingList__message {
-  margin: 20px 10px;
-}
-
-.rankingList__finished {
-  color: #e00;
-  font-size: 116%;
-  font-weight: bold;
-  text-align: right;
-  padding: 5px 0 0;
-}
-
-.rankingList__button {
+.hopeVoteButton {
   text-align: center;
-  margin: 0 -10px;
-  padding: 10px 0;
-  border-top: 1px dashed #ddd;
 }
 
-.rankingList__button button,
-.rankingList__button a,
-.rankingList__button span {
+.hopeVoteButton button {
+  margin: 0 auto;
+  padding: 10px 0;
+  border: none;
+  border-radius: 3px;
   -webkit-appearance: none;
      -moz-appearance: none;
       -ms-appearance: none;
           appearance: none;
-  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
+  box-sizing: border-box;
+  display: block;
+  width: 300px;
   color: #fff;
   line-height: 25px;
   background-color: #e80;
-  width: 30%;
-  margin: 0;
-  padding: 6px 0;
-  display: inline-block;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  font-family: "メイリオ","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック",sans-serif;
   cursor: pointer;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.rankingList__button a {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.rankingList__button a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-  text-decoration: none;
-}
-
-.rankingList__button span {
-  color: #aaa;
-  background-color: #ddd;
-}
-
-.rankingList__button a.rankingList__resultButton {
-  background-color: #333;
-}
-
-.rankingList + .pager {
-  border-top: 1px solid #ddd;
-  border-bottom: none;
-}
-
-/* 結果 */
-.voteCount {
-  font-size: 30px;
-  text-align: center;
-  background-color: #f6f6f6;
-  margin-bottom: 2px;
-  padding: 30px 0;
-  position: relative;
-}
-
-.voteCount:after {
-  content: "";
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid #ddd;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-}
-
-.voteCount:before {
-  font-family: utIcon;
-  content: "\e671";
-}
-
-.voteCount span {
-  color: #f33;
-  font-size: 56px;
-  margin: 0 5px;
-}
-
-input.voted {
-  background-color: yellow;
-}
-
-input.mostVoted {
-  color: red;
-}
-
-/* 投票結果 1位 */
-.voteTop {
-  background: #fce7cc url("/images/common/bg1.gif") repeat 0 0;
-  padding: 7px;
-  border-bottom: 1px solid #fff;
-}
-
-.voteTop + .list {
-  border-top: 1px solid #ddd;
-}
-
-.voteTop__inner {
-  background-color: #fff;
-  padding: 2px;
-  border: 1px solid #f8ab45;
-}
-
-.voteTop__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.voteTop__main {
-  width: 470px;
-  padding-top: 6em;
-  float: right;
-  position: relative;
-}
-
-.voteTop__title {
   font-size: 20px;
-  font-weight: bold;
-}
-
-.voteTop__name a {
-  color: #e80;/* 基本色 */
-}
-
-.voteTop__name a:before {
-  font-family: utIcon;
-  content: "\e690";
-  color: #ccc;
-  font-size: 12px;
-  vertical-align: middle;
-  margin-right: -0.2em;
-}
-
-.voteTop__sub {
-  width: 200px;
-  float: left;
-}
-
-.voteTop__sub img {
-  width: 200px;
-}
-
-.voteTop__icon {
-  color: #fff;
-  font-size: 32px;
-  font-style: normal;
-  text-align: center;
-  line-height: 1.2em;
-  background-color: #e80;
-  width: 1.2em;
-  display: block;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  position: absolute;
-  top: 15px;
-  left: 0;
-}
-
-/** ------------------------------
- * パンくずリスト
- */
-.path {
-  padding-bottom: 10px;
-}
-
-.path:before {
-  font-family: utIcon;
-  content: "\e602";
-  margin-right: -0.2em;
-}
-
-.path li {
-  display: inline-block;
-}
-
-.path li + li:before {
-  content: ">";
-  font-size: 10px;
-}
-
-.path li a {
-  color: #0044cc;
-}
-
-
-/** ------------------------------
- * 特集検索
- */
-/* アーティスト検索ボタン */
-.contentBox__title__artistSearch {
-  text-align: right;
-  margin-top: 6px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.contentBox__title__artistSearch a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  background-color: #000;
-  margin-right: 3px;
-  padding: 6px 10px 6px 30px;
-  display: inline-block;
-  border: none;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  position: relative;
-}
-
-.contentBox__title__artistSearch a:before {
-  font-family: utIcon;
-  content: "\e92c";
-  font-size: 20px;
-  position: absolute;
-  left: 7px;
-  top: 2px;
-}
-
-.specialArticleSearch {
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* ジャンル選択 */
-ul.specialArticleSearch__categoryGenre {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 6px 6px;
-}
-
-ul.specialArticleSearch__categoryGenre ol {
-  display: table-row;
-}
-
-ul.specialArticleSearch__categoryGenre li {
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-ul.specialArticleSearch__categoryGenre li a {
-  color: #888;
-  padding: 8px 0;
-  display: block;
-  border: 1px solid #888;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-}
-
-ul.specialArticleSearch__categoryGenre li a:hover {
-  color: #e80;
-  border: 1px solid #e80;
-}
-
-ul.specialArticleSearch__categoryGenre li.selected {
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-ul.specialArticleSearch__categoryGenre li.selected a {
-  color: #fff;
-  background-color: #e80;
-  padding: 8px 0;
-  border: 1px solid #e80;
-  display: block;
-}
-
-/* 種類選択 */
-ul.specialArticleSearch__categoryType {
-  margin-top: 8px;
-}
-
-ul.specialArticleSearch__categoryType:after {
-  clear: both;
-}
-
-ul.specialArticleSearch__categoryType li {
-  text-align: center;
-  vertical-align: middle;
-  padding: 6px 10px;
-  float: left;
-  border-right: 1px solid #ddd;
-}
-
-ul.specialArticleSearch__categoryType li.last {
-  border-right: none;
-}
-
-ul.specialArticleSearch__categoryType li a {
-  color: #888;
-}
-
-ul.specialArticleSearch__categoryType li a:hover {
-  color: #e80;
-}
-
-ul.specialArticleSearch__categoryType li.selected {
-  border-bottom: 2px solid #e80;
-}
-
-ul.specialArticleSearch__categoryType li.selected a {
-  color: #e80;
-}
-
-.specialArticleSearch:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-/* 人気の特集ランキング */
-.specialArticleRankingLink {
-  text-align: center;
-  margin: 6px 0;
-}
-
-.specialArticleRankingLink a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: #ee4e00;
-  padding: 8px 22px 8px 58px;
-  display: inline-block;
-  border: none;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-  position: relative;
-}
-
-.specialArticleRankingLink a:before {
-  font-family: utIcon;
-  content: "\e691";
-  font-size: 30px;
-  position: absolute;
-  top: -2px;
-  left: 22px;
-}
-
-.specialArticleRankingLink a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-/** ------------------------------
- * 特集一覧 - アーティスト検索
- */
-.specialArticleArtistSearch {
-  background-color: #eee;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.specialArticleArtistSearch__inner {
-  background-color: #fff;
-  width: 90%;
-  padding: 4px;
-  float: left;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.specialArticleArtistSearch__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.specialArticleArtistSearch__inner * {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-size: 15px;
-  line-height: 1.7;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
   outline: none;
-  border: none;
 }
 
-.specialArticleArtistSearch input[type="text"] {
-  width: 510px;
-  float: left;
-  margin-left: 5px;
-}
-
-.specialArticleArtistSearch button {
-  color: #fff;
-  text-align: center;
-  background-color: #e80;
-  width: 100px;
-  float: right;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.specialArticleArtistSearch button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.specialArticleArtistSearch button:before {
-  font-family: utIcon;
-  content: "\e92c";
-  margin-right: 5px;
-}
-
-.specialArticleArtistSearch:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.specialArticlePopularArtist {
-  background-color: #fffcf6;
-  padding: 10px 10px 4px;
-  border-bottom: 1px solid #ddd;
-}
-
-.specialArticlePopularArtist--index {
-  background-color: #fbf4f8;
- }
-
-.specialArticlePopularArtist:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.specialArticlePopularArtist li {
-  margin: 0 6px 6px 0;
-  float: left;
-}
-
-.specialArticlePopularArtist li a {
-  text-decoration: none;
-  background-color: #fff;
-  padding: 3px 5px;
-  display: inline-block;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.specialArticlePopularArtist li a:hover {
-  color: #e80;
-  border-color: #e80;
-}
-
-.specialArticlePopularArtist--index li a:hover {
-  color: #ab538b;
-  border-color: #ab538b;
-}
-
-/** ------------------------------
- * 人気の特集ランキング
- */
-.specialArticleWeeklyRanking {
-  padding: 5px 10px;
-}
-
-.specialArticleWeeklyRanking__Title {
-  font-weight: bold;
-  text-align: center;
-  background-color: #fffae4;
-  margin-bottom: 10px;
-  padding: 15px 10px;
-  border: 1px dotted #333333;
-  border-radius: 5px;
-}
-
-.specialArticleWeeklyRanking__Pager {
-  text-align: right;
-}
-
-.specialArticleWeeklyRanking__Article ,
-.specialArticleWeeklyRanking__Article a {
-  color: #000;
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-}
-
-.specialArticleWeeklyRanking__Article {
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.specialArticleWeeklyRanking__Article a:hover {
-  color: #e80;
-}
-
-.specialArticleWeeklyRanking__Article .text,
-.specialArticleWeeklyRanking__Article .image {
-  padding: 10px 10px 12px 10px;
-  display: table-cell;
-  direction: ltr;
-  vertical-align: top;
-}
-
-.specialArticleWeeklyRanking__Article .text {
-  line-height: 1.2;
-  padding-left: 0;
-  position: relative;
-}
-
-.specialArticleWeeklyRanking__Article .text .title {
-  font-weight: bold;
-}
-
-.specialArticleWeeklyRanking__Article .text .description {
-  font-size: 90%;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.specialArticleWeeklyRanking__Article .image {
-  width: 100px;
-  text-decoration: none;
-}
-
-.specialArticleWeeklyRanking__Article .image img {
-  width: 100%;
-  border-radius: 3px;
-}
-
-.specialArticleWeeklyRanking__Article .writer {
-  color: #272672;
-  font-size: 90%;
-  position: absolute;;
-  bottom: 4px;
-  right: 4px;
-}
-
-.specialArticleWeeklyRanking__Article + br {
-  display: none;
-}
-
-/** ------------------------------
- * ステージャーライブランキング
- */
-.stagerLiveRanking {
-  padding: 5px 10px;
-}
-
-.stagerLiveRanking__topImage img {
-  width: 100%;
-}
-
-.stagerLiveRanking__topMessage {
-  color: #888;
-  font-size: 15px;
-  text-align: center;
-  margin: 20px 12px 10px 12px;
-}
-
-.stagerLiveRanking__topMessage--presented {
-  color: #888;
-  font-size: 12px;
-  text-align: right;
-  margin-top: 16px;
-}
-
-.stagerLiveRanking__Title {
-  font-weight: bold;
-  text-align: center;
-  background-color: #fffae4;
-  margin-bottom: 10px;
-  padding: 15px 10px;
-  border: 1px dotted #333333;
-  border-radius: 5px;
-}
-
-.stagerLiveRanking__Pager {
-  text-align: right;
-}
-
-.stagerLiveRanking__Article {
-  color: #000;
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  direction: rtl;
-  unicode-bidi: embed;
-}
-
-.stagerLiveRanking__Article {
-  margin: 8px 0 14px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.stagerLiveRanking__Article a:hover {
-  color: #fa3;
-}
-
-.stagerLiveRanking__Article .text,
-.stagerLiveRanking__Article .image {
-  vertical-align: top;
-  padding: 10px 10px 12px 10px;
-  display: table-cell;
-  direction: ltr;
-}
-
-.stagerLiveRanking__Article .text {
-  line-height: 1.2;
-  padding-left: 0;
-  position: relative;
-}
-
-.stagerLiveRanking__Article .text .title {
-  font-size: 120%;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.stagerLiveRanking__Article .text .title .user_id {
-  color: #888;
-  font-size: 75%;
-}
-
-.stagerLiveRanking__Article .text .description {
-  font-size: 90%;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.stagerLiveRanking__Article .image {
-  text-decoration: none;
-  width: 100px;
-}
-
-.stagerLiveRanking__Article .image img {
-  width: 100%;
-  border-radius: 3px;
-}
-
-.stagerLiveRanking__Article .writer {
-  color: #272672;
-  font-size: 90%;
-  position: absolute;;
-  bottom: 4px;
-  right: 4px;
-}
-
-.stagerLiveRanking__Article + br {
-  display: none;
-}
-
-/*
-.specialArticleSearch__inner {
-  background-color: #fff;
-  width: 50%;
-  padding: 4px;
-  float: left;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.specialArticleSearch__inner:after {
-  content: ".";
-  font-size: 0;
-  line-height: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility: hidden;
-}
-
-.specialArticleSearch__inner * {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-      -ms-appearance: none;
-          appearance: none;
-  font-size: 15px;
-  line-height: 1.7;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-}
-
-.specialArticleSearch input[type="text"] {
-  width: 236px;
-  margin-left: 5px;
-  float: left;
-}
-
-.specialArticleSearch button {
-  color: #fff;
-  text-align: center;
-  background-color: #e80;
-  width: 100px;
-  float: right;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
-
-.specialArticleSearch button:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
-}
-
-.specialArticleSearch button:before {
-  font-family: utIcon;
-  content: "\e92c";
-  margin-right: 5px;
-}
-
-.specialArticleSearch .easy-select-box {
-  background-color: #fff;
-  height: 27px;
-  margin-right: 2px;
-  padding: 4px 1px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
-*/
-
-/** ------------------------------
- * JQuery UI Dialog
- */
-.ui-widget-overlay {
-  background: #000 url("images/ui-bg_flat_10_000000_40x100.png") 50% 50% repeat-x;
-  opacity: 0.5;
-  filter: Alpha(Opacity=50);
-}
-
-.dialog-base .ui-dialog-content {
-  background-color: #fff;
-  padding: 0;
-  overflow: auto;
-}
-
-.dialog-base .ui-dialog-titlebar {
-  display: none;
-}
-
-
-/**
- * 掲載メディア
- */
-.media__list {
-  padding: 20px 10px;
-}
-
-.media__list li {
-  text-align: center;
-  vertical-align: top;
-  width: 49%;
-  display: inline-block;
-}
-
-.media__list img {
-  background-color: #fff;
-  width: 80%;
-  padding: 10px 20px;
-}
-
-.media__list a:hover {
-  opacity: 0.5;
-}
-
-.media__list p {
-  padding: 7px 5px;
-}
-
-.adSpotBannerLyric {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.adSpotBannerLyric img {
-  max-width: 100%;
-}
-
-/** ------------------------------
- * アーティスト一覧
- */
-.artistList--item {
-  text-align: center;
-}
-
-.artistList__header--name,
-.artistList--name {
-  width: 40%;
-}
-
-td.kanaListItem {
-  text-align: center;
-  background-color: #F5D0A9;
-  padding-bottom: 20px;
-}
-
-.kanaListItem a {
-  font-weight: bold;
-  -webkit-transition: none;
-     -moz-transition: none;
-      -ms-transition: none;
-       -o-transition: none;
-          transition: none;
-}
-
-.kanaListItem span {
-  font-size: 16px;
-  background-color: #fff;
-  width: 100%;
-  padding: 10px 3px;
-  display: inline-block;
-  border: 1px solid #000;
-  border-radius: 4px;
-}
-
-.kanaListItem a:hover > span {
-  border: 1px solid #e80;
-  -webkit-transition: all 0.4s ease;
-     -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-       -o-transition: all 0.4s ease;
-          transition: all 0.4s ease;
-}
-
-.kanaListItem a.hover > span {
-  color: #e80;
-  border: 1px solid #e80;
-}
-
-span.kanaListItem__text--disable {
-  color: #000;
-  background-color: #efefef;
-  border: none;
-  box-shadow: none;
-}
-
-.kanaListItem--selected span {
-  color: #e80;
-  border: 1px solid #e80;
-}
-
-.charBox {
-  margin-bottom: 10px;
-}
-
-.kanaTable {
-  background-color: #F5D0A9;
-  padding: 0 10px;
-}
-
-.kanaTable td {
-  border: none;
-}
-
-.charBox .contentBox {
-  margin-bottom: 5px;
-}
-
-.artistList--item span {
-  color: #ccc;
-}
-
-td.artistList--name {
-  word-break: break-all;
-}
-
-/*みんなの気持ちコーナー*/
+/* 想いゲージパーセンテージ */
 .voteResultBarGraph .bar {
   text-align: center;
   float: left;
 }
 
 .barOuterWrapper {
-  height: 1.2em;
   overflow: hidden;
+  height: 1.2em;
 }
 
 .barNarrowTextHider {
-  width: 1px;
   display: inline-block;
+  width: 1px;
 }
 
 .barInnerWrapper {
-  white-space: nowrap;
   display: inline-block;
+  white-space: nowrap;
 }
 
 /* 友情 */
@@ -9592,136 +7144,1344 @@ td.artistList--name {
   clear: both;
 }
 
-.voteResultBarGraph .bar {
-  font-family: 'Dosis', sans-serif;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 600;
-  font-style: italic;
-  height: 21px;
-  padding: 18px 0;
-  border-bottom: 3px solid #ddd;
-}
-
-.voteResultBarGraph .bar:first-child {
-  border-radius: 5px 0 0px 5px;
-}
-
-.voteResultBarGraph .bar:last-child {
-  border-radius: 0 5px 5px 0;
-}
-
-.voteResultBarGraph .bar:only-child {
-  border-radius: 5px;
-}
-
-.voteResultBarGraph_info {
-  margin: 10px 40px;
-}
-
-.lst_voteResultBarGraph_info {
-  max-width: 300px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.voteResultBarGraph_info_Item::before {
-  content: "";
-  vertical-align: sub;
-  background: #ddd;
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  display: inline-block;
-  border-radius: 2px;
-}
-
-.voteResultBarGraph_info_Item:nth-of-type(1)::before {
-  background: #FF685E;
-}
-
-.voteResultBarGraph_info_Item:nth-of-type(2)::before {
-  background: #5496d9;
-}
-
-.voteResultBarGraph_info_Item:nth-of-type(3)::before {
-  background: #f46b88;
-}
-
-.voteResultBarGraph_info_Item:nth-of-type(4)::before {
-  background: #f0d220;
-}
-
-.notyet_info {
+/* リンク */
+.lyricAction {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  background-color: #f6f6f6;
   text-align: center;
-  margin: 50px 0;
+  font-size: 17px;
 }
 
-
-/****************artist▼▼ 20190207
-*********************************/
-.contentsBox {
-  background: #fff;
-  border: 1px solid #bbb;
-  border-top: none;
+.lyricAction__button + .lyricAction__button {
+  margin-top: 10px;
 }
 
-.contentsBox + .contentsBox {
-  margin-top: 20px;
+.lyricAction__button a {
+  padding: 12px;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  color: #e80;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
 }
 
-.contentsBox + #_popIn_recommend,
-.contentsBox + div[class^="xlift_"],
-.contentsBox + #logly-lift-widget {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.lyricAction__button--ranking a {
+  color: #fff;
+  background-color: #a1dc3c;
+}
+
+.lyricAction__button--comment a {
+  color: #fff;
+  background-color: #42e2a7;
+}
+
+.lyricAction__button a:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  font-family: utIcon;
+  font-size: 30px;
+  line-height: 1.0;
+  vertical-align: middle;
+}
+
+.lyricAction__button--ranking a:before {
+  content: "\e691";
+}
+
+.lyricAction__button--comment a:before {
+  top: 3px;
+  content: "\e684";
+}
+
+.artist_youtubeItems {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+div .artist_youtubeItems:last-of-type {
+  border-bottom: none;
+}
+
+.boxArea_youtube_contents {
+  overflow: hidden;
+  padding-left: 10px;
+  width: calc(100% - 140px);
+}
+
+.boxArea_youtube_img {
+  overflow: hidden;
+  width: 130px;
+}
+
+.boxArea_youtube_img img {
+  width: 100%;
+}
+
+.boxArea_youtube_move {
+  left: 150px;
+}
+
+.youtubeLink {
+  margin: 10px 6px 10px 4px;
+  float: right;
+  font-size: 14px;
+}
+
+.articleBody .youtubeLink a {
+  padding: 8px 15px 8px 10px;
+  display: inline-block;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #e80;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.articleBody .youtubeLink a::before {
+  margin-top: -5px;
+  padding-right: 6px;
+  font-size: 120%;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: utIcon;
+  content: "\e61d";
+}
+
+.lnk_ytube_long {
+  border-radius: 10px;
+  border: 2px solid #e80;
+  color: #e80;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+.lnk_ytube_long::before {
+  content: "\e60a";
+  color: #e80;
+  font-family: utIcon;
+  font-size: 1.2em;
+  line-height: 1;
+  margin-top: -5px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+
+/* tweet */
+.tweetBox {
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.tweetBox:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
+}
+
+.tweetBox__input {
+  display: table;
+  width: 100%;
+}
+
+.tweetBox__input div {
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 3em;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+  color: #55acee;
+}
+
+.tweetBox__input div.selected {
+  color: #555;
+  background-color: #fffe66;
+}
+
+.tweetBox__button {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.tweetBox__input input[type="text"] {
+  margin: 0 10px;
+  padding: 4px 6px;
   border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 70px;
+  line-height: 1.7;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: monospace;
+  outline: none;
+  text-align: center;
+}
+
+.tweetBox__button input[type="button"] {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2px 0;
+  border-radius: 2px;
+  border: none;
+  display: block;
+  width: 90%;
+  line-height: 2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #55acee;
+  font-size: medium;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-family: monospace;
+}
+
+.tweetBox__button input[type="button"]:hover {
+  opacity: 0.8;
+}
+
+.tweetBox__button input[type="button"].inline {
+  padding: 4px 10px;
+  display: inline;
+  width: auto;
+}
+
+.tweetBox__label {
+  padding: 4px 10px;
+  font-size: 18px;
+  background-color: #55acee;
+  color: #fff;
+}
+
+
+/* LINE */
+.lineSubTitle {
+  text-align: center;
+  font-size: 16px;
+  padding: 6px;
+  color: #fff;
+  background-color: #00c300;
+}
+
+.lineDescription {
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
+  font-size: 15px;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.lineText {
+  display: table;
+  width: 100%;
+  color: #00c300;
+  font-size: 17px;
+  text-align: center;
+}
+
+.lineText span {
+  padding: 0 15px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 4em;
+}
+
+.lineSelect {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 5px;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #eee;
+}
+
+.lineSelect > * {
+  display: table-cell;
+  font-size: 18px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.lineSelect > span:nth-of-type(2) {
+  width: 45%;
+}
+
+.lineSelect input,
+.lineSelect button {
+  padding: 6px 0;
+}
+
+.lineSelect input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 100%;
+  height: 2.5em;
+  background-color: #fff;
+  font-family: monospace;
+  outline: none;
+  text-align: center;
+  vertical-align: top;
+}
+
+.lineSelect button {
+  border-radius: 3px;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 2.5em;
+  color: #fff;
+  color: #00c300;
+  background-color: #00c300;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: utIcon;
+  text-align: center;
+  vertical-align: top;
+}
+
+#decrementLine:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-family: utIcon;
+  font-size: 20px;
+  content: "\e611";
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#incrementLine:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-family: utIcon;
+  font-size: 20px;
+  content: "\e60f";
+  line-height: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.submitLyricLine {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.lyricBody__row {
+  margin: 10px 0;
+  padding-left: 3.2em;
+  position: relative;
+}
+
+.lyricBody__row + .lyricBody__row {
+  padding-top: 10px;
+  border-top: 1px dotted #ddd;
+}
+
+.lyricBody__number {
+  padding: 0 0.2em;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  display: block;
+  min-width: 2em;
+  color: #fff;
+  background-color: #55acee;
+  text-align: center;
+}
+
+.lyricBody__number--line {
+  background-color: #00c300;
+}
+
+/* 関連リンク */
+.relatedLink {
+  margin-top: 20px;
+  padding: 0 0 10px;
+  border-top: 1px solid #ddd;
+}
+
+.snsNav + .relatedLink {
+  margin-top: 0;
+}
+
+.relatedLink__title {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #e80;
+  background-color: #f6f6f6;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.relatedLink__body {
+  padding: 10px;
+  line-height: 1.8;
+  overflow: hidden;
+}
+
+.relatedLink__body--lyric {
+  background: #fff;
+}
+
+.relatedLink__body--lyric img {
+  max-width: 100%;
+}
+
+.relatedLink__body--lyric a {
+  color: #0044cc;
+}
+
+.relatedLink__body--lyric a.box {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #e80;
+  display: inline-block;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.relatedLink__item a {
+  padding: 5px 10px 5px 20px;
+  color: #e80;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.relatedLink__item a:before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-family: utIcon;
+  font-size: 12px;
+  content: "\e683";
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+/* 歌詞関連情報Youtube動画 */
+.relatedLink .lyric_youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.relatedLink .lyric_youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* アルバム詳細 */
+.albumDetail {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.albumDetail__top:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.albumDetail a {
+  color: #0044cc;
+}
+
+.albumDetail__heading {
+  padding: 0 10px;
+}
+
+.albumDetail__heading h2 {
+  margin: 7px 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4em;
+  border-bottom: 2px solid #e80;
+}
+
+.albumDetail__title {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #e80;
+  background-color: #f6f6f6;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.albumDetail__body {
+  padding: 10px;
+}
+
+.albumDetail__body img {
+  float: left;
+  margin: 0 15px 10px 0;
+  max-width: 100px;
+}
+
+.albumDetail__contentDetail + .albumDetail__contentInfo,
+.albumDetail__contentInfo + .albumDetail__contentDetail {
+  margin-top: 20px;
+}
+
+/* アーティスト詳細 */
+.artistImage {
+  margin: 15px 0;
+}
+
+.artistImage img {
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.artistTags.keywordLineUp {
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* アーティスト情報 */
+.artistInfo__profile__name {
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 4px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.artistInfo__profile__image {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.artistInfo__profile__image img {
+  max-width: 100%;
+}
+
+.artistInfo__latest__title {
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 4px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.artist_wiki {
   border-top: 4px solid #555;
 }
 
-.contentsTtl {
-  border-top: 5px solid #555;
+.artist_wiki a {
+ color: #e80;
+}
+
+/** ------------------------------------------------------------
+ * errorPage
+ */
+.errorPage {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.errorPage__title {
+  color: #e80;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.errorPage__text {
+  color: #999;
+  font-size: medium;
+}
+
+#exceptionMessage {
+  margin-top: 40px;
+  padding: 20px;
+  border: 3px solid #e80;
+  background-color: #fff;
+  text-align: left;
+}
+
+/** ------------------------------------------------------------
+ * footer
+ */
+footer {
+  color: #f2f2f0;
+  background-color: #343330;
+  text-align: center;
+}
+
+.license,
+.footerNavi,
+.footerLink,
+.footerMedia {
+  padding: 10px 5px;
+  border-top: 1px solid #676664;
+  line-height: 1.3em;
+}
+
+.copyright {
+  padding: 10px 5px 120px 5px;
+  border-top: 1px solid #676664;
+  line-height: 1.3em;
+}
+
+.footerNavi {
+  color: #9a9998;
+  text-align:left;
+  padding: 10px 15px;
+  line-height:1.5em;
+}
+.footerNavi ul {
+  display:table;
+  width:100%;
+  margin-bottom:20px;
+}
+.footerNavi ul:nth-last-of-type(1) {
+  margin-bottom:0;
+}
+.footerNavi ul li {
+  display:table-cell;
+  width:50%;
+}
+
+.footerNavi a {
+  color: #fff;
+}
+/* 相互リンク */
+.footerLink {
+  background-color: #777;
+}
+/* 掲載メディア */
+.footerMedia {
+  background-color: #777;
+}
+
+/* 許諾 */
+.license {
+  font-size: 11px;
+}
+
+.license__main {
+  margin-top: 5px;
+}
+
+.license__item {
+  height: 60px;
+}
+
+/* コピーライト */
+.copyright {
+  font-size: 11px;
+}
+
+
+/** ------------------------------
+ * 歌詞リクエスト
+ */
+.requestLink {
+  padding: 10px 0;
+}
+
+.lnk_request {
+  background: #e80;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: auto;
+  letter-spacing: 1px;
+  padding: 6px;
+  text-align: center;
+  width: calc(100% - 20px);
+}
+
+.lnk_request::before {
+  content: "\e929";
+  color: #fff;
+  display: inline-block;
+  font-weight: normal;
+  font-family: utIcon;
+  margin-right: 6px;
+}
+
+/** ------------------------------
+ * ハッシュタグの紹介文（本番）
+ */
+.lyricTagIntroduction__title {
+  color: #e80;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.lyricTagIntroduction__body {
+  margin-top: 10px;
+  color: #000;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.lyricTagIntroduction__userInfo {
+  margin-top: 10px;
+  color: #888;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/** ------------------------------
+ * ハッシュタグ紹介文応募
+ */
+.lyricTagIntroductionForm__addLyric {
+  margin-top: 1px;
+  text-align: right;;
+}
+
+.lyricTagIntroductionForm__addLyric button {
+  margin: 0;
+  padding: 0 25px;
+  border-radius: 2px;
+  border: none;
+  line-height: 2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #343330;
+  font-size: small;
+  text-align: center;
+  cursor: pointer;
+}
+
+.lyricTagIntroductionForm__preview .lyricTagIntroductionForm__previewTitle {
+  color: #e80;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.lyricTagIntroductionForm__preview .lyricTagIntroductionForm__previewBody {
+  margin-top: 10px;
+  color: #000;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.lyricTagIntroductionForm__preview .lyricTagIntroductionForm__previewUserInfo {
+  margin-top: 10px;
+  color: #888;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.lyricTagIntroductionSent {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+  color: #888;
+  font-size: medium;
+}
+
+.lyricTagIntroductionSent__table {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.lyricTagIntroductionSent__table dt {
+  color: #e80;
+  font-size: 12px;
+}
+
+.lyricTagIntroductionSent__table dt::before {
+  margin-right: 3px;
+  line-height: 1.2;
+  content: "\e63a";
+  color: #ccc;
+  font-family: utIcon;
+}
+
+.lyricTagIntroductionSent__table dd {
+  min-height: 2em;
+  font-size: large;
+  font-weight: bold;
+}
+
+
+/** ------------------------------
+ * ハッシュタグ検索
+ */
+#selectTagWindow select {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  padding-right: 20px;
+}
+
+#selectTagWindow .select {
+  position: relative;
+}
+
+#selectTagWindow .select:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  color: #e80;
+  font-size: 26px;
+  font-family: utIcon;
+  content: "\e697";
+}
+
+#selectTagWindow .selectTagWindowSearchLoading {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/** ------------------------------
+ * 歌詞検索
+ */
+#selectLyricWindow select {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  padding-right: 20px;
+}
+
+#selectLyricWindow .select {
+  position: relative;
+}
+
+#selectLyricWindow .select:after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  color: #e80;
+  font-size: 26px;
+  font-family: utIcon;
+  content: "\e697";
+}
+
+#selectLyricWindow .selectLyricWindowSearchLoading {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#selectLyricWindow .selectLyricWindowSelectedLyric__content {
+  padding: 5px 10px;
+}
+
+#selectLyricWindow .selectLyricWindow__resultTitle {
+  padding-left: 5px;
+  color: #000;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#selectLyricWindow .selectLyricWindow__resultArtist {
+  color: #000;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#selectLyricWindow .selectLyricWindow__resultArtist span:before {
+  margin-right: 2px;
+  content: "\e690";
+  color: #ccc;
+  font-size: 14px;
+  font-family: utIcon;
+  vertical-align: middle;
+}
+
+#selectLyricWindow .selectLyricWindowSelected {
+  width: 90%;
+}
+
+/** ------------------------------
+ * ハッシュタグ紹介文プレビュー
+ */
+#previewWindow .previewWindow__preview {
+  margin: 20px;
+}
+
+#previewWindow .previewWindow__previewTheme {
+  margin: 5px 1px 1px;
+  padding: 10px 9px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  color: #e80;/* 基本色 */
+  font-size: 131%;
+}
+
+#previewWindow .previewWindow__previewTheme:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e80;/* 基本色 */
+}
+
+#previewWindow .previewWindow__previewTitle {
+  color: #e80;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#previewWindow .previewWindow__previewBody {
+  margin-top: 10px;
+  color: #000;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+#previewWindow .previewWindow__previewUserInfo {
+  margin-top: 10px;
+  color: #888;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#previewWindow .previewWindow__loading {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.previewButton {
+  margin-top: 1px;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.previewButton button {
+  margin: 0;
+  padding: 5px 60px;
+  border-radius: 2px;
+  border: none;
+  line-height: 2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
+  color: #fff;
+  background-color: #e80;
+  font-size: medium;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* adsense */
+.adsByGoogle {
+  text-align: right;
+  font-size: 12px;
+  color: #888888;
+  padding-right: 4px;
+}
+
+/*movie_ad*/
+
+#compass-fit-3737958 #compass-fit-widget {
+  border-top: 1px solid #ddd;
+}
+
+#compass-fit-3737958 .compass-fit-ad {
+  width: 100% !important;
+}
+
+#compass-fit-3737958 .compass-fit-ad-image {
+  padding: 0 10px;
+}
+
+#compass-fit-3737958 .compass-fit-ad-content {
+  padding: 0 0 0 10px;
+}
+
+/*news_artist_ad*/
+
+#compass-fit-3741337 #compass-fit-widget-content {
+  border-bottom: 1px solid #ddd;
+}
+
+#compass-fit-3737958 #compass-fit-widget {
+  border-top: 1px solid #ddd;
+}
+
+#compass-fit-widget-content>a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/*artist_ad*/
+
+#compass-fit-3737962 #compass-fit-widget-content {
+  border-bottom: 1px solid #ddd;
+}
+
+#compass-fit-3737962 .list__date {
+  color: #e80;
+}
+
+#compass-fit-3737962 .list__sub img {
+  width: 75px !important;
+  height: 75px !important;
+}
+
+/** ------------------------------
+ * JQuery UI Dialog
+ */
+.ui-widget-overlay {
+  background: #000 url("images/ui-bg_flat_10_000000_40x100.png") 50% 50% repeat-x;
+  opacity: 0.5;
+  filter: Alpha(Opacity=50);
+}
+
+.dialog-base .ui-dialog-content {
+  padding: 0;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.dialog-base .ui-dialog-titlebar {
+  display: none;
+}
+
+/**
+ * 掲載メディア
+ */
+.mediaList {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.mediaList li {
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.mediaList img {
+  width: 90%;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#pageTopScrollBtn a {
+  padding-top: 46px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 110px;
+  right: 10px;
+  display: block;
+  width: 46px;
+  height: 0;
+  line-height: 30px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  overflow: hidden;
+  z-index: 2000001;
+}
+
+#pageTopScrollBtn a::before {
+  content: "";
+  margin: auto;
+  border-style: solid;
+  border-width: 0 8px 12px 8px;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+#pageTopScrollBtn a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.adSpotBannerLyric {
+  text-align: center;
+  margin: 6px 0;
+}
+
+.adSpotBannerLyric img {
+  max-width: 100%;
+}
+
+/** ------------------------------
+ * アーティスト一覧
+ */
+.charBox {
+  clear: both;
+  position: relative;
+}
+
+.charBox table {
+  padding: 10px 25px 0;
+  background-color: #F5D0A9;
+}
+
+.charBox td {
+  text-align: center;
+  border: none;
+}
+
+.charBox span {
+  padding: 10px 3px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.kanaListItem {
+  padding-bottom: 20px;
+}
+
+.kanaListItem a {
+  font-weight: bold;
+}
+
+.kanaListItem--selected span {
+  color: #e80;
+  border: 1px solid #e80;
+}
+
+.kanaListItem a.hover > span {
+  border: 1px solid #e80;
+  color: #e80;
+}
+
+span.kanaListItem__text--disable {
+  box-shadow: none;
+  background-color: #efefef;
+  color: #000;
+  border: none;
+}
+
+.artistList--item {
+  text-align: center;
+}
+
+.artistList--item a {
+  color: #e80;
+}
+
+.artistList--name {
+  padding-right: 20px;
+  text-align: left;
+}
+
+.artistList--name a {
+  display: block;
+}
+
+.artistList--name a:after {
+  margin: auto;
+  content: "\e6a5";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  height: 1em;
+  line-height: 1.0;
+  color: #e80;
+  font-family: utIcon;
+  font-size: 14px;
+}
+
+.artistList--item span {
+  color: #ccc;
+}
+
+.noArtist {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f2f2f0;
+  font-size: 15px;
+}
+
+.utatenAjaRecommend {
+  border-top: 3px solid #e80;
+}
+
+.breadCrumbs + .utatenAjaRecommend {
+  border-top: 1px solid #ddd;
+}
+
+.threeToOneRectangleBanner + .utatenAjaRecommend {
+  border-top: 1px solid #ddd;
+}
+
+
+/****************20181226 artistPage
+*********************************/
+.artistContents {
+  background: #ededed;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.artistContents [class^=indexTtl_] {
+  letter-spacing: 1px;
+}
+
+.artistContents .threeToOneRectangleBanner {
+  background: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.artistContents section {
+  margin: 14px 0;
+}
+
+.artistContents .lst_boxArea + .lst_boxArea {
+  border-top: none;
+}
+
+.artistContents .lst_boxArea {
   border-bottom: 1px solid #eee;
 }
 
 .artistTtl {
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #eee;
   color: #3faba3;
-  font-size: 1.4em;
   font-weight: bold;
-  letter-spacing: .1em;
+  font-size: 1.5em;
+  letter-spacing: .2em;
   padding: 18px 10px;
 }
 
-.artistImg {
-  text-align: center;
+.artistDiscWrap {
   padding: 10px;
+}
+
+.artistDiscWrap img {
+  width: 100%;
+}
+
+.artistDisc {
+  border-top: 1px solid #ddd;
+  font-size: 1.2em;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.artistDisc img {
+  border-radius: 5px;
+  width: 50%;
+}
+
+.artistDisc a {
+  color: #0044cc;
 }
 
 .artistLstWrap {
   margin: 20px 0 10px;
-  padding: 10px;
   position: relative;
+  padding: 10px;
 }
 
 .artistLstTtl {
-  font-family: 'Dosis', sans-serif;
+  background: #fff;
   color: #3faba3;
   font-size: 2.6em;
   font-weight: 600;
   font-style: italic;
-  text-transform: capitalize;
-  background: #fff;
+  font-family: 'Dosis', sans-serif;
+  left: 10px;
   padding: 0 10px 0 0;
   position: absolute;
   top: -16px;
-  left: 10px;
+  text-transform: capitalize;
 }
 
 .artistLst {
-  font-size: 1.1em;
-  padding-top: 16px;
   border-top: 1px solid #3faba3;
+  font-size: 1.2em;
+  padding-top: 16px;
 }
 
 .artistLst_items {
@@ -9735,791 +8495,289 @@ td.artistList--name {
 }
 
 .lnk_artistLst_items::before {
-  font-family: utIcon;
   content: "\e697";
   color: #3faba3;
-  font-size: 2em;
   display: inline-block;
+  font-family: utIcon;
+  font-size: 2em;
+  left: 0;
   position: absolute;
   top: -10px;
-  left: 0;
 }
 
-.artistDisc img {
-  width: 50%;
-  border-radius: 5px;
+[class^=lnk_moreArtist_] {
+  border-radius: 50px;
+  border: 1px solid #555;
+  color: #555;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.artistDisc a {
-  color: #e80;
+.lnk_moreArtist_Rank,
+.lnk_moreArtist_movie {
+  box-sizing: border-box;
+  margin: 10px auto;
+  width: calc(100% - 20px);
 }
 
-.relation_ttl {
-  text-overflow: ellipsis;
-  vertical-align: bottom;
-  white-space: nowrap;
-  max-width: 570px;
-  display: inline-block;
+.lnk_moreArtist_Rank {
+  border: 2px solid #D6A810;
+  color: #D6A810;
+}
+
+.lnk_moreArtist_movie {
+  border: 2px solid #AD64BE;
+  color: #AD64BE;
+}
+
+.lnk_moreArtist_news {
+  border: 2px solid #5467B2;
+  color: #5467B2;
+}
+
+.lnk_moreArtist_feature {
+  border: 2px solid #AD64BE;
+  color: #AD64BE;
+}
+
+.lnk_moreArtist_album {
+  border: 2px solid #AD64BE;
+  color: #AD64BE;
+}
+
+.artist_indexTtl {
+  align-items: center;
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #eee;
+  padding: 18px 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+[class*=artist_indexTtl_] {
+  width: auto;
+}
+
+.boxArea_squareBig_img {
+  height: 120px;
   overflow: hidden;
+  width: 120px;
 }
 
-/*tag*/
-.artistHashtag {
-  margin: 20px;
-  border: 2px solid #3faba3;
-  border-radius: 3px;
+
+/*関連動画*/
+.indexTtl_movie,
+.lnk_indexTtl_movie,
+.indexTtl_movie::before {
+  color: #AD64BE;
+}
+
+.indexTtl_movie::before {
+  content: "\e905";
+}
+
+.boxArea_movie_img {
+  overflow: hidden;
+  width: 100px;
+}
+
+.boxArea_movie_ttl {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.parts_boxArea_movie {
+  align-items: center;
+}
+
+.parts_boxArea_movie img {
+  width: 100%;
+}
+
+.lnk_lst_boxArea_movie {
+  display: block;
+  padding: 0 10px 10px 10px;
+}
+
+.boxArea_movie_contents {
+  overflow: hidden;
+  padding-left: 10px;
+  width: calc(100% - 110px);
+}
+
+/*プロフィール*/
+.indexTtl_plf,
+.lnk_indexTtl_plf,
+.indexTtl_plf::before {
+  color: #3faba3;
+}
+
+.indexTtl_plf::before {
+  content: "\e906";
+}
+
+.artist_plf img {
+  border-radius: 5px;
+  width: 200px;
+}
+
+/*最新情報*/
+.indexTtl_info,
+.lnk_indexTtl_info,
+.indexTtl_info::before {
+  color: #3faba3;
+}
+
+.indexTtl_info::before {
+  content: "\e907";
+}
+
+.artist_indexTtl_only {
+  /*
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  */
+}
+
+.artist_plf h3 {
+  border-left: 4px solid #3faba3;
+  color: #3faba3;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.artist_plf a {
+  color: #0044cc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+
+
+
+/****************20190108 artistPage
+*********************************/
+[id^=cf_async_] + .lst_boxArea {
+  margin-top: 10px;
+}
+
+/*関連ハッシュタグ*/
+section + .artistHashtag {
+  background: #fff;
+  margin-top: -14px;
 }
 
 .artistHashtagTtl {
   color: #3faba3;
-  font-size: 1.2em;
   font-weight: bold;
+  font-size: 1.4em;
   padding: 10px;
 }
 
 .artistTagsLst {
   background: #3faba3;
-  max-height: 78px;
-  padding: 0 0 10px 20px;
+  box-sizing: border-box;
   display: flex;
+  display: -webkit-flex;
+  padding: 10px 10px 10px 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 100%;
+}
+
+.artistTagsLst--wrap {
   flex-wrap: wrap;
-  overflow-y: scroll;
+  -webkit-flex-wrap: wrap;
 }
 
 .artistTagsLst_item {
-  padding: 10px 20px 0px 0px;
+  padding: 0 20px 0 0;
+}
+
+.artistTagsLst--wrap .artistTagsLst_item {
+  margin: 5px 0;
+}
+
+.artistTagsLst_item:nth-last-of-type(1) {
+  padding: 0 10px 0 0;
 }
 
 .lnk_artistTagsLst_item {
+  background: #fff;
+  border-radius: 0 3px 3px 0;
   color: #fff;
+  display: block;
   font-size: 1.1em;
   line-height: 30px;
-  background: #fff;
-  padding: 0 1em;
-  display: block;
-  border-radius: 0 3px 3px 0;
   position: relative;
+  padding: 0 1em;
   transition: .2s;
 }
 
 .lnk_artistTagsLst_item::before {
-  content: '';
-  width: 0;
-  height: 0;
+  border-color: transparent #fff transparent transparent;
   border-style: solid;
   border-width: 15px 12px 15px 0;
-  border-color: transparent #fff transparent transparent;
+  content: '';
+  height: 0;
+  left: -12px;
   position: absolute;
   top: 0;
-  left: -12px;
   transition: .2s;
+  width: 0;
 }
 
 .lnk_artistTagsLst_item::after {
-  content: '';
   background: #3faba3;
-  width: 6px;
-  height: 6px;
-  margin-top: -3px;
-  display: block;
   border-radius: 100%;
+  content: '';
+  display: block;
+  height: 6px;
+  left: 0;
+  margin-top: -3px;
   position: absolute;
   top: 50%;
-  left: 0;
+  width: 6px;
+  z-index: 2;
 }
 
 .txt_artistTagsLst_item {
   color: #3faba3;
+  display: block;
+  max-width: 120px;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 118px;
-  display: block;
-  overflow: hidden;
-}
-
-/*人気ランキング***************/
-.artist_indexTtl {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-top: 4px solid #555;
-  border-bottom: 1px solid #eee;
-}
-
-[class^=indexTtl_] {
-  font-size: 1.3em;
-  font-weight: bold;
-  width: 100%;
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-
-.indexTtl_rank,
-.rank_ttl_ico::before {
-  color: #D6A810;
-}
-
-.indexTtl_article,
-.article_ttl_ico::before {
-  color: #AD64BE;
-}
-
-.indexTtl_movie,
-.movie_ttl_ico::before {
-  color: #AD64BE;
-}
-
-.indexTtl_news,
-.news_ttl_ico::before {
-  color: #5467B2;
-}
-
-.indexTtl_plf,
-.plf_ttl_ico::before {
-  color: #3faba3;
-}
-
-.indexTtl_info,
-.info_ttl_ico::before {
-  color: #3faba3;
-}
-
-.indexTtl_album,
-.album_ttl_ico::before {
-  color: #AD64BE;
-}
-
-.indexTtl_rank_centered {
-  text-align: center;
-  border-top: 4px solid #D6A810;
-}
-
-.ttl_ico {
-  line-height: 1;
-}
-
-.ttl_ico::before {
-  font-family: utIcon;
-  font-size: 3em;
-}
-
-.ttl_share {
-  width: 133px;
-}
-
-.rank_ttl_ico::before {
-  content: "\e900";
-}
-
-.article_ttl_ico::before {
-  content: "\e903";
-}
-
-.movie_ttl_ico::before {
-  content: "\e905";
-}
-
-.news_ttl_ico::before {
-  content: "\e904";
-}
-
-.plf_ttl_ico::before {
-  content: "\e906";
-}
-
-.info_ttl_ico::before {
-  content: "\e907";
-}
-
-.album_ttl_ico::before {
-  content: "\e938";
-}
-
-.boxArea_tieIn {
-  color: #888;
-  font-size: .9em;
-  margin-top: 5px;
-  padding-top: 5px;
-  border-top: 1px dashed #ddd;
-}
-
-.boxArea_rank {
-  padding: 0px 0 10px 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.boxArea_rank img {
-  width: 100%;
-}
-
-.lst_boxArea {
-  width: calc((100% - 50px) / 5);
-  margin: 10px 10px 0 0;
-}
-
-.boxArea_ttl {
-  font-weight: bold;
-  margin: 5px 0;
-  margin-bottom: 15px;
-}
-
-.hopeRanking .lst_boxArea {
-  padding-bottom: 30px;
-}
-
-.boxArea_hopeVotePointTxtWrap {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
-.boxArea_hopeVotePointTxtinr {
-  font-family: 'Dosis', sans-serif;
-  color: #5467b2;
-  font-weight: 60;
-  font-style: italic;
-  line-height: 1.2;
-  display: inline-block;
-  border-bottom: 8px solid #fef952;
-}
-
-.boxArea_hopeVotePointTxt {
-  font-size: 1.6em;
-  letter-spacing: 1px;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-
-.boxArea_ptTxt {
-  font-size: 1.2em;
-}
-
-.boxArea_square_img {
-  height: 126px;
-  margin-top: 8px;
-  border: 1px solid #ddd;
-  position: relative;
-  overflow: hidden;
-}
-
-.boxArea_square_img img {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-[class^=icoTxt_] {
-  color: #fff;
-  font-size: .7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 1px 8px;
-  display: inline-block;
-  border-radius: 2px;
-}
-
-.icoTxt_rank {
-  vertical-align: bottom;
-  background: #D6A810;
-  margin-right: .5em;
-}
-
-.icoTxt_rank_top3::before {
-  font-family: utIcon;
-  content: "\e908";
-  color: #D6A810;
-  font-size: 1.4em;
-  font-weight: normal;
-  margin-right: 2px;
-  display: inline-block;
-  position: absolute;
-  top: -2px;
-  left: -20px;
-}
-
-.icoTxt_rank_top3.icoTxt_rank {
-  margin-left: 20px;
-  position: relative;
-}
-
-[class^=lnk_moreArtist_] {
-  color: #555;
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: center;
-  margin: 10px auto;
-  padding: 10px;
-  width: calc(100% - 200px);
-  display: block;
-  border: 1px solid #555;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-.lnk_moreArtist_Rank {
-  color: #D6A810;
-  border: 2px solid #D6A810;
-}
-
-.lnk_moreArtist_Rank:hover {
-  color: #fff;
-  background: #D6A810;
-}
-
-.articleWrap {
-  padding: 10px;
-  display: flex;
-}
-
-.article_block {
-  width: calc((100% - 40px) / 5);
-}
-
-.article_block + .article_block {
-  margin-left: 10px;
-}
-
-.article_tmbWrap {
-  max-height: 100px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  overflow-y: hidden;
-}
-
-.article_tmbWrap img:not(.movie_tmb) {
-  width: 100%;
-  position: relative;
-  top: -14px;
-}
-
-.article_ttl {
-  font-size: .9em;
-  font-weight: bold;
-}
-
-.lnk_moreArtist_feature {
-  color: #AD64BE;
-  border: 2px solid #AD64BE;
-}
-
-.lnk_moreArtist_feature:hover {
-  color: #fff;
-  background: #AD64BE;
-}
-
-.movie_tmb {
-  width: 100%;
-}
-
-.article_date {
-  color: #999;
-  font-size: .9em;
-  margin-top: 5px;
-}
-
-.lnk_moreArtist_news {
-  color: #5467B2;
-  border: 2px solid #5467B2;
-}
-
-.lnk_moreArtist_news:hover {
-  color: #fff;
-  background: #5467B2;
-}
-
-.boxArea {
-  padding: 10px;
-}
-
-.artist_info h3 {
-  color: #3faba3;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  border-left: 4px solid #3faba3;
-}
-
-.artist_info a {
-  color: #0044cc;
-}
-
-.artist_info img {
-  max-width:100%;
-}
-
-.artist_wiki {
-  border-top: 4px solid #555;
-}
-
-.artist_wiki a {
-  color: #e80;
 }
 
 
 
-
-/****************artist▲▲
+/****************artistPage
 *********************************/
 
 
-/*sidebar*/
-#sidebar [class^=indexTtl_] {
-  font-size: 1.15em;
+.lowerContents section {
+  margin-top: 14px;
 }
 
-#sidebar .artistTagsLst {
-  max-height: 160px;
-  overflow: hidden;
-}
-
-#twitter {
-  margin-top: 20px;
-  border: 1px solid #ddd;
-}
-
-[class^=lnk_indexTtl] {
-  white-space: nowrap;
-}
-
-[class^=lnk_indexTtl]::after {
-  content: '';
-  width: 6px;
-  height: 6px;
-  margin: auto;
-  display: inline-block;
-  transform: rotate(45deg);
-}
-
-.lnk_indexTtl_etmt {
-  color: #5467B2;
-}
-
-.lnk_indexTtl_etmt::after {
-  border-top: 1px solid #5467B2;
-  border-right: 1px solid #5467B2;
-}
-
-.indexTtl_tag,
-.tag_ttl_ico::before {
-  color: #3faba3;
-}
-
-.tag_ttl_ico::before {
-  content: "\e926";
-}
-
-.lnk_indexTtl_tag {
-  color: #3faba3;
-}
-
-.lnk_indexTtl_tag::after {
-  border-top: 1px solid #3faba3;
-  border-right: 1px solid #3faba3;
-}
-
-
-/****************feelingGaugeRanking20190212▼▼
-*********************************/
-.lowerContents [class^=feeling_] {
+.lowerContents section.noMargin {
   margin-top: 0;
 }
 
-.indexTtl {
-  background: #fff;
-}
-
-.feelingRank_ttl_ico {
-  content: "\e900";
-}
-
-.feelingRank_ttl_ico::before {
-  content: "\e900";
-  color: #f02361;
-}
-
-.indexTtl_feelingRank,
-.lnk_indexTtl_feelingRank,
-.indexTtl_feelingRank::before {
-  color: #f02361;
-}
-
-.feelTtl  h2{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.tab {
-  background: #eee;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.tabLst {
-  padding: 0 10px 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.tabList_item {
-  text-align: center;
-  width: calc((100% - 20px)/4);
-  position: relative;
-  box-sizing: border-box;
-}
-
-.lnk_tabLst_item {
-  background: #fff;
-  padding: 5px;
-  display: block;
-  border: 2px solid #888;
-  border-radius: 4px;
-}
-
-.lnk_tabLst_item::before {
-  font-family: utIcon;
-  content: "\e904";
-  font-size: 1.4em;
-  line-height: 0;
-  vertical-align: sub;
-  display: inline-block;
-}
-
-.tabList_item.active::after {
-  content: "";
-  margin-left: -6px;
-  border: 6px solid transparent;
-  border-top: 8px solid #555;
-  position: absolute;
-  left: 50%;
-}
-
-/*友情*/
-.tabList_item:nth-of-type(1).active::after {
-  border-top: 8px solid #FF685E;
-}
-
-.tabList_item:nth-of-type(1) .lnk_tabLst_item {
-  color: #FF685E;
-  border: 1px solid #FF685E;
-}
-
-.tabList_item:nth-of-type(1).active .lnk_tabLst_item {
-  color: #fff;
-  background: #FF685E;
-}
-
-.tabList_item:nth-of-type(1) .lnk_tabLst_item::before {
-  content: "\e922";
-  color: #FF685E;
-}
-
-.tabList_item:nth-of-type(1).active .lnk_tabLst_item::before {
-  color: #fff;
-}
-
-.feeling_1 .feelTtl {
-  color: #FF685E;
-  border-color: #FF685E;
-}
-
-.feeling_1 .icoTxt_feelingRank {
-  background: #FF685E;
-}
-
-.feeling_1 .moreBtn_ranks {
-  color: #FF685E;
-  border: 1px solid #FF685E;
-}
-
-.feeling_1 .icoTxt_rank {
-  background: #FF685E;
-}
-
-.feeling_1 .icoTxt_rank_top3::before {
-  color: #FF685E;
-}
-
-/*感動*/
-.tabList_item:nth-of-type(2).active::after {
-  border-top: 8px solid #5697d9;
-}
-
-.tabList_item:nth-of-type(2) .lnk_tabLst_item {
-  color: #5697d9;
-  border: 1px solid #5697d9;
-}
-
-.tabList_item:nth-of-type(2).active .lnk_tabLst_item {
-  color: #fff;
-  background: #5697d9;
-}
-
-.tabList_item:nth-of-type(2) .lnk_tabLst_item::before {
-  content: "\e924";
-  color: #5697d9;
-}
-
-.tabList_item:nth-of-type(2).active .lnk_tabLst_item::before {
-  color: #fff;
-}
-
-.feeling_2 .feelTtl {
-  color: #5697d9;
-  border-color: #5697d9;
-}
-
-.feeling_2 .icoTxt_feelingRank {
-  background: #5697d9;
-}
-
-.feeling_2 .moreBtn_ranks {
-  color: #5697d9;
-  border: 1px solid #5697d9;
-}
-
-.feeling_2 .icoTxt_rank {
-  background: #5697d9;
-}
-
-.feeling_2 .icoTxt_rank_top3::before {
-  color: #5697d9;
-}
-
-/*恋愛*/
-.tabList_item:nth-of-type(3).active::after {
-  border-top: 8px solid #f46b88;
-}
-
-.tabList_item:nth-of-type(3) .lnk_tabLst_item {
-  color: #f46b88;
-  border: 1px solid #f46b88;
-}
-
-.tabList_item:nth-of-type(3).active .lnk_tabLst_item {
-  color: #fff;
-  background: #f46b88;
-}
-
-.tabList_item:nth-of-type(3) .lnk_tabLst_item::before {
-  content: "\e923";
-  color: #f46b88;
-}
-
-.tabList_item:nth-of-type(3).active .lnk_tabLst_item::before {
-  color: #fff;
-}
-
-.feeling_3 .feelTtl {
-  color: #f46b88;
-  border-color: #f46b88;
-}
-
-.feeling_3 .icoTxt_feelingRank {
-  background: #f46b88;
-}
-
-.feeling_3 .moreBtn_ranks {
-  color: #f46b88;
-  border: 1px solid #f46b88;
-}
-
-.feeling_3 .icoTxt_rank {
-  background: #f46b88;
-}
-
-.feeling_3 .icoTxt_rank_top3::before {
-  color: #f46b88;
-}
-
-/*元気*/
-.tabList_item:nth-of-type(4).active::after {
-  border-top: 8px solid #d6bd23;
-}
-
-.tabList_item:nth-of-type(4) .lnk_tabLst_item::before {
-  content: "\e925";
-  color: #d6bd23;
-}
-
-.tabList_item:nth-of-type(4).active .lnk_tabLst_item {
-  color: #fff;
-  background: #d6bd23;
-}
-
-.tabList_item:nth-of-type(4) .lnk_tabLst_item {
-  color: #d6bd23;
-  border: 1px solid #d6bd23;
-}
-
-.tabList_item:nth-of-type(4).active .lnk_tabLst_item::before {
-  color: #fff;
-}
-
-.feeling_4 .feelTtl {
-  color: #d6bd23;
-  border-color: #d6bd23;
-}
-
-.feeling_4 .icoTxt_feelingRank {
-  background: #d6bd23;
-}
-
-.feeling_4 .moreBtn_ranks {
-  color: #d6bd23;
-  border: 1px solid #d6bd23;
-}
-
-.feeling_4 .icoTxt_rank {
-  background: #d6bd23;
-}
-
-.feeling_4 .icoTxt_rank_top3::before {
-  color: #d6bd23;
-}
-/*タブ切り替えここまで*/
-
-
-
-/****************hopeRanking20190212▼▼
+/****************hopeRanking▼▼ 20190123
 *********************************/
-.indexTtl_hopeRank {
-  color: #5467b2;
-}
 
-.hopeRank_ttl_ico::before {
-  content: "\e900";
-  color: #5467b2;
-}
-
-.lnk_hopeRanking_feature {
-  border-radius: 50px;
-  border: 2px solid #5467b2;
-  box-sizing: border-box;
-  display: block;
-  font-weight: bold;
-  font-size: 1.1em;
-  padding: 10px;
-  text-align: center;
-  margin: 10px auto;
-  width: calc(100% - 200px);
-  color: #5467b2;
-}
-
-.lnk_hopeRanking_feature:hover {
-  color: #fff;
-  background: #5467b2;
-}
-
-.hopeRanking .icoTxt_rank {
-  background: #5467b2;
-}
-
-.indexSubttl [class^=icoTxt_] {
+.allHopeRankingTtl [class^=icoTxt_],
+.hopeRankingTtl [class^=icoTxt_] {
   color: #fff;
   font-size: 1em;
   text-align: center;
@@ -10540,194 +8798,85 @@ td.artistList--name {
   background: #5467b2;
 }
 
-.hopeRanking .icoTxt_rank_top3::before {
-  color: #5467b2;
+.lowerContents {
+  background: #ededed;
+  font-size: 12px;
+  padding-bottom: 14px;
 }
 
-.hopeRanking_boxArea_tmb {
+.lowerContents .indexTtl {
   border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
-.icoTxt_hope_rank1::before {
-  font-family: utIcon;
-  content: "\e908";
-  color: #5467b2;
-  margin-left: 5px;
-  font-size: 3em;
-  font-weight: normal;
-  display: inline-block;
+.lowerContents .indexTtl--noMargin {
+  margin-bottom: 0;
 }
 
-.icoTxt_hope_rank::before {
-  font-family: utIcon;
-  content: "\e908";
-  color: #5467b2;
-  margin-left: 5px;
-  font-size: 2.6em;
-  font-weight: normal;
-  display: inline-block;
-}
-
-.main_hopeRanking_boxArea_tmb {
-  padding: 10px;
-  min-height: 125px;
-}
-
-.parts_hopeRanking_boxArea_tmb {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row-reverse;
-}
-
-.hopeRanking_boxArea_TOPtmb_contents {
-  width: calc(100% - 110px);
-  padding-left: 10px;
-  overflow: hidden;
-}
-
-.lnk_hopeRanking_boxArea_tmb {
-  display: block;
-}
-
-.hopeRanking_boxArea_ttl_noClip {
-  color: #5467b2;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 1.4;
-  word-break: break-all;
-}
-
-.icoTxt_hopeRanking {
-  background: #f5a21b;
-}
-
-.icoTxt_hopeRanking--lyric {
-  background: #5467b2;
-}
-
-.hopeRankingArea_tieIn {
-  color: #888;
-  font-size: .9em;
-  margin-top: 5px;
-}
-
-.hopeRanking_hopeVotePointTxtWrap {
-  text-align: center;
-}
-
-.hopeRanking_hopeVotePointTxtinr {
-  font-family: 'Dosis', sans-serif;
-  color: #5467b2;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1.2;
-  display: inline-block;
-  border-bottom: 8px solid #fef952;
-}
-
-.hopeRanking_rank1_hopeVotePointTxt {
-  font-size: 5em;
-  letter-spacing: 3px;
-}
-
-.hopeRanking_hopeVotePointTxt {
-  font-size: 4em;
-  letter-spacing: 3px;
-}
-
-.hopeRanking_boxArea_rank1_img {
-  width: 175px;
-  height: auto;
-  text-align: center;
-}
-
-.hopeRanking_boxArea_rank1_img img {
-  width: 100%;
-}
-
-.hopeRanking_boxArea_img {
-  width: 125px;
-  height: auto;
-  text-align: center;
-}
-
-.hopeRanking_boxArea_img img {
-  width: 100%;
-}
-
-/****************reviewRanking20190212▼▼
-*********************************/
-.reviewRank_box {
-  padding-bottom: 10px;
-}
-
-.reviewRank_ttl_ico::before {
-  content: "\e900";
-  color: #f5a21b;
-}
-
-.indexTtl_reviewRank {
-  color: #f5a21b;
-}
-
-.lnk_indexTtl_review {
-  color: #0044cc;
-  align-self: flex-end;
-}
-
-.parts_boxArea_tmb {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: row-reverse;
+.icoTxt_lowerRank {
+  margin-right: .5em;
+  vertical-align: bottom;
 }
 
 .indexTtl_noIcon {
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
   font-size: 1.4em;
-  text-align: center;
   margin-bottom: 10px;
   padding: 14px 10px;
-  border-top: 4px solid #555;
-  border-bottom: 1px solid #eee;
-  box-sizing: border-box;
+  text-align: center;
 }
 
 .indexTtl_noIcon > * {
   font-weight: bold;
 }
 
+.indexTtl_rank_centered {
+  text-align: center;
+  border-top: 4px solid #D6A810;
+  color: #D6A810;
+}
+
 .icoTxt_lowerRankIn {
-  vertical-align: bottom;
+  display: inline-block;
   margin-left: 20px;
   margin-right: .5em;
-  padding: 1px 10px;
-  display: inline-block;
   position: relative;
+  padding: 1px 10px;
+  vertical-align: bottom;
 }
 
 .icoTxt_lowerRankIn::before {
-  font-family: utIcon;
   content: "\e908";
-  font-size: 1.4em;
   display: inline-block;
+  font-family: utIcon;
+  font-size: 1.4em;
+  left: -20px;
   position: absolute;
   top: -2px;
-  left: -20px;
   z-index: 10000;
 }
 
 .icoTxt_lowerRankIn::after {
-  content: '';
-  border-style: solid;
   border-width: 8px 5px 8px 0px;
   border-color: transparent #fff transparent transparent;
+  border-style: solid;
   position: absolute;
-  top: 0;
+  content: '';
   right: 0;
+  top: 0;
   z-index: 1;
+}
+
+.indexTtl_hopeRank::before {
+  content: "\e900";
 }
 
 .icoTxt_hopeRank {
   background: #5467b2;
+  margin-right: .5em;
+  vertical-align: bottom;
 }
 
 .icoTxt_hopeRankIn {
@@ -10745,14 +8894,12 @@ td.artistList--name {
 }
 
 .boxArea_artists_move_top {
-  font-size: 1.1em;
-  margin-top: 5px;
-  display: block;
+  left: 120px;
 }
 
 .boxArea_Bigsquare_img {
-  width: 100px;
   height: 100px;
+  width: 100px;
 }
 
 .boxArea_Bigsquare_img img {
@@ -10760,36 +8907,36 @@ td.artistList--name {
 }
 
 .boxArea_TOPtmb_contents {
-  width: calc(100% - 110px);
-  padding-left: 10px;
   overflow: hidden;
+  padding-left: 10px;
+  width: calc(100% - 110px);
+}
+
+.lst_boxArea_top .boxArea_artists {
+  width: calc(100% - 220px);
 }
 
 .boxArea_ttl_noClip {
-  color: #555;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   line-height: 1.4;
+  margin-bottom: 30px;
   word-break: break-all;
 }
 
-.icoTxt_reviewRank {
-  background: #f5a21b;
-}
-
 .rank1ttl {
-  font-family: 'Fjalla One', sans-serif;
-  color: #5467b2;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  white-space: nowrap;
-  margin-bottom: 10px;
-  padding: 2px 0 1px 24px;
-  display: block;
   /*border-top: 1px solid #5467b2;
   border-bottom: 1px solid #5467b2;*/
+  color: #5467b2;
+  display: block;
+  font-size: 1.4em;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  padding: 2px 0 1px 20px;
   position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .noUppercase {
@@ -10797,13 +8944,13 @@ td.artistList--name {
 }
 
 .rank1ttl::after {
-  font-family: utIcon;
   content: "\e908";
-  font-weight: bold;
   display: inline-block;
+  font-family: utIcon;
+  font-weight: bold;
+  left: 0;
   position: absolute;
   top: 1px;
-  left: 0;
 }
 
 .moreBtn_relative {
@@ -10811,42 +8958,405 @@ td.artistList--name {
 }
 
 .lowerContents .boxArea_tieIn {
+  margin-top: -30px;
+  margin-bottom: 10px;
+}
+
+.hope_boxArea_artists {
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.boxArea_rank1_img {
+  height: auto;
+  width: 100px;
+  text-align: center;
+}
+
+.boxArea_rank1_img img {
+  width: 100%;
+}
+
+.boxArea_rank_img {
+  height: auto;
+  width: 65px;
+  text-align: center;
+}
+
+.boxArea_rank_img img {
+  width: 100%;
+}
+
+.hopeRanking_rank1ttl {
+  color: #5467b2;
+  display: block;
+  font-size: 2.6em;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.hopeRanking_rank1ttl::after {
+  content: "\e908";
+  display: inline-block;
+  font-family: utIcon;
+  font-weight: bold;
+  left: 0;
+}
+
+.hopeRanking_rankttl {
+  color: #5467b2;
+  display: block;
+  font-size: 2em;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.hopeRanking_rankttl::after {
+  content: "\e908";
+  display: inline-block;
+  font-family: utIcon;
+  font-weight: bold;
+  left: 0;
+}
+
+.hopeRanking_hopeVotePointTxtWrap{
+  text-align: center;
+}
+
+.hopeRanking_hopeVotePointTxtinr {
+  border-bottom: 8px solid #fef952;
+  color: #5467b2;
+  display: inline-block;
+  font-style: italic;
+  font-family: 'Dosis', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hopeRanking_rank1_hopeVotePointTxt {
+  font-size: 3em;
+  letter-spacing: 3px;
+}
+
+.hopeRanking_hopeVotePointTxt {
+  font-size: 2.5em;
+  letter-spacing: 3px;
+}
+
+.ptTxt {
+  font-size: 1.5em;
+}
+
+.lnk_hopeRanking_feature {
+  border-radius: 50px;
+  border: 2px solid #5467b2;
+  box-sizing: border-box;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+  width: calc(100% - 20px);
+  color: #5467b2;
+}
+
+.hopeRank .boxArea_tieIn {
   margin-top: -26px;
   margin-bottom: 10px;
 }
 
-.lst_boxArea {
-  min-height: 55px;
-  position: relative;
+.hopeRank .boxArea_artists {
+  font-size: 1.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.lst_boxArea_tmb:not(.rank_4) {
-  margin-top: 10px;
-  border-top: 1px solid #ddd;
+/****************omoiRanking▼▼ 20190124
+*********************************/
+.lowerContents [class^=feeling_] {
+  margin-top: 0;
 }
 
-.lnk_lst_boxArea_tmb {
-  min-height: 77px;
+.indexTtl {
+  background: #fff;
+}
+
+.indexTtl_feelingRank::before {
+  content: "\e900";
+}
+
+.icoTxt_feelingRankIn {
+  background: #f02361;
+}
+
+.icoTxt_feelingRankIn::before {
+  color: #f02361;
+}
+
+.indexTtl_feelingRank,
+.lnk_indexTtl_feelingRank,
+.indexTtl_feelingRank::before {
+  color: #f02361;
+}
+
+
+.tabLst {
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
-  display: block;
 }
 
-.lnk_lst_boxArea_new {
-  min-height: 55px;
-  padding: 0 10px 10px 10px;
-  display: block;
+.tabList_item {
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  width: calc((100% - 20px)/4);
 }
 
-.reviewRankArea_tieIn {
-  color: #888;
-  font-size: .9em;
-  margin-top: 5px;
+.lnk_tabLst_item {
+  background: #fff;
+  border-radius: 4px;
+  border: 2px solid #888;
+  display: block;
+  padding: 5px;
+}
+
+.lnk_tabLst_item::before {
+  content: "\e904";
+  display: inline-block;
+  font-family: utIcon;
+  font-size: 1.4em;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+.tabList_item.active::after {
+  border: 6px solid transparent;
+  border-top: 8px solid #555;
+  content: "";
+  left: 50%;
+  margin-left: -6px;
+  position: absolute;
+}
+
+/*友情*/
+.tabList_item:nth-of-type(1).active::after {
+  border-top: 8px solid #FF685E;
+}
+
+.tabList_item:nth-of-type(1) .lnk_tabLst_item {
+  border: 1px solid #FF685E;
+  color: #FF685E;
+}
+
+.tabList_item:nth-of-type(1).active .lnk_tabLst_item {
+  background: #FF685E;
+  color: #fff;
+}
+
+.tabList_item:nth-of-type(1) .lnk_tabLst_item::before {
+  content: "\e922";
+  color: #FF685E;
+}
+
+.tabList_item:nth-of-type(1).active .lnk_tabLst_item::before {
+  color: #fff;
+}
+
+.feeling_1 .feelTtl {
+  color: #FF685E;
+}
+
+.feeling_1 .rank1ttl {
+  color: #FF685E;
+  /*border-top-color: #FF685E;
+  border-bottom-color: #FF685E;*/
+}
+
+.feeling_1 .icoTxt_feelingRank {
+  background: #FF685E;
+}
+
+.feeling_1 .moreBtn_ranks {
+  border: 1px solid #FF685E;
+  color: #FF685E;
+}
+
+/*感動*/
+.tabList_item:nth-of-type(2).active::after {
+  border-top: 8px solid #5697d9;
+}
+
+.tabList_item:nth-of-type(2) .lnk_tabLst_item {
+  border: 1px solid #5697d9;
+  color: #5697d9;
+}
+
+.tabList_item:nth-of-type(2).active .lnk_tabLst_item {
+  background: #5697d9;
+  color: #fff;
+}
+
+.tabList_item:nth-of-type(2) .lnk_tabLst_item::before {
+  content: "\e924";
+  color: #5697d9;
+}
+
+.tabList_item:nth-of-type(2).active .lnk_tabLst_item::before {
+  color: #fff;
+}
+
+.feeling_2 .feelTtl {
+  color: #5697d9;
+}
+
+.feeling_2 .rank1ttl {
+  color: #5697d9;
+  /*border-top-color: #5697d9;
+  border-bottom-color: #5697d9;*/
+}
+
+.feeling_2 .icoTxt_feelingRank {
+  background: #5697d9;
+}
+
+.feeling_2 .moreBtn_ranks {
+  border: 1px solid #5697d9;
+  color: #5697d9;
+}
+
+/*恋愛*/
+.tabList_item:nth-of-type(3).active::after {
+  border-top: 8px solid #f46b88;
+}
+
+.tabList_item:nth-of-type(3) .lnk_tabLst_item {
+  border: 1px solid #f46b88;
+  color: #f46b88;
+}
+
+.tabList_item:nth-of-type(3).active .lnk_tabLst_item {
+  background: #f46b88;
+  color: #fff;
+}
+
+.tabList_item:nth-of-type(3) .lnk_tabLst_item::before {
+  content: "\e923";
+  color: #f46b88;
+}
+
+.tabList_item:nth-of-type(3).active .lnk_tabLst_item::before {
+  color: #fff;
+}
+
+.feeling_3 .feelTtl {
+  color: #f46b88;
+}
+
+.feeling_3 .rank1ttl {
+  color: #f46b88;
+  /*border-top-color: #f46b88;
+  border-bottom-color: #f46b88;*/
+}
+
+.feeling_3 .icoTxt_feelingRank {
+  background: #f46b88;
+}
+
+.feeling_3 .moreBtn_ranks {
+  border: 1px solid #f46b88;
+  color: #f46b88;
+}
+
+/*元気*/
+.tabList_item:nth-of-type(4).active::after {
+  border-top: 8px solid #d6bd23;
+}
+
+.tabList_item:nth-of-type(4) .lnk_tabLst_item::before {
+  content: "\e925";
+  color: #d6bd23;
+}
+
+.tabList_item:nth-of-type(4).active .lnk_tabLst_item {
+  background: #d6bd23;
+  color: #fff;
+}
+
+.tabList_item:nth-of-type(4) .lnk_tabLst_item {
+  border: 1px solid #d6bd23;
+  color: #d6bd23;
+}
+
+.tabList_item:nth-of-type(4).active .lnk_tabLst_item::before {
+  color: #fff;
+}
+
+.feeling_4 .feelTtl {
+  color: #d6bd23;
+}
+
+.feeling_4 .rank1ttl {
+  color: #d6bd23;
+  /*border-top-color: #d6bd23;
+  border-bottom-color: #d6bd23;*/
+}
+
+.feeling_4 .icoTxt_feelingRank {
+  background: #d6bd23;
+}
+
+.feeling_4 .moreBtn_ranks {
+  border: 1px solid #d6bd23;
+  color: #d6bd23;
+}
+/*タブ切り替えここまで*/
+
+
+
+/****************reviewRanking▼▼ 20190125
+*********************************/
+.withinWrap {
+  margin-top: 20px;
+}
+
+.boxArea_reviewRank {
+  padding-bottom: 10px;
+}
+
+.indexTtl_reviewRank::before {
+  content: "\e91b";
+}
+
+.icoTxt_reviewRankIn {
+  background: #f5a21b;
+}
+
+.icoTxt_reviewRankIn::before {
+  color: #f5a21b;
+}
+
+.indexTtl_reviewRank,
+.lnk_indexTtl_reviewRank,
+.indexTtl_reviewRank::before {
+  color: #f5a21b;
+  width: auto;
+}
+
+.lnk_indexTtl_review {
+  position: absolute;
+  right: 4px;
+  bottom: 5px;
+  color: #0044cc;
+  font-size: 0.95em;
 }
 
 .rank1ttl.rank1ttl_reviewRank {
   color: #f5a21b;
-  /*border-top-color: #f5a21b;
-  border-bottom-color: #f5a21b;*/
+  border-top-color: #f5a21b;
+  border-bottom-color: #f5a21b;
 }
 
 .rank1ttl.rank1ttl_reviewRank--lyric {
@@ -10865,28 +9375,32 @@ td.artistList--name {
   color: #ad64be;
 }
 
+.review_boxArea:not(:nth-of-type(1)) {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+}
 
 /*レビューのところ*/
 .reviewWrap {
-  margin: 10px 0;
-  padding: 0 10px;
   display: flex;
+  padding: 0 10px;
 }
 
 .reviewIco {
-  width: 100px;
   position: relative;
+  width: 70px;
 }
 
 [class*=gender_] .reviewIco::before {
-  font-family: utIcon;
   content: "\e900";
   color: #ddd;
+  font-family: utIcon;
   font-size: 4em;
+  left: 0;
   line-height: 1;
   position: absolute;
   top: 0;
-  left: 15px;
   transform: scaleX(-1);
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -10909,31 +9423,33 @@ td.artistList--name {
 }
 
 .reviewContents {
-  width: calc(100% - 90px);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
   max-width: calc(100% - 90px);
   padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 10px;
   position: relative;
+  width: calc(100% - 90px);
 }
 
 .reviewContents::before {
-  content: "";
+  /*border-top: 8px solid #FF685E;*/
   border: 8px solid transparent;
-  border-right: 16px solid #aaa;
-  position: absolute;
-  top: 20px;
+  border-right: 16px solid #ddd;
+  content: "";
   left: -24px;
+  top: 20px;
+  position: absolute;
 }
 
 .reviewContents::after {
-  content: "";
-  border: 8px solid transparent;
   border-top: 8px solid #fff;
+  border: 8px solid transparent;
   border-right: 16px solid #fff;
-  position: absolute;
-  top: 20px;
+  content: "";
   left: -22px;
+  top: 20px;
+  position: absolute;
 }
 
 .reviewHeader {
@@ -10946,24 +9462,21 @@ td.artistList--name {
   display: block;
 }
 
-.reviewHeader .reviewName {
+.reviewName {
   float: left;
 }
 
-.reviewHeader .reviewTime {
+.reviewTime {
+  color: #999;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+  text-align: right;
   float: right;
 }
 
-.reviewTime {
-  font-family: 'Quicksand', sans-serif;
-  color: #999;
-  text-align: right;
-  letter-spacing: 1px;
-}
-
 .reviewDisc {
-  padding-top: 10px;
   border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
 
 .reviewDisc > * {
@@ -10972,19 +9485,9 @@ td.artistList--name {
 
 .reviewName {
   color: pink;
-  font-size: 1.1em;
   font-weight: bold;
+  font-size: 1.1em;
   letter-spacing: 1px;
-}
-
-.reviewCenterButton {
-  text-align:center;
-  padding: 10px;
-}
-
-.reviewCenterButton .lnk_opinion {
-  margin: 0 auto;
-  display: block;
 }
 
 .gender_1 .reviewName {
@@ -11004,28 +9507,39 @@ td.artistList--name {
   line-height: 2;
 }
 
-.lnk_more_reviewRank {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
+/*レビュー返信*/
+.reviewReply {
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.reviewReply .reviewName {
+  color: #33CC66;
+}
+
+.reviewReply .reviewComment {
+  padding: 5px;
+  padding-left: 10px;
+  border-left: 4px solid #aaa;
+}
+
+.more_Btn_review {
   background: #f5a21b;
-  width: 400px;
+  border-radius: 50px;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
   margin: auto;
   padding: 10px;
-  display: block;
-  border-bottom: 2px solid #ddd;
-  border-radius: 50px;
-  box-sizing: border-box;
+  text-align: center;
+  width: calc(100% - 20px);
 }
 
 .reviewTtl {
   color: #f5a21b;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 15px;
-  border-top: 4px solid #777;
-  border-bottom: 1px solid #ddd;
 }
 
 .reviewTtl--lyric {
@@ -11044,9 +9558,31 @@ td.artistList--name {
   color: #ad64be;
 }
 
+.reviewNotice {
+  color: #eee;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.reviewNotice a {
+  color: #e80;
+}
+
+.reviewRecaptchaNotice {
+  margin-top: 8px;
+  color: #aaa;
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.reviewRecaptchaNotice a {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
 .clipTxt {
-  clip: rect(80px, 80px, 80px, 80px);
   position: absolute;
+  clip: rect(80px, 80px, 80px, 80px);
 }
 
 .icoTxt_reviewRank {
@@ -11070,704 +9606,93 @@ td.artistList--name {
 }
 
 .moreBtn_reviewRanks {
-  color: #f5a21b;
   border: 1px solid #f5a21b;
+  color: #f5a21b;
 }
 
-/*レビュー返信*/
-.reviewReply {
-  margin-top: 10px;
-  padding-left: 5px;
+.moreBtn_reviewRanks--lyric {
+  border: 1px solid #f02361;
+  color: #f02361;
 }
 
-.reviewReply .reviewName {
-  color: #33CC66;
-}
 
-.reviewReply .reviewComment {
-  padding: 5px;
-  padding-left: 10px;
-  border-left: 4px solid #aaa;
-}
 
-/*text icon*/
-[class^=icoTxt_] {
-  color: #fff;
-  font-size: .7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 1px 8px;
-  display: inline-block;
-  border-radius: 2px;
-}
 
-[class^=icoTxt_] + [class^=icoTxt_] {
-  margin-left: .2em;
-}
-
-.icoTxt_rank {
-  vertical-align: bottom;
-  background: #D6A810;
-  margin-right: .5em;
-}
-
-.icoTxt_new {
-  text-transform: uppercase;
-  background: #FF3B2D;
-}
-
-.icoTxt_pre {
-  background: #28C4E5;
-}
-
-.icoTxt_fav {
-  background: #FF2994;
-}
-
-.icoTxt_sp {
-  background: #d70035;
-  padding: 2px 8px;
-  border: 1px solid #fff;
-  border-radius: 30px;
-  position: absolute;
-  bottom: 65px;
-  right: 2px;
-  z-index: 100;
-}
-
-.icoTxt_lowerRank {
-  vertical-align: middle;
-  margin-right: .5em;
+/****************公開前歌詞▼▼ 20190128
+*********************************/
+.txtIco_wrap {
   margin-bottom: 5px;
 }
 
-
-/****************movie20190213▼▼
-*********************************/
-.releaseDate {
-  font-size: .9em;
-  margin: 10px 10px 0;
+.lyricTtl {
+  background: #fff;
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #ddd;
+  color: #2AA29A;
+  font-weight: bold;
+  letter-spacing: 1px;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.movieTtl_mainTxt {
-  font-size: 1.4em;
+.lyricTtl_mainTxt {
+  font-size: 1.6em;
   line-height: 1.2;
   word-break: break-all;
 }
 
-.movieTtl_afterTxt {
-  font-size: .9rem;
-}
-
-.movie_box {
-  border-top: 4px solid #555;
-}
-
-.movieTtl {
-  color: #2AA29A;
-  font-weight: bold;
-  letter-spacing: 1px;
-  background: #fff;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
-}
-
-.movieTtl .boxArea_artists_move_top {
-  color: #0044cc;
-}
-
-.boxArea_ttlTieIn {
-  color: #aaa;
-  font-weight: normal;
-  margin-left: 10px;
-  display: inline;
-}
-
-
-.movie_subTtl {
-  color: #fff;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.4em;
-  letter-spacing: 1px;
-  background: #333;
-  padding: 10px;
-}
-
-.movie_contents {
-  background: #ddd;
-}
-
-.indexTtl_hope {
-  color: #5467b2;
-}
-
-.hope_ttl_ico::before {
-  content: "\e91d";
-  color: #5467b2;
-}
-
-.hopeVoteMessage {
-  color: #555;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  line-height: 2;
-  margin: 20px 0;
-}
-
-.hopeVoteMsgTtl {
-  color: #5467b2;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  padding: 5px;
-  border-top: 2px solid #5467b2;
-  border-bottom: 2px solid #5467b2;
-}
-
-.hopeVoteTtlTxt {
-  color: #5467b2;
-  font-size: 1.4em;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.hopeVotePointTxtWrap {
-  text-align: center;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #5467b2;
-}
-
-.lnk_moreHope {
-  color: #5467b2;
-  font-size: 15px;
-  text-align: center;
-  background: #fff;
-  width: 400px;
-  margin: 10px auto;
-  padding: 6px;
-  display: block;
-  border: 2px solid #5467b2;
-  border-radius: 30px;
-}
-
-.hopeVotePointTxtinr {
-  font-family: 'Dosis', sans-serif;
-  color: #5467b2;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  display: inline-block;
-  border-bottom: 8px solid #fef952;
-}
-
-.hopeVotePointTxt {
-  font-size: 7em;
-  letter-spacing: 3px;
-}
-
-.ptTxt {
-  font-size: 2em;
-}
-
-.lnk_moreHope:hover {
-  color: #fff;
-  background: #5467b2;
-}
-
-.indexTtl_review {
-  color: #f5a21b;
-}
-
-.review_ttl_ico::before {
-  content: "\e91b";
-  color: #f5a21b;
-}
-
-
-/*みんなの気持ち*/
-.indexTtl_feel {
-  color: #f02361;
-}
-
-.feel_ttl_ico::before {
-  content: "\e919";
-  color: #f02361;
-}
-
-.voteResultBarGraph {
-  width: 90%;
-  margin: auto;
-}
-
-.lnk_moreArtist_feelRank {
-  color: #f02361;
-  border: 2px solid #f02361;
-}
-
-.lnk_moreArtist_feelRank:hover {
-  color: #fff;
-  background: #f02361;
-}
-
-.lyricTtl {
-  color: #555;
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 15px;
-  border-top: 4px solid #555;
-  border-bottom: 1px solid #ddd;
-}
-
-.lnk_moreArtist_lyric {
-  color: #e80;
-  border: 2px solid #e80;
-}
-
-.lnk_moreArtist_lyric:hover {
-  color: #fff;
-  background: #e80;
-}
-
-.lnk_moreArtist_reviewLyric {
-  color: #f02361;
-  border: 2px solid #f02361;
-}
-
-.lnk_moreArtist_reviewLyric:hover {
-  color: #fff;
-  background: #f02361;
-}
-
-.btn_sbs {
-  width: calc(100% - 20px);
-  margin: 10px auto 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.more_Btn_review {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: center;
-  background: #f5a21b;
-  width: 49%;
-  margin: auto;
-  padding: 10px;
-  display: block;
-  border-bottom: 2px solid #ddd;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-.lnk_more_reviewRank:hover,
-.more_Btn_review:hover {
-  color: #fff;
-  opacity: 0.7;
-}
-
-.more_Btn_topic {
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-align: center;
-  background: #f02361;
-  width: 49%;
-  padding: 10px;
-  display: block;
-  border-bottom: 2px solid #ddd;
-  border-radius: 50px;
-  position: relative;
-  box-sizing: border-box;
-  text-decoration: none !important;
-}
-
-.more_Btn_topic::before,
-.more_Btn_topic::after {
-  font-family: utIcon;
-  content: "\e604";
-  color: #fff;
-  font-size: .9em;
-  position: absolute;
-  top: 11px;
-}
-
-.more_Btn_topic::before {
-  left: 18px;
-}
-
-.more_Btn_topic::after {
-  right: 18px;
-}
-
-.more_Btn_topic:hover {
-  color: #fff;
-  opacity: 0.7;
-}
-
-
-/*form*/
-.commentFormWrap {
-  background: #333;
-  margin: 10px 0;
-  padding: 20px 10px 10px;
-}
-
-.newCommentFormWrap {
-  background: #333;
-  margin: 10px 0;
-  padding: 20px 10px 10px;
-}
-
-.commentForm * {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-       -o-appearance: none;
-          appearance: none;
-  font-family: monospace;
-  outline: none;
-  border: none;
-}
-
-.reviewForm_ttl {
-  color: #ddd;
-  font-size: 1.2em;
-  margin-bottom: 5px;
-}
-
-.reviewSubmit {
-  color: #fff;
-  font-size: 1.4em;
-  text-align: center;
-  background: #ff5b4f;
-  width: 100%;
-  margin-top: 10px;
-  padding: 14px;
-  border-radius: 5px;
-}
-
-.reviewTextarea {
-  color: #000;
-  font-size: 1.4em;
-  line-height: 1.5;
-  width: 100%;
-  height: 10em;
-  padding: 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.reviewRegister {
-  background: #fff;
-  margin-top: 10px;
-  padding: 10px;
-  border: 2px solid #f5a21b;
-  border-radius: 10px;
-  position: relative;
-}
-
-.reviewRegister::before {
-  content: "";
-  border: 6px solid transparent;
-  border-bottom: 14px solid #fff;
-  position: absolute;
-  top: -20px;
-  left: 82px;
-  z-index: 1000;
-}
-
-.reviewRegister::after {
-  content: "";
-  border: 8px solid transparent;
-  border-bottom: 16px solid #f5a21b;
-  position: absolute;
-  left: 80px;
-  top: -26px;
-}
-
-.reviewRegisterTtl {
-  font-family: 'Dosis', sans-serif;
-  color: #f5a21b;
-  font-size: 3.4em;
-  font-weight: 600;
-  font-style: italic;
-  text-align: center;
-  line-height: .8;
-  margin: 20px;
-}
-
-.reviewRegisterTtl_small {
+.lyricTtl_afterTxt {
   font-size: 1rem;
-  font-weight: normal;
-  font-style: normal;
-  margin-top: 1.6em;
-  display: inline-block;
 }
 
-.reviewRegister_note {
-  color: #777;
-  font-size: .9rem;
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
+.lowerContents .boxArea_ttlTieIn {
+  color: #888;
+  margin: 0;
 }
 
-.reviewWindow_close {
-  color: #777;
+
+.lyricData {
   background: #fff;
-  width: 100%;
-  margin-top: 20px;
-  padding: 20px 10px 10px;
-  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-
-.reviewWindow_close::before {
-  font-family: utIcon;
-  content: "\e60c";
-  color: #555;
-  font-size: 1.2em;
-  line-height: 0;
-  vertical-align: middle;
-  margin-top: -4px;
-  margin-right: 6px;
-  display: inline-block;
-}
-
-.reviewNotice {
-  color: #eee;
-  margin-top: 8px;
-  margin-bottom: 2px;
-}
-
-.reviewNotice a {
-  color: #e80;
-}
-
-.reviewRecaptchaNotice {
-  color: #aaa;
-  font-size: 0.9em;
-  text-align: right;
-  margin-top: 8px;
-}
-
-.reviewRecaptchaNotice a {
-  color: #aaa;
-  font-size: 0.8em;
-}
-
-#postReviewRegister {
-  display: none;
-}
-
-.reviewRegister_items {
-  margin-bottom: 10px;
-}
-
-.reviewRegister_item {
-  margin-bottom: 10px;
-}
-
-.reviewRegister_itemTtl {
-  color: #f5a21b;
-  font-size: 1.1em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-
-.reviewCenterBtn {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.radioLst_reviewRegister {
-  display: flex;
-  justify-content: space-between;
-}
-
-.radioLst_reviewRegister label {
-  color: #fff;
-  font-size: .8rem;
-  text-align: center;
-  width: 100%;
-  padding: 10px 5px;
-  display: block;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.radioLst_reviewRegister input[type="radio"] {
-  display: none;
-}
-
-/*gender*/
-.radioLst_gender_item {
-  width: calc((100% - 20px)/3);
-}
-
-.radioLst_gender_item input[type="radio"]:checked + label {
-  color: #fff;
-}
-
-.radioLst_gender_item label[for="genderMen"] {
-  color: #6bbbec;
-  border: 2px solid #6bbbec;
-}
-
-.radioLst_gender_item input[type="radio"]:checked + label[for="genderMen"] {
-  background: #6bbbec;
-}
-
-.radioLst_gender_item label[for="genderWomen"] {
-  color: #ffb2c1;
-  border: 2px solid #ffb2c1;
-}
-
-.radioLst_gender_item input[type="radio"]:checked + label[for="genderWomen"] {
-  background: #ffb2c1;
-}
-
-.radioLst_gender_item label[for="genderOther"] {
-  color: #99d64a;
-  border: 2px solid #99d64a;
-}
-
-.radioLst_gender_item input[type="radio"]:checked + label[for="genderOther"] {
-  background: #99d64a;
-}
-
-.reviewRegister_item input[type="text"]{
-  color: #777;
-  background: #ededec;
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-/*age*/
-.radioLst_age_item {
-  width: calc((100% - 25px)/5);
-}
-
-.radioLst_age_item input[type="radio"]:checked + label {
-  color: #fff;
-}
-
-.radioLst_age_item label[for="age10"] {
-  color: #ffb052;
-  border: 2px solid #ffb052;
-}
-
-.radioLst_age_item input[type="radio"]:checked + label[for="age10"] {
-  background: #ffb052;
-}
-
-.radioLst_age_item label[for="age20"] {
-  color: #ffb2c1;
-  border: 2px solid #ffb2c1;
-}
-
-.radioLst_age_item input[type="radio"]:checked + label[for="age20"] {
-  background: #ffb2c1;
-}
-
-.radioLst_age_item label[for="age30"] {
-  color: #6bbbec;
-  border: 2px solid #6bbbec;
-}
-
-.radioLst_age_item input[type="radio"]:checked + label[for="age30"] {
-  background: #6bbbec;
-}
-
-.radioLst_age_item label[for="age40"] {
-  color: #99d64a;
-  border: 2px solid #99d64a;
-}
-
-.radioLst_age_item input[type="radio"]:checked + label[for="age40"] {
-  background: #99d64a;
-}
-
-.radioLst_age_item label[for="age50"] {
-  color: #cabbec;
-  border: 2px solid #cabbec;
-}
-
-.radioLst_age_item input[type="radio"]:checked + label[for="age50"] {
-  background: #cabbec;
-}
-
-
-
-/****************lyric20190213▼▼
-*********************************/
 
 .gaugeWrap {
   background: #fff;
-  padding: 10px;
-  display: flex;
-}
-
-.gaugeLstFlex {
-  flex-grow: 1;
-}
-
-.gaugeWrap .lyricFont {
-  flex: 0 0 285px;
-  margin-left: 0;
-}
-
-.gaugeWrap .lyricFont .rubyButton {
-  height: 25px;
 }
 
 .gaugeLst {
-  text-align: center;
-  width: 100%;
-  margin: -5px;
-  display: table;
-  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 5px;
-  cursor: pointer;
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
 }
 
 .gaugeLst span {
-  color: #bbb;
-  line-height: 2;
-  vertical-align: middle;
-  display: table-cell;
   border-radius: 3px;
+  color: #bbb;
+  display: table-cell;
+  line-height: 2;
   position: relative;
+  vertical-align: middle;
 }
 
 .voteBtn {
-  font-family: utIcon;
   background-color: #fff;
   border: 1px solid #e6e6e6;
+  font-family: utIcon;
 }
 
 .gaugeLst span:not(:nth-child(6)) {
-  padding-top: 50px;
+  padding-top: 24px;
 }
 
 .voteBtn::before {
-  font-size: 2em;
-  margin-left: -0.5em;
-  top: 18px;
+  font-size: 1.5em;
   left: 50%;
+  margin-left: -0.5em;
+  top: 6px;
 }
 
 .gaugeLst span:not(:nth-child(6))::before {
@@ -11793,89 +9718,46 @@ td.artistList--name {
 }
 
 .openVoteResult::before {
-  content: "";
   background-image: url(/images/sp/graph.png);
-  background-repeat: no-repeat;
   background-size: 100% 100%;
-  width: 25px;
-  height: 25px;
-  margin: auto;
+  background-repeat: no-repeat;
+  content: "";
   display: block;
-  top: 19px;
+  height: 20px;
   left: 0;
+  margin: auto;
   right: 0;
+  top: 5px;
+  width: 20px;
 }
 
-.gaugeLst .voted[data-type="1"] {
-  color: #fff;
+
+.gaugeLst .voted[data-type="1"]  {
   background: #FF685E;
   border-color: #FF685E;
-}
-
-.gaugeLst .voted[data-type="1"]:hover {
-  opacity: .7;
-}
-
-.gaugeLst .voted[data-type="2"] {
   color: #fff;
+}
+
+.gaugeLst .voted[data-type="2"]  {
   background: #5697d9;
   border-color: #5697d9;
-}
-
-.gaugeLst .voted[data-type="2"]:hover {
-  opacity: .7;
-}
-
-.gaugeLst .voted[data-type="3"] {
   color: #fff;
+}
+
+.gaugeLst .voted[data-type="3"]  {
   background: #f46b88;
   border-color: #f46b88;
-}
-
-.gaugeLst .voted[data-type="3"]:hover {
-  opacity: .7;
-}
-
-.gaugeLst .voted[data-type="4"] {
   color: #fff;
+}
+
+.gaugeLst .voted[data-type="4"]  {
   background: #d6bd23;
   border-color: #d6bd23;
-}
-
-.gaugeLst .voted[data-type="4"]:hover {
-  opacity: .7;
-}
-
-.yujoBtn:hover {
   color: #fff;
-  background: #FF685E;
-  border-color: #FF685E;
-}
-
-.kandoBtn:hover {
-  color: #fff;
-  background: #5697d9;
-  border-color: #5697d9;
-}
-
-.rennaiBtn:hover {
-  color: #fff;
-  background: #f46b88;
-  border-color: #f46b88;
-}
-
-.gennkiBtn:hover {
-  color: #fff;
-  background: #d6bd23;
-  border-color: #d6bd23;
 }
 
 .gaugeLst .openVoteResult {
   background: #555;
-}
-
-.gaugeLst .openVoteResult:hover {
-  opacity: 0.7;
 }
 
 .gaugeLst .openVoteResult a {
@@ -11883,36 +9765,30 @@ td.artistList--name {
 }
 
 .gaugeLst_youtubeLink {
-  width: 90px;
+  width: 70px;
 }
 
 .lnk_gaugeLst_youtubeLink {
-  color: #fff;
   background: #e80;
-  min-height: 60px;
-  padding-top: 18px;
-  display: block;
   border-radius: 3px;
+  color: #fff;
+  display: block;
+  padding: 2px;
+  min-height: 45px;
 }
 
 .lnk_gaugeLst_youtubeLink::after {
-  font-family: utIcon;
-  content: "\e920";
+  bottom: 6px;
   color: #fff;
+  content: "\e920";
+  font-family: utIcon;
   font-size: 1.5em;
   line-height: 1.1;
-  margin: auto;
-  margin-left: -0.5em;
-  position: absolute;
-  top: 45px;
-  bottom: 6px;
   left: 0;
+  margin-left: -0.5em;
+  margin: auto;
+  position: absolute;
   right: 0;
-}
-
-.lnk_gaugeLst_youtubeLink:hover {
-  color: #fff;
-  opacity: 0.7;
 }
 
 .lyricBody {
@@ -11921,10 +9797,10 @@ td.artistList--name {
 }
 
 [class^=lnk_lyric] {
+  border-radius: 30px;
+  display: block;
   font-size: 15px;
   padding: 6px;
-  display: block;
-  border-radius: 30px;
 }
 
 [class^=lnk_lyric] + [class^=lnk_lyric] {
@@ -11934,63 +9810,30 @@ td.artistList--name {
 .lyricBody--darkMode {
   background: #343330;
   color: #EEE;
-  margin: 0;
-  padding: 35px 30px 5px;
 }
 
 .lnk_lyricComment {
-  color: #fff;
   background: #2aa29a;
   border: 2px solid #2aa29a;
+  color: #fff;
 }
 
 .lnk_lyricVote {
-  color: #2aa29a;
-  background: #fff;
-  border: 2px solid #2aa29a;
+  background: #a1dc3c;
+  color: #fff;
 }
 
 .lnk_lyricReview {
-  color: #fff;
   background: #f5a21b;
   border: 2px solid #f5a21b;
-}
-
-.lnk_opinion {
-  color: #f5a21b;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  display: block;
-  border: 2px solid #f5a21b;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-.lnk_opinion:hover {
   color: #fff;
-  background: #f5a21b;
 }
 
-.lnk_opinion + .lnk_opinion {
-  margin-left: 10px;
-}
 
-.lnk_rankVote {
-  color: #fff;
-  background: #ff328a;
-  width: 450px;
-  border: 2px solid #ff328a;
-  border-radius: 5px;
-}
 
-.lnk_rankVote:hover {
-  background: #ff328a;
-  opacity: 0.7;
-}
 
-/*koukaimae*/
+/****************公開後歌詞▼▼ 20190129
+*********************************/
 .hopeVoteWrap {
   background: #fff;
   padding: 10px 10px 20px;
@@ -11998,76 +9841,76 @@ td.artistList--name {
 
 .hopeVoteMessage {
   font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
   line-height: 2;
   margin: 20px 0;
+  text-align: center;
+  font-weight: bold;
 }
 
 .bgborder_txt {
-  font-weight: bold;
   background: linear-gradient(transparent 50%,yellow 50%);
+  font-weight: bold;
 }
 
 .hopeVoteTimeWrap {
-  height: 50px;
   position: relative;
+  height: 50px;
 }
 
 .hopeVoteTimeWrap::after {
-  content: "";
-  margin: auto;
   border: 1px solid #5467b2;
-  position: absolute;
-  top: 16px;
+  content: "";
   left: 0;
+  margin: auto;
+  position: absolute;
   right: 0;
+  top: 16px;
 }
 
 .hopeVoteTime {
-  font-family: 'Quicksand', sans-serif;
-  color: #5467b2;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1px;
   background: #fff;
-  width: 240px;
-  margin: auto;
-  padding: 5px 20px;
-  display: inline-block;
   border: 2px solid #5467b2;
   border-radius: 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
   box-sizing: border-box;
+  color: #5467b2;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  left: 0;
+  letter-spacing: 1px;
+  margin: auto;
+  padding: 5px 20px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 220px;
+  z-index: 2;
 }
 
 .hopeVoteTtlTxt {
   color: #5467b2;
   font-size: 1.4em;
   font-weight: bold;
-  text-align: center;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .hopeVotePointTxtWrap {
-  text-align: center;
-  margin-bottom: 20px;
   border-bottom: 2px solid #5467b2;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .hopeVotePointTxtinr {
-  font-family: 'Dosis', sans-serif;
+  border-bottom: 8px solid #fef952;
   color: #5467b2;
-  font-weight: 600;
+  display: inline-block;
   font-style: italic;
+  font-family: 'Dosis', Helvetica, Arial, sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 20px;
-  display: inline-block;
-  border-bottom: 8px solid #fef952;
 }
 
 .hopeVotePointTxt {
@@ -12080,89 +9923,1326 @@ td.artistList--name {
 }
 
 .hopeVoteBtn {
-  color: #fff;
-  font-size: 1.2em;
   background: #5467b2;
-  width: 49%;
-  padding: 6px;
-  display: block;
   border: 2px solid #5467b2;
   border-radius: 30px;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 6px;
+  width: 100%;
+}
+
+.hopeVoteBtn + .lnk_lyricReviewBtn {
+  margin-top: 10px;
 }
 
 .lnk_lyricReviewBtn {
+  background: #fff;
+  border: 2px solid #5467b2;
+  color: #5467b2;
+  text-align: center;
+}
+
+.mainAreas + .hopeRank {
+  margin-top: 14px;
+}
+
+.lowerContents .threeToOneRectangleBanner {
+  background: none;
+}
+
+/****************公開後歌詞▼▼ アルファ版 20201101
+*********************************/
+.newLyricFont__size {
+  padding: 8px 10px 4px;
+  border-radius: 3px;
+  display: table-cell;
+  background-color: #fff;
+}
+
+.newLyricFont__size + .newLyricFont__size {
+  width: 33%;
+}
+
+.hopeVote_indexTtl {
+  align-items: center;
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #eee;
+  padding: 18px 10px;
+  position: relative;
+}
+
+.newHopeVoteWrap {
+  background: #fff;
+  padding: 0px 10px 20px;
+}
+
+.hopeVoteLyricInfo {
+  font-size: 1.2em;
+  line-height: 2;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hopeVoteLyricInfoWrap {
+  border-top: 2px solid #5467b2;
+  margin-top: 20px;
+  border-bottom: 2px solid #5467b2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.newIndex .youtube {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+/****************movie▼▼ 20190129
+*********************************/
+
+.movie_subTtl {
+  background: #333;
+  font-size: 1.4em;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.movieAreas,
+.movieAreas .billboard {
+  background: #fff;
+}
+
+.indexTtl_hope {
+  color: #5467b2;
+}
+
+.indexTtl_hope::before {
+  content: "\e91d";
+}
+
+.indexTtl_hope,
+.lnk_indexTtl_hope,
+.indexTtl_hope::before {
+  color: #5467b2;
+}
+
+.hopeVoteMsgTtl {
+  border-top: 2px solid #5467b2;
+  border-bottom: 2px solid #5467b2;
   color: #5467b2;
   font-size: 1.2em;
   font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding: 5px;
   text-align: center;
-  width: 49%;
-  padding: 10px;
-  display: block;
+}
+
+.lnk_moreHope {
+  background: #fff;
   border: 2px solid #5467b2;
-  border-radius: 50px;
-  box-sizing: border-box;
+  border-radius: 30px;
+  color: #5467b2;
+  display: block;
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 6px;
+  text-align: center;
 }
 
-.lnk_lyricReviewBtn:hover {
+/*みんなの気持ちコーナー*/
+.indexTtl_feel::before {
+  content: "\e919";
+}
+
+.indexTtl_feel,
+.lnk_indexTtl_feel,
+.indexTtl_feel::before {
+  color: #f02361;
+  letter-spacing: 1px;
+  width: auto;
+}
+
+.voteResultBarGraph .bar {
+  border-bottom: 3px solid #ddd;
   color: #fff;
-  background: #5467b2;
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  font-size: 1.2em;
+  font-weight: 600;
+  height: 21px;
+  padding: 18px 0;
 }
 
-img.mediumCenteredImg {
-  width: 65%;
+.voteResultBarGraph .bar:first-child {
+  border-radius: 5px 0 0px 5px;
+}
+
+.voteResultBarGraph .bar:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.voteResultBarGraph .bar:only-child {
+  border-radius: 5px;
+}
+
+.voteResultBarGraph_info {
+  margin: 10px 40px;
+}
+
+.lst_voteResultBarGraph_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voteResultBarGraph_info_Item::before {
+  background: #ddd;
+  border-radius: 2px;
+  content: "";
+  display: inline-block;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: sub;
+  width: 15px;
+}
+
+.voteResultBarGraph_info_Item:nth-of-type(1)::before {
+  background: #FF685E;
+}
+
+.voteResultBarGraph_info_Item:nth-of-type(2)::before {
+  background: #5496d9;
+}
+
+.voteResultBarGraph_info_Item:nth-of-type(3)::before {
+  background: #f46b88;
+}
+
+.voteResultBarGraph_info_Item:nth-of-type(4)::before {
+  background: #f0d220;
+}
+
+.lnk_morefeeling {
+  border: 2px solid #f02361;
+  border-radius: 50px;
+  color: #f02361;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.more_Btn_topic {
+  background: #f02361;
+  border-radius: 50px;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 10px auto auto;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: calc(100% - 20px);
+  text-decoration: none !important;
+}
+
+.more_Btn_topic::before,
+.more_Btn_topic::after {
+  color: #fff;
+  content: "\e604";
+  font-family: utIcon;
+  font-size: .9em;
+  position: absolute;
+  top: 11px;
+}
+
+.more_Btn_topic::before {
+  left: 20px;
+}
+
+.more_Btn_topic::after {
+  right: 20px;
+}
+
+.notyet_info {
+  margin: 50px 0;
+  text-align: center;
+}
+
+
+/*form*/
+.newCommentFormWrap {
+  background: #333;
+  margin: 10px 0;
+  padding: 20px 10px 10px;
+}
+
+.reviewRegister_nickname {
+  color: #fff;
+}
+
+.commentFormWrap {
+  background: #333;
+  padding: 20px 10px 10px;
+  margin: 10px 0;
+}
+
+.commentForm * {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  font-family: monospace;
+  border: none;
+  outline: none;
+}
+
+.reviewForm_ttl {
+  color: #ddd;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.reviewSubmit {
+  background: #ff5b4f;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 14px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+.reviewTextarea {
+  font-size: 1.4em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #333;
+  height: 10em;
+  line-height: 1.5;
+  padding: 10px;
+  width: 100%;
+}
+
+.reviewRegister {
+  background: #fff;
+  border: 2px solid #f5a21b;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.reviewRegister::before {
+  border: 6px solid transparent;
+  border-bottom: 14px solid #fff;
+  content: "";
+  left: 82px;
+  position: absolute;
+  top: -20px;
+  z-index: 1000;
+}
+
+.reviewRegister::after {
+  border: 8px solid transparent;
+  border-bottom: 16px solid #f5a21b;
+  content: "";
+  left: 80px;
+  top: -26px;
+  position: absolute;
+}
+
+.reviewRegisterTtl {
+  color: #f5a21b;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 3.4em;
+  line-height: .8;
+  font-family: 'Dosis', sans-serif;
+  margin: 20px;
+}
+
+.reviewRegisterTtl_small {
+  font-size: .8rem;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  margin-top: -4px;
+}
+
+.reviewRegister_note {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  color: #777;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.reviewWindow_close {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  color: #777;
+  margin-top: 20px;
+  padding: 20px 10px 10px;
+  width: 100%;
+}
+
+.reviewWindow_close::before {
+  content: "\e60c";
+  color: #555;
+  display: inline-block;
+  font-family: utIcon;
+  font-size: 1.2em;
+  line-height: 0;
+  margin-right: 6px;
+  margin-top: -4px;
+  vertical-align: middle;
+}
+
+#postReviewRegister {
+  display: none;
+}
+
+.reviewRegister_items {
+  margin-bottom: 10px;
+}
+
+.reviewRegister_item {
+  margin-bottom: 10px;
+}
+
+.reviewRegister_itemTtl {
+  color: #f5a21b;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.reviewCenterBtn {
   display: block;
   margin: 0 auto;
+  text-align: center;
+}
+
+.radioLst_reviewRegister {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radioLst_reviewRegister label {
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.radioLst_reviewRegister input[type="radio"] {
+  display: none;
+}
+
+/*gender*/
+.radioLst_gender_item {
+  width: calc((100% - 20px)/3);
+}
+
+.radioLst_gender_item input[type="radio"]:checked + label {
+  color: #fff;
+}
+
+.radioLst_gender_item label[for="genderMen"] {
+  border: 2px solid #6bbbec;
+  color: #6bbbec;
+}
+
+.radioLst_gender_item input[type="radio"]:checked + label[for="genderMen"] {
+  background: #6bbbec;
+}
+
+.radioLst_gender_item label[for="genderWomen"] {
+  border: 2px solid #ffb2c1;
+  color: #ffb2c1;
+}
+
+.radioLst_gender_item input[type="radio"]:checked + label[for="genderWomen"] {
+  background: #ffb2c1;
+}
+
+.radioLst_gender_item label[for="genderOther"] {
+  border: 2px solid #99d64a;
+  color: #99d64a;
+}
+
+.radioLst_gender_item input[type="radio"]:checked + label[for="genderOther"] {
+  background: #99d64a;
+}
+
+.reviewRegister_item input[type="text"]{
+  background: #ededec;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #777;
+  height: 40px;
+  padding: 10px;
+  width: 100%;
+}
+
+/*age*/
+.radioLst_age_item {
+  width: calc((100% - 25px)/5);
+}
+
+.radioLst_age_item input[type="radio"]:checked + label {
+  color: #fff;
+}
+
+.radioLst_age_item label[for="age10"] {
+  border: 2px solid #ffb052;
+  color: #ffb052;
+}
+
+.radioLst_age_item input[type="radio"]:checked + label[for="age10"] {
+  background: #ffb052;
+}
+
+.radioLst_age_item label[for="age20"] {
+  border: 2px solid #ffb2c1;
+  color: #ffb2c1;
+}
+
+.radioLst_age_item input[type="radio"]:checked + label[for="age20"] {
+  background: #ffb2c1;
+}
+
+.radioLst_age_item label[for="age30"] {
+  border: 2px solid #6bbbec;
+  color: #6bbbec;
+}
+
+.radioLst_age_item input[type="radio"]:checked + label[for="age30"] {
+  background: #6bbbec;
+}
+
+.radioLst_age_item label[for="age40"] {
+  border: 2px solid #99d64a;
+  color: #99d64a;
+}
+
+.radioLst_age_item input[type="radio"]:checked + label[for="age40"] {
+  background: #99d64a;
+}
+
+.radioLst_age_item label[for="age50"] {
+  border: 2px solid #cabbec;
+  color: #cabbec;
+}
+
+.radioLst_age_item input[type="radio"]:checked + label[for="age50"] {
+  background: #cabbec;
+}
+/*age fin*/
+
+
+.lyric_txtTtl {
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 15px;
 }
 
 .lyricFurigana {
-  padding: 5px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  padding-top: 7px;
+  margin-top: 5px;
   text-align: right;
   color: #888;
-  border-top: 1px solid #ddd;
+  font-size: 0.8em;
+}
+
+
+
+/****************movie▲▲
+*********************************/
+
+
+
+
+
+
+
+
+
+
+/**以下消す予定*******************************/
+
+/** --------------------------------------------------------------------------------
+ * コメント入力
+ */
+ /*
+ .commentBalloon__posn {
+  position: relative;
+}
+
+.commentBalloon {
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: solid 2px #f5a21b;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+       -o-border-radius: 7px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+  position: relative;
+}
+
+.commentBalloon__posn .commentBalloon {
+  min-width: 300px;
+}
+
+* + .commentBalloon {
+  margin-top: 15px;
+}
+
+.noItem + .commentBalloon {
+  margin-top: 65px;
+}
+
+.commentBalloon__posn .commentBalloon {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.commentBalloon__posn * + .commentBalloon {
+  margin-top: 0;
+}
+
+.commentBalloon:before ,
+.commentBalloon:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 26px 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.commentBalloon:before {
+  border-color: transparent transparent #f5a21b transparent;
+  top: -52px;
+}
+
+.commentBalloon:after {
+  border-color: transparent transparent #fff transparent;
+  top: -46px;
+}
+
+.commentBalloon--noArrow:before ,
+.commentBalloon--noArrow:after {
+  content: none;
+}
+
+
+.commentBalloon__item + .commentBalloon__item {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: dotted 2px #ddd;
+}
+
+/* 応援ありがとう */
+/*
+.commentBalloon__thx {
+  font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+  color: #f5a21b;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 -15px;
+}
+
+.commentBalloon__thx span:before ,
+.commentBalloon__thx span:after {
+  font-family: 'icomoon';
+  font-size: 26px;
+  font-weight: normal;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.commentBalloon__thx span:before {
+  content: "\e906";
+  margin-right: 2px;
+}
+
+.commentBalloon__thx span:after {
+  content: "\e907";
+  margin-left: 2px;
+}
+*/
+/* テキスト */
+/*.commentBalloon__text {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+.commentBalloon__text + .commentForm {
+  margin-top: 15px;
+}
+*/
+/* 注釈 */
+/*.commentBalloon__text__notes {
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+}
+
+*/
+
+/** --------------------------------------------------------------------------------
+ * コメント入力フォーム
+ */
+ /*
+.commentForm form * {
+  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+       -o-appearance: none;
+  font-family: monospace;
+  border: none;
+  outline: none;
+}
+
+.commentForm__item {
+  width: 100%;
+  display: table;
+}
+
+.commentForm__item + .commentForm__item {
+  margin-top: 10px;
+}
+
+.commentForm__item__cell {
+  vertical-align: bottom;
+  display: table-cell;
+}
+
+.commentForm__item__float {
+  width: 55%;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+}
+
+.commentForm__item__float + .commentForm__item__float {
+  width: 45%;
+  padding-left: 5px;
+}
+:?
+/* 見出し */
+.commentForm__item__title {
+  width: 100%;
+  display: block;
+}
+
+/* radio */
+.commentForm__radioContents {
+  margin: 0 -5px;
+}
+
+.commentForm__radioList {
+  width: 100%;
+  display: table;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 5px 0;
+}
+
+.commentForm__radioList__item {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.commentForm__radioList__item input[type="radio"] {
+  display: none;
+}
+
+.commentForm__radioList__item label {
+  color: #fff;
+  text-align: center;
+  background-color: #ccc;
+  padding: 5px 0;
+  width: 100%;
+  height: 31px;
+  display: block;
+  border: solid 1px #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label {
+  background-color: #fcfcfc;
+}
+
+/* 男性 */
+.commentForm__radioList__item label[for="genderMen"] {
+  background-color: #6bbbec;
+  border-color: #6bbbec;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="genderMen"] {
+  color: #6bbbec;
+}
+
+/* 女性 */
+.commentForm__radioList__item label[for="genderWomen"] {
+  background-color: #ffb2c1;
+  border-color: #ffb2c1;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="genderWomen"] {
+  color: #ffb2c1;
+}
+
+/* その他 */
+.commentForm__radioList__item label[for="genderOther"] {
+  background-color: #99d64a;
+  border-color: #99d64a;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="genderOther"] {
+  color: #99d64a;
+}
+
+/* 10代 */
+.commentForm__radioList__item label[for="age10"] {
+  background-color: #ffb052;
+  border-color: #ffb052;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="age10"] {
+  color: #ffb052;
+}
+
+/* 20代 */
+.commentForm__radioList__item label[for="age20"] {
+  background-color: #ffb2c1;
+  border-color: #ffb2c1;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="age20"] {
+  color: #ffb2c1;
+}
+
+/* 30代 */
+.commentForm__radioList__item label[for="age30"] {
+  background-color: #6bbbec;
+  border-color: #6bbbec;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="age30"] {
+  color: #6bbbec;
+}
+
+/* 40代 */
+.commentForm__radioList__item label[for="age40"] {
+  background-color: #99d64a;
+  border-color: #99d64a;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="age40"] {
+  color: #99d64a;
+}
+
+/* 50代 */
+.commentForm__radioList__item label[for="age50"] {
+  background-color: #cabbec;
+  border-color: #cabbec;
+}
+
+.commentForm__radioList__item input[type="radio"]:checked + label[for="age50"] {
+  color: #cabbec;
+}
+
+/* input text */
+.commentForm__inputText input[type="text"] {
+  background-color: #ededec;
+  width: 100%;
+  height: 31px;
+  padding: 9px 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* textarea */
+.commentForm__textarea {
+  line-height: normal;
+}
+
+.commentForm__textarea textarea {
+  line-height: 1.25;
+  background-color: #ededec;
+  width: 100%;
+  height: 10em;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* 送信する */
+.commentForm__submit {
+  padding: 0 2px 2px 0;
+}
+.commentForm__item__cell.commentForm__submit {
+  width: 60px;
+  padding-left: 5px;
+}
+
+.commentForm__submit button {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-indent: .05em;
+  letter-spacing: .05em;
+  background-color: #f5a21b;
+  width: 100%;
+  height: 29px;
+  padding: 0;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0 #968c85;
+  box-sizing: border-box;
+}
+
+/* 閉じる */
+.commentBalloon__close {
+  text-indent: .08em;
+  letter-spacing: .08em;
+  text-align: center;
+  margin-top: 20px;
+  padding: 2px 10px;
+  border: dotted 2px #ddd;
+}
+
+.commentBalloon__close span {
+  padding-left: 22px;
+  display: inline-block;
+  position: relative;
+}
+
+.commentBalloon__close span:before ,
+.commentBalloon__close span:after {
+  width: 15px;
+  height: 15px;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.commentBalloon__close span:before {
+  content: " ";
+  background-color: #666;
+  border-radius: 50px;
+}
+
+.commentBalloon__close span:after {
+  content: "×";
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* 新着コラム */
+
+.newColumn {
+  margin-top: 14px;
+  background: #ffffff;
+}
+
+.newColumn_indexTtl {
+  font-size: 1.3em;
+  font-weight: bold;
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #ddd;
+  padding: 14px;
+}
+
+.lnk_moreColumn {
+  padding: 10px;
+}
+
+.lnk_moreColumn a {
+  border: 2px solid #555;
+  border-radius: 50px;
+  color: #555;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 10px;
+  text-align: center;
+}
+
+/****************LINE 歌詞▼▼ 20190305
+*********************************/
+.lnk_moreArtist_lyric {
+  border: 2px solid #e80;
+  box-sizing: border-box;
+  color: #e80;
+  margin: auto;
+  width: calc(100% - 20px);
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-/****************レコメンド広告20190225▼▼
+/****************広告▼▼ 20190227
 *********************************/
+
+
+
+
+
+[id^="logly-lift_reccomend_"],
+[id^="logly-lift-"],
+[class^="xlift_"],
+#_popIn_recommend {
+  background: #fff;
+  margin-top: 14px;
+}
+
+[id^="logly-lift_reccomend_"]::before,
+[class^="xlift_"]::before {
+  background: #fff !important;
+  border-top: 4px solid #555 !important;
+
+  content: 'あなたにおすすめの歌詞';
+  color: #555 !important;
+  display: block;
+  font-size: 1.3em !important;
+  padding: 14px !important;
+}
+
+[id^="logly-lift_reccomend_"]::before {
+  border-bottom: none !important;
+}
+
+._popIn_recommend_header {
+  display: block;
+  padding: 14px !important;
+  font-size: 1.3em !important;
+  line-height: 1.5;
+  border-top: 4px solid #555 !important;
+  background: #fff !important;
+  color: #555 !important;
+}
+
+/*
+[class^="xlift_"]::before {
+  border-bottom: 1px solid #ddd;
+}
+*/
+/*
+
+.lyric_txtTtl {
+  border-top: 4px solid #555;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 15px;
+}
+
+
+
 [class^="xlift_"] {
-  margin-top: 20px;
   margin-bottom: 40px !important;
   border: 1px solid #ddd;
   border-top: 4px solid #555;
 }
 
 [class^="xlift_"]::before {
+  border-top: none !important;
   color: #555 !important;
   margin: 0 0 10px !important;
   padding: 14px !important;
-  border-top: none !important;
 }
 
 #_popIn_recommend_div ._popIn_recommend_header,
 .logly-lift-widget-header {
-  color: #555 !important;
   background: #fff;
+  border-top: none !important;
+  color: #555 !important;
   margin: 0 0 10px !important;
   padding: 14px !important;
-  border-top: none !important;
 }
 
-#logly-lift-widget,
-#_popIn_recommend {
-  margin-top: 20px;
+#logly-lift-widget {
   border: 1px solid #ddd;
   border-top: 4px solid #555;
+  margin-top: 20px;
+}
+
+*/
+
+
+/** --------------------------------------------------------------------------------
+ * 縦リスト 201904
+ */
+
+.indexTtl + .articleList {
+  margin-top: -10px;
+}
+
+.articleList__item + .articleList__item {
+  border-top: solid 1px #f2f2f2;
+}
+
+.articleList__item a {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: separate;
+  direction: rtl;
+  border-spacing: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+          transition: all .5s ease;
+}
+
+.articleList a:hover {
+  opacity: 0.8;
+  -ms-filter: alpha(opacity=80);
+}
+
+.articleList__main ,
+.articleList__sub {
+  vertical-align: top;
+  padding: 10px;
+  display: table-cell;
+  direction: ltr;
+}
+
+.articleList__main {
+  position: relative;
+}
+
+.articleList__ttlWrap {
+  min-height: 70px;
+}
+
+.articleList__stateIcon {
+  font-size: 0;
+  margin-bottom: 3px;
+}
+
+.articleList__stateIcon .stateIcon + .stateIcon {
+  margin-left: 5px;
+}
+
+.articleList__ttl {
+  font-weight: bold;
+}
+
+.articleList__ttl .stateIcon {
+  margin-right: 5px;
+}
+
+.articleList__ttl {
+  font-size: 14px;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: inline-block;
+  position: relative;
+}
+
+.articleList__subTtl {
+  color: #999;
+  font-size: 12px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.articleList__name {
+  line-height: 14px;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  white-space: nowrap;
+  padding-right: 90px;
+  overflow: hidden;
+}
+
+.articleList__view {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.articleList__view {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  width: 80px;
+  height: 20px;
+  display: block;
+  overflow: hidden;
+  border: solid 1px;
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+       -o-border-radius: 50px;
+          border-radius: 50px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.articleList__message {
+  color: #999;
+  font-size: 12px;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+
+.articleList__sub {
+  width: 90px;
+  padding-right: 0;
+}
+.articleList__sub img {
+  width: 100%;
+}
+
+/* タグ */
+.articleTag {
+  font-size: 14px;
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+/* pick up */
+.pickupList .articleList__main {
+  vertical-align: middle;
+}
+
+.pickupList .articleList__sub {
+  width: 40%;
+}
+
+
+/** --------------------------------------------------------------------------------
+ * カラーセット 201904
+ */
+/* pink */
+.contentColor--style01 .contentHead__ttl ,
+.contentColor--style01 .contentHead__view a ,
+.contentColor--style01 .articleList__view ,
+.contentColor--style01 .articleTag {
+  color: #f02361;
+}
+
+.contentColor--style01 .rankNo__icon {
+  background-color: #f02361;
+}
+
+/* gold */
+.contentColor--style02 .contentHead__ttl ,
+.contentColor--style02 .contentHead__view a ,
+.contentColor--style02 .articleList__view ,
+.contentColor--style02 .articleTag {
+  color: #d6a810;
+}
+
+.contentColor--style02 .rankNo__icon {
+  background-color: #d6a810;
+}
+
+/* bluegreen */
+.contentColor--style03 .contentHead__ttl ,
+.contentColor--style03 .contentHead__view a ,
+.contentColor--style03 .articleList__view a ,
+.contentColor--style03 .articleTag {
+  color: #2aa29a;
+}
+
+.contentColor--style03 .rankNo__icon {
+  background-color: #2aa29a;
+}
+
+/* violet */
+.contentColor--style04 .contentHead__ttl ,
+.contentColor--style04 .contentHead__view a ,
+.contentColor--style04 .articleList__view a ,
+.contentColor--style04 .articleTag {
+  color: #ad64be;
+}
+
+.contentColor--style04 .rankNo__icon {
+  background-color: #ad64be;
+}
+
+/* blue */
+.contentColor--style05 .contentHead__ttl ,
+.contentColor--style05 .contentHead__view a ,
+.contentColor--style05 .articleList__view a ,
+.contentColor--style05 .articleTag {
+  color: #5467b2;
+}
+
+.contentColor--style05 .rankNo__icon {
+  background-color: #5467b2;
 }
 
 
@@ -12173,6 +11253,12 @@ img.mediumCenteredImg {
   margin: 0 -5px -5px;
   margin-top: 10px;
   overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .btnList {
+    margin: 0 -2.5px -5px;
+    margin-top: 10px;
+  }
 }
 
 .btnList__item {
@@ -12185,30 +11271,25 @@ img.mediumCenteredImg {
        -o-box-sizing: border-box;
           box-sizing: border-box;
 }
-
-/* 2box */
-.btnList__box2 .btnList__item {
-  width: 50%;
+@media screen and (max-width: 600px) {
+  .btnList__item {
+    padding: 0 2.5px;
+  }
 }
 
-/* 3box */
-.btnList__box3 .btnList__item {
-  width: 33.3%;
-}
-
-/* 4box */
-.btnList__box4 .btnList__item {
+/* 4-2box */
+.btnList__box4-2 .btnList__item {
   width: 25%;
 }
-
-/* 5box */
-.btnList__box5 .btnList__item {
-  width: 20%;
+@media screen and (max-width: 600px) {
+  .btnList__box4-2 .btnList__item {
+    width: 50%;
+  }
 }
 
 .btnList__item a {
   color: #e80;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   text-indent: .05em;
   letter-spacing: .05em;
@@ -12225,11 +11306,12 @@ img.mediumCenteredImg {
   background-color: #e80;
 }
 
+
 /** --------------------------------------------------------------------------------
  * アーティストカード 201904
  */
 .artistCard {
-  margin: 25px 0 8px;
+  margin: 10px 0;
   padding: 10px;
   border: solid 1px #ccc;
   -webkit-border-radius: 3px;
@@ -12241,7 +11323,7 @@ img.mediumCenteredImg {
   text-decoration: none;
 }
 
-.artistCard__info {
+.artistCard__head {
   width: 100%;
   display: table;
   table-layout: fixed;
@@ -12250,18 +11332,18 @@ img.mediumCenteredImg {
   direction: rtl;
 }
 
-.artistCard__info__main ,
-.artistCard__info__sub {
+.artistCard__name ,
+.artistCard__thumb {
   vertical-align: middle;
   display: table-cell;
 }
 
-.artistCard__info__main {
-  padding-left: 10px;
+.artistCard__name {
+  padding-left: 15px;
   direction: ltr;
 }
 
-.artistCard__info__main .artistCard__name a {
+.artistCard__name a {
   color: #0044cc;
   font-size: 16px;
   font-weight: bold;
@@ -12270,39 +11352,59 @@ img.mediumCenteredImg {
   text-decoration: underline;
 }
 
-.artistCard__text {
-  font-size: 13px;
-  max-height: 6em;
-  margin-top: 5px;
-  overflow: hidden;
+.artistCard__thumb {
+  width: 40%;
+  max-width: 300px;
 }
 
-.artistCard__info__sub {
-  width: 150px;
-}
-
-.artistCard__info__sub img {
+.artistCard__thumb img {
   max-width: 100%;
 }
 
-.artistCard__btn {
-  margin: 0 -.5%;
+.artistCard__text {
+  font-size: 13px;
+  max-height: 6em;
   margin-top: 10px;
   overflow: hidden;
 }
 
+.artistCard__btn {
+  margin: 0 -3px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+.artistCard__btn {
+    margin: 0 -2.5px -5px;
+    margin-top: 10px;
+  }
+}
+
 .artistCard__btn__item {
-  width: 24%;
-  margin: 0 .5%;
+  width: 25%;
+  padding: 0 3px;
   float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .artistCard__btn__item {
+    width: 50%;
+    margin-bottom: 5px;
+    padding: 0 2.5px;
+  }
 }
 
 .artistCard__btn__item a {
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   text-indent: .05em;
   letter-spacing: .05em;
-  padding: 4px 10px 3px;
+  padding: 3px 10px;
   display: block;
   border: solid 1px #0044cc;
   -webkit-border-radius: 50px;
@@ -12315,19 +11417,18 @@ img.mediumCenteredImg {
   background-color: #0044cc;
 }
 
-
 /** --------------------------------------------------------------------------------
  * テーマ別アーティスト一覧 201904
  */
 .artistTheme {
   font-size: 10px;
-  border: solid 1px #ddd !important;
+  overflow: hidden;
 }
 
 .artistTheme__head {
   text-align: center;
-  padding: 20px 20px 0;
-  border-bottom: solid 8px;
+  padding: 10px 10px 0;
+  border-bottom: solid 6px;
 }
 
 .artistTheme__head img {
@@ -12335,15 +11436,15 @@ img.mediumCenteredImg {
 }
 
 .artistTheme__desc {
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-indent: .01em;
   letter-spacing: .01em;
-  padding: 20px 10px;
+  padding: 10px;
   display: block;
 }
 
 .artistTheme__desc {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .artistTheme__desc h2 {
@@ -12351,7 +11452,7 @@ img.mediumCenteredImg {
 }
 
 .artistTheme__desc h3 {
-  font-size: 1.17em;
+  font-size: 1.4em;
 }
 
 .artistTheme__title {
@@ -12360,27 +11461,19 @@ img.mediumCenteredImg {
   text-align: center;
   text-indent: 0.15em;
   letter-spacing: 0.15em;
-  padding: 25px 0;
+  padding: 12px 0;
   border-bottom: solid 1px;
 }
 
 .artistTheme__list {
   margin-bottom: -1px;
-  padding: 0 10px;
-}
-
-.artistTheme__list:after {
-  content: " ";
-  font-size: 0;
-  height: 0;
-  display: block;
-  clear: both;
-  visibility:hidden;
+  padding-left: 10px;
+  overflow: hidden;
 }
 
 .artistTheme__item {
-  width: 33.3%;
-  padding: 30px 15px;
+  padding: 20px 0;
+  padding-right: 10px;
   float: left;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -12397,49 +11490,63 @@ img.mediumCenteredImg {
   position: absolute;
   bottom: 0;
   left: -10px;
-  right: -11px;
+  right: -300%;
 }
 
-.artistTheme__item:nth-of-type(3n+1) {
-  clear: both;
+@media screen and (min-width: 601px) { /*601以上*/
+  .artistTheme__item {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 600px) { /*600以下*/
+  .artistTheme__item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 601px) {  /*601以上*/
+  .artistTheme__item:nth-of-type(3n+1) {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 600px) { /*600以下*/
+  artistTheme__item:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
+
+.artistTheme__info {
+  margin-top: 10px;
+  padding-bottom: 6.7em;
+  position: relative;
 }
 
 .artistTheme__thumb img {
   width: 100%;
 }
 
-.artistTheme__detail {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.artistTheme__info {
-  height: 10.2em;
-  overflow: hidden;
-}
-
 .artistTheme__name {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   word-break: break-all;
   word-wrap: break-word;
-  max-height: 5.8em;
-  padding: 3px 0 1px;
-  padding-left: 10px;
+  padding-left: 7px;
   display: block;
-  overflow: hidden;
   border-left: solid 5px;
 }
 
 .artistTheme__text {
-  color: #343330;
+  color: #555;
   font-size: 1.3em;
-  line-height: 1.75;
   word-break: break-all;
   word-wrap: break-word;
-  max-height: 5.1em;
-  margin-top: 10px;
+  height: 4.4em;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 
@@ -12451,16 +11558,17 @@ img.mediumCenteredImg {
   border-color: #e80;
 }
 
-.artistTheme--col01 .artistTheme__desc ,
-.artistTheme--col01 .artistTheme__desc h2 ,
-.artistTheme--col01 .artistTheme__desc h3 {
-  color: #f5a21b;
-}
-
 .artistTheme--col01 .artistTheme__head {
   color: #fff;
   background-color: #161616;
   border-color: #e80;
+}
+
+.artistTheme--col01 .artistTheme__desc ,
+.artistTheme--col01 .artistTheme__desc h2 ,
+.artistTheme--col01 .artistTheme__desc h3 ,
+.artistTheme--col01 .artistTheme__related a {
+  color: #f5a21b;
 }
 
 
@@ -12468,9 +11576,10 @@ img.mediumCenteredImg {
 .artistTheme--col02 ,
 .artistTheme--col02 .artistTheme__item a ,
 .artistTheme--col02 .btnList__item a ,
-.artistTheme--col02 .artistTheme__desc ,
-.artistTheme--col02 .artistTheme__desc h2 ,
-.artistTheme--col02 .artistTheme__desc h3 {
+.artistTheme--col02 .artistTheme__desc,
+.artistTheme--col02 .artistTheme__desc h2,
+.artistTheme--col02 .artistTheme__desc h3,
+.artistTheme--col02 .artistTheme__related a {
   color: #9e61cc;
   border-color: #9e61cc;
 }
@@ -12490,9 +11599,10 @@ img.mediumCenteredImg {
 .artistTheme--col03 ,
 .artistTheme--col03 .artistTheme__item a ,
 .artistTheme--col03 .btnList__item a ,
-.artistTheme--col03 .artistTheme__desc ,
-.artistTheme--col03 .artistTheme__desc h2 ,
-.artistTheme--col03 .artistTheme__desc h3 {
+.artistTheme--col03 .artistTheme__desc,
+.artistTheme--col03 .artistTheme__desc h2,
+.artistTheme--col03 .artistTheme__desc h3,
+.artistTheme--col03 .artistTheme__related a {
   color: #118ad7;
   border-color: #118ad7;
 }
@@ -12512,9 +11622,10 @@ img.mediumCenteredImg {
 .artistTheme--col04 ,
 .artistTheme--col04 .artistTheme__item a ,
 .artistTheme--col04 .btnList__item a ,
-.artistTheme--col04 .artistTheme__desc ,
-.artistTheme--col04 .artistTheme__desc h2 ,
-.artistTheme--col04 .artistTheme__desc h3 {
+.artistTheme--col04 .artistTheme__desc,
+.artistTheme--col04 .artistTheme__desc h2,
+.artistTheme--col04 .artistTheme__desc h3,
+.artistTheme--col04 .artistTheme__related a {
   color: #ff6986;
   border-color: #ff6986;
 }
@@ -12534,9 +11645,10 @@ img.mediumCenteredImg {
 .artistTheme--col05 ,
 .artistTheme--col05 .artistTheme__item a ,
 .artistTheme--col05 .btnList__item a ,
-.artistTheme--col05 .artistTheme__desc ,
-.artistTheme--col05 .artistTheme__desc h2 ,
-.artistTheme--col05 .artistTheme__desc h3 {
+.artistTheme--col05 .artistTheme__desc,
+.artistTheme--col05 .artistTheme__desc h2,
+.artistTheme--col05 .artistTheme__desc h3,
+.artistTheme--col05 .artistTheme__related a {
   color: #5eb21c;
   border-color: #5eb21c;
 }
@@ -12551,18 +11663,6 @@ img.mediumCenteredImg {
   background-color: #5eb21c;
 }
 
-/* pickupArtist特集一覧 */
-.picupArtist__show .artistTheme__item:not(:nth-of-type(3n+1)) {
-  border-left: solid 1px #ddd;
-}
-
-
-/* ページャー */
-.artistTheme + .pager {
-  border: 1px solid #bbb;
-  border-top: none;
-}
-
 /* トップ */
 .artistTheme .artistTheme__head--top {
   background: none;
@@ -12575,35 +11675,46 @@ img.mediumCenteredImg {
 
 /* 広告 */
 .artistTheme__ads {
-  background-color: #fff;
-  margin: 0 -11px;
-  padding: 10px;
+  float: left;
+  width: 100%;
+  padding: 10px 5px 6px;
   border-bottom: 1px solid #ddd;
-  clear: both;
+  margin-left: -10px;
 }
 
-.artistTheme__ads .MediumRectangleBanner--half {
-  width: 50%;
+.artistTheme__ads--gray {
+  background: #ddd;
 }
 
-.artistTheme__ads .MediumRectangleBanner {
-  margin-bottom: 0;
+.artistTheme__related {
+  padding: 5px;
+  font-size: 13px;
+}
+
+.artistTheme__related dl dt {
+  font-weight: bold;
+}
+
+.artistTheme__related dl dd {
+  margin-top: 4px;
 }
 
 
 /** --------------------------------------------------------------------------------
- * sns 201904
+ * sns
  */
 .snsList {
   font-size: 0;
-  margin: 0 0 -10px -10px;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 .snsList__item {
   font-size: 10px;
   vertical-align: middle;
   width: 33.3%;
-  padding: 0 0 10px 10px;
+  padding: 0 5px;
   display: inline-block;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -12628,11 +11739,6 @@ img.mediumCenteredImg {
      -moz-box-sizing: border-box;
        -o-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.snsList__item a:hover {
-  opacity: 0.8;
-  -ms-filter: alpha(opacity=80);
 }
 
 .sns__faceBook a {
@@ -12676,161 +11782,32 @@ img.mediumCenteredImg {
   content: "\e6ae";
 }
 
-
-/** --------------------------------------------------------------------------------
- * app 201904
- */
-.appList {
-  font-size: 0;
-  text-align: center;
-}
-
-.appList__item {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.app__googlePlay {
-  width: 51.5%;
-}
-
-.app__appStore {
-  width: 48.5%;
-}
-
-.appList__item a {
-  display: block;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-       -o-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.app__appStore a {
-  padding: 6.58% 7%;
-  padding-right: 0;
-}
-
-.appList__item img {
-  width: 100%;
-}
-
-
-/** --------------------------------------------------------------------------------
- *
- */
-.MediumRectangleBanner--half {
-  width: 50%;
-  float: left;
-}
-
-.MediumRectangleBanner--half .MediumRectangleBanner {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.sideBySideBanner:after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
-.sideBySideBanner .MediumRectangleBanner {
-  width: 50%;
-  float: left;
-  margin: 10px auto;
-}
-
-.topBanner {
-  margin-top: 15px;
-}
-
-/* もっと見るボタン */
-.moreBtn {
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: center;
-  padding: 10px;
-  display: block;
-  border: 1px solid;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-.moreBtn__medium {
-  width: calc(100% - 200px);
-  margin: 0 auto;
-}
-
-.moreBtn:hover {
-  color: #fff !important;
-}
-
-.moreBtn--style01 {
-  color: #f02361;
-}
-
-.moreBtn--style01:hover {
-  background-color: #f02361;
-}
-
-.moreBtn--style02 {
-  color: #d6a810;
-}
-
-.moreBtn--style02:hover {
-  background-color: #d6a810;
-}
-
-.moreBtn--style03 {
-  color: #2aa29a;
-}
-
-.moreBtn--style03:hover {
-  background-color: #2aa29a;
-}
-
-.moreBtn--style04 {
-  color: #ad64be;
-}
-
-.moreBtn--style04:hover {
-  background-color: #ad64be;
-}
-
-.moreBtn--style05 {
-  color: #5467b2;
-}
-
-.moreBtn--style05:hover {
-  background-color: #5467b2;
+/* 201904 */
+.lyricsDate {
+  color: #999;
+  font-size: 11px;
 }
 
 /* 201905 ランキング用シェアボタン */
 .snsShare {
-  min-width: 240px;
-  margin-left: auto;
+  margin: 10px;
   overflow: hidden;
 }
 
-.indexTtl_rank + .snsShare {
-  margin-left: 6px;
-}
-
 .snsShare__item {
+  width: calc((100% - 10px) / 2);
   float: left;
 }
 
 .snsShare__item + .snsShare__item {
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 .snsShare__item a {
   color: #fff;
-  font-size: 11px;
+  font-size: 1.1em;
   text-align: center;
-  padding: 7px 12px 5px;
+  padding: 6px 10px;
   display: block;
   -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -12877,66 +11854,6 @@ img.mediumCenteredImg {
   content: "\e6a8";
 }
 
-/* 201905 レビューランキング用moreボタン */
-.reviewMore {
-  text-align: center;
-  width: calc(100% - 80px);
-  margin: 20px auto;
-  display: table;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 10px 0;
-}
-
-.reviewMore__item {
-  display: table-cell;
-}
-
-.reviewMore__item a {
-  font-size: 1.1em;
-  font-weight: bold;
-  text-indent: .1em;
-  letter-spacing: .1em;
-  padding: 5px 10px;
-  display: block;
-  border: solid 2px;
-  border-radius: 50px;
-  box-sizing: border-box;
-}
-
-/* アーティスト */
-.reviewMore--artist .reviewMore__item a {
-  color: #3faba3;
-  border-color: #3faba3;
-}
-
-.reviewMore--artist .reviewMore__item a:hover {
-  color: #fff;
-  background-color: #3faba3;
-}
-
-/* ニュース */
-.reviewMore--news .reviewMore__item a {
-  color: #5467B2;
-  border-color: #5467B2;
-}
-
-.reviewMore--news .reviewMore__item a:hover {
-  color: #fff;
-  background-color: #5467B2;
-}
-
-/* 特集記事 */
-.reviewMore--specialArticle .reviewMore__item a {
-  color: #ad64be;
-  border-color: #ad64be;
-}
-
-.reviewMore--specialArticle .reviewMore__item a:hover {
-  color: #fff;
-  background-color: #ad64be;
-}
-
 .blueLink {
   color: #0044cc;
 }
@@ -12954,7 +11871,7 @@ img.mediumCenteredImg {
 }
 
 .card {
-  margin: 25px 0 8px;
+  margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -12965,6 +11882,10 @@ img.mediumCenteredImg {
   display: table-cell;
   direction: ltr;
   vertical-align: top;
+}
+
+.card .cardImage img {
+  max-width: 100%;
 }
 
 .card .cardHeading {
@@ -13011,7 +11932,6 @@ img.mediumCenteredImg {
 .shortUrlBox {
   padding: 10px;
   text-align: center;
-  font-weight: bold;
 }
 
 .inputText {
@@ -13025,145 +11945,28 @@ img.mediumCenteredImg {
 }
 
 .shortUrlBox .inputText {
-  width: 360px;
-}
-
-/* floatの解除 */
-.clearfix:after {
-  content: '';
-  clear: both;
-  display: block;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* ライターランキング */
 
-.highlightTtl.highlightTtl--writerRanking {
-  background-color: #D6A810;
-  font-size: 0.9em;
+.reviewRankingTtl--writerRanking {
+  display: flex;
+  font-size: 12px;
 }
 
-.indexSubttl.indexSubttl--writerRanking {
-  color: #D6A810;
-  border-bottom: 2px solid #D6A810;
-}
-
-.rank1ttl_writerRank {
-  color: #D6A810;
-}
-
-.indexSubttl.indexSubttl--writerRanking a {
-  color: #D6A810;
-}
-
-.indexSubttl__weeklyRanking {
-  text-align: center;
-  font-weight: bold;
+.reviewRankingTtl--writerRanking h4 {
   flex-grow: 1;
+  color: #000;
 }
 
-.indexSubttl__weeklyRanking span {
-  color: #000;
+.reviewRankingTtl--writerRanking h4 span {
   display: block;
   font-weight: normal;
-  margin-top: 4px;
 }
 
-.writer_boxArea .boxArea_TOPtmb_contents {
-  position: relative;
-}
-
-.writer_boxArea + .writer_boxArea{
-  border-top: 1px solid #ddd;
-}
-
-.writerRank__links {
-  font-size: 0.9em;
-  position: absolute;
-  padding-left: 10px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 25px;
-}
-
-.writerInfo__linkSns {
-  font-weight: bold;
-  float: left;
-  margin-bottom: 30px;
-  margin-left: 5px;
-}
-
-.writerInfo__linkSns a:before {
-  font-family: "utIcon";
-  content: "\025B6";
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.writerInfo__linkTwitter {
-  color: #5dc2e0 !important;
-}
-
-.writerInfo__linkInstagram {
-  color: #AD64BE !important;
-}
-
-.writerRank__linkProfile {
-  border: 1px solid #D6A810;
-  border-radius: 10px;
-  color: #D6A810;
-  padding: 0px 8px;
-  float: right;
-  display: block;
-  margin-top: 50px;
-}
-
-.writerRank__linkProfile:hover {
-  color: #fff;
-  background: #D6A810;
-}
-
-.writerRank__profile {
-  color: #888;
-  margin: 5px 0 25px;
-}
-
-.writerRank__profile a {
-  color: #0044cc;
-}
-
-.writerRank__mvp .writerRank__profile {
-  margin: 5px 0 15px;
-}
-
-.writerRank__mvp .writerRank__links {
-  position: static;
-}
-
-.writerRank__mvp .writerInfo__linkSns {
-  margin-bottom: 0;
-}
-
-.writer_boxArea .boxArea_Bigsquare_img {
-  width: 120px;
-  height: 120px;
-}
-
-.indexSubttl--writerRanking a {
-  line-height: 2;
-}
-
-.indexSubttl--writerRanking .navArrow__left {
-  float: left;
-  margin-right: 10px;
-}
-
-.indexSubttl--writerRanking .navArrow__right {
-  float: right;
-  margin-left: 10px;
-}
-
-.indexSubttl--writerRanking .navArrow {
+.reviewRankingTtl--writerRanking .navArrow {
   background: #D6A810;
   color: #fff;
   width: 24px;
@@ -13171,115 +11974,58 @@ img.mediumCenteredImg {
   text-align: center;
   border-radius: 15px;
   position: relative;
+  margin: 0 auto;
 }
 
-.indexSubttl--writerRanking .navArrow.navArrow__left:before{
+.reviewRankingTtl--writerRanking .navArrow.navArrow:before {
+  display: block;
+  font-family: "utIcon";
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.reviewRankingTtl--writerRanking .navArrow.navArrow__left:before{
   content: "\e6a2";
-  display: block;
-  font-family: "utIcon";
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.indexSubttl .navArrow.navArrow__right:before{
+.reviewRankingTtl--writerRanking .navArrow.navArrow__right:before{
   content: "\e6a5";
-  display: block;
-  font-family: "utIcon";
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.boxArea_ttl--mvpWriter {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-.boxArea_ttl--mvpWriter span {
-  display: block;
+.rank1ttl_reviewRank--writer {
   color: #D6A810;
 }
 
-.boxArea_ttl--mvpWriter a {
-  font-size: 1.4em;
+.writerRank__profile {
+  color: #888;
+  margin-bottom: 20px;
 }
 
-.writerRank__topArticle {
-  padding: 0 10px;
+.writerRank__linkSns {
+  width: calc(80% - 120px);
+  width: 150px;
 }
 
-.writerRankCard .cardImage {
+.lst_boxArea--writerRank .moreBtn_ranks {
   width: 120px;
-  height: 120px;
 }
 
-.writerRankCard .cardImage img {
-  width: 100%;
+.writerRankCard .cardContent {
+  color: #000;
 }
 
 .writerRankCard__title {
-  color: #000;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  margin: 8px 0;
 }
 
 .writerRankCard__date {
   color: #888;
 }
 
-.writerInfo__profile__name {
-  display: flex;
-}
-
-.writerInfo__profile__name p {
-  flex-grow: 1;
-  align-self: flex-end;
-}
-
-.writerInfo__label {
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.95em;
-  font-weight: bold;
-  padding: 1px 8px;
-}
-
 .writerInfo__achievements {
-  padding: 10px;
-}
-
-.writerInfo__achievements .writerInfo__label + .writerInfo__label {
-  margin-left: 5px;
-}
-
-.writerInfo__label--rankIco:before {
-  font-family: "utIcon";
-  content: '\e908';
-  padding-right: 8px;
-}
-
-.writerInfo__label--starIco:before {
-  font-family: "utIcon";
-  content: '\e604';
-  padding-right: 8px;
-}
-
-.writerInfo__label--mvp {
-  background-color: #ff6552;
-}
-
-.writerInfo__label--rank {
-  background-color: #D6A810;
-}
-
-.writerInfo__label--mvpCount {
-  color: #ff6552;
-  display: block;
-  margin-top: 5px;
+  padding: 5px 0;
 }
 
 .writerInfo__label--topArticle {
@@ -13318,29 +12064,130 @@ img.mediumCenteredImg {
   right: -1px;
 }
 
-.indexSubttl--writerInfo {
-  padding: 10px 15px;
-  color: #e80;
-  border-bottom: 1px solid #e80;
-  border-top: 1px solid #eee;
+.writerInfo__label {
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.95em;
+  font-weight: bold;
+  padding: 1px 8px;
+}
+
+.writerInfo__label + .writerInfo__label {
+  margin-top: 5px;
+}
+
+.writerInfo__label--rankIco:before {
+  font-family: "utIcon";
+  content: '\e908';
+  padding-right: 8px;
+}
+
+.writerInfo__label--starIco:before {
+  font-family: "utIcon";
+  content: '\e604';
+  padding-right: 8px;
+}
+
+.writerInfo__label--mvp {
+  background-color: #ff6552;
+}
+
+.writerInfo__label--rank {
+  background-color: #D6A810;
+}
+
+.writerInfo__label--mvpCount {
+  color: #ff6552;
 }
 
 .writerInfo__links {
-  margin-top: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.writerInfo__linkSns a:before {
+  font-family: "utIcon";
+  content: "\025B6";
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.writerInfo__linkTwitter {
+  color: #5dc2e0 !important;
+}
+
+.writerInfo__linkInstagram {
+  color: #AD64BE !important;
+}
+
+.indexTtl__writerInfo {
+  color: #f5a21b;
+  padding: 0 5px;
+}
+
+.writerInfo a {
+  color: #0044cc;
+}
+
+.writerInfo__subTtl {
+  color: #f5a21b;
+  border-bottom: 1px solid #f5a21b;
+}
+
+.mvpWriter__month {
+  color: #D6A810;
+}
+
+.mvpWriter__name {
+  font-size: 1.2em;
 }
 
 .writer_rank_not_found {
   text-align: center;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .writer_rank_not_found a {
   color: #0044cc;
+  font-size: 15px;
+}
+
+/* ライター詳細ページ　*/
+
+.sp_writerInfo_ranking_lnk {
+  color: #fff;
+  background: #f5a21b;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 45px;
+  border: 2px solid #f5a21b;
+  border-radius: 50px;
+}
+
+.sp_writerInfo_ranking_lnk_wrapper {
+  text-align:center;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 /* 関連記事 */
+.related__articlePager {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 7px;
+  background-color: #f2f2f0;
+  text-align: center;
+  height: 35px;
+  display: relative;
+  margin-left: calc( ( 100% - 100vw ) / 2 );
+  margin-right: calc( ( 100% - 100vw ) / 2 );
+}
+
 .related__article {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -13349,36 +12196,14 @@ img.mediumCenteredImg {
   color: #fff;
   display: inline-block;
   padding: 10px;
-  width: 480px;
+  width: auto;
   height: 13px;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 14px;
   text-decoration: none;
   -webkit-border-radius: 100px;
      -moz-border-radius: 100px;
           border-radius: 10px;
-}
-
-/* ライター詳細ページ　*/
-
-.writerInfo_ranking_lnk {
-  color: #fff;
-  background: #f5a21b;
-  font-size: 15px;
-  padding: 6px 35px;
-  border: 2px solid #f5a21b;
-  border-radius: 50px;
-}
-
-.writerInfo_ranking_lnk:hover {
-  opacity: 0.8;
-  color: #fff;
-}
-
-.writerInfo_ranking_lnk_wrapper {
-  text-align:center;
-  margin-bottom: 20px;
-  margin-top: 40px;
 }
 
 /** --------------------------------------------------------------------------------
@@ -13406,9 +12231,24 @@ img.mediumCenteredImg {
 .monthList__item {
   display: inline-block;
   font-size: 14px;
-  width: 16.6666%;
+  width: 8.3333%;
   padding: 0 0 5px 5px;
   box-sizing: border-box;
+}
+@media screen and (max-width:768px) {
+  .monthList__item {
+    width: 16.6666%;
+  }
+}
+@media screen and (max-width:600px) {
+  .monthList__item {
+    width: 25%;
+  }
+}
+@media screen and (max-width:425px) {
+  .monthList__item {
+    width: 33.3333%;
+  }
 }
 
 .monthList__item a {
@@ -13420,143 +12260,128 @@ img.mediumCenteredImg {
 }
 
 .monthList__item a:hover {
+  color: #e80;
   border-color: #e80;
 }
 
 /** --------------------------------------------------------------------------------
  * 新：歌詞ページ
  */
+.lowerContents--newLyric {
+  background: #fff;
+}
+
 .newLyricTitle {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  line-height: 1.2;
-  word-break: break-all;
+  padding: 10px 10px 0;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+  color: #2AA29A;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
 .newLyricTitle_afterTxt {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .newLyricTitle__sub {
-  display: table;
-  width:  100%;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  font-size: 0.9em;
+  letter-spacing: normal;
 }
 
-.newLyricTitle__sub > * {
-  display: table-cell;
-  direction: ltr;
-}
-
-.newLyricTitle__kana {
-  width: 100%;
-  color: #888;
-  font-size: 10px;
-  vertical-align: bottom;
-}
-
-.newLyricTitle__stateIcon {
-  padding-left: 5px;
-  font-size: 0;
-  float: right;
-  white-space: nowrap;
-  vertical-align: top;
-}
-
-.newLyricTitle__stateIcon .stateIcon {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  height: auto;
-  line-height: 1;
-}
-
-.newLyricTitle__stateIcon .stateIcon + .stateIcon {
-  margin-left: 5px;
-}
-
-.newLyricTitle__main {
-  margin-top: 3px;
-  color: #2AA29A;
-  font-size: 1.4em;
-  font-weight: bold;
-}
-
-.newLyricTitle__subTitle {
-  margin-top: 2px;
-  color: #888;
-  display: block;
-  font-size: 12px;
-}
-
-.lyricData__main--new {
-  margin-right: 0;
-  padding-left: 20px;
-  width: auto;
-  float: none;
-  overflow: hidden;
-}
-
-.newLyricWork {
-  margin-bottom: 5px;
-}
-
-.newLyricWork__name,
-.newLyricWork__date,
-.newLyricWork__title,
-.newLyricWork__body {
-  margin-bottom: 1px;
-}
-
-.newLyricWork__name a {
-  font-size: 15px;
-  color: #0044cc;
-}
-
-.newLyricWork__name a:before {
-  margin-right: -0.1em;
-  content: "\e690";
-  color: #ccc;
-  font-family: utIcon;
-  vertical-align: middle;
-}
-
-.newLyricWork__date {
-  color: #888;
-}
-
-.newLyricWork__title {
-  font-weight: bold;
-  margin-right: 10px;
-  float: left;
-}
-
-.newLyricWork__body {
-  color: #888;
-  word-break: break-all;
-  overflow: hidden;
-}
-
-.newLyricWorkFooter {
-  text-align: right;
-}
-
-/*
-.newLyricWorkFooter::after {
+.newLyricTitle__sub::after {
   content: "";
   display: block;
   clear: both;
 }
-*/
 
-.newLyricWorkFooter > div + div {
+.iconText {
   float: right;
+  font-weight: bold;
+  font-size: .7rem;
+  letter-spacing: 1px;
+}
+
+.iconText__item {
+  margin-left: 2px;
+  padding: 1px 8px;
+  border-radius: 2px;
+  color: #fff;
+  float: left;
+  display: block;
+  white-space: nowrap;
+}
+
+.iconText--new {
+  background: #ff3b2d;
+  text-transform: uppercase;
+}
+
+.iconText--pre {
+  background: #28c4e5;
+}
+
+.iconText--fav {
+  background: #ff2994;
+}
+
+.newLyricTitle__kana {
+  overflow: hidden;
+  line-height: 1.8;
+  color: #888;
+  font-size: 0.85em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.newLyricTitle__main {
+  line-height: 1.2;
+  font-size: 1.6em;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.newLyricTitle__subTitle {
+  margin-top: 3px;
+  display: block;
+  color: #888;
+  font-size: 0.6em;
+}
+
+.newLyricTitle + .lyricData {
+  padding: 6px 10px 10px;
+}
+
+.newLyricTitle + .lyricData .lyricData__sub {
+  padding: 0 10px 0 0;
+}
+
+.newLyricTitle + .lyricData .releaseDate {
+  color: #888;
+}
+
+.newLyricTitle + .lyricData .lyricWork {
+  padding: 0;
+}
+
+.newLyricTitle + .lyricData .articleTitle__sub {
+  margin-top: 0;
 }
 
 .newLyricSubpart {
-  margin-right: -10px;
+  display: flex;
+  height: 28px;
+  margin-top: -1px;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 320px) {
+  .newLyricSubpart {
+    font-size: 0.9em;
+  }
 }
 
 .newLyricSubpart::after {
@@ -13566,14 +12391,17 @@ img.mediumCenteredImg {
 }
 
 .newLyricSubpart > li {
-  border-left: 1px solid #eee;
-  padding: 0 15px;
+  padding: 0 10px;
   display: inline-block;
-  cursor: pointer;
+  flex-grow: 1;
+}
+
+.newLyricSubpart > li + li {
+  border-left: 1px solid #eee;
 }
 
 .newLyricSubpart__icon {
-  margin-right: 0.4em;
+  margin-right: 0.3em;
   -webkit-border-radius: 100%;
           border-radius: 100%;
   position: relative;
@@ -13615,7 +12443,6 @@ img.mediumCenteredImg {
   width: 0;
   height: 0;
 }
-
 
 .newLyricSubpart__youtube .newLyricSubpart__icon {
   -webkit-border-radius: 5px;
@@ -13665,16 +12492,84 @@ img.mediumCenteredImg {
   background-color: #e80;
 }
 
-/* 動画スライダー */
-.billboardSlide--newLyric a:hover img {
-  opacity: 1;
+.newLyricSubpart__iTunes .newLyricSubpart__icon {
+  color: #000;
+  margin-right: 4px;
+  transform: rotate(90deg);
 }
 
-.billboardSlide__thumb {
+.newLyricSubpart__iTunes .newLyricSubpart__icon::before {
+  content: '꓿';
+  font-size: 1.4em;
+}
+
+.newLyricSubpart__iTunes .newLyricSubpart__icon--off {
+  transform: none;
+}
+
+.newLyricSubpart__iTunes .newLyricSubpart__icon--off::before {
+  content: '♪' !important;
+  font-size: 1em;
+}
+
+.circle__icon {
+  border-radius: 50%;
+  border-width: 4px 0 4px 7px;
+  border: 1px solid;
+  width: 26px;
+  height: 26px;
+}
+
+/* 動画 */
+.newLyricVideo {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eee;
+  background-color: #f2f2f0;
+  font-size: 12px;
+}
+
+.newLyricVideo .bxslider {
+  margin-bottom: 0;
+  padding-bottom: 18px;
+  overflow: hidden;
+}
+
+.newLyricVideo .slick-dots {
+  bottom: -4px;
+  background-color: #f2f2f0;
+  padding-bottom: 3px;
+}
+
+.newLyricVideo__item > a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.newLyricVideo__item > a > * {
+  display: table-cell;
+  padding: 10px 10px 2px;
+  direction: ltr;
+}
+
+.newLyricVideo__main {
+  vertical-align: middle;
+}
+
+.newLyricVideo__sub {
+  padding-right: 0 !important;
+  width: 130px;
+  vertical-align: top;
+}
+
+.newLyricVideo__sub span {
+  display: block;
   position: relative;
 }
 
-.billboardSlide__thumb::before {
+.newLyricVideo__sub span::before {
   content: "";
   margin: auto;
   display: block;
@@ -13683,18 +12578,14 @@ img.mediumCenteredImg {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 46px;
-  height: 28px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  width: 36px;
+  height: 24px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   background-color: rgba(180,180,180,0.7);
 }
 
-.billboardSlide--newLyric a:hover .billboardSlide__thumb::before {
-  background-color: rgba(180,180,180,0.55);
-}
-
-.billboardSlide__thumb::after {
+.newLyricVideo__sub span::after {
   content: "";
   margin: auto;
   display: block;
@@ -13706,49 +12597,132 @@ img.mediumCenteredImg {
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 6px 0 6px 9px;
+  border-width: 5px 0 5px 8px;
   border-color: transparent transparent transparent #fff;
   opacity: 0.8;
 }
 
-.newLyricVideo {
-  text-align: center;
+.newLyricVideo__sub img {
+  width: 100%;
+  display: block;
 }
 
-.newLyricVideo__inner {
-  padding-bottom: 10px;
-  display: inline-block;
+.newLyricVideo #youtubeContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:  100%;
+  z-index: 100;
+  overflow: visible;
 }
 
 #youtubeContainerClose {
-  padding: 6px 1.5em;
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
   line-height: 1.4;
+  background: rgba(0,0,0,0.7);
+  font-size: 30px;
   color: #fff;
-  background: rgba(0,0,0,0.8);
-  font-weight: bold;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
+
+.toggleVideoPanel__close {
+  display: table;
+  position: relative;
+  z-index: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  padding-right: 1.5em;
+  border: none;
+  background-color: transparent;
+  color: #04c;
+  font-size: 14px;
+  line-height: 1.5;
+  outline: none;
+}
+
+.toggleVideoPanel__close:after {
+  display: block;
+  position: absolute;
+  top: .25em;
+  right: .45em;
+  bottom: 0;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+       -o-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  width: .6em;
+  height: .6em;
+  margin: auto 0;
+  border-right: 2px solid #04c;
+  border-bottom: 2px solid #04c;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  content: " ";
+  -webkit-transition: all .25s;
+       -o-transition: all .25s;
+          transition: all .25s;
+}
+
+.toggleVideoPanel__close:hover {
   cursor: pointer;
 }
 
-#youtubeContainerClose:hover {
-  opacity: 0.85;
+
+/* 広告 */
+
+/* 歌詞表示切替 */
+.newLyricSwitch {
+  margin: 0 auto;
+  padding: 0 8px;
+  display: table;
+  width: calc(100% - 16px);
+  table-layout: fixed;
+  text-align: center;
 }
 
-#youtubeContainerClose::before {
-  font-family: utIcon;
-  content: "\e60c";
-  color: #fff;
-  vertical-align: middle;
+.newLyricSwitch__item {
+  display: table-cell;
+  padding: 8px 2px;
+}
+
+.newLyricSwitch__item > span {
+  padding: 5px 4px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  display: block;
+  line-height: 1.2;
+}
+
+.newLyricSwitch__item > span > span {
+  font-size: 80%;
+}
+
+.furiganaButton--disabled {
+  color: #ccc;
+  background-color: #eee;
 }
 
 /* tag */
 .newLyricTag {
-  text-align: left;
+  margin: -10px 10px 5px 5px;
+  text-align: right;
   line-height: 1.6;
-  width: 280px;
 }
 
 .newLyricTag a {
+  margin-left: 5px;
   color: #0044cc;
 }
 
@@ -13756,27 +12730,13 @@ img.mediumCenteredImg {
   margin-top: 0;
 }
 
-/* シェア */
-.shareArea {
-  border-top: 4px solid #555;
-  display: table;
-  width: 100%;
-  display: table-cell;
+/* 投票 */
+.hopeVoteMessage--newLyric {
+  margin: 15px 0 10px;
+  line-height: 1.4;
 }
 
-.shareArea__item {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.shareArea .shortUrlTtl {
-  border-top: none;
-}
-
-.shareArea__item--SNS {
-  width: 30%;
-}
-
+/* シェアリンク */
 .newShareLink {
   margin: 0 auto;
   padding: 0 8px;
@@ -13789,11 +12749,11 @@ img.mediumCenteredImg {
 
 .newShareLink__item {
   display: table-cell;
-  padding: 0 2px;
+  padding: 0 2px 10px;
 }
 
 .newShareLink__item > a {
-  padding: 10px 4px;
+  padding: 7px 4px;
   border-radius: 3px;
   display: block;
   line-height: 1.2;
@@ -13808,263 +12768,15 @@ img.mediumCenteredImg {
   background-color: #1877f2;
 }
 
-/* 投票結果 */
-.newLyricFont {
-  position: relative;
-}
-
-.newLyricVoteWrap {
-  position: absolute;
-  width: 100%;
-}
-
-.newLyricVoteWrap .voteResultBarGraph_info {
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
-.newLyricVote {
-  padding: 20px 15px 10px;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  position: relative;
-  display: block;
-  background: #f6f6f6;
-}
-
-.newLyricVote::before {
-  content: "";
-  position: absolute;
-  top: 23px;
-  left: -8px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 7px 10px 7px 0;
-  border-color: transparent #f6f6f6 transparent transparent;
-  z-index: 2;
-}
-
-.newLyricVote::after {
-  content: "";
-  position: absolute;
-  top: 23px;
-  left: -10px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 7px 10px 7px 0;
-  border-color: transparent #ccc transparent transparent;
-  z-index: 1;
-}
-
-.newLyricVote button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  -webkit-border-radius: 2em;
-          border-radius: 2em;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: block;
-  font-size: 22px;
-  color: #fff;
-  cursor: pointer;
-  appearance: none;
-  outline: none;
-}
-
-.newLyricVote button::before {
-  font-family: utIcon;
-  content: "\e60c";
-  color: #333;
-  vertical-align: middle;
-}
-
-.newLyricVote button:hover {
-  opacity: 0.8;
-}
-
-.newLyricVote .hopeVoteMessage {
-  margin: 0 auto 10px;
-  max-width: 250px;
-  line-height: 1.3;
-  font-size: 1.14em;
-}
-
-/* フォント */
-.lyricFont--new {
-  width: auto;
-  white-space: nowrap;
-}
-
-.lyricFont--new .lyricFont__size {
-  float: none;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.lyricFont--new input[type="button"] {
-  padding: 3px 7px;
-}
-
-/* レビュー */
-.newCommentFormWrap--new {
-  margin-bottom: 0;
-}
-
-.newCommentFormWrap--new .commentForm * {
-  font-family: inherit;
-}
-
-.newCommentFormWrap--new .reviewRegister_itemTtl {
-  margin-bottom: 0.2em;
-}
-
-.newCommentFormWrap--new .reviewFormFooter .reviewRegister_itemTtl {
-  margin: 0.3em 0.6em 0 0;
-  float: left;
-}
-
-.newCommentFormWrap--new .reviewRegister_itemTtl + * {
-  overflow: hidden;
-}
-
-.commentForm label,
-.commentForm button {
-  cursor: pointer;
-}
-
-.reviewFormFooter {
-  margin-top: 10px;
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.reviewFormFooter > div {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.reviewFormFooter > div + div {
-  padding-left: 15px;
-}
-
-.reviewFormFooter__input {
-  width: 63%;
-}
-
-.reviewFormFooter__input .radioLst_reviewRegister label {
-  padding: 2px 4px;
-}
-
-.newCommentFormWrap--new .reviewTextarea {
-  display: block;
-}
-
-.reviewFormFooter__button .reviewSubmit {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 340px;
-  display: block;
-}
-
-.reviewFormFooter__input + .reviewFormFooter__button .reviewSubmit {
-  padding: 19px 14px 18px;
-  width: 100%;
-}
-
-.reviewRegister_nickname {
-  color: #fff;
-}
-
-.newCommentFormWrap--new .reviewForm_ttl {
-  font-weight: bold;
-}
-
-/* lyricData--new */
-.lyricData--new {
-  display: flex;
-}
-
-.lyricData--new .lyricData__sub {
-  float: none;
-}
-
-.lyricData--new .lyricData__main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.lyricData--new .newLyricWorkFooter {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/** --------------------------------------------------------------------------------
- * 新：歌詞ページ：サイドバー
- */
-/* 特集 */
-.specialLineUp__date {
-  margin-top: 4px;
-  color: #999;
-  text-align: right;
-}
-
-.specialLineUpMore {
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  font-weight: bold;
-  text-align: center;
-}
-
-.specialLineUpMore a {
-  padding: 10px;
-  border-radius: 50px;
-  display: block;
-}
-
-.specialLineUpMore--feature a {
-  color: #ad64be;
-  border: 2px solid #ad64be;
-}
-
-.specialLineUpMore--feature a:hover {
-  color: #fff;
-  background: #ad64be;
-}
-
-/* ニュース */
-.newsLineUpMore {
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  font-weight: bold;
-  text-align: center;
-}
-.newsLineUpMore a {
-  padding: 10px;
-  border-radius: 50px;
-  display: block;
-}
-
-.newsLineUpMore--feature a {
-  color: #5467B2;
-  border: 2px solid #5467B2;
-}
-
-.newsLineUpMore--feature a:hover {
-  color: #fff;
-  background: #5467B2;
+.newShareLink__item--line a {
+  background-color: #00b900;
 }
 
 /* ランキング */
+.newRanking {
+  margin-top: -10px;
+}
+
 .newRanking__item {
   border-bottom: 1px solid #eee;
 }
@@ -14073,7 +12785,6 @@ img.mediumCenteredImg {
   display: table;
   table-layout: fixed;
   width: 100%;
-  color: #0044cc;
 }
 
 .newRanking__item > a > * {
@@ -14118,40 +12829,172 @@ img.mediumCenteredImg {
   background-color: #c1784d;
 }
 
+.newRanking__title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 .newRanking__subTitle {
   margin-top: 4px;
-  font-size: .9em;
+  color: #888;
+}
+
+/* 特集 */
+.newSpecialList {
+  margin-top: -10px;
+}
+
+.newSpecialList__item {
+  border-bottom: 1px solid #eee;
+}
+
+.newSpecialList__item a {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+.newSpecialList__item > a > * {
+  display: table-cell;
+  padding: 10px;
+  direction: ltr;
+}
+
+.newSpecialList__sub {
+  padding-right: 0 !important;
+  width: 70px;
+  vertical-align: top;
+  text-align: center;
+  font-weight: bold;
+}
+
+.newSpecialList__sub img {
+  width: 100%;
+}
+
+.newSpecialList__main {
+  vertical-align: middle;
+}
+
+.newSpecialList__title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.newSpecialList__date {
+  margin-top: 4px;
   color: #999;
+  text-align: right;
 }
 
-.newRankingMore {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
+.newSpecialList + .lnk_moreArtist_feature {
+  margin: 10px;
+}
+
+/* この歌詞へのご意見 */
+.lnk_lyricComment--newLyric {
+  margin: 0 10px;
   text-align: center;
 }
 
-.newRankingMore a {
-  padding: 10px;
-  border-radius: 50px;
+.lyricFont--new .lyricFont__size {
+  padding: 8px 0px 4px;
+}
+
+/* lyricFont--new */
+.lyricFont--new .lyricFont__size + .lyricFont__size {
+  width: auto;
+}
+
+.lyricFont--new .lyricFont__body span {
+  padding: 3px 0px;
+}
+
+/* 歌詞詳細 */
+.lyricBody + .newLyricData {
+  border-top: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.newLyricData {
+  display: flex;
+}
+
+.newLyricData:after {
+  content: "";
   display: block;
-  color: #d6a810;
-  border: 2px solid #d6a810;
+  clear: both;
 }
 
-.newRankingMore a:hover {
-  color: #fff;
-  background: #d6a810;
+.newLyricData:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  clear: both;
 }
 
-.newRankingSNS {
+.newLyricData__main {
+  flex-grow: 1;
+}
+
+.newLyricData__sub {
   padding: 10px;
-  font-weight: bold;
-  text-align: center;
+  width: 65px;
 }
 
-.newRankingSNS .snsShare__item {
-  width: calc(50% - 3px);
+.newLyricData__sub img {
+  width: 100%;
+}
+
+/* 楽曲制作 */
+.newLyricData--lyricDetail .lyricWork {
+  padding-right: 136px;
+  min-height: 41px;/* 作詞作曲などの登録が2項目以下の場合用補正 */
+}
+
+/* トップバナー */
+.affiliateBanners {
+  margin: 16px 0;
+}
+
+.affiliateBanners aside {
+  padding: 0 6px;
+}
+
+.affiliateBanners aside + aside {
+  margin-top: 12px;
+}
+
+.affiliateBanners aside a {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.affiliateBanners aside img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.affiliateBanners aside:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.newsHeadImage img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-height: 330px
 }
 
 /* ▽202107 */
@@ -14188,6 +13031,12 @@ img.mediumCenteredImg {
   width:         calc( ( ( 100% - .01px ) - ( 10px * 3 ) ) / 3 );
   margin: 0 0 10px 10px;
 }
+@media screen and (max-width:600px) {
+  .albumList__item {
+    width: -webkit-calc( ( ( 100% - .01px ) - ( 10px * 3 ) ) / 3 );
+    width:         calc( ( ( 100% - .01px ) - ( 10px * 3 ) ) / 3 );
+  }
+}
 
 .albumList__item a {
   display: -webkit-flex;
@@ -14212,31 +13061,16 @@ img.mediumCenteredImg {
 
 .albumListThumb {
   min-height: 0%;
-  height: 222px;
-  width:  auto;
+  width: auto;
+  height: 113px;
 }
 
 .albumListThumb img {
   display: block;
-  width: 100%;
-  height: 222px;
-  width:  auto;
+  width: auto;
+  height: auto;
   max-width: 100%;
-  margin: 0 auto;
-}
-
-.ArtistAlbumListThumb {
-  min-height: 0%;
-  height: 132px;
-  width:  auto;
-}
-
-.ArtistAlbumListThumb img {
-  display: block;
-  width: 100%;
-  height: 130px;
-  width:  auto;
-  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
 }
 
@@ -14249,14 +13083,20 @@ img.mediumCenteredImg {
       word-break: break-all;
   word-wrap: break-word;
 }
+@media screen and (max-width:425px) {
+  .albumListDetail {
+    font-size: 12px;
+  }
+}
 
 .albumListDetail__title {
   font-weight: bold;
 }
 
 .albumListDetail__release {
+  margin-top: 2px;
   color: #999;
-  font-size: 85.714286%; /* 12px */
+  font-size: 85.714286%;
 }
 
 .albumListDetail__release:before {
@@ -14267,34 +13107,28 @@ img.mediumCenteredImg {
   content: "\e66f";
 }
 
-.albumList--item5 .albumList__item {
-  width: -webkit-calc( ( ( 100% - .01px ) - ( 10px * 5 ) ) / 5 );
-  width:         calc( ( ( 100% - .01px ) - ( 10px * 5 ) ) / 5 );
+.boxArea.artist_boxArea .albumList {
+  margin: 0 0 -10px -10px;
 }
 
-.albumList--item5 .albumListDetail__title {
-  font-size: 85.714286%; /* 12px */
+.boxArea.artist_boxArea .albumListDetail {
+  font-size: 12px;
 }
 
-.lnk_moreArtist_Album {
-  color: #AD64BE;
-  border: 2px solid #AD64BE;
-}
-
-.lnk_moreArtist_Album:hover {
-  color: #fff;
-  background: #AD64BE;
+.boxArea.artist_boxArea .albumListDetail__release {
+  font-size: 1em;
 }
 /** --------------------------------------------------------------------------------
  * アルバム詳細
  */
+
 .albumContents {
-  padding: 15px;
+  padding: 10px;
 }
 
 .albumContents__item + .albumContents__item {
   margin-top: 20px;
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 1px solid #ddd;
 }
 
@@ -14308,9 +13142,20 @@ img.mediumCenteredImg {
   -ms-align-items: flex-start;
       align-items: flex-start;
 }
+@media screen and (max-width:600px) {
+  .albumDetails {
+    display: block;
+  }
+}
 
 .albumDetails__item + .albumDetails__item {
   margin-left: 30px;
+}
+@media screen and (max-width:600px) {
+  .albumDetails__item + .albumDetails__item {
+    margin: 0;
+    margin-top: 26px;
+  }
 }
 
 .albumDetailsThumb {
@@ -14323,9 +13168,17 @@ img.mediumCenteredImg {
   width: 30%;
   min-width: 180px;
 }
+@media screen and (max-width:600px) {
+  .albumDetailsThumb {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
 
 .albumDetailsThumb img {
-  width: 100%;
+  width: 40%;
   -webkit-box-shadow: 6px 6px 0 #eee;
           box-shadow: 6px 6px 0 #eee;
 }
@@ -14355,12 +13208,13 @@ img.mediumCenteredImg {
 .albumTitle {
   color: #343330;
   font-weight: bold;
-  font-size: 138.4615384615385%; /* 18px */
+  font-size: 128.5714285714286%; /* 18px */
   letter-spacing: .04em;
 }
 
 .albumRelease {
   color: #999;
+  font-size: 13px;
 }
 
 .albumRelease:before {
@@ -14381,19 +13235,12 @@ img.mediumCenteredImg {
 }
 
 .albumRecorded__item a {
-  display: block;
+  /* display: block; */
   position: relative;
   z-index: 0;
   padding: 2px 0;
-  padding-right: 7.230769em; /* 94px */
-}
-
-.albumRecorded__item a {
-  display: block;
-  position: relative;
-  z-index: 0;
-  padding: 2px 0;
-  padding-right: 7.230769em; /* 94px */
+  /* padding-right: 7.230769em; */
+  font-size: 13px;
   text-decoration: underline;
   color: #4264c0;
 }
@@ -14419,6 +13266,12 @@ img.mediumCenteredImg {
       align-items: stretch;
   margin: 0 0 -5px -5px;
 }
+@media screen and (max-width:600px) {
+  .albumArtist {
+    display: block;
+    margin: 0;
+  }
+}
 
 .albumArtist__item {
   display: -webkit-flex;
@@ -14438,6 +13291,12 @@ img.mediumCenteredImg {
   width:         calc( ( ( 100% - .01px ) - ( 5px * 2 ) ) / 2 );
   margin: 0 0 5px 5px;
 }
+@media screen and (max-width:600px) {
+  .albumArtist__item {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
 .albumArtist__item:only-child {
   -webkit-flex: 0 1 auto;
@@ -14446,6 +13305,12 @@ img.mediumCenteredImg {
        -o-flex: 0 1 auto;
           flex: 0 1 auto;
   /*width: 100%;*/
+}
+
+@media screen and (max-width:600px) {
+  .albumArtist__item + .albumArtist__item {
+    margin-top: 5px;
+  }
 }
 
 .albumArtist__item + .albumArtist__item:last-child {
@@ -14483,11 +13348,23 @@ img.mediumCenteredImg {
   background-color: #f6f6f6;
   color: #343330;
   font-weight: bold;
+  font-size: 13px;
   line-height: 1.35;
   text-align: center;
   -webkit-transition: all .4s ease;
        -o-transition: all .4s ease;
           transition: all .4s ease;
+}
+@media screen and (max-width:600px) {
+  .albumArtist__item a {
+    padding: 12px 30px 10px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .albumArtist__item a > br{
+    display: none;
+  }
 }
 
 .albumArtist__item a:after {
@@ -14509,188 +13386,53 @@ img.mediumCenteredImg {
   content: " ";
 }
 
-
 .albumArtist__item a:hover {
   /*background-color: #e80;
   color: #fff;*/
   opacity: .7;
 }
+/** --------------------------------------------------------------------------------
+ * 戻るボタン
+ */
+.backLink {
+  margin: 10px;
+}
+
+.backLink a {
+  display: block;
+  position: relative;
+  z-index: 0;
+  padding: 6px;
+  border: 2px solid #e80;
+  border-radius: 50px;
+  color: #e80;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.backLink a:before {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: auto 0;
+  font-weight: normal;
+  font-size: 1.2em;
+  font-family: utIcon;
+  content: "\e69a";
+}
 /* ▲202107 */
 
 .recommendAdTag {
-  margin: 10px 0;
-}
-/**
- * BxSlider v4.1.2 - Fully loaded, responsive content slider
- * http://bxslider.com
- *
- * Written by: Steven Wanderski, 2014
- * http://stevenwanderski.com
- * (while drinking Belgian ales and listening to jazz)
- *
- * CEO and founder of bxCreative, LTD
- * http://bxcreative.com
- */
-
-
-/** RESET AND LAYOUT
-===================================*/
-
-.bx-wrapper {
-	position: relative;
-	margin: 0 auto 15px;
-	padding: 0;
-	*zoom: 1;
+  margin: 10px 8px;
 }
 
-.bx-wrapper img {
-	max-width: 100%;
-	display: block;
+.adMoveTag img {
+  height: 313px;
 }
-
-/** THEME
-===================================*/
-
-.bx-wrapper .bx-viewport {
-	/*fix other elements on the page moving (on Chrome)*/
-	-webkit-transform: translatez(0);
-	-moz-transform: translatez(0);
-    	-ms-transform: translatez(0);
-    	-o-transform: translatez(0);
-    	transform: translatez(0);
-}
-
-.bx-wrapper .bx-pager,
-.bx-wrapper .bx-controls-auto {
-	position: absolute;
-	width: 100%;
-}
-
-/* LOADER */
-
-.bx-wrapper .bx-loading {
-	min-height: 50px;
-	//background: url(images/bx_loader.gif) center center no-repeat #fff;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2000;
-}
-
-/* PAGER */
-
-.bx-wrapper .bx-pager {
-	padding-top: 5px;
-	text-align: center;
-	font-size: .85em;
-	font-family: Arial;
-	font-weight: bold;
-	color: #666;
-}
-
-.bx-wrapper .bx-pager .bx-pager-item,
-.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-	display: inline-block;
-	*zoom: 1;
-	*display: inline;
-	vertical-align: top;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a {
-	background: #9f9d96;
-	text-indent: -9999px;
-	display: block;
-	width: 10px;
-	height: 10px;
-	margin: 0 5px;
-	outline: 0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-}
-
-.bx-wrapper .bx-pager.bx-default-pager a:hover,
-.bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #343330;
-}
-
-/* DIRECTION CONTROLS (NEXT / PREV) */
-.bx-wrapper .bx-controls-direction a.disabled {
-	display: none;
-}
-
-/* AUTO CONTROLS (START / STOP) */
-.bx-wrapper .bx-controls-auto {
-	text-align: center;
-}
-
-.bx-wrapper .bx-controls-auto .bx-start {
-	display: block;
-	text-indent: -9999px;
-	width: 10px;
-	height: 11px;
-	outline: 0;
-	//background: url(images/controls.png) -86px -11px no-repeat;
-	margin: 0 3px;
-}
-
-.bx-wrapper .bx-controls-auto .bx-start:hover,
-.bx-wrapper .bx-controls-auto .bx-start.active {
-	background-position: -86px 0;
-}
-
-.bx-wrapper .bx-controls-auto .bx-stop {
-	display: block;
-	text-indent: -9999px;
-	width: 9px;
-	height: 11px;
-	outline: 0;
-	//background: url(images/controls.png) -86px -44px no-repeat;
-	margin: 0 3px;
-}
-
-.bx-wrapper .bx-controls-auto .bx-stop:hover,
-.bx-wrapper .bx-controls-auto .bx-stop.active {
-	background-position: -86px -33px;
-}
-
-/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
-	text-align: left;
-	width: 80%;
-}
-
-.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
-	right: 0;
-	width: 35px;
-}
-
-/* IMAGE CAPTIONS */
-
-.bx-wrapper .bx-caption {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background: #666\9;
-	background: rgba(80, 80, 80, 0.75);
-	width: 100%;
-}
-
-.bx-wrapper .bx-caption span {
-	color: #fff;
-	font-family: Arial;
-	display: block;
-	font-size: .85em;
-	padding: 10px;
-}
-/*! jQuery UI - v1.11.2 - 2014-10-16
-* http://jqueryui.com
-* Includes: core.css, accordion.css, autocomplete.css, button.css, datepicker.css, dialog.css, draggable.css, menu.css, progressbar.css, resizable.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
-* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=f6a828&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=e78f08&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=1c94c4&iconColorDefault=ef8c08&bgColorHover=fdf5ce&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=fbcb09&fcHover=c77405&iconColorHover=ef8c08&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=fbd850&fcActive=eb8f00&iconColorActive=ef8c08&bgColorHighlight=ffe45c&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
-* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
-
-.ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0)}.ui-front{z-index:100}.ui-state-disabled{cursor:default!important}.ui-icon{display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat}.ui-widget-overlay{position:fixed;top:0;left:0;width:100%;height:100%}.ui-accordion .ui-accordion-header{display:block;cursor:pointer;position:relative;margin:2px 0 0 0;padding:.5em .5em .5em .7em;min-height:0;font-size:100%}.ui-accordion .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-icons .ui-accordion-icons{padding-left:2.2em}.ui-accordion .ui-accordion-header .ui-accordion-header-icon{position:absolute;left:.5em;top:50%;margin-top:-8px}.ui-accordion .ui-accordion-content{padding:1em 2.2em;border-top:0;overflow:auto}.ui-autocomplete{position:absolute;top:0;left:0;cursor:default}.ui-button{display:inline-block;position:relative;padding:0;line-height:normal;margin-right:.1em;cursor:pointer;vertical-align:middle;text-align:center;overflow:visible}.ui-button,.ui-button:link,.ui-button:visited,.ui-button:hover,.ui-button:active{text-decoration:none}.ui-button-icon-only{width:2.2em}button.ui-button-icon-only{width:2.4em}.ui-button-icons-only{width:3.4em}button.ui-button-icons-only{width:3.7em}.ui-button .ui-button-text{display:block;line-height:normal}.ui-button-text-only .ui-button-text{padding:.4em 1em}.ui-button-icon-only .ui-button-text,.ui-button-icons-only .ui-button-text{padding:.4em;text-indent:-9999999px}.ui-button-text-icon-primary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 1em .4em 2.1em}.ui-button-text-icon-secondary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 2.1em .4em 1em}.ui-button-text-icons .ui-button-text{padding-left:2.1em;padding-right:2.1em}input.ui-button{padding:.4em 1em}.ui-button-icon-only .ui-icon,.ui-button-text-icon-primary .ui-icon,.ui-button-text-icon-secondary .ui-icon,.ui-button-text-icons .ui-icon,.ui-button-icons-only .ui-icon{position:absolute;top:50%;margin-top:-8px}.ui-button-icon-only .ui-icon{left:50%;margin-left:-8px}.ui-button-text-icon-primary .ui-button-icon-primary,.ui-button-text-icons .ui-button-icon-primary,.ui-button-icons-only .ui-button-icon-primary{left:.5em}.ui-button-text-icon-secondary .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary{right:.5em}.ui-buttonset{margin-right:7px}.ui-buttonset .ui-button{margin-left:0;margin-right:-.3em}input.ui-button::-moz-focus-inner,button.ui-button::-moz-focus-inner{border:0;padding:0}.ui-datepicker{width:17em;padding:.2em .2em 0;display:none}.ui-datepicker .ui-datepicker-header{position:relative;padding:.2em 0}.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{position:absolute;top:2px;width:1.8em;height:1.8em}.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover{top:1px}.ui-datepicker .ui-datepicker-prev{left:2px}.ui-datepicker .ui-datepicker-next{right:2px}.ui-datepicker .ui-datepicker-prev-hover{left:1px}.ui-datepicker .ui-datepicker-next-hover{right:1px}.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px}.ui-datepicker .ui-datepicker-title{margin:0 2.3em;line-height:1.8em;text-align:center}.ui-datepicker .ui-datepicker-title select{font-size:1em;margin:1px 0}.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:45%}.ui-datepicker table{width:100%;font-size:.9em;border-collapse:collapse;margin:0 0 .4em}.ui-datepicker th{padding:.7em .3em;text-align:center;font-weight:bold;border:0}.ui-datepicker td{border:0;padding:1px}.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none}.ui-datepicker .ui-datepicker-buttonpane{background-image:none;margin:.7em 0 0 0;padding:0 .2em;border-left:0;border-right:0;border-bottom:0}.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:.5em .2em .4em;cursor:pointer;padding:.2em .6em .3em .6em;width:auto;overflow:visible}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker.ui-datepicker-multi{width:auto}.ui-datepicker-multi .ui-datepicker-group{float:left}.ui-datepicker-multi .ui-datepicker-group table{width:95%;margin:0 auto .4em}.ui-datepicker-multi-2 .ui-datepicker-group{width:50%}.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%}.ui-datepicker-multi-4 .ui-datepicker-group{width:25%}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left}.ui-datepicker-row-break{clear:both;width:100%;font-size:0}.ui-datepicker-rtl{direction:rtl}.ui-datepicker-rtl .ui-datepicker-prev{right:2px;left:auto}.ui-datepicker-rtl .ui-datepicker-next{left:2px;right:auto}.ui-datepicker-rtl .ui-datepicker-prev:hover{right:1px;left:auto}.ui-datepicker-rtl .ui-datepicker-next:hover{left:1px;right:auto}.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right}.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,.ui-datepicker-rtl .ui-datepicker-group{float:right}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-right-width:0;border-left-width:1px}.ui-dialog{overflow:hidden;position:absolute;top:0;left:0;padding:.2em;outline:0}.ui-dialog .ui-dialog-titlebar{padding:.4em 1em;position:relative}.ui-dialog .ui-dialog-title{float:left;margin:.1em 0;white-space:nowrap;width:90%;overflow:hidden;text-overflow:ellipsis}.ui-dialog .ui-dialog-titlebar-close{position:absolute;right:.3em;top:50%;width:20px;margin:-10px 0 0 0;padding:1px;height:20px}.ui-dialog .ui-dialog-content{position:relative;border:0;padding:.5em 1em;background:none;overflow:auto}.ui-dialog .ui-dialog-buttonpane{text-align:left;border-width:1px 0 0 0;background-image:none;margin-top:.5em;padding:.3em 1em .5em .4em}.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:right}.ui-dialog .ui-dialog-buttonpane button{margin:.5em .4em .5em 0;cursor:pointer}.ui-dialog .ui-resizable-se{width:12px;height:12px;right:-5px;bottom:-5px;background-position:16px 16px}.ui-draggable .ui-dialog-titlebar{cursor:move}.ui-draggable-handle{-ms-touch-action:none;touch-action:none}.ui-menu{list-style:none;padding:0;margin:0;display:block;outline:none}.ui-menu .ui-menu{position:absolute}.ui-menu .ui-menu-item{position:relative;margin:0;padding:3px 1em 3px .4em;cursor:pointer;min-height:0;list-style-image:url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")}.ui-menu .ui-menu-divider{margin:5px 0;height:0;font-size:0;line-height:0;border-width:1px 0 0 0}.ui-menu .ui-state-focus,.ui-menu .ui-state-active{margin:-1px}.ui-menu-icons{position:relative}.ui-menu-icons .ui-menu-item{padding-left:2em}.ui-menu .ui-icon{position:absolute;top:0;bottom:0;left:.2em;margin:auto 0}.ui-menu .ui-menu-icon{left:auto;right:0}.ui-progressbar{height:2em;text-align:left;overflow:hidden}.ui-progressbar .ui-progressbar-value{margin:-1px;height:100%}.ui-progressbar .ui-progressbar-overlay{background:url("data:image/gif;base64,R0lGODlhKAAoAIABAAAAAP///yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJAQABACwAAAAAKAAoAAACkYwNqXrdC52DS06a7MFZI+4FHBCKoDeWKXqymPqGqxvJrXZbMx7Ttc+w9XgU2FB3lOyQRWET2IFGiU9m1frDVpxZZc6bfHwv4c1YXP6k1Vdy292Fb6UkuvFtXpvWSzA+HycXJHUXiGYIiMg2R6W459gnWGfHNdjIqDWVqemH2ekpObkpOlppWUqZiqr6edqqWQAAIfkECQEAAQAsAAAAACgAKAAAApSMgZnGfaqcg1E2uuzDmmHUBR8Qil95hiPKqWn3aqtLsS18y7G1SzNeowWBENtQd+T1JktP05nzPTdJZlR6vUxNWWjV+vUWhWNkWFwxl9VpZRedYcflIOLafaa28XdsH/ynlcc1uPVDZxQIR0K25+cICCmoqCe5mGhZOfeYSUh5yJcJyrkZWWpaR8doJ2o4NYq62lAAACH5BAkBAAEALAAAAAAoACgAAAKVDI4Yy22ZnINRNqosw0Bv7i1gyHUkFj7oSaWlu3ovC8GxNso5fluz3qLVhBVeT/Lz7ZTHyxL5dDalQWPVOsQWtRnuwXaFTj9jVVh8pma9JjZ4zYSj5ZOyma7uuolffh+IR5aW97cHuBUXKGKXlKjn+DiHWMcYJah4N0lYCMlJOXipGRr5qdgoSTrqWSq6WFl2ypoaUAAAIfkECQEAAQAsAAAAACgAKAAAApaEb6HLgd/iO7FNWtcFWe+ufODGjRfoiJ2akShbueb0wtI50zm02pbvwfWEMWBQ1zKGlLIhskiEPm9R6vRXxV4ZzWT2yHOGpWMyorblKlNp8HmHEb/lCXjcW7bmtXP8Xt229OVWR1fod2eWqNfHuMjXCPkIGNileOiImVmCOEmoSfn3yXlJWmoHGhqp6ilYuWYpmTqKUgAAIfkECQEAAQAsAAAAACgAKAAAApiEH6kb58biQ3FNWtMFWW3eNVcojuFGfqnZqSebuS06w5V80/X02pKe8zFwP6EFWOT1lDFk8rGERh1TTNOocQ61Hm4Xm2VexUHpzjymViHrFbiELsefVrn6XKfnt2Q9G/+Xdie499XHd2g4h7ioOGhXGJboGAnXSBnoBwKYyfioubZJ2Hn0RuRZaflZOil56Zp6iioKSXpUAAAh+QQJAQABACwAAAAAKAAoAAACkoQRqRvnxuI7kU1a1UU5bd5tnSeOZXhmn5lWK3qNTWvRdQxP8qvaC+/yaYQzXO7BMvaUEmJRd3TsiMAgswmNYrSgZdYrTX6tSHGZO73ezuAw2uxuQ+BbeZfMxsexY35+/Qe4J1inV0g4x3WHuMhIl2jXOKT2Q+VU5fgoSUI52VfZyfkJGkha6jmY+aaYdirq+lQAACH5BAkBAAEALAAAAAAoACgAAAKWBIKpYe0L3YNKToqswUlvznigd4wiR4KhZrKt9Upqip61i9E3vMvxRdHlbEFiEXfk9YARYxOZZD6VQ2pUunBmtRXo1Lf8hMVVcNl8JafV38aM2/Fu5V16Bn63r6xt97j09+MXSFi4BniGFae3hzbH9+hYBzkpuUh5aZmHuanZOZgIuvbGiNeomCnaxxap2upaCZsq+1kAACH5BAkBAAEALAAAAAAoACgAAAKXjI8By5zf4kOxTVrXNVlv1X0d8IGZGKLnNpYtm8Lr9cqVeuOSvfOW79D9aDHizNhDJidFZhNydEahOaDH6nomtJjp1tutKoNWkvA6JqfRVLHU/QUfau9l2x7G54d1fl995xcIGAdXqMfBNadoYrhH+Mg2KBlpVpbluCiXmMnZ2Sh4GBqJ+ckIOqqJ6LmKSllZmsoq6wpQAAAh+QQJAQABACwAAAAAKAAoAAAClYx/oLvoxuJDkU1a1YUZbJ59nSd2ZXhWqbRa2/gF8Gu2DY3iqs7yrq+xBYEkYvFSM8aSSObE+ZgRl1BHFZNr7pRCavZ5BW2142hY3AN/zWtsmf12p9XxxFl2lpLn1rseztfXZjdIWIf2s5dItwjYKBgo9yg5pHgzJXTEeGlZuenpyPmpGQoKOWkYmSpaSnqKileI2FAAACH5BAkBAAEALAAAAAAoACgAAAKVjB+gu+jG4kORTVrVhRlsnn2dJ3ZleFaptFrb+CXmO9OozeL5VfP99HvAWhpiUdcwkpBH3825AwYdU8xTqlLGhtCosArKMpvfa1mMRae9VvWZfeB2XfPkeLmm18lUcBj+p5dnN8jXZ3YIGEhYuOUn45aoCDkp16hl5IjYJvjWKcnoGQpqyPlpOhr3aElaqrq56Bq7VAAAOw==");height:100%;filter:alpha(opacity=25);opacity:0.25}.ui-progressbar-indeterminate .ui-progressbar-value{background-image:none}.ui-resizable{position:relative}.ui-resizable-handle{position:absolute;font-size:0.1px;display:block;-ms-touch-action:none;touch-action:none}.ui-resizable-disabled .ui-resizable-handle,.ui-resizable-autohide .ui-resizable-handle{display:none}.ui-resizable-n{cursor:n-resize;height:7px;width:100%;top:-5px;left:0}.ui-resizable-s{cursor:s-resize;height:7px;width:100%;bottom:-5px;left:0}.ui-resizable-e{cursor:e-resize;width:7px;right:-5px;top:0;height:100%}.ui-resizable-w{cursor:w-resize;width:7px;left:-5px;top:0;height:100%}.ui-resizable-se{cursor:se-resize;width:12px;height:12px;right:1px;bottom:1px}.ui-resizable-sw{cursor:sw-resize;width:9px;height:9px;left:-5px;bottom:-5px}.ui-resizable-nw{cursor:nw-resize;width:9px;height:9px;left:-5px;top:-5px}.ui-resizable-ne{cursor:ne-resize;width:9px;height:9px;right:-5px;top:-5px}.ui-selectable{-ms-touch-action:none;touch-action:none}.ui-selectable-helper{position:absolute;z-index:100;border:1px dotted black}.ui-selectmenu-menu{padding:0;margin:0;position:absolute;top:0;left:0;display:none}.ui-selectmenu-menu .ui-menu{overflow:auto;overflow-x:hidden;padding-bottom:1px}.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup{font-size:1em;font-weight:bold;line-height:1.5;padding:2px 0.4em;margin:0.5em 0 0 0;height:auto;border:0}.ui-selectmenu-open{display:block}.ui-selectmenu-button{display:inline-block;overflow:hidden;position:relative;text-decoration:none;cursor:pointer}.ui-selectmenu-button span.ui-icon{right:0.5em;left:auto;margin-top:-8px;position:absolute;top:50%}.ui-selectmenu-button span.ui-selectmenu-text{text-align:left;padding:0.4em 2.1em 0.4em 1em;display:block;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ui-slider{position:relative;text-align:left}.ui-slider .ui-slider-handle{position:absolute;z-index:2;width:1.2em;height:1.2em;cursor:default;-ms-touch-action:none;touch-action:none}.ui-slider .ui-slider-range{position:absolute;z-index:1;font-size:.7em;display:block;border:0;background-position:0 0}.ui-slider.ui-state-disabled .ui-slider-handle,.ui-slider.ui-state-disabled .ui-slider-range{filter:inherit}.ui-slider-horizontal{height:.8em}.ui-slider-horizontal .ui-slider-handle{top:-.3em;margin-left:-.6em}.ui-slider-horizontal .ui-slider-range{top:0;height:100%}.ui-slider-horizontal .ui-slider-range-min{left:0}.ui-slider-horizontal .ui-slider-range-max{right:0}.ui-slider-vertical{width:.8em;height:100px}.ui-slider-vertical .ui-slider-handle{left:-.3em;margin-left:0;margin-bottom:-.6em}.ui-slider-vertical .ui-slider-range{left:0;width:100%}.ui-slider-vertical .ui-slider-range-min{bottom:0}.ui-slider-vertical .ui-slider-range-max{top:0}.ui-sortable-handle{-ms-touch-action:none;touch-action:none}.ui-spinner{position:relative;display:inline-block;overflow:hidden;padding:0;vertical-align:middle}.ui-spinner-input{border:none;background:none;color:inherit;padding:0;margin:.2em 0;vertical-align:middle;margin-left:.4em;margin-right:22px}.ui-spinner-button{width:16px;height:50%;font-size:.5em;padding:0;margin:0;text-align:center;position:absolute;cursor:default;display:block;overflow:hidden;right:0}.ui-spinner a.ui-spinner-button{border-top:none;border-bottom:none;border-right:none}.ui-spinner .ui-icon{position:absolute;margin-top:-8px;top:50%;left:0}.ui-spinner-up{top:0}.ui-spinner-down{bottom:0}.ui-spinner .ui-icon-triangle-1-s{background-position:-65px -16px}.ui-tabs{position:relative;padding:.2em}.ui-tabs .ui-tabs-nav{margin:0;padding:.2em .2em 0}.ui-tabs .ui-tabs-nav li{list-style:none;float:left;position:relative;top:0;margin:1px .2em 0 0;border-bottom-width:0;padding:0;white-space:nowrap}.ui-tabs .ui-tabs-nav .ui-tabs-anchor{float:left;padding:.5em 1em;text-decoration:none}.ui-tabs .ui-tabs-nav li.ui-tabs-active{margin-bottom:-1px;padding-bottom:1px}.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor{cursor:text}.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{cursor:pointer}.ui-tabs .ui-tabs-panel{display:block;border-width:0;padding:1em 1.4em;background:none}.ui-tooltip{padding:8px;position:absolute;z-index:9999;max-width:300px;-webkit-box-shadow:0 0 5px #aaa;box-shadow:0 0 5px #aaa}body .ui-tooltip{border-width:2px}.ui-widget{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;font-size:1.1em}.ui-widget .ui-widget{font-size:1em}.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;font-size:1em}.ui-widget-content{border:1px solid #ddd;background:#eee url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;color:#333}.ui-widget-content a{color:#333}.ui-widget-header{border:1px solid #e78f08;background:#f6a828 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;color:#fff;font-weight:bold}.ui-widget-header a{color:#fff}.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{border:1px solid #ccc;background:#f6f6f6 url("images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;font-weight:bold;color:#1c94c4}.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited{color:#1c94c4;text-decoration:none}.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus{border:1px solid #fbcb09;background:#fdf5ce url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;font-weight:bold;color:#c77405}.ui-state-hover a,.ui-state-hover a:hover,.ui-state-hover a:link,.ui-state-hover a:visited,.ui-state-focus a,.ui-state-focus a:hover,.ui-state-focus a:link,.ui-state-focus a:visited{color:#c77405;text-decoration:none}.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid #fbd850;background:#fff url("images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;font-weight:bold;color:#eb8f00}.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited{color:#eb8f00;text-decoration:none}.ui-state-highlight,.ui-widget-content .ui-state-highlight,.ui-widget-header .ui-state-highlight{border:1px solid #fed22f;background:#ffe45c url("images/ui-bg_highlight-soft_75_ffe45c_1x100.png") 50% top repeat-x;color:#363636}.ui-state-highlight a,.ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a{color:#363636}.ui-state-error,.ui-widget-content .ui-state-error,.ui-widget-header .ui-state-error{border:1px solid #cd0a0a;background:#b81900 url("images/ui-bg_diagonals-thick_18_b81900_40x40.png") 50% 50% repeat;color:#fff}.ui-state-error a,.ui-widget-content .ui-state-error a,.ui-widget-header .ui-state-error a{color:#fff}.ui-state-error-text,.ui-widget-content .ui-state-error-text,.ui-widget-header .ui-state-error-text{color:#fff}.ui-priority-primary,.ui-widget-content .ui-priority-primary,.ui-widget-header .ui-priority-primary{font-weight:bold}.ui-priority-secondary,.ui-widget-content .ui-priority-secondary,.ui-widget-header .ui-priority-secondary{opacity:.7;filter:Alpha(Opacity=70);font-weight:normal}.ui-state-disabled,.ui-widget-content .ui-state-disabled,.ui-widget-header .ui-state-disabled{opacity:.35;filter:Alpha(Opacity=35);background-image:none}.ui-state-disabled .ui-icon{filter:Alpha(Opacity=35)}.ui-icon{width:16px;height:16px}.ui-icon,.ui-widget-content .ui-icon{background-image:url("images/ui-icons_222222_256x240.png")}.ui-widget-header .ui-icon{background-image:url("images/ui-icons_ffffff_256x240.png")}.ui-state-default .ui-icon{background-image:url("images/ui-icons_ef8c08_256x240.png")}.ui-state-hover .ui-icon,.ui-state-focus .ui-icon{background-image:url("images/ui-icons_ef8c08_256x240.png")}.ui-state-active .ui-icon{background-image:url("images/ui-icons_ef8c08_256x240.png")}.ui-state-highlight .ui-icon{background-image:url("images/ui-icons_228ef1_256x240.png")}.ui-state-error .ui-icon,.ui-state-error-text .ui-icon{background-image:url("images/ui-icons_ffd27a_256x240.png")}.ui-icon-blank{background-position:16px 16px}.ui-icon-carat-1-n{background-position:0 0}.ui-icon-carat-1-ne{background-position:-16px 0}.ui-icon-carat-1-e{background-position:-32px 0}.ui-icon-carat-1-se{background-position:-48px 0}.ui-icon-carat-1-s{background-position:-64px 0}.ui-icon-carat-1-sw{background-position:-80px 0}.ui-icon-carat-1-w{background-position:-96px 0}.ui-icon-carat-1-nw{background-position:-112px 0}.ui-icon-carat-2-n-s{background-position:-128px 0}.ui-icon-carat-2-e-w{background-position:-144px 0}.ui-icon-triangle-1-n{background-position:0 -16px}.ui-icon-triangle-1-ne{background-position:-16px -16px}.ui-icon-triangle-1-e{background-position:-32px -16px}.ui-icon-triangle-1-se{background-position:-48px -16px}.ui-icon-triangle-1-s{background-position:-64px -16px}.ui-icon-triangle-1-sw{background-position:-80px -16px}.ui-icon-triangle-1-w{background-position:-96px -16px}.ui-icon-triangle-1-nw{background-position:-112px -16px}.ui-icon-triangle-2-n-s{background-position:-128px -16px}.ui-icon-triangle-2-e-w{background-position:-144px -16px}.ui-icon-arrow-1-n{background-position:0 -32px}.ui-icon-arrow-1-ne{background-position:-16px -32px}.ui-icon-arrow-1-e{background-position:-32px -32px}.ui-icon-arrow-1-se{background-position:-48px -32px}.ui-icon-arrow-1-s{background-position:-64px -32px}.ui-icon-arrow-1-sw{background-position:-80px -32px}.ui-icon-arrow-1-w{background-position:-96px -32px}.ui-icon-arrow-1-nw{background-position:-112px -32px}.ui-icon-arrow-2-n-s{background-position:-128px -32px}.ui-icon-arrow-2-ne-sw{background-position:-144px -32px}.ui-icon-arrow-2-e-w{background-position:-160px -32px}.ui-icon-arrow-2-se-nw{background-position:-176px -32px}.ui-icon-arrowstop-1-n{background-position:-192px -32px}.ui-icon-arrowstop-1-e{background-position:-208px -32px}.ui-icon-arrowstop-1-s{background-position:-224px -32px}.ui-icon-arrowstop-1-w{background-position:-240px -32px}.ui-icon-arrowthick-1-n{background-position:0 -48px}.ui-icon-arrowthick-1-ne{background-position:-16px -48px}.ui-icon-arrowthick-1-e{background-position:-32px -48px}.ui-icon-arrowthick-1-se{background-position:-48px -48px}.ui-icon-arrowthick-1-s{background-position:-64px -48px}.ui-icon-arrowthick-1-sw{background-position:-80px -48px}.ui-icon-arrowthick-1-w{background-position:-96px -48px}.ui-icon-arrowthick-1-nw{background-position:-112px -48px}.ui-icon-arrowthick-2-n-s{background-position:-128px -48px}.ui-icon-arrowthick-2-ne-sw{background-position:-144px -48px}.ui-icon-arrowthick-2-e-w{background-position:-160px -48px}.ui-icon-arrowthick-2-se-nw{background-position:-176px -48px}.ui-icon-arrowthickstop-1-n{background-position:-192px -48px}.ui-icon-arrowthickstop-1-e{background-position:-208px -48px}.ui-icon-arrowthickstop-1-s{background-position:-224px -48px}.ui-icon-arrowthickstop-1-w{background-position:-240px -48px}.ui-icon-arrowreturnthick-1-w{background-position:0 -64px}.ui-icon-arrowreturnthick-1-n{background-position:-16px -64px}.ui-icon-arrowreturnthick-1-e{background-position:-32px -64px}.ui-icon-arrowreturnthick-1-s{background-position:-48px -64px}.ui-icon-arrowreturn-1-w{background-position:-64px -64px}.ui-icon-arrowreturn-1-n{background-position:-80px -64px}.ui-icon-arrowreturn-1-e{background-position:-96px -64px}.ui-icon-arrowreturn-1-s{background-position:-112px -64px}.ui-icon-arrowrefresh-1-w{background-position:-128px -64px}.ui-icon-arrowrefresh-1-n{background-position:-144px -64px}.ui-icon-arrowrefresh-1-e{background-position:-160px -64px}.ui-icon-arrowrefresh-1-s{background-position:-176px -64px}.ui-icon-arrow-4{background-position:0 -80px}.ui-icon-arrow-4-diag{background-position:-16px -80px}.ui-icon-extlink{background-position:-32px -80px}.ui-icon-newwin{background-position:-48px -80px}.ui-icon-refresh{background-position:-64px -80px}.ui-icon-shuffle{background-position:-80px -80px}.ui-icon-transfer-e-w{background-position:-96px -80px}.ui-icon-transferthick-e-w{background-position:-112px -80px}.ui-icon-folder-collapsed{background-position:0 -96px}.ui-icon-folder-open{background-position:-16px -96px}.ui-icon-document{background-position:-32px -96px}.ui-icon-document-b{background-position:-48px -96px}.ui-icon-note{background-position:-64px -96px}.ui-icon-mail-closed{background-position:-80px -96px}.ui-icon-mail-open{background-position:-96px -96px}.ui-icon-suitcase{background-position:-112px -96px}.ui-icon-comment{background-position:-128px -96px}.ui-icon-person{background-position:-144px -96px}.ui-icon-print{background-position:-160px -96px}.ui-icon-trash{background-position:-176px -96px}.ui-icon-locked{background-position:-192px -96px}.ui-icon-unlocked{background-position:-208px -96px}.ui-icon-bookmark{background-position:-224px -96px}.ui-icon-tag{background-position:-240px -96px}.ui-icon-home{background-position:0 -112px}.ui-icon-flag{background-position:-16px -112px}.ui-icon-calendar{background-position:-32px -112px}.ui-icon-cart{background-position:-48px -112px}.ui-icon-pencil{background-position:-64px -112px}.ui-icon-clock{background-position:-80px -112px}.ui-icon-disk{background-position:-96px -112px}.ui-icon-calculator{background-position:-112px -112px}.ui-icon-zoomin{background-position:-128px -112px}.ui-icon-zoomout{background-position:-144px -112px}.ui-icon-search{background-position:-160px -112px}.ui-icon-wrench{background-position:-176px -112px}.ui-icon-gear{background-position:-192px -112px}.ui-icon-heart{background-position:-208px -112px}.ui-icon-star{background-position:-224px -112px}.ui-icon-link{background-position:-240px -112px}.ui-icon-cancel{background-position:0 -128px}.ui-icon-plus{background-position:-16px -128px}.ui-icon-plusthick{background-position:-32px -128px}.ui-icon-minus{background-position:-48px -128px}.ui-icon-minusthick{background-position:-64px -128px}.ui-icon-close{background-position:-80px -128px}.ui-icon-closethick{background-position:-96px -128px}.ui-icon-key{background-position:-112px -128px}.ui-icon-lightbulb{background-position:-128px -128px}.ui-icon-scissors{background-position:-144px -128px}.ui-icon-clipboard{background-position:-160px -128px}.ui-icon-copy{background-position:-176px -128px}.ui-icon-contact{background-position:-192px -128px}.ui-icon-image{background-position:-208px -128px}.ui-icon-video{background-position:-224px -128px}.ui-icon-script{background-position:-240px -128px}.ui-icon-alert{background-position:0 -144px}.ui-icon-info{background-position:-16px -144px}.ui-icon-notice{background-position:-32px -144px}.ui-icon-help{background-position:-48px -144px}.ui-icon-check{background-position:-64px -144px}.ui-icon-bullet{background-position:-80px -144px}.ui-icon-radio-on{background-position:-96px -144px}.ui-icon-radio-off{background-position:-112px -144px}.ui-icon-pin-w{background-position:-128px -144px}.ui-icon-pin-s{background-position:-144px -144px}.ui-icon-play{background-position:0 -160px}.ui-icon-pause{background-position:-16px -160px}.ui-icon-seek-next{background-position:-32px -160px}.ui-icon-seek-prev{background-position:-48px -160px}.ui-icon-seek-end{background-position:-64px -160px}.ui-icon-seek-start{background-position:-80px -160px}.ui-icon-seek-first{background-position:-80px -160px}.ui-icon-stop{background-position:-96px -160px}.ui-icon-eject{background-position:-112px -160px}.ui-icon-volume-off{background-position:-128px -160px}.ui-icon-volume-on{background-position:-144px -160px}.ui-icon-power{background-position:0 -176px}.ui-icon-signal-diag{background-position:-16px -176px}.ui-icon-signal{background-position:-32px -176px}.ui-icon-battery-0{background-position:-48px -176px}.ui-icon-battery-1{background-position:-64px -176px}.ui-icon-battery-2{background-position:-80px -176px}.ui-icon-battery-3{background-position:-96px -176px}.ui-icon-circle-plus{background-position:0 -192px}.ui-icon-circle-minus{background-position:-16px -192px}.ui-icon-circle-close{background-position:-32px -192px}.ui-icon-circle-triangle-e{background-position:-48px -192px}.ui-icon-circle-triangle-s{background-position:-64px -192px}.ui-icon-circle-triangle-w{background-position:-80px -192px}.ui-icon-circle-triangle-n{background-position:-96px -192px}.ui-icon-circle-arrow-e{background-position:-112px -192px}.ui-icon-circle-arrow-s{background-position:-128px -192px}.ui-icon-circle-arrow-w{background-position:-144px -192px}.ui-icon-circle-arrow-n{background-position:-160px -192px}.ui-icon-circle-zoomin{background-position:-176px -192px}.ui-icon-circle-zoomout{background-position:-192px -192px}.ui-icon-circle-check{background-position:-208px -192px}.ui-icon-circlesmall-plus{background-position:0 -208px}.ui-icon-circlesmall-minus{background-position:-16px -208px}.ui-icon-circlesmall-close{background-position:-32px -208px}.ui-icon-squaresmall-plus{background-position:-48px -208px}.ui-icon-squaresmall-minus{background-position:-64px -208px}.ui-icon-squaresmall-close{background-position:-80px -208px}.ui-icon-grip-dotted-vertical{background-position:0 -224px}.ui-icon-grip-dotted-horizontal{background-position:-16px -224px}.ui-icon-grip-solid-vertical{background-position:-32px -224px}.ui-icon-grip-solid-horizontal{background-position:-48px -224px}.ui-icon-gripsmall-diagonal-se{background-position:-64px -224px}.ui-icon-grip-diagonal-se{background-position:-80px -224px}.ui-corner-all,.ui-corner-top,.ui-corner-left,.ui-corner-tl{border-top-left-radius:4px}.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr{border-top-right-radius:4px}.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl{border-bottom-left-radius:4px}.ui-corner-all,.ui-corner-bottom,.ui-corner-right,.ui-corner-br{border-bottom-right-radius:4px}.ui-widget-overlay{background:#666 url("images/ui-bg_diagonals-thick_20_666666_40x40.png") 50% 50% repeat;opacity:.5;filter:Alpha(Opacity=50)}.ui-widget-shadow{margin:-5px 0 0 -5px;padding:5px;background:#000 url("images/ui-bg_flat_10_000000_40x100.png") 50% 50% repeat-x;opacity:.2;filter:Alpha(Opacity=20);border-radius:5px}
 </style>
