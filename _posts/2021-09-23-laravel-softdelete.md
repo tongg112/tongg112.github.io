@@ -11,8 +11,27 @@ comments: true
 ---
 
 ## 软删除 softdelete
-- 参考：[Laravel 8 中文文档 软删除](https://learnku.com/docs/laravel/8.x/eloquent/9406#soft-deleting)
-- 数据库表中增加字段 `deleted_at`
+
+- 数据库表中增加字段 `deleted_at`，可以使用数据库迁移的方式增加，也可以手动创建。
+
+```php
+public function up()
+{
+    Schema::table('asset_info', function (Blueprint $table) {
+        $table->softDeletes();
+    });
+}
+
+public function down()
+{
+    Schema::table('asset_info', function (Blueprint $table) {
+        $table->dropSoftDeletes();
+    });
+}
+
+```
+
+
 - 在 model 文件中，引入 SoftDeletes
 
 ```php
