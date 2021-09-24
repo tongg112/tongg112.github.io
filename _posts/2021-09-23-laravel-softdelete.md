@@ -12,11 +12,7 @@ comments: true
 
 ## 软删除 softdelete
 
-<<<<<<< HEAD
 - 数据库表中增加字段 `deleted_at`，可以使用数据库迁移的方式增加，也可以手动创建。
-=======
-- 数据库表中增加字段 `deleted_at`，可以使用数据库迁移
->>>>>>> d6783c34370d8c0ab97c6de29c5d27004f3c9727
 
 ```php
 public function up()
