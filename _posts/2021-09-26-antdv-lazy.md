@@ -158,5 +158,5 @@ process.env.NODE_ENV !== 'production' && console.warn('[antd-pro] NOTICE: Antd u
 
 ## 参考资料
 - [ant design pro vue 组件未注册 Unknown custom element:＜a-tree＞](https://blog.csdn.net/SeasmallTop/article/details/109117059)
-- [Unknown custom element: <a-carousel> #689](https://github.com/vueComponent/ant-design-vue-pro/issues/689)  
+- [Unknown custom element:<a-carousel> #689](https://github.com/vueComponent/ant-design-vue-pro/issues/689)  
 - [组件a-tree-select 无法使用，请问应该需要引入 #546](https://github.com/vueComponent/ant-design-vue-pro/issues/546)  
