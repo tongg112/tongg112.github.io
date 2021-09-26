@@ -232,3 +232,4 @@ export default {
 ## 参考资料
 - [ant design vue pro 支持多页签模式 页签可以缓存](https://blog.csdn.net/abcdefg182/article/details/108454433)
 - [开启multiTab后, keep-alive 没有生效](https://github.com/vueComponent/ant-design-vue-pro/issues/794)  
+- [PROJECT_STARTER/antdv-typescript-starter 国际化](https://gitea.kerbores.com/PROJECT_STARTER/antdv-typescript-starter/commit/f483c60a42a6baf8e6bc1cbf05f3b4a4287f17d0)  
