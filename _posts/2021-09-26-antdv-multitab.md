@@ -128,7 +128,7 @@ export default {
 
 使用 `$t()` 替换原来的中文描述文本。
 
-```js
+```html
 <script>
 import events from './events'
 
