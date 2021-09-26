@@ -77,6 +77,8 @@ export default {
 // ...
 ```
 
+## 软件版本：vue-antd-pro 3.0.2
+
 ## 参考资料
 - [ant design vue pro 支持多页签模式 页签可以缓存](https://blog.csdn.net/abcdefg182/article/details/108454433)
 - [开启multiTab后, keep-alive 没有生效](https://github.com/vueComponent/ant-design-vue-pro/issues/794)  

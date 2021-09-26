@@ -57,6 +57,7 @@ class AssetInfo extends Model
 }
 ```
 
+## 软件版本：laravel 8.54
 
 ## 参考资料
 - [Laravel 8 中文文档 软删除](https://learnku.com/docs/laravel/8.x/eloquent/9406#soft-deleting)

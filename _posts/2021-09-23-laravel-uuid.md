@@ -25,5 +25,7 @@ Str::orderedUuid()->toString();
 Str::orderedUuid()->getHex()->toString();
 ```
 
+## 软件版本：laravel 8.54
+
 ## 参考资料
 - [Laravel UUID generation](https://stackoverflow.com/questions/37948764/laravel-uuid-generation)

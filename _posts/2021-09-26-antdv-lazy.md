@@ -154,6 +154,7 @@ process.env.NODE_ENV !== 'production' && console.warn('[antd-pro] NOTICE: Antd u
 
 ```
 
+## 软件版本：vue-antd-pro 3.0.2
 
 ## 参考资料
 - [ant design pro vue 组件未注册 Unknown custom element:＜a-tree＞](https://blog.csdn.net/SeasmallTop/article/details/109117059)

@@ -87,3 +87,5 @@ import LogoSvg from '../assets/new-logo.svg?inline'
 ```html
 <link rel="icon" href="<%= BASE_URL %>favicon.ico">
 ```
+
+## 软件版本：vue-antd-pro 3.0.2
