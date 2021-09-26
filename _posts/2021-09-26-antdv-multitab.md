@@ -13,6 +13,7 @@ comments: true
 ## 最终效果
 
 <img class="shadow" src="/img/in-post/post-antdv-multitab/antdv-multitab.jpg" >
+<img class="shadow" src="/img/in-post/post-antdv-multitab/antdv-multitab-close.jpg" >
 
 ## 修改配置文件
 
