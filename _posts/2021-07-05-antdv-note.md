@@ -254,6 +254,13 @@ export default {
 用`<a-divider />`代替`<hr />`
 
 ## 获取form表单的值,根据值动态控制元素展示
+
 ```
 v-if="form.getFieldValue('fix_status') == 4"
+```
+
+## 修复 eslint 错误提示
+
+```
+npm run lint --fix
 ```
