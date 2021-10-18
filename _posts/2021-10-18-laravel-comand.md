@@ -14,7 +14,7 @@ comments: true
 
 如果使用了 knuckleswtf/scribe 来生成 api文档
 
-```
+```shell
 php artisan scribe:generate
 ```
 
@@ -22,25 +22,25 @@ php artisan scribe:generate
 
 重新加载数据库
 
-```
+```shell
 php artisan scribe:generate
 ```
 
 ## 生成 model
 
-```
+```shell
 php artisan make:model Roles
 ```
 
 ## 生成 controller
 
-```
+```shell
 php artisan make:controller Api/v1/RoleController --api
 ```
 
 ## 生成 Request
 
-```
+```shell
 php artisan make:request CarStoreRequest
 php artisan make:request CarQueryRequest
 
@@ -52,7 +52,7 @@ php artisan make:request UserStoreRequest
 
 ## 生成中间件
 
-```
+```shell
 php artisan make:middleware SetPageSize
 php artisan make:middleware SetSort
 ```
