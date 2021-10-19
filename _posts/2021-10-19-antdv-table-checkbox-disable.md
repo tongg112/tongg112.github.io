@@ -27,7 +27,7 @@ comments: true
 ```html
 <a-table
   size="middle"
-  :row-selection="{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange, getCheckboxProps: (record) => getCheckboxProps(record) }"
+  :row-selection="{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange, getCheckboxProps: (record) => setCheckboxProps(record) }"
   :columns="columns"
   :dataSource="loadData"
   :pagination="false"
@@ -35,11 +35,11 @@ comments: true
   :rowKey="(record) => record.id"
 />
 ```
-其中实现`复选框禁用`是`getCheckboxProps: (record) => getCheckboxProps(record)`  
+其中实现`复选框禁用`是`getCheckboxProps: (record) => setCheckboxProps(record)`  
 
 在 methods 中定义：
 ```js
-getCheckboxProps (record) {
+setCheckboxProps (record) {
   console.log(record)
   return {
     props: {
