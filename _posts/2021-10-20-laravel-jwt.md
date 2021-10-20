@@ -20,21 +20,21 @@ composer require tymon/jwt-auth
 ```
 ## jwt配置
 
-1. 发布配置文件
+### 1、发布配置文件
 
 ```shell
 # 这条命令会在 config 下增加一个 jwt.php 的配置文件
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 ```
 
-2. 生成加密密钥
+### 2、生成加密密钥
 
 ```shell
 # 这条命令会在 .env 文件下生成一个加密密钥，如：JWT_SECRET=foobar
 php artisan jwt:secret
 ```
 
-3. 更新你的模型
+### 3、更新你的模型
 
 如果你使用默认的 User 表来生成 token，你需要在该模型下增加一段代码：
 
@@ -89,7 +89,7 @@ class User extends Authenticatable implements JWTSubject
 
 ```
 
-4. 注册两个 Facade
+### 4、注册两个 Facade
 
 这两个 Facade 并不是必须的，但是使用它们会给你的代码编写带来一点便利。
 
@@ -109,7 +109,7 @@ return [
 ]
 ```
 
-5. 修改 auth.php
+### 5、修改 auth.php
 
 - config/auth.php
 
@@ -148,7 +148,7 @@ return [
   ]
 
 ```
-6. 创建 token 控制器
+### 6、创建 token 控制器
 
 ```shell
 php artisan make:controller Api/v1/AuthController
@@ -223,7 +223,7 @@ class AuthController extends Controller
 
 ```
 
-7. 注册路由
+### 7、注册路由
 
 
 
@@ -249,7 +249,8 @@ jwt token 的过期时间在 config/jwt.php 中可以配置，默认1小时。
 
 - App\Http\Controllers\Api\v1\AuthController::login
 
-```
+```php
+
 /**
  * login 用户登录
  *
