@@ -20,10 +20,10 @@ php artisan scribe:generate
 
 ## 数据库数据初始化
 
-重新加载数据库
+重新加载数据库，默认执行 `database/seeders/DatabaseSeeder.php`下的`run()`
 
 ```shell
-php artisan scribe:generate
+php artisan migrate:refresh --seed
 ```
 
 ## 生成 model
