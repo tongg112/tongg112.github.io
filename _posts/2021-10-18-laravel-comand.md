@@ -55,6 +55,10 @@ php artisan make:request UserStoreRequest
 ```shell
 php artisan make:middleware SetPageSize
 php artisan make:middleware SetSort
+
+// 查看中间件
+php artisan route:list
+
 ```
 
 
