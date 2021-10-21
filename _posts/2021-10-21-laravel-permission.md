@@ -136,6 +136,7 @@ protected $routeMiddleware = [
     // ...
     'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
     'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
 ];
 ```
 
@@ -192,6 +193,79 @@ public function __construct()
 }
 ```
 
+## 与 jwt 一起使用
+
+因为 jwt 的 用户模型使用的 User 继承 Authenticatable，使用 laravel-permission 的 HasRoles Traits 也无法正常工作。
+
+```php
+class User extends Authenticatable implements JWTSubject
+{
+  ...
+}
+
+```
+这里使用继承 Model 的 Users，可以正常使用 使用 laravel-permission 的 HasRoles Traits。
+
+```php
+class Users extends Model
+{
+  ...
+}
+```
+
+经过调试定位，决定重写 permission 中间件。在 `\App\Http\Middleware\` 下创建 Permission 中间件，继承 laravel-permission 的 PermissionMiddleware。
+
+修改用户实例，并使用 hasPermissionTo 判断权限。
+
+```php
+
+namespace App\Http\Middleware;
+
+use App\Models\Users;
+use Spatie\Permission\Exceptions\UnauthorizedException;
+use Closure;
+use Spatie\Permission\Middlewares\PermissionMiddleware as Middleware;
+
+class Permission extends Middleware
+{
+    public function handle($request, Closure $next, $permission, $guard = null)
+    {
+        $authGuard = app('auth')->guard($guard);
+
+        if ($authGuard->guest()) {
+            throw UnauthorizedException::notLoggedIn();
+        }
+
+        $user = Users::find($authGuard->user()->id);
+        $permissions = is_array($permission)
+            ? $permission
+            : explode('|', $permission);
+
+        foreach ($permissions as $permission) {
+            if ($user->hasPermissionTo($permission)) {
+                return $next($request);
+            }
+        }
+
+        throw UnauthorizedException::forPermissions($permissions);
+    }
+}
+
+```
+
+最后，app/Http/Kernel.php 文件中，重新添加新的 permission 中间件
+
+```php
+protected $routeMiddleware = [
+    // ...
+    // 'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+    // 'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    // 'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
+    'permission' => \App\Http\Middleware\Permission::class,
+];
+
+```
+
 
 # 软件版本：laravel 8.54
 
@@ -201,3 +275,6 @@ public function __construct()
 - [Laravue 框架 官网文档](https://doc.laravue.dev/guide/development/work-with-permission.html#permissions-and-api-resources)
 - [Laravel在控制器功能中添加中间件](https://ask.csdn.net/questions/794718)
 - [Laravel中间件](https://laravel.com/docs/5.4/controllers#controller-middleware)
+- [using middleware with multiple guards](https://github.com/spatie/laravel-permission/issues/447)
+- [Laravel-permission 官方文档 Using a middleware](https://spatie.be/docs/laravel-permission/v5/basic-usage/middleware)
+- [Spatie gave an error like "User have not permission for this page access."](https://laracasts.com/discuss/channels/laravel/spatie-gave-an-error-like-user-have-not-permission-for-this-page-access)
