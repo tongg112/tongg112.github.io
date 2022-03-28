@@ -16,14 +16,13 @@ comments: true
 - laravel版本：8.54
 
 ```php
-
+<?php
 \Illuminate\Support\Facades\Log::error($e);
-
 ```
 
 在业务场景中使用
 
-```
+```php
 DB::beginTransaction();
 try {
     // do sth.
