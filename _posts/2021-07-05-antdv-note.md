@@ -1,266 +1,214 @@
 ---
 layout: post
-title:  "蚂蚁金服antdv的使用笔记"
-subtitle: "Ant Design 的 Vue 实现"
+title:  "蚂蚁金服antdv快速上手"
+subtitle: "快速构建一个antdv的前端项目"
 author: xtong
 date:   2021-07-05 22:45:00 +0800
 catalog: true
-tags: [vue, 前端, 笔记]
+tags: [vue, antd, 前端, 笔记]
 header-img: "img/post-bg-universe.jpg"
 comments: true
 ---
 # antdv是什么
-ant-design-vue 是 Ant Design 的 Vue 实现，组件的风格与 Ant Design 保持同步，组件的 html 结构和 css 样式也保持一致，组件 API 也尽量保持了一致。  
-Ant Design: https://ant.design/index-cn
-# 使用中的一些笔记
-## 修改logo和系统名称
-在`src/layouts/UserLayouts.vue`中,替换路径`src/assets/logo.svg`下的logo文件；修改 title 【Ant Design】为系统名称。
-```html
-<img src="~@/assets/logo.svg" class="logo" alt="logo">
-<span class="title">Ant Design</span>
-```
-在`src/config/defaultSettings.js`中，修改 title 【Ant Design】为系统名称。
-```js
-/**
- * 项目默认配置项
- * primaryColor - 默认主题色, 如果修改颜色不生效，请清理 localStorage
- * navTheme - sidebar theme ['dark', 'light'] 两种主题
- * colorWeak - 色盲模式
- * layout - 整体布局方式 ['sidemenu', 'topmenu'] 两种布局
- * fixedHeader - 固定 Header : boolean
- * fixSiderbar - 固定左侧菜单栏 ： boolean
- * contentWidth - 内容区布局： 流式 |  固定
- *
- * storageOptions: {} - Vue-ls 插件配置项 (localStorage/sessionStorage)
- *
- */
+ant-design-vue 是 Ant Design 的 Vue 实现，组件的风格与 Ant Design 保持同步，组件的 html 结构和 css 样式也保持一致，组件 API 也尽量保持了一致。
 
-export default {
-  navTheme: 'dark', // theme for nav menu
-  primaryColor: '#F5222D', // primary color of ant design
-  layout: 'sidemenu', // nav menu position: `sidemenu` or `topmenu`
-  contentWidth: 'Fluid', // layout of content: `Fluid` or `Fixed`, only works when layout is topmenu
-  fixedHeader: false, // sticky header
-  fixSiderbar: false, // sticky siderbar
-  colorWeak: false,
-  menu: {
-    locale: true
-  },
-  title: 'Ant Design Pro',
-  pwa: false,
-  iconfontUrl: '',
-  production: process.env.NODE_ENV === 'production' && process.env.VUE_APP_PREVIEW !== 'true'
-}
+Ant Design:  [https://antdv.com/components/overview](https://antdv.com/components/overview)
 
-```
-## 设置中文语言，关闭语言切换
-在`src/locales/index.js`中，修改默认语言为中文
-```js
-// default lang
-import zhCN from './lang/zh-CN'
+中文介绍：[https://antdv.com/docs/vue/introduce-cn](https://antdv.com/docs/vue/introduce-cn)
 
-Vue.use(VueI18n)
+中文文档：[https://antdv.com/components/overview-cn](https://antdv.com/components/overview-cn)
 
-export const defaultLang = 'zh-CN'
+# 如何安装
 
-const messages = {
-  'zh-CN': {
-    ...zhCN
-  }
-}
+使用 npm 或者 [yarn](https://yarnpkg.com/) 都可以，个人推荐 yarn，速度比 npm 快。
 
-```
-在`src/config/defaultSettings.js`中，关闭locale
-```js
-menu: {
-	// locale: true
-	disableLocal: true // 关闭全球化
-},
-```
-在`scr/store/modules/app.js`中，lang 修改为 `zh-CN`
-```js
-const app = {
-  state: {
-    sideCollapsed: false,
-    isMobile: false,
-    theme: 'dark',
-    layout: '',
-    contentWidth: '',
-    fixedHeader: false,
-    fixedSidebar: false,
-    autoHideHeader: false,
-    color: '',
-    weak: false,
-    multiTab: true,
-    lang: 'zh-CN',
-    _antLocale: {}
-  },
-```
-在`src/core/bootstrap.js`中，最后几行修改`en-US`为`zh-CN`
-```js
-store.dispatch('setLang', storage.get(APP_LANGUAGE, 'zh-CN'))
-// last step
-}
-```
-在`src/layouts/UserLayouts.vue`和`src/components/GlobalHeader/RightContent.vue`中，删除`SelectLang`的引用。
-```js
-import { deviceMixin } from '@/store/device-mixin'
-// import SelectLang from '@/components/SelectLang'
+## 安装yarn
 
-export default {
-  name: 'UserLayout',
-  components: {
-    // SelectLang
-  },
-```
-## 加载动画内容修改
-在`public/index.html`中，`<div class="first-loading-wrp">`标签内的加载文字内容自行修改
+[安装 yarn](https://yarn.bootcss.com/docs/install#mac-stable)：`npm install --global yarn` 安装成功后 `yarn -v` 查看版本确认安装成功
 
-## 页脚版权信息修改
-在`src/components/GlobalFooter/index.vue`
+## 安装vue脚手架工具
 
-## 调试模式，初始化完成console输出内容
-在`src/utils/screenLog.js`
-字体使用【ASCII - ANSI Shadow】    
-工具地址：https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=xtong
-
-## Empty组件使用
-html部分
-```html
-<a-card v-if="no_data" :bordered="true" style='height: 500px;'>
-  <Empty style='margin-top: 80px;'>
-    <h2 slot="description"> 您没有待审批的申请 </h2>
-    <span slot="description"> 已通过的申请单，请您在申请记录中查看 </span>
-    <a-button type="primary">
-      立即添加
-    </a-button>
-  </Empty>
-</a-card>
-```
-js部分
-```js
-// ...
-import { Empty } from 'ant-design-vue'
-
-export default {
-  name: 'Home',
-  components: {
-    Info,
-    Empty,
-    STable
-  },
-  data () {
-    return {
-      no_data: true,
-// ...			
-```
-## 图片点击预览
-使用【v-viewer】实现  
-v-viewer：https://www.npmjs.com/package/v-viewer
 ```shell
-yarn install v-viewer
+yarn global add @vue/cli
 ```
-在`src/main.js`中引入 v-viewer
-```js
-// ...
-import './global.less' // global style
+全局安装 vue-cli
+```shell
+yarn global add @vue/cli
+yarn global v1.22.17
+[1/4] 🔍  Resolving packages...
+warning @vue/cli > @vue/cli-ui > apollo-server-express > subscriptions-transport-ws@0.9.19: The `subscriptions-transport-ws` package is no longer maintained. We recommend you use `graphql-ws` instead. For help migrating Apollo software to `graphql-ws`, see https://www.apollographql.com/docs/apollo-server/data/subscriptions/#switching-from-subscriptions-transport-ws    For general help using `graphql-ws`, see https://github.com/enisdenjo/graphql-ws/blob/master/README.md
+warning @vue/cli > @vue/cli-ui > apollo-server-express > apollo-server-core > subscriptions-transport-ws@0.9.19: The `subscriptions-transport-ws` package is no longer maintained. We recommend you use `graphql-ws` instead. For help migrating Apollo software to `graphql-ws`, see https://www.apollographql.com/docs/apollo-server/data/subscriptions/#switching-from-subscriptions-transport-ws    For general help using `graphql-ws`, see https://github.com/enisdenjo/graphql-ws/blob/master/README.md
+warning @vue/cli > @vue/cli-ui > apollo-server-express > apollo-server-core > apollo-cache-control@0.14.0: The functionality provided by the `apollo-cache-control` package is built in to `apollo-server-core` starting with Apollo Server 3. See https://www.apollographql.com/docs/apollo-server/migration/#cachecontrol for details.
+warning @vue/cli > @vue/cli-ui > apollo-server-express > apollo-server-core > apollo-tracing@0.15.0: The `apollo-tracing` package is no longer part of Apollo Server 3. See https://www.apollographql.com/docs/apollo-server/migration/#tracing for details
+warning @vue/cli > @vue/cli-ui > apollo-server-express > apollo-server-core > graphql-extensions@0.15.0: The `graphql-extensions` API has been removed from Apollo Server 3. Use the plugin API instead: https://www.apollographql.com/docs/apollo-server/integrations/plugins/
+warning @vue/cli > @vue/cli-ui > apollo-server-express > graphql-tools@4.0.8: This package has been deprecated and now it only exports makeExecutableSchema.\nAnd it will no longer receive updates.\nWe recommend you to migrate to scoped packages such as @graphql-tools/schema, @graphql-tools/utils and etc.\nCheck out https://www.graphql-tools.com to learn what package you should use instead
+warning @vue/cli > @vue/cli-ui > apollo-server-express > apollo-server-core > graphql-tools@4.0.8: This package has been deprecated and now it only exports makeExecutableSchema.\nAnd it will no longer receive updates.\nWe recommend you to migrate to scoped packages such as @graphql-tools/schema, @graphql-tools/utils and etc.\nCheck out https://www.graphql-tools.com to learn what package you should use instead
+warning @vue/cli > @vue/cli-ui > apollo-server-express > graphql-tools > uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+warning @vue/cli > vue-codemod > jscodeshift > micromatch > snapdragon > source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+warning @vue/cli > vue-codemod > jscodeshift > micromatch > snapdragon > source-map-resolve > resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+warning @vue/cli > vue-codemod > jscodeshift > micromatch > snapdragon > source-map-resolve > source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+warning @vue/cli > vue-codemod > jscodeshift > micromatch > snapdragon > source-map-resolve > urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 🔨  Building fresh packages...
+success Installed "@vue/cli@5.0.4" with binaries:
+      - vue
+✨  Done in 167.46s.
+```
+## 创建一个vue项目
 
-+ import 'viewerjs/dist/viewer.css'
-+ import Viewer from 'v-viewer'
+```shell
+vue create antd-demo
+```
+
+选择 vue2 版本，使用 yarn 安装
+
+```
+Vue CLI v5.0.4
+? Please pick a preset:
+  Default ([Vue 3] babel, eslint)
+❯ Default ([Vue 2] babel, eslint)
+  Manually select features
+```
+
+```
+Vue CLI v5.0.4
+✨  Creating project in /Users/xtong/code/demo/antd-demo.
+🗃  Initializing git repository...
+⚙️  Installing CLI plugins. This might take a while...
+
+yarn install v1.22.17
+info No lockfile found.
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+
+success Saved lockfile.
+✨  Done in 54.09s.
+🚀  Invoking generators...
+📦  Installing additional dependencies...
+
+yarn install v1.22.17
+[1/4] 🔍  Resolving packages...
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 🔨  Building fresh packages...
+
+success Saved lockfile.
+✨  Done in 11.58s.
+⚓  Running completion hooks...
+
+📄  Generating README.md...
+
+🎉  Successfully created project antd-demo.
+👉  Get started with the following commands:
+
+ $ cd antd-demo
+ $ yarn serve
+```
+
+在 antd-demo 目录下，运行 `yarn serve` 查看 demo 页面。
+
+## 安装 antdv 组件
+
+在 antd-demo 目录下，执行
+
+```shell
+// npm 安装 antdv
+npm install ant-design-vue --save
+// yarn 安装 antdv
+yarn add ant-design-vue
+```
+
+```shell
+➜  antd-demo git:(master) ✗ yarn add ant-design-vue@1.7.6
+yarn add v1.22.17
+[1/4] 🔍  Resolving packages...
+info There appears to be trouble with your network connection. Retrying...
+warning ant-design-vue > babel-runtime > core-js@2.6.12: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+[2/4] 🚚  Fetching packages...
+[3/4] 🔗  Linking dependencies...
+[4/4] 🔨  Building fresh packages...
+success Saved lockfile.
+success Saved 39 new dependencies.
+info Direct dependencies
+└─ ant-design-vue@1.7.6
+info All dependencies
+├─ @ant-design/colors@3.2.2
+├─ @ant-design/icons-vue@2.0.0
+├─ @ant-design/icons@2.1.1
+├─ @simonwep/pickr@1.7.4
+├─ add-dom-event-listener@1.1.0
+├─ ant-design-vue@1.7.6
+├─ array-tree-filter@2.1.0
+├─ async-validator@3.5.2
+├─ babel-helper-vue-jsx-merge-props@2.0.3
+├─ babel-runtime@6.26.0
+├─ classnames@2.3.1
+├─ component-classes@1.2.6
+├─ component-indexof@0.0.3
+├─ dom-align@1.12.3
+├─ dom-closest@0.2.0
+├─ dom-matches@2.0.0
+├─ dom-scroll-into-view@2.0.1
+├─ enquire.js@2.1.6
+├─ intersperse@1.0.0
+├─ is-mobile@2.2.2
+├─ is-negative-zero@2.0.2
+├─ ismobilejs@1.1.1
+├─ json2mq@0.2.0
+├─ loose-envify@1.4.0
+├─ moment@2.29.3
+├─ mutationobserver-shim@0.3.7
+├─ nanopop@2.1.0
+├─ node-emoji@1.11.0
+├─ omit.js@1.0.2
+├─ performance-now@2.1.0
+├─ raf@3.4.1
+├─ regenerator-runtime@0.11.1
+├─ resize-observer-polyfill@1.5.1
+├─ shallow-equal@1.2.1
+├─ shallowequal@1.1.0
+├─ string-convert@0.2.1
+├─ tinycolor2@1.4.2
+├─ vue-ref@2.0.0
+└─ warning@4.0.3
+✨  Done in 50.41s.
+```
+
+## 引入 antd
+
+在 vue 项目的 main.js 中，增加引入 antd 的代码。
+
+```
+import Vue from 'vue'
+import App from './App.vue'
++ import Antd from 'ant-design-vue'
++ import 'ant-design-vue/dist/antd.css'
 
 Vue.config.productionTip = false
 
-// mount axios to `Vue.$http` and `this.$http`
-Vue.use(VueAxios)
-// 引入图片预览
-+ Vue.use(Viewer, { name: 'v-viewer' })
-// ...
-```
-在页面中直接使用
-```html
-<viewer v-viewer="{toolbar: false}">
-  <img src="~@/assets/car.png" class="car-img" alt="car">
-</viewer>
-```
-## 离线部署的生产环境打包配置
-在`vue.config.js`中，只需要将`assetsCDN`里的内容注释掉
-```js
-const assetsCDN = {
-  // webpack build externals
-  externals: {
-    // vue: 'Vue',
-    // 'vue-router': 'VueRouter',
-    // vuex: 'Vuex',
-    // axios: 'axios'
-  },
-  css: [],
-  // https://unpkg.com/browse/vue@2.6.10/
-  js: [
-    // '//cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js',
-    // '//cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js',
-    // '//cdn.jsdelivr.net/npm/vuex@3.1.1/dist/vuex.min.js',
-    // '//cdn.jsdelivr.net/npm/axios@0.19.0/dist/axios.min.js'
-  ]
-}
-```
-## 根据查询条件导出excel
-html部分
-```html
-<a-button style="margin-left: 8px" @click="excel_export">导出</a-button>
-```
-js部分
-```js
-// ...
-import { applicationList, applicationExport } from '@/api/application'
-// ...
++ Vue.use(Antd)
 
-export default {
-  name: 'List',
-  components: {
-    Empty,
-    STable
-  },
-  data () {
-    return {
-    // ...
-    }
-  },
-  filters: {
-		// ...
-  },
-  methods: {
-    // ...
-    excel_export () {
-      if (this.queryParam.submit_time[0]) {
-        this.queryParam.submit_time[0] = moment(this.queryParam.submit_time[0]).format('YYYY-MM-DD HH:mm:ss')
-        this.queryParam.submit_time[1] = moment(this.queryParam.submit_time[1]).format('YYYY-MM-DD HH:mm:ss')
-      }
-      return applicationExport(this.queryParam)
-        .then(blob => {
-          const a = document.createElement('a')
-          const url = window.URL.createObjectURL(blob)
-          const filename = '导出结果.xlsx'
-          a.href = url
-          a.download = filename
-          a.click()
-          window.URL.revokeObjectURL(url)
-        })
-    },
-    moment
-  }
-}
-```
-## 分割线
-用`<a-divider />`代替`<hr />`
-
-## 获取form表单的值,根据值动态控制元素展示
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
 
 ```
-v-if="form.getFieldValue('fix_status') == 4"
-```
 
-## 修复 eslint 错误提示
+在 HelloWord.vue 文件中插入 antdv 的按钮元素查看效果: `a-button`
 
 ```
-npm run lint --fix
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <a-button type="primary" >新增</a-button>
+    ...
 ```
+
+<img class="shadow" src="/img/in-post/post-antd-note/post-antdv-button.jpg" >
+
+可以看到，antdv 的元素可以正常展示了。
+
+# 参考资料
+- <a href="https://antdv.com/components/overview-cn" target="_blank">Ant Design Vue 官方中文文档</a>
