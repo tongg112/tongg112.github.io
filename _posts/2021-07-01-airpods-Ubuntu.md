@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Airpods连接Ubuntu"
+title:  "Ubuntu下连接并使用Airpods  "
 subtitle: ""
 author: xtong
 date:   2021-07-01 22:34:25 +0800
@@ -10,7 +10,7 @@ header-img: "img/post-bg-node.png"
 comments: true
 ---
 
-# Airpods 连接 Ubuntu
+# Ubuntu 下连接并使用 Airpods  
 
 在 Ubuntu 20.04 上连接 Airpods 终于成功了，记录一下过程吧。
 > Ubuntu系统版本：Ubuntu 20.04.1  
