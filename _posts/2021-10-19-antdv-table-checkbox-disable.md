@@ -54,7 +54,7 @@ setCheckboxProps (record) {
 ## 软件版本：vue-antd-pro 3.0.2
 
 - "ant-design-vue": "^1.7.6"
-  - "vue": "^2.6.0",
+- "vue": "^2.6.0",
 
 ## 参考资料
 - [ant design vue pro 文档：Table 表格](https://antdv.com/components/table-cn/#rowSelection)  
