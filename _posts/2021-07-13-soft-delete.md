@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "项目中软删除的实现思路"
-subtitle: ""
+subtitle: "改造phalapi框架实现软删除"
 author: xtong
 date:   2021-07-13 22:32:52 +0800
 catalog: true
-tags: [笔记]
+tags: [笔记, php, phalapi]
 header-img: "img/post-bg-node.png"
 comments: true
 ---
@@ -30,7 +30,33 @@ comments: true
 - delete：更新当前时间戳(deleted_at/deleted)，更新status=3
 - 查询：增加查询条件`status<3`
 
-## 在PHP的phalapi框架下示例
+## 在PHP的phalapi框架下改造软删除的示例
+
+原框架中没有内置软删除功能，我们需要修改框架的 DataModel 类中的方法来实现。  
+我们不要去直接修改 DataModel 类，而是创建一个 Model 类继承自 DataModel。
+
+```php
+class Model extends DataModel
+```
+
+然后重写以下的方法，让项目中的 业务表Model 继承于我们创建的这个 Model类。
+
+- 插入 insert
+  - 自动插入创建时间 created
+- 更新 updateAll 和 update
+  - 自动更新更新时间 updated
+  - 自动更新数据状态 status = 2（已更新）
+- 删除 deleteAll 和 deleteIds
+  - 原删除 delete 操作改为 更新 update 操作
+  - 自动更新删除时间 deleted
+  - 自动更新数据状态 status = 3（已删除）
+- 查询 getList、getDataMoreBy、count
+  - 查询条件增加软删除状态过滤，status < 3 （已删除）
+
+
+
+当然，修改完 Model 之后，别忘了每张数据表也都应该修改，必须包含`status、created、updated、deleted`四个字段。
+
 ```php
     /** ---------------- 插入操作 ---------------- **/
 
