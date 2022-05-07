@@ -140,7 +140,7 @@ export default {
       no_data: true,
 // ...			
 ```
-## 图片点击预览
+## 图片点击预览（已发布）
 使用【v-viewer】实现  
 v-viewer：https://www.npmjs.com/package/v-viewer
 ```shell

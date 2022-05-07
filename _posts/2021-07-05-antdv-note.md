@@ -212,3 +212,4 @@ new Vue({
 
 # 参考资料
 - <a href="https://antdv.com/components/overview-cn" target="_blank">Ant Design Vue 官方中文文档</a>
+- [GitHub 代码示例：antd-demo 项目](https://github.com/tongg112/antd-demo)
