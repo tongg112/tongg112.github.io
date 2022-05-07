@@ -6,7 +6,7 @@ author: xtong
 date:   2021-09-23 13:32:52 +0800
 catalog: true
 tags: [laravel, php]
-header-img: "img/post-bg-node.png"
+header-img: "img/post-bg-laravel.png"
 comments: true
 ---
 ## 什么是软删除
