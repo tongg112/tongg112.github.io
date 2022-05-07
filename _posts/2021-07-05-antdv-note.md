@@ -61,7 +61,7 @@ success Installed "@vue/cli@5.0.4" with binaries:
 vue create antd-demo
 ```
 
-选择 vue2 版本，使用 yarn 安装
+选择 `vue2` 版本，使用 yarn 安装（antdv 的 1.7.6 版本，不支持最新的 vue3）
 
 ```
 Vue CLI v5.0.4
@@ -109,7 +109,7 @@ success Saved lockfile.
 
 在 antd-demo 目录下，运行 `yarn serve` 查看 demo 页面。
 
-## 安装 antdv 组件
+## 安装 antdv 组件（版本@1.7.6）
 
 在 antd-demo 目录下，执行
 
@@ -117,7 +117,7 @@ success Saved lockfile.
 // npm 安装 antdv
 npm install ant-design-vue --save
 // yarn 安装 antdv
-yarn add ant-design-vue
+yarn add ant-design-vue@1.7.6
 ```
 
 ```shell
