@@ -166,9 +166,14 @@ ln -s /usr/lib64/libcurl.so.4 ~/steamcmd/linux64/libcurl-gnutls.so.4
 # 如果不存在，查看有没有 libcurl.so.4.XX，有的话创建一个软连接
 ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl.so.4.3.0
 ```
+
+## 报`ld-linux.so.2`找不到的错误
+安装ld-linux.so.2：
+```
+yum install ld-linux.so.2
+```
 # 参考资料
 
 
 - [Dedicated Server Quick Setup Guide - Linux](https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/  )
 - [Dedicated Server Quick Setup Guide - Windows](https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/)
-
