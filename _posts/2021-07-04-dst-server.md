@@ -177,3 +177,4 @@ yum install ld-linux.so.2
 
 - [Dedicated Server Quick Setup Guide - Linux](https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/  )
 - [Dedicated Server Quick Setup Guide - Windows](https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/)
+- [ld-linux.so.2: bad ELF interpreter: No such file or directory](http://mahakala.lesc.uec.ac.jp/mahoodle/moodle/bug/lib_ld-linuxso2-bad-elf.php)
