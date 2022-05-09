@@ -149,8 +149,10 @@ D:\Program Files (x86)\Steam\steamapps\workshop\content\322330
 注意，需要将这些mod的文件夹命名为`workshop-{mod ID}`的格式。  
 比如`workshop-727774324`。
 > Myth Words Theme-神话书说主题：workshop-1991746508
-Myth Words Characters 神话书说角色：workshop-1699194522
-[DST] Legion-棱镜：workshop-1392778117
+
+> Myth Words Characters 神话书说角色：workshop-1699194522
+
+> [DST] Legion-棱镜：workshop-1392778117
 
 
 # 其他注意
