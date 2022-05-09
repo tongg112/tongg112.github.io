@@ -148,6 +148,9 @@ D:\Program Files (x86)\Steam\steamapps\workshop\content\322330
 找到对应的mod，并上传到服务器`~/dontstarvetogether_dedicated_server/mods`中。  
 注意，需要将这些mod的文件夹命名为`workshop-{mod ID}`的格式。  
 比如`workshop-727774324`。
+> Myth Words Theme-神话书说主题：workshop-1991746508
+Myth Words Characters 神话书说角色：workshop-1699194522
+[DST] Legion-棱镜：workshop-1392778117
 
 
 # 其他注意
@@ -167,6 +170,13 @@ ln -s /usr/lib64/libcurl.so.4 ~/steamcmd/linux64/libcurl-gnutls.so.4
 ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl.so.4.3.0
 ```
 
+如果还是不行，安装
+```
+yum install libcurl.i686
+cd /usr/lib
+ln -s libcurl.so.4 libcurl-gnutls.so.4
+
+```
 ## 报`ld-linux.so.2`找不到的错误
 
 安装ld-linux.so.2：
@@ -187,3 +197,4 @@ echo "" > /etc/ld.so.preload
 - [Dedicated Server Quick Setup Guide - Windows](https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/)
 - [ld-linux.so.2: bad ELF interpreter: No such file or directory](http://mahakala.lesc.uec.ac.jp/mahoodle/moodle/bug/lib_ld-linuxso2-bad-elf.php)
 - [libdns.so 错误解决](http://blog.nice123.plus/2018/10/19/object-usr-local-lib-libdns-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored/)
+- [centos7.x86_64搭建饥荒服务器](https://www.cnblogs.com/lanhj/p/7620147.html)
