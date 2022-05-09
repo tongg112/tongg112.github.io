@@ -168,9 +168,17 @@ ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl.so.4.3.0
 ```
 
 ## 报`ld-linux.so.2`找不到的错误
+
 安装ld-linux.so.2：
 ```
 yum install ld-linux.so.2
+```
+
+## 报错`ERROR: ld.so: object '/$LIB/libonion.so' from /etc/ld.so.preload cannot be preloaded: ignored.`
+
+清空 /etc/ld.so.preload
+```
+echo "" > /etc/ld.so.preload
 ```
 # 参考资料
 
@@ -178,3 +186,4 @@ yum install ld-linux.so.2
 - [Dedicated Server Quick Setup Guide - Linux](https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/  )
 - [Dedicated Server Quick Setup Guide - Windows](https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/)
 - [ld-linux.so.2: bad ELF interpreter: No such file or directory](http://mahakala.lesc.uec.ac.jp/mahoodle/moodle/bug/lib_ld-linuxso2-bad-elf.php)
+- [libdns.so 错误解决](http://blog.nice123.plus/2018/10/19/object-usr-local-lib-libdns-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored/)
