@@ -18,7 +18,7 @@ comments: true
 
 - src/components/Table/index.js
 
-```
+```js
 // 在 props 中增加 showQuickJumper
 ...
 showSizeChanger: {
@@ -47,7 +47,7 @@ this.localPagination = this.showPagination && Object.assign({}, this.localPagina
 ```
 如果在 props 中设置了默认 `false`，则在 s-table 组件调用时可以配置 `show-quick-jumper` 来开启自定义页码跳转
 
-```
+```html
 <s-table
   ref="table"
 +   show-quick-jumper
@@ -65,7 +65,7 @@ this.localPagination = this.showPagination && Object.assign({}, this.localPagina
 
 - src/components/Table/index.js
 
-```
+```js
 // 在 props 中增加 showTotal
 ...
 showSizeChanger: {
