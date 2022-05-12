@@ -6,7 +6,7 @@ author: xtong
 date:   2022-05-12 21:52:52 +0800
 catalog: true
 tags: [python, 后端, 爬虫]
-header-img: "img/post-bg-php.jpeg"
+header-img: "img/post-bg-python.jpeg"
 comments: true
 ---
 
@@ -33,6 +33,7 @@ pip3 install bs4 xlwt
 
 # 代码实现
 - 引入 modules
+
 ```python
 import os
 import sqlite3
@@ -46,6 +47,7 @@ from bs4 import BeautifulSoup
 ```
 
 - 请求头设置
+
 ```python
 # 浏览器请求头
 head = {
@@ -74,7 +76,9 @@ def get_page_content(url):
 ```
 
 - 获取网站专辑总页数，这个可以浏览器里看一眼总页数，不麻烦
+
 - 保存专辑信息到本地
+
 ```python
 # 专辑数据爬取到本地
 def album_to_local():
@@ -101,6 +105,7 @@ def album_to_local():
     # 爬取专辑信息
     save_album_list(baseurl, total_page, page)
 ```
+
 ```python
 
 # 爬取保存专辑信息
@@ -150,7 +155,9 @@ def save_to_excel(data_list, save_path):
             sheet.write(i + 1, j, data[j])
     book.save(save_path)
 ```
+
 - 专辑信息正则与图片正则
+
 ```python
 # <a href="https://xtongs.com/web/1001.html" target="_blank" title="自然风景之美丽夕阳"><img src="https://xtongs.com/static/24/03/db/aHR0cHM6Ly9udXlvdTguY2MvemJfdXNlcnMvdXBsb2FkLzIwMjIvMDQvMjAyMjA0MjQxNjUwNzY2MzgzMzcwNDgxLmpwZw-190-285-index-a.jpg"/></a>
 
@@ -179,7 +186,9 @@ re_image_id = re.compile(r'.*\/(.*?)\.jpg')
 db_path = 'spider2022.db'
 
 ```
+
 - 创建 sqlite 数据库 spider2022.db
+
 ```sql
 -- auto-generated definition
 create table album
@@ -204,7 +213,9 @@ create table failed
 );
 
 ```
+
 - 专辑保存到数据库
+
 ```python
 # 保存专辑信息到数据库
 def save_to_db(data_list):
@@ -230,6 +241,7 @@ def save_to_db(data_list):
 ```
 
 - 下载图片
+
 ```python
 # 获取当爬取队列
 def get_album():
@@ -316,6 +328,7 @@ def failed_remove(url):
     conn.commit()
 
 ```
+
 > 下载图片方法可以拆出来下载方法 和 图片地址获取方法，但是这里我很懒不想搞了，熬夜不好，早点睡了
 
 ```python
@@ -416,7 +429,9 @@ def download_images():
         failed_remove(url)
 
 ```
+
 - 主程序
+
 ```python
 
 def main():
