@@ -76,12 +76,15 @@ kramdown:
 # Disqus settings
 # disqus_username: xtongs-com
 
-# gitalk:
-#    owner: tongg112
-#    repo: tongg112.github.io
-#    clientID: 759a5d44d57399b4031b
-#    clientSecret: 53345c089d62123ca269bd1cb1fa800df3a6fcc2
-#    admin: xtongs
+
+# utteranc settings
+utteranc:
+  enable: true
+  repo: tongg112/tongg112.github.io
+  issue-term: pathname
+  label: 💬
+  theme: github-light
+
 
 # Netease settings
 netease_comment: false

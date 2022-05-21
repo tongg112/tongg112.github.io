@@ -101,12 +101,9 @@ layout: default
   {% include mathjax_support.html %}
 {% endif %}
 
-<!-- gitalk 评论 -->
-{% if site.gitalk %}
-<div class="comment">
-    {% include comments.html %}
-</div>
-{% endif %}
+<!-- utteranc 评论框 start -->
+{% include utteranc.html %}
+<!-- utteranc 评论框 end -->
 
 {% if site.netease_comment %}
 <!-- 网易云跟帖JS代码 start -->
