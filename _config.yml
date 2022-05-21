@@ -74,14 +74,14 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: xtongs-com
+# disqus_username: xtongs-com
 
-#gitalk:
-#    owner: 你
-#    repo: 评论仓库名称
-#    clientID: 申请的ID
-#    clientSecret: 申请的clientSecret
-#    admin: 名称
+gitalk:
+   owner: tongg112
+   repo: tongg112.github.io
+   clientID: 759a5d44d57399b4031b
+   clientSecret: 53345c089d62123ca269bd1cb1fa800df3a6fcc2
+   admin: xtongs
 
 # Netease settings
 netease_comment: false
