@@ -51,7 +51,17 @@ Log::debug($message);
 ```
 参考官方文档。
 
+## sql打印
 
+```
+DB::enableQueryLog();
+
+// 查询数据库 业务代码
+$list = User::select(DB::raw('count(*) as total, dept'))->groupBy('is_true')->get();
+
+\Illuminate\Support\Facades\Log::error(DB::getQueryLog());
+
+```
 
 # 软件版本：laravel 8.54
 
