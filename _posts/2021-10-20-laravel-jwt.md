@@ -6,7 +6,7 @@ author: xtong
 date:   2021-10-20 21:32:52 +0800
 catalog: true
 tags: [laravel, php, jwt]
-header-img: "img/post-bg-node.png"
+header-img: "img/post-bg-laravel.png"
 comments: true
 ---
 

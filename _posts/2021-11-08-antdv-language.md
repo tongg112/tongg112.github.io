@@ -73,4 +73,4 @@ const app = {
 ## 软件版本：vue-antd-pro 3.0.2
 
 - "ant-design-vue": "^1.7.6"
-  - "vue": "^2.6.0",
+- "vue": "^2.6.0",

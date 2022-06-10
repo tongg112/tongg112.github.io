@@ -38,9 +38,10 @@ Fatal error: require_once(): Failed opening required '/home/wwwroot/carapi/publi
 ```
 有了错误信息，就好解决了  
 # 解决办法
-因为nginx中配置的网站根目录是`/home/wwwroor/carapi/public`，所以在获取public之外的目录文件时出错。  
-只要修改`open_basedir`，增加`/home/wwwroor/carapi/`目录就可以了。  
+因为nginx中配置的网站根目录是`/home/wwwroot/carapi/public`，所以在获取public之外的目录文件时出错。  
+只要修改`open_basedir`，增加`/home/wwwroot/carapi/`目录就可以了。  
 lnmp的nginx配置文件
+
 ```
 vim /usr/local/nginx/conf/fastcgi.conf
 ```

@@ -31,7 +31,7 @@ future: true
 
 
 # SNS settings
-RSS: false
+RSS: true
 weibo_username:     tongg112
 zhihu_username:     xtongs
 github_username:    tongg112
@@ -74,7 +74,17 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: xtongs-com
+# disqus_username: xtongs-com
+
+
+# utteranc settings
+utteranc:
+  enable: true
+  repo: tongg112/tongg112.github.io
+  issue-term: pathname
+  label: 💬
+  theme: github-light
+
 
 # Netease settings
 netease_comment: false

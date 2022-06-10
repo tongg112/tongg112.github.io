@@ -41,7 +41,7 @@ export default {
   colorWeak: false,
   multiTab: true, // <----- 增加 multiTab 配置
 // ...
-```  
+```
 
 ## 布局模版中增加 multitab
 
@@ -230,7 +230,7 @@ export default {
 ## 软件版本：vue-antd-pro 3.0.2
 
 - "ant-design-vue": "^1.7.6"
-  - "vue": "^2.6.0",
+- "vue": "^2.6.0",
 
 ## 参考资料
 - [ant design vue pro 支持多页签模式 页签可以缓存](https://blog.csdn.net/abcdefg182/article/details/108454433)
