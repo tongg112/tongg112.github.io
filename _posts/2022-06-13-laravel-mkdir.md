@@ -12,7 +12,7 @@ comments: true
 
 ## 创建文件夹
 
-- 可以使用 php 的 mkdir 直接创建文件夹
+- 可以使用 php 的 mkdir 直接创建文件夹，默认权限：777
 
 ```php
 
@@ -29,7 +29,7 @@ mkdir("/path/to/my/dir", 0700);
 # 如果因为权限问题无法创建目录，导致 E_WARNING错误。
 ```
 
-- 使用 laravel 框架中提供的方法
+- 使用 laravel 框架中提供的方法，默认权限：755
 
 ```php
 use Illuminate\Support\Facades\Storage;
