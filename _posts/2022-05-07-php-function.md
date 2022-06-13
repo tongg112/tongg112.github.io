@@ -83,6 +83,36 @@ if(in_array($new_student['name'], $student_names)) {
   echo '巧了，本班也有一名同学叫：' . $new_student['name'];
 }
 ```
+
+# array_values — 返回数组中所有的值
+
+文档：[https://www.php.net/manual/zh/function.array-values](https://www.php.net/manual/zh/function.array-values)
+
+通常在遍历处理数组内容时，使用 `unset()` 去除不需要的元素后，会导致数组的索引不连续，写接口返回给前端就会变成对象；要避免这种情况，可以在这里使用 `array_values` 进行索引重建。
+
+```php
+print_r($list);
+
+Array(
+  [0] => 'apple'
+  [4] => 'car'
+  [5] => 'google'
+  [7] => 'youtube'
+)
+
+// array_values() 返回 input 数组中所有的值并给其建立数字索引。
+$list = array_values($list);
+
+Array(
+  [0] => 'apple'
+  [1] => 'car'
+  [2] => 'google'
+  [3] => 'youtube'
+)
+
+```
+
+
 # 参考资料
 - [PHP 官方手册](https://www.php.net/)
 
