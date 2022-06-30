@@ -154,6 +154,30 @@ D:\Program Files (x86)\Steam\steamapps\workshop\content\322330
 
 > [DST] Legion-棱镜：workshop-1392778117
 
+## mod更新
+在`~/dontstarvetogether_dedicated_server/mods/dedicated_server_mods_setup.lua`
+文件末尾添加 `ServerModSetup('mod编号')`
+
+```
+--There are two functions that will install mods, ServerModSetup and ServerModCollectionSetup. Put the calls to the functions in this file and they will be executed on boot.
+
+--ServerModSetup takes a string of a specific mod's Workshop id. It will download and install the mod to your mod directory on boot.
+	--The Workshop id can be found at the end of the url to the mod's Workshop page.
+	--Example: http://steamcommunity.com/sharedfiles/filedetails/?id=350811795
+	--ServerModSetup("350811795")
+
+--ServerModCollectionSetup takes a string of a specific mod's Workshop id. It will download all the mods in the collection and install them to the mod directory on boot.
+	--The Workshop id can be found at the end of the url to the collection's Workshop page.
+	--Example: http://steamcommunity.com/sharedfiles/filedetails/?id=379114180
+	--ServerModCollectionSetup("379114180")
+ServerModSetup("1392778117")
+ServerModSetup("378160973")
+```
+注释掉`run_dedicated_servers.sh `脚本中的这一行后，重新运行脚本启动服务
+```
+# ./steamcmd.sh +force_install_dir "$install_dir" +login anonymous +app_update 343050 validate +quit
+
+```
 
 # 其他注意
 ## 报`libcurl-gnutls.so.4`找不到的错误
