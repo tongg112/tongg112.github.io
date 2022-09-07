@@ -14,7 +14,7 @@ comments: true
 # 为英文版本设置特定的CSS
 
 label设置自动换行：
-```
+```css
 >>> .ant-form-item-label {
   display: inline-block;
   overflow: hidden;
@@ -26,7 +26,7 @@ label设置自动换行：
 ```
 仅在英文版本下，label自动换行：
 
-```
+```html
 <template>
   <a-form :form="form" :lang="$i18n.locale">
     ...
