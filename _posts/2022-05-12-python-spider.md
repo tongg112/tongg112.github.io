@@ -52,7 +52,7 @@ from bs4 import BeautifulSoup
 # 浏览器请求头
 head = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36",
-    # "Referer": "https://www.mzitu.com/"
+    # "Referer": "https://www.xtongs.com/"
 }
 # 图片下载请求头
 img_header = [
