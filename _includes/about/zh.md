@@ -78,3 +78,17 @@
 - vim编辑器
 
 - Ubuntu桌面系统美化
+
+- MacOS办公
+
+- iPhone iPad Mac 全家桶用户
+
+- NS主机玩家
+
+- 偶尔玩玩 new bing 和 Stable Diffusion
+
+- 立直麻将爱好者，玩雀魂
+
+- 一位努力控制体重的父亲
+
+- 等想起什么了再写写……
