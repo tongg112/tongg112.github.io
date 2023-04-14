@@ -444,6 +444,140 @@ if __name__ == '__main__':
     main()
 ```
 
+# 豆瓣电影 top250 爬取
+
+```python
+# Author:Xtongs
+# -*- coding = utf-8 -*-
+# @Time: 2023/3/2 下午7:14
+# @Author: xtong
+# @File: main.py
+# @Software: VScode
+
+# 爬取地址:https://movie.douban.com/top250
+
+import urllib.request
+import re
+
+import xlwt
+from bs4 import BeautifulSoup
+
+# 浏览器请求头
+head = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36",
+    # "Referer": "https://movie.douban.com/"
+}
+
+# 需要修改的地方，注意正则要与网站对应
+
+# 电影排名
+re_movie_rank = re.compile(r'<em class="">(.*?)</em>')
+
+# 电影标题
+# re_album_name = re.compile(r'.*>(.*)</a></span>')
+re_album_name = re.compile(r'<span class="title">(.*?)</span>')
+
+# 电影链接地址
+# re_album_link = re.compile(r'href="(.*)" target="_blank"><img')
+re_album_link = re.compile(r'<a href="(.*)">')
+
+# 电影封面图片
+# re_cover_link = re.compile(r'data-original="(.*?)"')
+re_cover_link = re.compile(r'src="(.*?)"')
+
+
+
+def main():
+    # 电影数据爬取到本地
+    album_to_local()
+
+
+# 电影数据爬取到本地
+def album_to_local():
+    print('开始')
+    # 爬取地址
+    baseurl = 'https://movie.douban.com/top250'
+    save_path = '豆瓣250.xls'
+    print('爬取地址：%s' % baseurl)
+    # 爬取电影信息
+    save_movie_list(baseurl, 10)
+
+
+# 获取页面内容
+def get_page_content(url):
+    print('获取页面内容:%s' % url)
+    request = urllib.request.Request(url, headers=head)
+    html = ''
+    try:
+        response = urllib.request.urlopen(request, timeout=5)
+        html = response.read().decode()
+    except Exception as e:
+        print(e)
+    return BeautifulSoup(html, "html.parser")
+
+
+
+# 爬取保存电影信息
+def save_movie_list(baseurl, total_page):
+    print('获取电影信息')
+    all_data = []
+    for i in range(0, int(total_page)):
+        data_list = []
+        # 修改电影地址
+        url = baseurl + '?start=' + str((i)*25)
+        soup = get_page_content(url)
+        # 修改电影信息获取 find_all_next
+        for item in soup.find(id="content").find_all(class_='item'):
+            item = str(item)
+            # print(item)
+            data = []
+            movie_rank = re.findall(re_movie_rank, item)[0]
+            # print(re.findall(re_album_name, item))
+            album_name = re.findall(re_album_name, item)[0]
+            # print(album_name)
+            album_link = re.findall(re_album_link, item)[0]
+            # print(album_link)
+            cover_link = re.findall(re_cover_link, item)[0]
+            # print(cover_link)
+            data.append(movie_rank)
+            data.append(album_name)
+            data.append(album_link)
+            data.append(cover_link)
+            data_list.append(data)
+            # print(data)
+            # print(data_list)
+            # break
+        # break
+        # print(data_list)
+        # break
+        # save_to_db(data_list)
+        all_data.extend(data_list)
+    print(all_data)
+    save_to_excel(all_data, 'movie.xls')
+    return data_list
+
+
+# 保存到excel测试
+def save_to_excel(data_list, save_path):
+    print('保存execl')
+    book = xlwt.Workbook(encoding="utf-8", style_compression=0)
+    sheet = book.add_sheet('电影', cell_overwrite_ok=True)
+    col = ('电影排名', '电影名称', '介绍地址', '电影海报')
+    for i in range(0, 4):
+        sheet.write(0, i, col[i])
+    for i in range(0, len(data_list)):
+        print("第%d条" % i)
+        data = data_list[i]
+        for j in range(0, 4):
+            sheet.write(i + 1, j, data[j])
+    book.save(save_path)
+
+
+
+if __name__ == '__main__':
+    main()
+```
+
 # 参考资料
 - [Python 官网](https://www.python.org/)
 
