@@ -17,7 +17,7 @@ comments: true
 
 使用php，当然需要php环境了，还有转码的软件ffmpeg。
 
-# 1.1 PHP运行环境下载
+## 1.1 PHP运行环境下载
 
 在php官网上下载php7.4的windows版：
 
@@ -25,7 +25,7 @@ https://www.php.net/releases/
 
 > php-7.4.33-nts-Win32-vc15-x64.zip
 
-# 1.2 ffmpeg下载
+## 1.2 ffmpeg下载
 
 在ffmpeg官网下载最新的Windows版：
 
