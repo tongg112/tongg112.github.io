@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Xtong's Blog",
+  "short_name": "Xtong's Blog",
+  "description": "以终为始",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",
