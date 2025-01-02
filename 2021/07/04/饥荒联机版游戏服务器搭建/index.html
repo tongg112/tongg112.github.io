@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>饥荒联机版游戏服务器搭建 | Xtongs blog</title><meta name="keywords" content="游戏,饥荒"><meta name="author" content="Xtong"><meta name="copyright" content="Xtong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="饥荒联机版游戏服务器搭建"><meta name="application-name" content="饥荒联机版游戏服务器搭建"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="饥荒联机版游戏服务器搭建"><meta property="og:url" content="http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/index.html"><meta property="og:site_name" content="Xtongs blog"><meta property="og:description" content="背景故事和朋友一起玩饥荒是非常快乐的事情。在和朋友在开新档时总说：“这个是长期档，咱们好好玩”，然而总是“半途而废”。饥荒弃坑已经很久了，前一阵儿和朋友偶然说玩一玩饥荒，我们离开的时间里klei一直勤奋地更新着，攒了好大一波对我们来说的“新内容”，可以一次体验个够了。而我们又发现了一些有趣的mod，"><meta property="og:locale" content="zh"><meta property="og:image" content="http://xtongs.com/images/bg-dst.jpg"><meta property="article:author" content="Xtong"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="http://xtongs.com/images/bg-dst.jpg"><meta name="description" content="背景故事和朋友一起玩饥荒是非常快乐的事情。在和朋友在开新档时总说：“这个是长期档，咱们好好玩”，然而总是“半途而废”。饥荒弃坑已经很久了，前一阵儿和朋友偶然说玩一玩饥荒，我们离开的时间里klei一直勤奋地更新着，攒了好大一波对我们来说的“新内容”，可以一次体验个够了。而我们又发现了一些有趣的mod，"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Xtong","link":"链接: ","source":"来源: Xtongs blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Xtongs blog',
+  title: '饥荒联机版游戏服务器搭建',
+  postAI: '',
+  pageFillDescription: '背景故事, 存档迁移, 本地准备工作, 找到存档, 创建并下载服务端配置, 解压空白存档将其替换成要迁移的存档, 服务器准备工作, 环境安装, 安装steamcmd, 创建游戏存档目录, 上传空白存档, 开始迁移, 启动脚本上传至云服务器, 赋予脚本可执行权限, 执行脚本启动服务, 上传需要迁移的游戏存档, 上传游戏mod, mod更新, 其他注意, 报libcurl-gnutls.so.4找不到的错误, 报ld-linux.so.2找不到的错误, 报错ERROR ld.so object 39/$LIB/libonion.so39 from /etc/ld.so.preload cannot be preloaded ignored., 参考资料背景故事和朋友一起玩饥荒是非常快乐的事情在和朋友在开新档时总说这个是长期档咱们好好玩然而总是半途而废饥荒弃坑已经很久了前一阵儿和朋友偶然说玩一玩饥荒我们离开的时间里一直勤奋地更新着攒了好大一波对我们来说的新内容可以一次体验个够了而我们又发现了一些有趣的比如神话书说棱镜这下料就更足了我用在游戏内开创建存档断断续续玩了差不多天饥荒游戏内的日历最近工作上开始忙了不能稳定地创建服务器所以想把这个存档迁移到云服务器上这样就方便多了存档迁移本地准备工作找到存档既然是迁移存档首先要找到存档的位置的饥荒联机版存档位置一般在这个目录这个可能是用来区分不同账户的用户名创建并下载服务端配置登录账号使用登录登录后选择饥荒联机版的游戏服务器按钮添加新服务器填写好服务器配置后点击下载设置按钮得到一个压缩文件解压空白存档将其替换成要迁移的存档解压后把我们的存档替换进来删除下的和文件夹将我们需要迁移的存档目录下的和文件夹拷贝到目录里服务器准备工作环境安装登录云服务器执行安装创建游戏存档目录上传空白存档把之前得到的上传到并解压空白存档的位置开始迁移启动脚本上传至云服务器上传或者创建以下脚本到云服务器的当前用户目录下载地址赋予脚本可执行权限执行脚本启动服务执行成功后服务器上会生成一些目录停止脚本进行后续操作生成的可以存放稍后上传生成的用来存放存档上传需要迁移的游戏存档将准备好的文件夹上传到下存档上传后的路径上传游戏本地饥荒游戏一般在安装目录比如将这个文件夹里的文件上传到服务器下面的目录中对于神话书说棱镜等并没有在上面的目录中需要在这个目录下找安装目录比如找到对应的并上传到服务器中注意需要将这些的文件夹命名为的格式比如神话书说主题神话书说角色棱镜更新在文件末尾添加编号注释掉脚本中的这一行后重新运行脚本启动服务其他注意报找不到的错误解决办法给创建软连接注意查看下是否存在如果不存在查看有没有有的话创建一个软连接如果还是不行安装报找不到的错误安装报错清空参考资料错误解决搭建饥荒服务器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-01-03 00:40:30',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Xtongs blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>2</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>1</sup></a><a href="/tags/nodejs/" style="font-size: 1.05rem;">nodejs<sup>1</sup></a><a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 1.05rem;">日语<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 1.05rem;">游戏<sup>1</sup></a><a href="/tags/%E9%A5%A5%E8%8D%92/" style="font-size: 1.05rem;">饥荒<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">July 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">June 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url">游戏</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>游戏</span></a><a class="article-meta__tags" href="/tags/%E9%A5%A5%E8%8D%92/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>饥荒</span></a></span></div></div><h1 class="post-title" itemprop="name headline">饥荒联机版游戏服务器搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2021-07-04T15:50:00.000Z" title="发表于 2021-07-04 23:50:00">2021-07-04</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-01-02T16:40:30.781Z" title="更新于 2025-01-03 00:40:30">2025-01-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为大版"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>大版</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/bg-dst.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"><header><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F/" itemprop="url">游戏</a><a href="/tags/%E6%B8%B8%E6%88%8F/" tabindex="-1" itemprop="url">游戏</a><a href="/tags/%E9%A5%A5%E8%8D%92/" tabindex="-1" itemprop="url">饥荒</a><h1 id="CrawlerTitle" itemprop="name headline">饥荒联机版游戏服务器搭建</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Xtong</span><time itemprop="dateCreated datePublished" datetime="2021-07-04T15:50:00.000Z" title="发表于 2021-07-04 23:50:00">2021-07-04</time><time itemprop="dateCreated datePublished" datetime="2025-01-02T16:40:30.781Z" title="更新于 2025-01-03 00:40:30">2025-01-03</time></header><h1 id="背景故事"><a href="#背景故事" class="headerlink" title="背景故事"></a>背景故事</h1><p>和朋友一起玩饥荒是非常快乐的事情。在和朋友在开新档时总说：“这个是长期档，咱们好好玩”，然而总是“半途而废”。<br>饥荒弃坑已经很久了，前一阵儿和朋友偶然说玩一玩饥荒，我们离开的时间里klei一直勤奋地更新着，攒了好大一波对我们来说的“新内容”，可以一次体验个够了。而我们又发现了一些有趣的mod，比如《神话书说》、《棱镜》，这下料就更足了。<br>我用windows在游戏内，开mod，创建存档，断断续续玩了差不多200天（饥荒游戏内的日历）。最近工作上开始忙了，不能稳定地创建服务器，所以想把这个存档迁移到云服务器上，这样就方便多了。</p>
+<h1 id="存档迁移"><a href="#存档迁移" class="headerlink" title="存档迁移"></a>存档迁移</h1><h2 id="本地准备工作"><a href="#本地准备工作" class="headerlink" title="本地准备工作"></a>本地准备工作</h2><h3 id="找到存档"><a href="#找到存档" class="headerlink" title="找到存档"></a>找到存档</h3><p>既然是迁移存档，首先要找到存档的位置。<br>windows的饥荒联机版存档位置一般在这个目录，（<code>87037553</code>这个可能是用来区分不同steam账户的）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\&#123;用户名&#125;\Documents\Klei\DoNotStarveTogether\87037553\Cluster_1</span><br></pre></td></tr></table></figure>
+<img class="shadow" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/in-post/post-dst-server/save.png" >
+
+<h3 id="创建并下载服务端配置"><a href="#创建并下载服务端配置" class="headerlink" title="创建并下载服务端配置"></a>创建并下载服务端配置</h3><p>登录klei账号：<a target="_blank" rel="noopener" href="https://accounts.klei.com/account/game/list">https://accounts.klei.com/account/game/list</a><br>使用steam登录，登录后选择【《饥荒：联机版》的游戏服务器】按钮<br>（<a target="_blank" rel="noopener" href="https://accounts.klei.com/account/game/servers?game=DontStarveTogether%EF%BC%89">https://accounts.klei.com/account/game/servers?game=DontStarveTogether）</a><br>添加新服务器，填写好服务器配置后，点击【下载设置】按钮，得到一个压缩文件<code>MyDediServer.zip</code>。</p>
+<h3 id="解压空白存档，将其替换成要迁移的存档"><a href="#解压空白存档，将其替换成要迁移的存档" class="headerlink" title="解压空白存档，将其替换成要迁移的存档"></a>解压空白存档，将其替换成要迁移的存档</h3><p>解压<code>MyDediServer.zip</code>后，把我们的存档替换进来：</p>
+<ul>
+<li>删除 MyDediServer 下的 Master 和 Caves 文件夹；</li>
+<li>将我们需要迁移的存档 Cluster 目录下的 Master 和 Caves 文件夹拷贝到 MyDediServer目录里。</li>
+</ul>
+<h2 id="服务器准备工作"><a href="#服务器准备工作" class="headerlink" title="服务器准备工作"></a>服务器准备工作</h2><h3 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h3><p>登录云服务器，执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y libstdc++6:i386 libgcc1:i386 libcurl4-gnutls-dev:i386 screen</span><br></pre></td></tr></table></figure>
+<h3 id="安装steamcmd"><a href="#安装steamcmd" class="headerlink" title="安装steamcmd"></a>安装steamcmd</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/steamcmd &amp;&amp; cd ~/steamcmd</span><br><span class="line">wget &quot;https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz&quot;</span><br><span class="line">tar -zxvf steamcmd_linux.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="创建游戏存档目录"><a href="#创建游戏存档目录" class="headerlink" title="创建游戏存档目录"></a>创建游戏存档目录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.klei/DoNotStarveTogether</span><br></pre></td></tr></table></figure>
+<h3 id="上传空白存档"><a href="#上传空白存档" class="headerlink" title="上传空白存档"></a>上传空白存档</h3><p>把之前得到的<code>MyDediServer.zip</code>,上传到<code>~/.klei/DoNotStarveTogether</code>并解压。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">空白存档的位置</span></span><br><span class="line">~/.klei/DoNotStarveTogether/MyDediServer</span><br></pre></td></tr></table></figure>
+<h2 id="开始迁移"><a href="#开始迁移" class="headerlink" title="开始迁移"></a>开始迁移</h2><h3 id="启动脚本上传至云服务器"><a href="#启动脚本上传至云服务器" class="headerlink" title="启动脚本上传至云服务器"></a>启动脚本上传至云服务器</h3><p>上传或者创建以下脚本到云服务器的当前用户目录（~&#x2F;）：<br>下载地址：<a target="_blank" rel="noopener" href="https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh">https://accounts.klei.com/assets/gamesetup/linux/run_dedicated_servers.sh</a>  </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">steamcmd_dir=&quot;$HOME/steamcmd&quot;</span><br><span class="line">install_dir=&quot;$HOME/dontstarvetogether_dedicated_server&quot;</span><br><span class="line">cluster_name=&quot;MyDediServer&quot;</span><br><span class="line">dontstarve_dir=&quot;$HOME/.klei/DoNotStarveTogether&quot;</span><br><span class="line"></span><br><span class="line">function fail()</span><br><span class="line">&#123;</span><br><span class="line">	echo Error: &quot;$@&quot; &gt;&amp;2</span><br><span class="line">	exit 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function check_for_file()</span><br><span class="line">&#123;</span><br><span class="line">	if [ ! -e &quot;$1&quot; ]; then</span><br><span class="line">		fail &quot;Missing file: $1&quot;</span><br><span class="line">	fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">cd &quot;$steamcmd_dir&quot; || fail &quot;Missing $steamcmd_dir directory!&quot;</span><br><span class="line"></span><br><span class="line">check_for_file &quot;steamcmd.sh&quot;</span><br><span class="line">check_for_file &quot;$dontstarve_dir/$cluster_name/cluster.ini&quot;</span><br><span class="line">check_for_file &quot;$dontstarve_dir/$cluster_name/cluster_token.txt&quot;</span><br><span class="line">check_for_file &quot;$dontstarve_dir/$cluster_name/Master/server.ini&quot;</span><br><span class="line">check_for_file &quot;$dontstarve_dir/$cluster_name/Caves/server.ini&quot;</span><br><span class="line"></span><br><span class="line">./steamcmd.sh +force_install_dir &quot;$install_dir&quot; +login anonymous +app_update 343050 validate +quit</span><br><span class="line"></span><br><span class="line">check_for_file &quot;$install_dir/bin&quot;</span><br><span class="line"></span><br><span class="line">cd &quot;$install_dir/bin&quot; || fail</span><br><span class="line"></span><br><span class="line">run_shared=(./dontstarve_dedicated_server_nullrenderer)</span><br><span class="line">run_shared+=(-console)</span><br><span class="line">run_shared+=(-cluster &quot;$cluster_name&quot;)</span><br><span class="line">run_shared+=(-monitor_parent_process $$)</span><br><span class="line"></span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; -shard Caves  | sed &#x27;s/^/Caves:  /&#x27; &amp;</span><br><span class="line">&quot;$&#123;run_shared[@]&#125;&quot; -shard Master | sed &#x27;s/^/Master: /&#x27;</span><br></pre></td></tr></table></figure>
+<h3 id="赋予脚本可执行权限"><a href="#赋予脚本可执行权限" class="headerlink" title="赋予脚本可执行权限"></a>赋予脚本可执行权限</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x run_dedicated_servers.sh</span><br></pre></td></tr></table></figure>
+<h3 id="执行脚本启动服务"><a href="#执行脚本启动服务" class="headerlink" title="执行脚本启动服务"></a>执行脚本启动服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">screen</span><br><span class="line">./run_dedicated_servers.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>执行成功后，服务器上会生成一些目录，Ctrl+c停止脚本，进行后续操作。</p>
+<ul>
+<li>生成的<code>~/dontstarvetogether_dedicated_serve</code>可以存放稍后上传mod</li>
+<li>生成的<code>~/.klei/DoNotStarveTogether</code>用来存放存档</li>
+</ul>
+<h3 id="上传需要迁移的游戏存档"><a href="#上传需要迁移的游戏存档" class="headerlink" title="上传需要迁移的游戏存档"></a>上传需要迁移的游戏存档</h3><p>将准备好的 MyDediServer 文件夹，上传到<code>~/.klei/DoNotStarveTogether</code>下。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">存档上传后的路径：</span></span><br><span class="line">~/.klei/DoNotStarveTogether/MyDediServer</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传游戏mod"><a href="#上传游戏mod" class="headerlink" title="上传游戏mod"></a>上传游戏mod</h3><p>windows本地饥荒游戏mod一般在  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;steam安装目录&#125;\Steam\steamapps\common\Don&#x27;t Starve Together\mods</span><br><span class="line"># 比如</span><br><span class="line">D:\Program Files (x86)\Steam\steamapps\common\Don&#x27;t Starve Together\mods</span><br></pre></td></tr></table></figure>
+<p>将这个mods文件夹里的文件上传到服务器下面的目录中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/dontstarvetogether_dedicated_server/mods</span><br></pre></td></tr></table></figure>
+<p>对于《神话书说》《棱镜》等mod，并没有在上面的mods目录中，需要在这个目录下找</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;steam安装目录&#125;\Steam\steamapps\workshop\content\322330</span><br><span class="line"># 比如</span><br><span class="line">D:\Program Files (x86)\Steam\steamapps\workshop\content\322330</span><br></pre></td></tr></table></figure>
+<p>找到对应的mod，并上传到服务器<code>~/dontstarvetogether_dedicated_server/mods</code>中。<br>注意，需要将这些mod的文件夹命名为<code>workshop-&#123;mod ID&#125;</code>的格式。<br>比如<code>workshop-727774324</code>。</p>
+<blockquote>
+<p>Myth Words Theme-神话书说主题：workshop-1991746508</p>
+</blockquote>
+<blockquote>
+<p>Myth Words Characters 神话书说角色：workshop-1699194522</p>
+</blockquote>
+<blockquote>
+<p>[DST] Legion-棱镜：workshop-1392778117</p>
+</blockquote>
+<h2 id="mod更新"><a href="#mod更新" class="headerlink" title="mod更新"></a>mod更新</h2><p>在<code>~/dontstarvetogether_dedicated_server/mods/dedicated_server_mods_setup.lua</code><br>文件末尾添加 <code>ServerModSetup(&#39;mod编号&#39;)</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">--There are two functions that will install mods, ServerModSetup and ServerModCollectionSetup. Put the calls to the functions in this file and they will be executed on boot.</span><br><span class="line"></span><br><span class="line">--ServerModSetup takes a string of a specific mod&#x27;s Workshop id. It will download and install the mod to your mod directory on boot.</span><br><span class="line">	--The Workshop id can be found at the end of the url to the mod&#x27;s Workshop page.</span><br><span class="line">	--Example: http://steamcommunity.com/sharedfiles/filedetails/?id=350811795</span><br><span class="line">	--ServerModSetup(&quot;350811795&quot;)</span><br><span class="line"></span><br><span class="line">--ServerModCollectionSetup takes a string of a specific mod&#x27;s Workshop id. It will download all the mods in the collection and install them to the mod directory on boot.</span><br><span class="line">	--The Workshop id can be found at the end of the url to the collection&#x27;s Workshop page.</span><br><span class="line">	--Example: http://steamcommunity.com/sharedfiles/filedetails/?id=379114180</span><br><span class="line">	--ServerModCollectionSetup(&quot;379114180&quot;)</span><br><span class="line">ServerModSetup(&quot;1392778117&quot;)</span><br><span class="line">ServerModSetup(&quot;378160973&quot;)</span><br></pre></td></tr></table></figure>
+<p>注释掉<code>run_dedicated_servers.sh </code>脚本中的这一行后，重新运行脚本启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ./steamcmd.sh +force_install_dir &quot;$install_dir&quot; +login anonymous +app_update 343050 validate +quit</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="其他注意"><a href="#其他注意" class="headerlink" title="其他注意"></a>其他注意</h1><h2 id="报libcurl-gnutls-so-4找不到的错误"><a href="#报libcurl-gnutls-so-4找不到的错误" class="headerlink" title="报libcurl-gnutls.so.4找不到的错误"></a>报<code>libcurl-gnutls.so.4</code>找不到的错误</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./dontstarve_dedicated_server_nullrenderer: error while loading shared libraries: libcurl-gnutls.so.4: cannot open shared object file: No such file or directory]</span><br></pre></td></tr></table></figure>
+<p>解决办法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 给steamcmd创建软连接</span><br><span class="line">ln -s /usr/lib64/libcurl.so.4 ~/steamcmd/linux32/libcurl-gnutls.so.4</span><br><span class="line">ln -s /usr/lib64/libcurl.so.4 ~/steamcmd/linux64/libcurl-gnutls.so.4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 注意查看 /usr/lib64 下是否存在 libcurl.so.4</span><br><span class="line"># 如果不存在，查看有没有 libcurl.so.4.XX，有的话创建一个软连接</span><br><span class="line">ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl.so.4.3.0</span><br></pre></td></tr></table></figure>
+
+<p>如果还是不行，安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install libcurl.i686</span><br><span class="line">cd /usr/lib</span><br><span class="line">ln -s libcurl.so.4 libcurl-gnutls.so.4</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="报ld-linux-so-2找不到的错误"><a href="#报ld-linux-so-2找不到的错误" class="headerlink" title="报ld-linux.so.2找不到的错误"></a>报<code>ld-linux.so.2</code>找不到的错误</h2><p>安装ld-linux.so.2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install ld-linux.so.2</span><br></pre></td></tr></table></figure>
+
+<h2 id="报错ERROR-ld-so-object-LIB-libonion-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored"><a href="#报错ERROR-ld-so-object-LIB-libonion-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored" class="headerlink" title="报错ERROR: ld.so: object &#39;/$LIB/libonion.so&#39; from /etc/ld.so.preload cannot be preloaded: ignored."></a>报错<code>ERROR: ld.so: object &#39;/$LIB/libonion.so&#39; from /etc/ld.so.preload cannot be preloaded: ignored.</code></h2><p>清空 &#x2F;etc&#x2F;ld.so.preload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;&quot; &gt; /etc/ld.so.preload</span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://forums.kleientertainment.com/forums/topic/64441-dedicated-server-quick-setup-guide-linux/">Dedicated Server Quick Setup Guide - Linux</a></li>
+<li><a target="_blank" rel="noopener" href="https://forums.kleientertainment.com/forums/topic/64212-dedicated-server-quick-setup-guide-windows/">Dedicated Server Quick Setup Guide - Windows</a></li>
+<li><a target="_blank" rel="noopener" href="http://mahakala.lesc.uec.ac.jp/mahoodle/moodle/bug/lib_ld-linuxso2-bad-elf.php">ld-linux.so.2: bad ELF interpreter: No such file or directory</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.nice123.plus/2018/10/19/object-usr-local-lib-libdns-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored/">libdns.so 错误解决</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lanhj/p/7620147.html">centos7.x86_64搭建饥荒服务器</a></li>
+</ul>
+<style>
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Xtong</div><div class="post-copyright__author_desc">以终为始</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/')">饥荒联机版游戏服务器搭建</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=饥荒联机版游戏服务器搭建&amp;url=http://xtongs.com/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/&amp;pic=/images/bg-dst.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://xtongs.com" target="_blank">Xtongs blog</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%B8%B8%E6%88%8F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>游戏<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E9%A5%A5%E8%8D%92/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>饥荒<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/images/bg-dst.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/07/03/NHK%E3%80%8A%E7%AE%80%E6%98%8E%E6%97%A5%E8%AF%AD%E3%80%8B%E7%AC%AC01%E8%AF%BE/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-nhk.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">NHK《简明日语》第01课</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E6%95%85%E4%BA%8B"><span class="toc-text">背景故事</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E6%A1%A3%E8%BF%81%E7%A7%BB"><span class="toc-text">存档迁移</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">本地准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%BE%E5%88%B0%E5%AD%98%E6%A1%A3"><span class="toc-text">找到存档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E4%B8%8B%E8%BD%BD%E6%9C%8D%E5%8A%A1%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="toc-text">创建并下载服务端配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B%E7%A9%BA%E7%99%BD%E5%AD%98%E6%A1%A3%EF%BC%8C%E5%B0%86%E5%85%B6%E6%9B%BF%E6%8D%A2%E6%88%90%E8%A6%81%E8%BF%81%E7%A7%BB%E7%9A%84%E5%AD%98%E6%A1%A3"><span class="toc-text">解压空白存档，将其替换成要迁移的存档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">服务器准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85"><span class="toc-text">环境安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85steamcmd"><span class="toc-text">安装steamcmd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%B8%B8%E6%88%8F%E5%AD%98%E6%A1%A3%E7%9B%AE%E5%BD%95"><span class="toc-text">创建游戏存档目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E7%A9%BA%E7%99%BD%E5%AD%98%E6%A1%A3"><span class="toc-text">上传空白存档</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E8%BF%81%E7%A7%BB"><span class="toc-text">开始迁移</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E4%B8%8A%E4%BC%A0%E8%87%B3%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">启动脚本上传至云服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E4%BA%88%E8%84%9A%E6%9C%AC%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90"><span class="toc-text">赋予脚本可执行权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-text">执行脚本启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E9%9C%80%E8%A6%81%E8%BF%81%E7%A7%BB%E7%9A%84%E6%B8%B8%E6%88%8F%E5%AD%98%E6%A1%A3"><span class="toc-text">上传需要迁移的游戏存档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%B8%B8%E6%88%8Fmod"><span class="toc-text">上传游戏mod</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mod%E6%9B%B4%E6%96%B0"><span class="toc-text">mod更新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F"><span class="toc-text">其他注意</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5libcurl-gnutls-so-4%E6%89%BE%E4%B8%8D%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">报libcurl-gnutls.so.4找不到的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5ld-linux-so-2%E6%89%BE%E4%B8%8D%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-text">报ld-linux.so.2找不到的错误</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99ERROR-ld-so-object-LIB-libonion-so-from-etc-ld-so-preload-cannot-be-preloaded-ignored"><span class="toc-text">报错ERROR: ld.so: object &#39;&#x2F;$LIB&#x2F;libonion.so&#39; from &#x2F;etc&#x2F;ld.so.preload cannot be preloaded: ignored.</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="饥荒联机版游戏服务器搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-dst.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="饥荒联机版游戏服务器搭建"/></a><div class="content"><a class="title" href="/2021/07/04/%E9%A5%A5%E8%8D%92%E8%81%94%E6%9C%BA%E7%89%88%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" title="饥荒联机版游戏服务器搭建">饥荒联机版游戏服务器搭建</a><time datetime="2021-07-04T15:50:00.000Z" title="发表于 2021-07-04 23:50:00">2021-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/03/NHK%E3%80%8A%E7%AE%80%E6%98%8E%E6%97%A5%E8%AF%AD%E3%80%8B%E7%AC%AC01%E8%AF%BE/" title="NHK《简明日语》第01课"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-nhk.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="NHK《简明日语》第01课"/></a><div class="content"><a class="title" href="/2021/07/03/NHK%E3%80%8A%E7%AE%80%E6%98%8E%E6%97%A5%E8%AF%AD%E3%80%8B%E7%AC%AC01%E8%AF%BE/" title="NHK《简明日语》第01课">NHK《简明日语》第01课</a><time datetime="2021-07-03T14:16:30.000Z" title="发表于 2021-07-03 22:16:30">2021-07-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/02/Windows10%E4%B8%8B%E5%88%87%E6%8D%A2%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/" title="Windows10下切换日语输入法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows10下切换日语输入法"/></a><div class="content"><a class="title" href="/2021/07/02/Windows10%E4%B8%8B%E5%88%87%E6%8D%A2%E6%97%A5%E8%AF%AD%E8%BE%93%E5%85%A5%E6%B3%95/" title="Windows10下切换日语输入法">Windows10下切换日语输入法</a><time datetime="2021-07-02T15:52:52.000Z" title="发表于 2021-07-02 23:52:52">2021-07-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/01/Ubuntu%E4%B8%8B%E8%BF%9E%E6%8E%A5%E5%B9%B6%E4%BD%BF%E7%94%A8Airpods/" title="Ubuntu下连接并使用Airpods"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-macbook.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Ubuntu下连接并使用Airpods"/></a><div class="content"><a class="title" href="/2021/07/01/Ubuntu%E4%B8%8B%E8%BF%9E%E6%8E%A5%E5%B9%B6%E4%BD%BF%E7%94%A8Airpods/" title="Ubuntu下连接并使用Airpods">Ubuntu下连接并使用Airpods</a><time datetime="2021-07-01T14:34:25.000Z" title="发表于 2021-07-01 22:34:25">2021-07-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/30/centos%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%8E%AF%E5%A2%83/" title="centos下安装node环境"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bg-node.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="centos下安装node环境"/></a><div class="content"><a class="title" href="/2021/06/30/centos%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%8E%AF%E5%A2%83/" title="centos下安装node环境">centos下安装node环境</a><time datetime="2021-06-30T13:32:52.000Z" title="发表于 2021-06-30 21:32:52">2021-06-30</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="Xtong" target="_blank">Xtong</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>2</sup></a><a href="/tags/git/" style="font-size: 0.88rem;">git<sup>1</sup></a><a href="/tags/nodejs/" style="font-size: 0.88rem;">nodejs<sup>1</sup></a><a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 0.88rem;">日语<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 0.88rem;">游戏<sup>1</sup></a><a href="/tags/%E9%A5%A5%E8%8D%92/" style="font-size: 0.88rem;">饥荒<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Xtong 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
